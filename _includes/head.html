@@ -36,27 +36,41 @@
 <!-- Scripts -->
 <script>
 
-    // Wait for the DOM to be to set up the PrismJS language definition.
-    document.addEventListener('DOMContentLoaded', function () {
-        if (typeof Prism !== 'undefined') {
-            // QuillScript language definition for PrismJS
-            // ! This is done replacing the language definition for Java
-            Prism.languages.q = {
-                'comment': /#.*/,
+// Observe for PrismJS to be loaded to inject the QuillScript language definition
+let value;
+Object.defineProperty(window, 'Prism', {
+    get() { return value; },
 
-                'string': {
-                    pattern: /"(?:\\.|[^"\\])*"/,
-                    greedy: true,
-                },
+    set(newValue) {
+        value = newValue;
 
-                'keyword': /\b(if|else|return|function)\b/,
-                'number': /\b\d+(?:\.\d+)?\b/,
-                'operator': /[+\-*\/=<>!]/,
-            };
-        } else {
-            console.warn('PrismJS not loaded');
-        }
-    });
+        // Timer to check if PrismJS is loaded
+        let interval = setInterval(() => {
+            if (typeof Prism !== 'undefined') {
+                // Create QuillScript language definition for PrismJS
+                // This is done replacing the Q language definition
+                Prism.languages.q = {
+                    'comment': /#.*/,
+
+                    'string': {
+                        pattern: /"(?:\\.|[^"\\])*"/,
+                        greedy: true,
+                    },
+
+                    'keyword': /\b(if|else|return|function)\b/,
+                    'number': /\b\d+(?:\.\d+)?\b/,
+                    'operator': /[+\-*\/=<>!]/,
+                };
+
+                // Stop the loop
+                clearInterval(interval);
+
+                // Refresh PrismJS highlighting
+                Prism.highlightAll();
+            }
+        }, 50);
+    },
+});
 
 </script>
 
