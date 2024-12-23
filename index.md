@@ -1,6 +1,9 @@
-# Quillscript
-
-![](img/Quillscript.gif)
+---
+label: Home
+icon: home
+---
+![](./static/img/banner.gif)
+#
 
 [Quillscript](https://www.fab.com/listings/3dab3d58-9249-48a6-a039-ada7457c7e4e), formerly known as _Snowfall_, is an [Unreal Engine](https://www.unrealengine.com/) code plugin. It controls the story and narrative flow for RPGs, visual novels, and other story-driven games. Including player choices, story branching, conditions, code integration, and much more. All of that is done through an easy-to-use screenplay-style scripting language.
 

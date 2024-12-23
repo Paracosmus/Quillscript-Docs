@@ -1,0 +1,4 @@
+---
+label: Localization
+icon: globe
+---
