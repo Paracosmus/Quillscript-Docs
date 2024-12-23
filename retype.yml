@@ -4,6 +4,10 @@ url: paracosmus.github.io/Quillscript-Docs/ # quillscript.ink
 favicon: ./static/img/favicon.ico
 # poweredByRetype: false
 
+cache:
+  strategy: query
+  # token: v1
+
 branding:
   title: Quillscript
   label: doc
@@ -11,8 +15,8 @@ branding:
 
   colors:
     label:
-      # text: "#000000"
-      # background: "#000000"
+      text: "#FFFFFF"
+      background: "#E1BEE7"
 
 breadcrumb:
   home: ":icon-home:"

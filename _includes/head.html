@@ -6,8 +6,28 @@
     }
     */
 
+    /* Body */
     div.container {
-        max-width: 1500px;
+        max-width: 1440px;
+    }
+
+    /* Quillscript syntax highlighting */
+    .language-q .token.comment {
+        color: #ff0000;
+        font-style: italic;
+    }
+
+    .language-q .token.keyword {
+        color: #569cd6;
+        font-weight: bold;
+    }
+
+    .language-q .token.string {
+        color: #ce9178;
+    }
+
+    .language-q .token.number {
+        color: #b5cea8;
     }
 
 </style>
@@ -16,7 +36,27 @@
 <!-- Scripts -->
 <script>
 
+    // Wait for the DOM to be to set up the PrismJS language definition.
+    document.addEventListener('DOMContentLoaded', function () {
+        if (typeof Prism !== 'undefined') {
+            // QuillScript language definition for PrismJS
+            // ! This is done replacing the language definition for Java
+            Prism.languages.q = {
+                'comment': /#.*/,
 
+                'string': {
+                    pattern: /"(?:\\.|[^"\\])*"/,
+                    greedy: true,
+                },
+
+                'keyword': /\b(if|else|return|function)\b/,
+                'number': /\b\d+(?:\.\d+)?\b/,
+                'operator': /[+\-*\/=<>!]/,
+            };
+        } else {
+            console.warn('PrismJS not loaded');
+        }
+    });
 
 </script>
 
