@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788306498172">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788311551548">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -34,11 +34,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/img/favicon.ico" rel="icon">
-    <link href="../resources/css/retype.css?v=3.6.0.788306498172" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.6.0.788311551548" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.788306498172" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.788311551548" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.788306498172" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.788311551548" data-turbo-eval="false" defer></script>
 
     <!-- Styles -->
     <style>
@@ -78,27 +78,41 @@
     <!-- Scripts -->
     <script>
 
-        // Wait for the DOM to be to set up the PrismJS language definition.
-        document.addEventListener('DOMContentLoaded', function () {
-            if (typeof Prism !== 'undefined') {
-                // QuillScript language definition for PrismJS
-                // ! This is done replacing the language definition for Java
-                Prism.languages.q = {
-                    'comment': /#.*/,
+    // Observe for PrismJS to be loaded to inject the QuillScript language definition
+    let value;
+    Object.defineProperty(window, 'Prism', {
+        get() { return value; },
 
-                    'string': {
-                        pattern: /"(?:\\.|[^"\\])*"/,
-                        greedy: true,
-                    },
+        set(newValue) {
+            value = newValue;
 
-                    'keyword': /\b(if|else|return|function)\b/,
-                    'number': /\b\d+(?:\.\d+)?\b/,
-                    'operator': /[+\-*\/=<>!]/,
-                };
-            } else {
-                console.warn('PrismJS not loaded');
-            }
-        });
+            // Timer to check if PrismJS is loaded
+            let interval = setInterval(() => {
+                if (typeof Prism !== 'undefined') {
+                    // Create QuillScript language definition for PrismJS
+                    // This is done replacing the Q language definition
+                    Prism.languages.q = {
+                        'comment': /#.*/,
+
+                        'string': {
+                            pattern: /"(?:\\.|[^"\\])*"/,
+                            greedy: true,
+                        },
+
+                        'keyword': /\b(if|else|return|function)\b/,
+                        'number': /\b\d+(?:\.\d+)?\b/,
+                        'operator': /[+\-*\/=<>!]/,
+                    };
+
+                    // Stop the loop
+                    clearInterval(interval);
+
+                    // Refresh PrismJS highlighting
+                    Prism.highlightAll();
+                }
+            }, 50);
+        },
+    });
 
     </script>
 
