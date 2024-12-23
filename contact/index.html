@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788292481974">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788306498172">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -12,6 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Contact</title>
     <meta name="title" content="Contact">
+    <meta name="description" content="discord.gg">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://paracosmus.github.io/Quillscript-Docs/contact/">
@@ -20,20 +21,24 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://paracosmus.github.io/Quillscript-Docs/contact/">
     <meta property="og:title" content="Contact">
+    <meta property="og:description" content="discord.gg">
+    <meta property="og:image" content="https://paracosmus.github.io/Quillscript-Docs/static/img/icons/discord.svg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://paracosmus.github.io/Quillscript-Docs/contact/">
     <meta property="twitter:title" content="Contact">
+    <meta property="twitter:description" content="discord.gg">
+    <meta property="twitter:image" content="https://paracosmus.github.io/Quillscript-Docs/static/img/icons/discord.svg">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/img/favicon.ico" rel="icon">
-    <link href="../resources/css/retype.css?v=3.6.0.788292481974" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.6.0.788306498172" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.788292481974" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.788306498172" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.788292481974" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.788306498172" data-turbo-eval="false" defer></script>
 
     <!-- Styles -->
     <style>
@@ -43,8 +48,28 @@
         }
         */
 
+        /* Body */
         div.container {
-            max-width: 1500px;
+            max-width: 1440px;
+        }
+
+        /* Quillscript syntax highlighting */
+        .language-q .token.comment {
+            color: #ff0000;
+            font-style: italic;
+        }
+
+        .language-q .token.keyword {
+            color: #569cd6;
+            font-weight: bold;
+        }
+
+        .language-q .token.string {
+            color: #ce9178;
+        }
+
+        .language-q .token.number {
+            color: #b5cea8;
         }
 
     </style>
@@ -53,7 +78,27 @@
     <!-- Scripts -->
     <script>
 
+        // Wait for the DOM to be to set up the PrismJS language definition.
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof Prism !== 'undefined') {
+                // QuillScript language definition for PrismJS
+                // ! This is done replacing the language definition for Java
+                Prism.languages.q = {
+                    'comment': /#.*/,
 
+                    'string': {
+                        pattern: /"(?:\\.|[^"\\])*"/,
+                        greedy: true,
+                    },
+
+                    'keyword': /\b(if|else|return|function)\b/,
+                    'number': /\b\d+(?:\.\d+)?\b/,
+                    'operator': /[+\-*\/=<>!]/,
+                };
+            } else {
+                console.warn('PrismJS not loaded');
+            }
+        });
 
     </script>
 
@@ -256,6 +301,93 @@
         <span>Contact</span>
     </h1>
 </doc-anchor-target>
+<doc-anchor-target id="request-support">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#request-support">#</doc-anchor-trigger>
+        <span>Request Support</span>
+    </h2>
+</doc-anchor-target>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white border-r">
+        <span>Discord</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span>e-mail</span>
+    </div>
+    <div class="px-5 py-3 docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<a href="https://discord.com/invite/YTYxhCFJGC" target="_blank">
+<p><figure class="content-center">
+    <img src="../static/img/icons/discord.svg" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+<br />
+discord.gg<br />
+</a></p>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<a href="https://www.youtube.com/channel/UCdUBIYVRJKtqyTIy0Yg-K1Q" target="_blank">
+<p><figure class="content-center">
+    <img src="../static/img/icons/email.svg" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+<br />
+<a href="mailto:support@quillscript.ink">support@quillscript.ink</a><br />
+</a></p>
+    </div>
+</div>
+<br>
+<doc-anchor-target id="other-links">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#other-links">#</doc-anchor-trigger>
+        <span>Other Links</span>
+    </h2>
+</doc-anchor-target>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white border-r">
+        <span>Youtube</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span>VS Code Extension</span>
+    </div>
+    <div class="px-5 py-3 docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<a href="https://www.youtube.com/channel/UCdUBIYVRJKtqyTIy0Yg-K1Q" target="_blank">
+<p><figure class="content-center">
+    <img src="../static/img/icons/youtube.svg" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+<br />
+Quillscript Channel<br />
+</a></p>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<a href="https://marketplace.visualstudio.com/items?itemName=BrunoCaxito.quillscript-language" target="_blank">
+<p><figure class="content-center">
+    <img src="../static/img/icons/vscode.svg" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+<br />
+Visual Studio Marketplace<br />
+</a></p>
+    </div>
+</div>
+<br>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-green-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-green-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M21 9.09c-.55 0-1 .45-1 1v.92c0 4.96-4.04 8.99-9 8.99-4.97 0-9-4.04-9-9s4.04-9 9-9c1.27 0 2.5.26 3.66.78.51.22 1.1 0 1.32-.51.23-.5 0-1.1-.51-1.32C14.06.32 12.56 0 11.01 0H11C4.94 0 0 4.93 0 10.99 0 17.06 4.93 22 10.99 22H11c6.06 0 11-4.93 11-10.99v-.92c0-.56-.45-1-1-1z"></path>
+                    <path d="M8.71 9.31a.996.996 0 10-1.41 1.41l3 3c.19.19.44.29.71.29.27 0 .52-.11.71-.29l10-10.01a.996.996 0 10-1.41-1.41L11 11.6 8.71 9.31z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><span style="font-size: 1.5rem;">Are you enjoying our plugin?<br />
+<strong>Please rate us on FAB</strong> <span class="docs-emoji">&#x1F604;</span></span></p>
+        </div>
+    </div>
+</div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -302,5 +434,26 @@
     <div id="docs-overlay-target"></div>
 
     <script data-cfasync="false">window.__DOCS__ = { "title": "Contact", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+
+    <!-- Footer -->
+    <footer>
+
+
+
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+
+
+
+    </script>
+
+    <!-- End Content -->
+    <div>
+
+
+
+    </div>
 </body>
 </html>
