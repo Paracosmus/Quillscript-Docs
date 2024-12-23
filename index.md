@@ -40,9 +40,47 @@ A scripting-based dialogue has many advantages over common dialogue systems like
 * Optional Visual Studio Code extension for syntax highlighting and autocompletion
 * Easy to customize and extend
 
+<br>
+
+||| Unreal Engine
+<a href="https://docs.unrealengine.com/latest/unreal-engine-programming-and-scripting/" target="_blank" style="font-size: 13px;">
+
+![](./static/img/icons/ue.svg)
+Compatible both with Unreal Engine Blueprints and C++
+</a>
+
+||| VS Code Extension
+<a href="https://marketplace.visualstudio.com/items?itemName=BrunoCaxito.quillscript-language" target="_blank" style="font-size: 13px;">
+
+![](./static/img/icons/vscode.svg)
+Syntax highlighting and autocompletion for Quillscript Language
+</a>
+
+||| Discord Community
+<a href="https://discord.com/invite/YTYxhCFJGC" target="_blank" style="font-size: 13px;">
+
+![](./static/img/icons/discord.svg)
+Join our Discord server to get help and share your projects
+</a>
+
+||| Youtube Channel
+<a href="https://www.youtube.com/channel/UCdUBIYVRJKtqyTIy0Yg-K1Q" target="_blank" style="font-size: 13px;">
+
+![](./static/img/icons/youtube.svg)
+Video tutorials
+</a>
+
+|||
+
 ---
 
+<br>
+
 !!!
-## Ready to get started?
-To start with Quillscript, you need Unreal Engine installed and basic knowledge of how to use Unreal's Editor. Follow our Getting Started guide to begin authoring stories within Unreal Engine.
+## ⚡ Ready to get started? ⚡
+To start with **Quillscript**, you need <a href="https://www.unrealengine.com/download" target="_blank">Unreal Engine</a> installed and basic knowledge of how to use <a href="https://docs.unrealengine.com/latest/understanding-the-basics-of-unreal-engine/" target="_blank">Unreal's Editor</a>. Follow our [Getting Started](./GettingStarted.md) guide to begin authoring stories within Unreal Engine.
 !!!
+
+<br>
+
+---

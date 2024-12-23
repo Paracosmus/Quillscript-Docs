@@ -22,6 +22,14 @@ links:
   link: ./
   icon: home
 
+- text: Roadmap
+  link: ./changelog/
+  icon: repo-forked
+
+- text: Contact
+  link: ./contact.md
+  icon: paper-airplane
+
 markdown:
   lineBreaks: hard
 
