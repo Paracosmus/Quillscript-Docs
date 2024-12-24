@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788321829256">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788372443173">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Covert Label</title>
-    <meta name="title" content="Covert Label">
+    <title>Covert</title>
+    <meta name="title" content="Covert">
+    <meta name="description" content="A covert label has the same behavior as a standard label, except that a covert label won't play unless explicitly called by a ">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://paracosmus.github.io/Quillscript-Docs/language/label/covert/">
@@ -19,21 +20,24 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://paracosmus.github.io/Quillscript-Docs/language/label/covert/">
-    <meta property="og:title" content="Covert Label">
+    <meta property="og:title" content="Covert">
+    <meta property="og:description" content="A covert label has the same behavior as a standard label, except that a covert label won't play unless explicitly called by a ">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://paracosmus.github.io/Quillscript-Docs/language/label/covert/">
-    <meta property="twitter:title" content="Covert Label">
+    <meta property="twitter:title" content="Covert">
+    <meta property="twitter:description" content="A covert label has the same behavior as a standard label, except that a covert label won't play unless explicitly called by a ">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/img/favicon.ico" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.788321829256" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.788372443173" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788321829256" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788372443173" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788321829256" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788372443173" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788372443173" defer></script>
 
     <!-- Styles -->
     <style>
@@ -203,7 +207,6 @@
     <script>
 
     // Observe for PrismJS to be loaded to inject the QuillScript language definition
-    let injected = false;
     let value;
     Object.defineProperty(window, 'Prism', {
         get() { return value; },
@@ -211,179 +214,174 @@
         set(newValue) {
             value = newValue;
 
-            // Timer to check if PrismJS is loaded
-            if (injected === false) {
-                injected = true;
-
-                let interval = setInterval(() => {
-                    if (typeof Prism !== 'undefined') {
-                        // Create QuillScript language definition for PrismJS
-                        // This is done replacing the Q language definition
-                        Prism.languages.q = {
-                            'comment': {
-                                'pattern': /\/\/.*|\/\*[\s\S]*?\*\//,
-                                'greedy': true,
-                                'inside': {
-                                    'title': {
-                                        'pattern': /\b(SCENE|ACT|CHAPTER|SCRIPT|TITLE|HEADER|BOOK|NAME|PART|SECTION|FILE|BRANCH)\b[ -Z]+/,
-                                        'alias': 'important'
-                                    },
-                                    'brackets': {
-                                        'pattern': /[{}]/,
-                                        'alias': 'punctuation'
-                                    }
+            let interval = setInterval(() => {
+                if (typeof Prism !== 'undefined') {
+                    // Create QuillScript language definition for PrismJS
+                    // This is done replacing the Q language definition
+                    Prism.languages.q = {
+                        'comment': {
+                            'pattern': /\/\/.*|\/\*[\s\S]*?\*\//,
+                            'greedy': true,
+                            'inside': {
+                                'title': {
+                                    'pattern': /\b(SCENE|ACT|CHAPTER|SCRIPT|TITLE|HEADER|BOOK|NAME|PART|SECTION|FILE|BRANCH)\b[ -Z]+/,
+                                    'alias': 'important'
+                                },
+                                'brackets': {
+                                    'pattern': /[{}]/,
+                                    'alias': 'punctuation'
                                 }
-                            },
-                            'directive': {
-                                'pattern': /[ \t]*~\s\w+.*?(?=\||\/\/|\n)/m,
-                                'inside': {
-                                    'tilde': { 'pattern': /~/, 'alias': 'punctuation' },
-                                    'name': { 'pattern': /\w+/, 'alias': 'keyword' }
-                                }
-                            },
-                            'router': {
-                                'pattern': /[ \t]*(->|<->).+?(?=\||\/\/|\n)/,
-                                'inside': {
-                                    'arrow': { 'pattern': /->|<->/, 'alias': 'keyword' },
-                                    'text': { 'pattern': /.*/ }
-                                }
-                            },
-                            'dialogue': {
-                                'pattern': /^[ \t]*-.*?(?=\||\/\/|\n)/m,
-                                'inside': {
-                                    'dash': { 'pattern': /^-/, 'alias': 'punctuation' },
-                                    'text': { 'pattern': /.*/ }
-                                }
-                            },
-                            'option': {
-                                'pattern': /^[ \t]*\*.*$/m,
-                                'inside': {
-                                    'asterisk': { 'pattern': /^\*/, 'alias': 'punctuation' },
-                                    'text': { 'pattern': /.+/, 'alias': 'string' }
-                                }
-                            },
-                            'label': {
-                                'pattern': /[ \t]*(@|<@>).+?(?=\||\/\/|\n)/,
-                                'inside': {
-                                    'symbol': { 'pattern': /@|<@>/, 'alias': 'keyword' },
-                                    'text': { 'pattern': /.*/ }
-                                }
-                            },
-                            'command': {
-                                'pattern': /[ \t]*\$.*?(?=\||\/\/|\n)/,
-                                'inside': {
-                                    'dollar': { 'pattern': /\$/, 'alias': 'keyword' },
-                                    'text': { 'pattern': /.*/ }
-                                }
-                            },
-                            'condition': {
-                                'pattern': /[ \t]*\? ?(?:if:|elseif:|else|endif).+?(?=\||\/\/|\n)/,
-                                'inside': {
-                                    'keyword': { 'pattern': /\? ?(?:if|elseif|else|endif)/, 'alias': 'keyword' },
-                                    'text': { 'pattern': /.*/ }
-                                }
-                            },
-                            'tag': {
-                                'pattern': /#[a-zA-Z_]\w*/,
-                                'inside': {
-                                    'hash': { 'pattern': /#/, 'alias': 'punctuation' },
-                                    'name': { 'pattern': /\w+/, 'alias': 'tag' }
-                                }
-                            },
-                            'string': {
-                                'pattern': /"([^"\\]|\\.)*"|'([^'\\]|\\.)*'/,
-                                'greedy': true,
-                                'alias': 'string'
-                            },
-                            'variable': {
-                                'pattern': /{[a-zA-Z_]\w*}/,
-                                'inside': {
-                                    'braces': { 'pattern': /[{}]/, 'alias': 'punctuation' },
-                                    'name': { 'pattern': /[a-zA-Z_]\w*/, 'alias': 'variable' }
-                                }
-                            },
-                            'number': {
-                                'pattern': /\b\d+(\.\d+)?\b/,
-                                'alias': 'number'
-                            },
-                            'operator': {
-                                'pattern': /=|~|===|!==|==|!=|>=|<=|<|>|\+|-|\*|\/|%|\^|&&|\|\|/,
-                                'alias': 'operator'
-                            },
-                            'punctuation': {
-                                'pattern': /[{}()\[\],.;]/,
-                                'alias': 'punctuation'
-                            },
-                            'concatenation': {
-                                'pattern': /\|/,
-                                'alias': 'operator'
-                            },
-                            'definition': {
-                                'pattern': /\[[^\s]+\]/,
-                                'alias': 'constant'
-                            },
-                            'delay': {
-                                'pattern': /\(\([^()\s]+\)\)/,
-                                'alias': 'variable'
-                            },
-                            'keyword': {
-                                'pattern': /\b(true|false|on|off|null|nullptr)\b/,
-                                'alias': 'keyword'
-                            },
-                            'arguments': {
-                                'pattern': /\([^()]*\)/,
-                                'inside': {
-                                    'braces': { 'pattern': /[()]/, 'alias': 'punctuation' },
-                                    'parameter': { 'pattern': /\w+/, 'alias': 'variable' },
-                                    'separator': { 'pattern': /,/, 'alias': 'punctuation' }
-                                }
-                            },
-                            'richtext': {
-                                'pattern': /<\/?[^\s>\/]+(?:\s+[^\s>]+(?:=(?:"[^"]*"|'[^']*'|[^\s"'=<>`]+))?)*\s*\/?>/m,
-                                'inside': {
-                                    'tag-name': {
-                                        'pattern': /^<\/?[^\s>\/]+/,
-                                        'alias': 'keyword'
-                                    },
-                                    'attribute': {
-                                        'pattern': /[^\s>\/]+=(?:"[^"]*"|'[^']*'|[^\s"'=<>`]+)/,
-                                        'inside': {
-                                            'attr-name': {
-                                                'pattern': /^[^\s=]+/,
-                                                'alias': 'attr-name'
-                                            },
-                                            'attr-value': {
-                                                'pattern': /=(?:"[^"]*"|'[^']*'|[^\s"'=<>`]+)/,
-                                                'inside': {
-                                                    'punctuation': /^=|^["']|["']$/,
-                                                    'string': {
-                                                        'pattern': /[^"']+/,
-                                                        'alias': 'attr-value'
-                                                    }
+                            }
+                        },
+                        'directive': {
+                            'pattern': /[ \t]*~\s\w+.*?(?=\||\/\/|\n)/m,
+                            'inside': {
+                                'tilde': { 'pattern': /~/, 'alias': 'punctuation' },
+                                'name': { 'pattern': /\w+/, 'alias': 'keyword' }
+                            }
+                        },
+                        'router': {
+                            'pattern': /[ \t]*(->|<->).+?(?=\||\/\/|\n)/,
+                            'inside': {
+                                'arrow': { 'pattern': /->|<->/, 'alias': 'keyword' },
+                                'text': { 'pattern': /.*/ }
+                            }
+                        },
+                        'dialogue': {
+                            'pattern': /^[ \t]*-.*?(?=\||\/\/|\n)/m,
+                            'inside': {
+                                'dash': { 'pattern': /^-/, 'alias': 'punctuation' },
+                                'text': { 'pattern': /.*/ }
+                            }
+                        },
+                        'option': {
+                            'pattern': /^[ \t]*\*.*$/m,
+                            'inside': {
+                                'asterisk': { 'pattern': /^\*/, 'alias': 'punctuation' },
+                                'text': { 'pattern': /.+/, 'alias': 'string' }
+                            }
+                        },
+                        'label': {
+                            'pattern': /[ \t]*(@|<@>).+?(?=\||\/\/|\n)/,
+                            'inside': {
+                                'symbol': { 'pattern': /@|<@>/, 'alias': 'keyword' },
+                                'text': { 'pattern': /.*/ }
+                            }
+                        },
+                        'command': {
+                            'pattern': /[ \t]*\$.*?(?=\||\/\/|\n)/,
+                            'inside': {
+                                'dollar': { 'pattern': /\$/, 'alias': 'keyword' },
+                                'text': { 'pattern': /.*/ }
+                            }
+                        },
+                        'condition': {
+                            'pattern': /[ \t]*\? ?(?:if:|elseif:|else|endif).+?(?=\||\/\/|\n)/,
+                            'inside': {
+                                'keyword': { 'pattern': /\? ?(?:if|elseif|else|endif)/, 'alias': 'keyword' },
+                                'text': { 'pattern': /.*/ }
+                            }
+                        },
+                        'tag': {
+                            'pattern': /#[a-zA-Z_]\w*/,
+                            'inside': {
+                                'hash': { 'pattern': /#/, 'alias': 'punctuation' },
+                                'name': { 'pattern': /\w+/, 'alias': 'tag' }
+                            }
+                        },
+                        'string': {
+                            'pattern': /"([^"\\]|\\.)*"|'([^'\\]|\\.)*'/,
+                            'greedy': true,
+                            'alias': 'string'
+                        },
+                        'variable': {
+                            'pattern': /{[a-zA-Z_]\w*}/,
+                            'inside': {
+                                'braces': { 'pattern': /[{}]/, 'alias': 'punctuation' },
+                                'name': { 'pattern': /[a-zA-Z_]\w*/, 'alias': 'variable' }
+                            }
+                        },
+                        'number': {
+                            'pattern': /\b\d+(\.\d+)?\b/,
+                            'alias': 'number'
+                        },
+                        'operator': {
+                            'pattern': /=|~|===|!==|==|!=|>=|<=|<|>|\+|-|\*|\/|%|\^|&&|\|\|/,
+                            'alias': 'operator'
+                        },
+                        'punctuation': {
+                            'pattern': /[{}()\[\],.;]/,
+                            'alias': 'punctuation'
+                        },
+                        'concatenation': {
+                            'pattern': /\|/,
+                            'alias': 'operator'
+                        },
+                        'definition': {
+                            'pattern': /\[[^\s]+\]/,
+                            'alias': 'constant'
+                        },
+                        'delay': {
+                            'pattern': /\(\([^()\s]+\)\)/,
+                            'alias': 'variable'
+                        },
+                        'keyword': {
+                            'pattern': /\b(true|false|on|off|null|nullptr)\b/,
+                            'alias': 'keyword'
+                        },
+                        'arguments': {
+                            'pattern': /\([^()]*\)/,
+                            'inside': {
+                                'braces': { 'pattern': /[()]/, 'alias': 'punctuation' },
+                                'parameter': { 'pattern': /\w+/, 'alias': 'variable' },
+                                'separator': { 'pattern': /,/, 'alias': 'punctuation' }
+                            }
+                        },
+                        'richtext': {
+                            'pattern': /<\/?[^\s>\/]+(?:\s+[^\s>]+(?:=(?:"[^"]*"|'[^']*'|[^\s"'=<>`]+))?)*\s*\/?>/m,
+                            'inside': {
+                                'tag-name': {
+                                    'pattern': /^<\/?[^\s>\/]+/,
+                                    'alias': 'keyword'
+                                },
+                                'attribute': {
+                                    'pattern': /[^\s>\/]+=(?:"[^"]*"|'[^']*'|[^\s"'=<>`]+)/,
+                                    'inside': {
+                                        'attr-name': {
+                                            'pattern': /^[^\s=]+/,
+                                            'alias': 'attr-name'
+                                        },
+                                        'attr-value': {
+                                            'pattern': /=(?:"[^"]*"|'[^']*'|[^\s"'=<>`]+)/,
+                                            'inside': {
+                                                'punctuation': /^=|^["']|["']$/,
+                                                'string': {
+                                                    'pattern': /[^"']+/,
+                                                    'alias': 'attr-value'
                                                 }
                                             }
                                         }
-                                    },
-                                    'punctuation': {
-                                        'pattern': /<\/?|\/?>/,
-                                        'alias': 'punctuation'
                                     }
+                                },
+                                'punctuation': {
+                                    'pattern': /<\/?|\/?>/,
+                                    'alias': 'punctuation'
                                 }
-                            },
-                            'text': {
-                                'pattern': /.+/,
-                                'alias': 'text'
                             }
-                        };
+                        },
+                        'text': {
+                            'pattern': /.+/,
+                            'alias': 'text'
+                        }
+                    };
 
-                        // Stop the loop
-                        clearInterval(interval);
+                    // Stop the loop
+                    clearInterval(interval);
 
-                        // Refresh PrismJS highlighting
-                        Prism.highlightAll();
-                    }
-                }, 1000);
-            }
+                    // Refresh PrismJS highlighting
+                    Prism.highlightAll();
+                }
+            }, 1000);
         },
     });
 
@@ -582,12 +580,61 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="covert-label" class="break-words">
+<doc-anchor-target id="covert" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#covert-label">#</doc-anchor-trigger>
-        <span>Covert Label</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#covert">#</doc-anchor-trigger>
+        <span>Covert</span>
     </h1>
 </doc-anchor-target>
+<p>A covert label has the same behavior as a standard label, except that a covert label won&#x27;t play unless explicitly called by a <a href="../../router/">Router</a>. This means if the script flow ever reaches a covert label, it jumps to the following standard label.</p>
+<p>A Covert Label starts with <strong>&lt;@&gt; (<em>Less Than, At Sign, and Greater Than</em>)</strong>, immediately followed by a whitespace.</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-q" data-line="9,15"><code v-pre class="language-q">- Professor
+  We do not have much time.
+
+* Where are we?     | -&gt; Where
+* Can we eat first? | -&gt; Eat
+* Ok
+
+
+&lt;@&gt; Where
+
+  - Professor
+    Downtown.
+
+
+&lt;@&gt; Eat
+
+  - Professor
+    Of course not.
+
+
+@ Continue
+
+  - Professor
+    Now, let's go.</code></pre>
+</doc-codeblock></div>
+<p>In the example above, the <strong>@Where</strong> and <strong>@Eat</strong> labels only play if selected, and the story proceeds to <strong>@Continue</strong> jumping any covert labels on its flow.</p>
+<hr>
+<doc-anchor-target id="covert-label-as-instruction">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#covert-label-as-instruction">#</doc-anchor-trigger>
+        <span>Covert Label as Instruction</span>
+    </h2>
+</doc-anchor-target>
+<p>If a covert label is used as an instruction in other types of statements, that statement is also jumped unless it is called directly by a router.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">- Alice | &lt;@&gt;MyDialogueLabel
+  Hello!
+
+-&gt; Target | &lt;@&gt;MyRouterLabel
+
+$ x = 10 | &lt;@&gt;MyCommandLabel
+
+? if {x} == 10 | &lt;@&gt;MyConditionLabel
+</code></pre>
+</doc-codeblock></div>
+<hr>
 
                                 
                                 <!-- Required only on API pages -->
@@ -654,7 +701,7 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Covert Label", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Covert Label", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 
     <!-- Footer -->
     <footer>
