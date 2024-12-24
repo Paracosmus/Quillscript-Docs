@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788372443173">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788382637263">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -32,12 +32,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/img/favicon.ico" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.788372443173" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.788382637263" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788372443173" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788382637263" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788372443173" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788372443173" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788382637263" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788382637263" defer></script>
 
     <!-- Styles -->
     <style>
@@ -59,7 +59,7 @@
             color: #0e4a8f;
             font-weight: bold
         }
-        .language-q .token.dialogue .token.text {
+        .language-q .token.dialogue .token.text, .dialogue {
             color: #349df3;
             font-weight: bold
         }
@@ -69,8 +69,9 @@
             color: #811818;
             font-weight: bold
         }
-        .language-q .token.option .token.text {
+        .language-q .token.option .token.text, .option {
             color: #ef5350;
+            font-weight: bold
         }
 
         /* Label */
@@ -78,7 +79,7 @@
             color: #ad1457;
             font-weight: bold
         }
-        .language-q .token.label .token.text {
+        .language-q .token.label .token.text, .label {
             color: #b64168;
             font-weight: bold
         }
@@ -92,7 +93,7 @@
             color: #472399;
             font-weight: bold
         }
-        .language-q .token.router .token.text {
+        .language-q .token.router .token.text, .router {
             color: #854be9;
         }
 
@@ -101,7 +102,7 @@
             color: #2e7d32;
             font-weight: bold
         }
-        .language-q .token.command .token.text {
+        .language-q .token.command .token.text, .command {
             color: #60a863;
             font-weight: bold
         }
@@ -111,7 +112,7 @@
             color: #008f9c;
             font-weight: bold
         }
-        .language-q .token.condition .token.text {
+        .language-q .token.condition .token.text, .condition {
             color: #5a989e;
             font-weight: bold
         }
@@ -121,13 +122,13 @@
             color: #fbc02d;
             font-weight: bold
         }
-        .language-q .token.directive .token.name.keyword {
+        .language-q .token.directive .token.name.keyword, .directive {
             color: #FFF176;
             font-weight: bold
         }
 
         /* Comment */
-        .language-q .token.comment {
+        .language-q .token.comment, .comment {
             color: #4A4A4A;
             font-weight: "italic"
         }
@@ -140,7 +141,7 @@
         .language-q .token.tag .token.hash.punctuation {
             color: #be5a09;
         }
-        .language-q .token.tag .token.name.tag {
+        .language-q .token.tag .token.name.tag, .tag {
             color: #fa9d52;
         }
 
@@ -191,9 +192,9 @@
         } */
 
         /* Keyword */
-        /* .language-q .token.constant.language {
+        .language-q, .keyword {
             color: #0059ff;
-        } */
+        }
 
         /* Enumerator */
         /* .language-q .token.variable.other.enummember {

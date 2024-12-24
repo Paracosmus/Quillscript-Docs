@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788372443173">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788382637263">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Built-in Functions</title>
-    <meta name="title" content="Built-in Functions">
+    <title>Built-In Functions</title>
+    <meta name="title" content="Built-In Functions">
+    <meta name="description" content="List all built-in functions available in script">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://paracosmus.github.io/Quillscript-Docs/language/command/built-in-functions/">
@@ -19,21 +20,24 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://paracosmus.github.io/Quillscript-Docs/language/command/built-in-functions/">
-    <meta property="og:title" content="Built-in Functions">
+    <meta property="og:title" content="Built-In Functions">
+    <meta property="og:description" content="List all built-in functions available in script">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://paracosmus.github.io/Quillscript-Docs/language/command/built-in-functions/">
-    <meta property="twitter:title" content="Built-in Functions">
+    <meta property="twitter:title" content="Built-In Functions">
+    <meta property="twitter:description" content="List all built-in functions available in script">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/img/favicon.ico" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.788372443173" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.788382637263" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788372443173" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788382637263" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788372443173" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788382637263" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788382637263" defer></script>
 
     <!-- Styles -->
     <style>
@@ -55,7 +59,7 @@
             color: #0e4a8f;
             font-weight: bold
         }
-        .language-q .token.dialogue .token.text {
+        .language-q .token.dialogue .token.text, .dialogue {
             color: #349df3;
             font-weight: bold
         }
@@ -65,8 +69,9 @@
             color: #811818;
             font-weight: bold
         }
-        .language-q .token.option .token.text {
+        .language-q .token.option .token.text, .option {
             color: #ef5350;
+            font-weight: bold
         }
 
         /* Label */
@@ -74,7 +79,7 @@
             color: #ad1457;
             font-weight: bold
         }
-        .language-q .token.label .token.text {
+        .language-q .token.label .token.text, .label {
             color: #b64168;
             font-weight: bold
         }
@@ -88,7 +93,7 @@
             color: #472399;
             font-weight: bold
         }
-        .language-q .token.router .token.text {
+        .language-q .token.router .token.text, .router {
             color: #854be9;
         }
 
@@ -97,7 +102,7 @@
             color: #2e7d32;
             font-weight: bold
         }
-        .language-q .token.command .token.text {
+        .language-q .token.command .token.text, .command {
             color: #60a863;
             font-weight: bold
         }
@@ -107,7 +112,7 @@
             color: #008f9c;
             font-weight: bold
         }
-        .language-q .token.condition .token.text {
+        .language-q .token.condition .token.text, .condition {
             color: #5a989e;
             font-weight: bold
         }
@@ -117,13 +122,13 @@
             color: #fbc02d;
             font-weight: bold
         }
-        .language-q .token.directive .token.name.keyword {
+        .language-q .token.directive .token.name.keyword, .directive {
             color: #FFF176;
             font-weight: bold
         }
 
         /* Comment */
-        .language-q .token.comment {
+        .language-q .token.comment, .comment {
             color: #4A4A4A;
             font-weight: "italic"
         }
@@ -136,7 +141,7 @@
         .language-q .token.tag .token.hash.punctuation {
             color: #be5a09;
         }
-        .language-q .token.tag .token.name.tag {
+        .language-q .token.tag .token.name.tag, .tag {
             color: #fa9d52;
         }
 
@@ -187,9 +192,9 @@
         } */
 
         /* Keyword */
-        /* .language-q .token.constant.language {
+        .language-q, .keyword {
             color: #0059ff;
-        } */
+        }
 
         /* Enumerator */
         /* .language-q .token.variable.other.enummember {
@@ -579,9 +584,623 @@
 <doc-anchor-target id="built-in-functions" class="break-words">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#built-in-functions">#</doc-anchor-trigger>
-        <span>Built-in Functions</span>
+        <span>Built-In Functions</span>
     </h1>
 </doc-anchor-target>
+<p>List all built-in functions available in script</p>
+<doc-anchor-target id="flow">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#flow">#</doc-anchor-trigger>
+        <span>Flow</span>
+    </h2>
+</doc-anchor-target>
+<doc-panel id="span-class-command-restart-span" collapsed>
+    <template #title><span class="command">Restart</span></template>
+<p>Go back to the beginning of the script.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Restart
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-next-span" collapsed>
+    <template #title><span class="command">Next</span></template>
+<p>Go to next Statement.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Next
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-rollback-span" collapsed>
+    <template #title><span class="command">Rollback</span></template>
+<p>Go to previous executed Statement.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Rollback
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-repeat-span" collapsed>
+    <template #title><span class="command">Repeat</span></template>
+<p>Restart current label statement.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Repeat
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-done-span" collapsed>
+    <template #title><span class="command">Done</span></template>
+<p>Advance to next label statement.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Done
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-return-span" collapsed>
+    <template #title><span class="command">Return</span></template>
+<p>Go back to last executed Router statement.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Return
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-end-span" collapsed>
+    <template #title><span class="command">End</span></template>
+<p>End this script.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ End
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-kill-span" collapsed>
+    <template #title><span class="command">Kill</span></template>
+<p>Same as <span class="command">$ End</span>, but does not apply Script Settings After.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Kill
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-restore-span" collapsed>
+    <template #title><span class="command">Restore</span></template>
+<p>Allows this scene to proceed.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Restore
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-stop-span" collapsed>
+    <template #title><span class="command">Stop</span></template>
+<p>Prevents this scene from proceeding.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Stop
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-sleep-span" collapsed>
+    <template #title><span class="command">Sleep</span></template>
+<p>Stops the script play, remove the script widgets from the screen, and apply <em>Script Settings After</em>.</p>
+<p>This function is intended to stop a script play and restore the game to its default state until the scene is restored with the command <span class="command">$ Wakeup</span>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Sleep
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-wakeup-span" collapsed>
+    <template #title><span class="command">Wakeup</span></template>
+<p>Restore and continue a script play from a sleep state caused by the <span class="command">$ Sleep</span> command.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Wakeup
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-wait-span" collapsed>
+    <template #title><span class="command">Wait</span></template>
+<p>Stop script for a few seconds.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">Duration: float</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Wait 3
+$ Wait 0.25
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-timer-span" collapsed>
+    <template #title><span class="command">Timer</span></template>
+<p>Execute the given command after the given time.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">Duration: float
+Command: string
+(Omittable) Async: bool</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Timer 5 &quot;^Quillscript.Tools.Print '5 seconds passed'&quot;
+$ Timer 1.5 &quot;&amp;GameInstance.MyFunction 36&quot; true
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-travel-span" collapsed>
+    <template #title><span class="command">Travel</span></template>
+<p>End current Script and play a new script from start or from label.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">TargetScript: string | ref
+(Omittable) StartingLabel: string</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example by Id</div>
+<pre class="language-q"><code v-pre class="language-q">$ Travel @Intro            // Travel and play from start
+$ Travel @Act1 Chapter2    // Travel and play from label 'Chapter2'
+</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example by Script Reference</div>
+<pre class="language-q"><code v-pre class="language-q">$ Travel {&amp;/Game/Scripts/Intro.Intro}                // Travel and play from start
+$ Travel {&amp;/Plugin/Screenplay/Act1.Act1} Chapter2    // Travel and play from label 'Chapter2'
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-travel-pass-span" collapsed>
+    <template #title><span class="command">Travel Pass</span></template>
+<p>End current Script and play a new script from start or from label.</p>
+<p>It is the same as <span class="command">$ Travel</span>, but instead of a new clean Interpreter, it makes a of the current Interpreter, keeping settings and changes. Also, it uses the same <em>Script settings</em> as the current Script object and passes them to the given script.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">TargetScript: string | ref
+(Omittable) StartingLabel: string</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example by Id</div>
+<pre class="language-q"><code v-pre class="language-q">$ TravelPass @Intro            // Travel pass and play from start
+$ TravelPass @Act1 Chapter2    // Travel pass and play from label 'Chapter2'
+</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example by Script Reference</div>
+<pre class="language-q"><code v-pre class="language-q">$ TravelPass {&amp;/Game/Scripts/Intro.Intro}                // Travel pass and play from start
+$ TravelPass {&amp;/Plugin/Screenplay/Act1.Act1} Chapter2    // Travel pass and play from label 'Chapter2'
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="state">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#state">#</doc-anchor-trigger>
+        <span>State</span>
+    </h2>
+</doc-anchor-target>
+<doc-panel id="span-class-command-print-span" collapsed>
+    <template #title><span class="command">Print</span></template>
+<p>Debugger function to print the given Quillscript variable&#x27;s value.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">VariableName: string</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Print myVariable
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-delete-span" collapsed>
+    <template #title><span class="command">Delete</span></template>
+<p>Delete the given Quillscript variable.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">VariableName: string</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Delete myVariable
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-notify-span" collapsed>
+    <template #title><span class="command">Notify</span></template>
+<p>Notify all registered observers in &#x27;UQuillscriptSubsystem::OnNotified(FString)&#x27;.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">Message: string</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Notify 72
+$ Notify 'Boss defeated'
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="input">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#input">#</doc-anchor-trigger>
+        <span>Input</span>
+    </h2>
+</doc-anchor-target>
+<doc-panel id="span-class-command-set-input-mode-span" collapsed>
+    <template #title><span class="command">Set Input Mode</span></template>
+<p>Change the game input mode.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">InputMode: InputMode                        [ GameOnly, GameAndUI, UIOnly ]
+(Omittable) MouseLockMode: MouseLockMode    [ DoNotLock, LockOnCapture, LockAlways, LockInFullscreen ]
+(Omittable) HideCursorDuringCapture: bool
+(Omittable) WidgetToFocus: ref</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ SetInputMode GameOnly
+$ SetInputMode GameAndUI LockAlways
+$ SetInputMode UIOnly LockOnCapture true {&amp;MyWidget}
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-input-enable-span" collapsed>
+    <template #title><span class="command">Input Enable</span></template>
+<p>Enable input, move input, and look input.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ InputEnable
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-input-disable-span" collapsed>
+    <template #title><span class="command">Input Disable</span></template>
+<p>Disable input, move input, and look input.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ InputDisable
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-input-mode-span" collapsed>
+    <template #title><span class="command">Input Mode</span></template>
+<p>Show mouse cursor.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ ShowMouseCursor
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-hide-mouse-cursor-span" collapsed>
+    <template #title><span class="command">Hide Mouse Cursor</span></template>
+<p>Hide mouse cursor.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ HideMouseCursor
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="user-interface">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#user-interface">#</doc-anchor-trigger>
+        <span>User Interface</span>
+    </h2>
+</doc-anchor-target>
+<doc-panel id="span-class-command-use-span" collapsed>
+    <template #title><span class="command">Use</span></template>
+<p>Use the specified class or keyword for Dialog Box, Selection Box and Background Box and Sprite Box.</p>
+<p><strong>By Keywords:</strong></p>
+<ul>
+<li><strong>Default:</strong> Reset all boxes classes to default.</li>
+<li><strong>DialogBox:</strong> Reset the Dialog Box class to default.</li>
+<li><strong>SelectionBox:</strong> Reset the Selection Box class to default.</li>
+<li><strong>BackgroundBox:</strong> Reset the Background Box class to default.</li>
+<li><strong>SpriteBox:</strong> Reset the Sprite Box class to default.</li>
+</ul>
+<p><strong>By Class Path:</strong></p>
+<ul>
+<li><strong>C++ Class:</strong> /Script/Module.DialogBoxClass</li>
+<li><strong>Blueprint Class:</strong> /Game/Path/To/Folder/MyDialogBox.MyDialogBox</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">WidgetClassPath: string</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Use Default
+$ Use DialogBox
+$ Use /Script/Quillscript.DialogBox
+$ Use /Game/MyFolder/MyDialogBox.MyDialogBox
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-show-dialog-box-span" collapsed>
+    <template #title><span class="command">Show Dialog Box</span></template>
+<p>Add Dialog Box to viewport.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ ShowDialogBox
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-show-selection-box-span" collapsed>
+    <template #title><span class="command">Show Selection Box</span></template>
+<p>Add Selection Box to viewport.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ ShowSelectionBox
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-show-background-box-span" collapsed>
+    <template #title><span class="command">Show Background Box</span></template>
+<p>Add Background Box to viewport.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ ShowBackgroundBox
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-remove-dialog-box-span" collapsed>
+    <template #title><span class="command">Remove Dialog Box</span></template>
+<p>Remove Dialog Box from viewport.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ RemoveDialogBox
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-remove-selection-box-span" collapsed>
+    <template #title><span class="command">Remove Selection Box</span></template>
+<p>Remove Selection Box from viewport.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ RemoveSelectionBox
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-remove-background-box-span" collapsed>
+    <template #title><span class="command">Remove Background Box</span></template>
+<p>Remove Background Box from viewport.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ RemoveBackgroundBox
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-show-span" collapsed>
+    <template #title><span class="command">Show</span></template>
+<p>Show Dialog Box and Selection Box.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Show
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-hide-span" collapsed>
+    <template #title><span class="command">Hide</span></template>
+<p>Hide Dialog Box and Selection Box.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Hide
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-background-span" collapsed>
+    <template #title><span class="command">Background</span></template>
+<p>Change the background image on screen with a transition animation.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">Image: ref
+(Omittable) Transition: string [ none, fade, dissolve, scrollup, shake ]
+(Omittable) Duration: float</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Background {&amp;/Game/Scenarios/School.School}
+$ Background {&amp;MyRef} dissolve 1
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-bg-span" collapsed>
+    <template #title><span class="command">Bg</span></template>
+<p>An alias function for <span class="command">$ Background</span>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">Image: ref
+(Omittable) Transition: string [ none, fade, dissolve, scrollup, shake ]
+(Omittable) Duration: float</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Bg {&amp;/Game/Scenarios/School.School}
+$ Bg {&amp;MyRef} dissolve 1
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-sprite-span" collapsed>
+    <template #title><span class="command">Sprite</span></template>
+<p>Create a User Interface object to display an image on screen from the default <strong>SpriteBox</strong> class and set a Script Reference for the created object.</p>
+<p>It is most useful to display, animate and handle character images and illustrations during dialogues.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">Name: name
+(Omittable) Class: class</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Sprite Alice
+
+// Or define another class instead of the default one.
+// $ Sprite Alice {&amp;/Game/Path/To/SpriteBoxClass.SpriteBoxClass_C}
+
+// left, center, right for slots; 0.5:0.5 for screen percentage; 100,100 for pixels;
+$ &amp;Alice.Position  left
+
+// Animation name, start at time, num loops, play mode, playback speed, destroy on end.
+$ &amp;Alice.Animate   fade 0 1 Forward 1 false
+
+$ &amp;Alice.Layer     10
+$ &amp;Alice.Rotate    180
+$ &amp;Alice.Scale     2 2
+
+// Script path reference to an asset.
+$ &amp;Alice.Show 	   {&amp;/Game/Assets/Alice_Happy.Alice_Happy}
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="media">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#media">#</doc-anchor-trigger>
+        <span>Media</span>
+    </h2>
+</doc-anchor-target>
+<doc-panel id="span-class-command-play-sound-span" collapsed>
+    <template #title><span class="command">Play Sound</span></template>
+<p>Play a sound asset.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">Sound: ref
+(Omittable) Channel: string
+(Omittable) Volume: float
+(Omittable) FadeDuration: float</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ PlaySound {&amp;/Game/Voices/Line33.Line33}
+$ PlaySound {&amp;/Game/SFXs/Explosion.Explosion} SFX 2
+$ PlaySound {&amp;/Game/Musics/Piano.Piano} BackgroundMusic 0.5 0.5
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-voice-span" collapsed>
+    <template #title><span class="command">Voice</span></template>
+<p>Play a sound asset.</p>
+<p>Same as: <code v-pre>PlaySound {&amp;/Path} 'voice' volume 0</code></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">Sound: ref
+(Omittable) Volume: float</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Voice {&amp;/Game/Voices/Line33.Line33}
+$ Voice {&amp;/Game/Character/Greetings.Greetings} 1
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-music-span" collapsed>
+    <template #title><span class="command">Music</span></template>
+<p>Play a sound asset.</p>
+<p>Same as: <code v-pre>PlaySound {&amp;/Path} 'music' volume 0</code></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">Sound: ref
+(Omittable) Volume: float
+(Omittable) FadeDuration: float</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Music {&amp;/Game/Musics/Piano.Piano}
+$ Music {&amp;/Game/Environment/Wind.Wind} 0.75
+$ Music {&amp;/Game/Environment/Birds.Birds} 0.5 1
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-sfx-span" collapsed>
+    <template #title><span class="command">SFX</span></template>
+<p>Play a sound asset.</p>
+<p>Same as: <code v-pre>PlaySound {&amp;/Path} 'sfx' volume 0</code></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">Sound: ref
+(Omittable) Volume: float</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ SFX {&amp;/Game/Car/Engine.Engine}
+$ SFX {&amp;/Game/SFXs/Explosion.Explosion} 2
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-stop-sound-span" collapsed>
+    <template #title><span class="command">Stop Sound</span></template>
+<p>Stop the sound asset playing.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">(Omittable) Channel: string
+(Omittable) FadeDuration: float</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ StopSound
+$ StopSound voice
+$ StopSound music 0.5
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-stop-all-sounds-span" collapsed>
+    <template #title><span class="command">Stop All Sounds</span></template>
+<p>Stop all sound assets from all channels.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">(Omittable) FadeDuration: float</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ StopAllSounds
+$ StopAllSounds 0.5
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<doc-panel id="span-class-command-play-animation-span" collapsed>
+    <template #title><span class="command">Play Animation</span></template>
+<p>Play animation on target skeletal mesh.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">SkeletalMeshComponent: ref
+AnimationReference: ref
+(Omittable) Loop: bool</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ PlayAnimation {&amp;Mesh} {&amp;/Game/Animations/Idle.Idle}
+$ PlayAnimation {&amp;Mesh} {&amp;/Game/Animations/Running.Running} true
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
+<doc-anchor-target id="helper">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#helper">#</doc-anchor-trigger>
+        <span>Helper</span>
+    </h2>
+</doc-anchor-target>
+<doc-panel id="span-class-command-roll-span" collapsed>
+    <template #title><span class="command">Roll</span></template>
+<p>Roll a die. Select a random number in range.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust"><code v-pre class="language-rust">DieSides: integer</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-q"><code v-pre class="language-q">$ Roll 2    // heads or tails
+$ Roll 6    // d6
+$ Roll 20   // d20
+$ Roll 100
+$ Roll 17
+</code></pre>
+</doc-codeblock></div>
+</doc-panel>
+<hr>
 
                                 
                                 <!-- Required only on API pages -->
@@ -648,7 +1267,7 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Built-in Functions", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Built-in Functions", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 
     <!-- Footer -->
     <footer>
