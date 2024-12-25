@@ -19,7 +19,7 @@ Specifically for Visual Studio Code, we provide a recommended extension for synt
 
 3. With Visual Studio Code installed, execute the application, go to **Extensions**, and search and install the Quillscript extension.
 
-![](../../static/img/examples/vsc_installation.gif)
+![](../static/img/examples/vsc_installation.gif)
 
 ---
 
@@ -28,10 +28,10 @@ We recommend some specific settings, completely optional, that can work and feel
 
 Open your Visual Studio Code settings file, copy and paste the following settings, and save the file.
 
-![](../../static/img/examples/vsc_settings.gif)
+![](../static/img/examples/vsc_settings.gif)
 
 ### Editor Settings
-```json
+```json #
 // Quillscript.
 "[quillscript]": {
     "editor.tabSize": 2,
@@ -55,7 +55,7 @@ Open your Visual Studio Code settings file, copy and paste the following setting
 ### Syntax-Highlighting Settings
 These settings paint your Quillscript code using the same color coding as the documentation, tutorials, and in-engine indicators.
 
-```json
+```json #3,13,23,45,55,65,71,81,95,111,129,135,149,155,161,167,173,179
 "editor.tokenColorCustomizations": {
     "textMateRules": [
         // Dialogue
@@ -248,6 +248,6 @@ These settings paint your Quillscript code using the same color coding as the do
 ## View Project
 You can open your Unreal Engine project root folder directly in Visual Studio Code to have a broad view of your project files and manage all your Quillscript source files.
 
-![](../../static/img/examples/vsc_view.gif)
+![](../static/img/examples/vsc_view.gif)
 
 ---

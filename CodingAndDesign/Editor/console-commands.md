@@ -41,7 +41,7 @@ LabelName: string
 qsc.PlayByLabel MyLabelName
 ```
 
-==- qsc.**Car**
+==- qsc.**Var**
 Set the value of a variable.
 
 ```rust Parameters

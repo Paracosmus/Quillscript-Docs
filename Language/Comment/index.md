@@ -9,7 +9,7 @@ Comment lines are ignored by the Lexer and discarded on parsing time. They are u
 
 - A comment statement starts with a **// (_Double Dash_)**, immediately followed by a whitespace.
 
-```q #
+```q #1,4,7
 // Ask the player for character name
 $ MyCustomFunction | Stop
 
@@ -40,7 +40,7 @@ $ gold = 10 // main currency
 ## Header Comment
 If a [free text](../FreeText/) line is set before any other statement in script, these lines are called header comments and differ from usual comments because they don't have a comment marker. They are also ignored and discarded by the parser.
 
-```q #
+```q #1-4
 SCENE 1 - PILOT
 Subtitle
 
@@ -61,7 +61,7 @@ They also allow you to use the folding feature in most editors, like [Visual Stu
 
 You start a section with a line containing a single { (Open Bracket) and end it with another line containing a single } (Close Bracket).
 
-```q
+```q #1,8
 {
   - Bob
     Hi, Alice! How are you?

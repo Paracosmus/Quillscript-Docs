@@ -1,6 +1,6 @@
 ---
 label: How-To
-icon: file
+icon: device-camera-video
 order: 2
 ---
 # How-to

@@ -68,11 +68,11 @@ The first thing you can notice is that the metadata and non-localizable data is 
 
 After translating each entry, the resulting table should look like this:
 
-![](../../static/img/examples/loc_dashboard.png)
+![](../static/img/examples/loc_dashboard.png)
 
 And the result:
 
-![](../../static/img/examples/loc_en_example.png)
-![](../../static/img/examples/loc_pt_example.png)
+![](../static/img/examples/loc_en_example.png)
+![](../static/img/examples/loc_pt_example.png)
 
 ---

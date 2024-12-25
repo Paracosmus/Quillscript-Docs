@@ -1,6 +1,6 @@
 ---
 label: Quicky
-icon: file
+icon: device-camera-video
 order: 1
 ---
 # Quicky

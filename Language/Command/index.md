@@ -17,6 +17,7 @@ $ flag = on
 
 // Function call
 $ Play 1
+
 ```
 
 [!ref](./quillscript-variables.md)
