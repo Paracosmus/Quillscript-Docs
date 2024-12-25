@@ -42,7 +42,7 @@ Options' texts can also come in multiple lines, using a second asterisk, and add
 
 ## Navigation
 
-As you can see, the above options do nothing after being chosen. You can use an option to move to a desired point of the story by concatenating a [Router as instruction](todo).
+As you can see, the above options do nothing after being chosen. You can use an option to move to a desired point of the story by concatenating a [Router as instruction](../Router/index.md#router-as-instruction).
 
 ```q #4,5,8,13
 - Jack
@@ -67,7 +67,7 @@ $ End
 ---
 
 ## Execute Commands
-Another common use is executing a [Command as instruction](todo) within an option, like handling a variable or calling a function.
+Another common use is executing a [Command as instruction](../Command/index.md#command-as-instruction) within an option, like handling a variable or calling a function.
 
 ```q #4-6
 - Alice

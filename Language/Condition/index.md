@@ -94,7 +94,7 @@ You can nest **if** conditions inside each other, just remember to close each in
 ---
 
 ## Expression
-A condition is always an [expression](todo), the same method used to assign value to a variable. Therefore, conditions can use the same operators and syntax used by command expressions and be as complex as required.
+A condition is always an [expression](../Command/quillscript-variables.md#expressions), the same method used to assign value to a variable. Therefore, conditions can use the same operators and syntax used by command expressions and be as complex as required.
 
 ```q #
 - Bob | ? {x} + {y} > (10 ^ ({x} / 2)) OR ({x} == 5 AND {y} / 2 > 3)

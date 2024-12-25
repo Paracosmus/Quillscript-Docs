@@ -27,7 +27,7 @@ By default, you can pass only primary type parameters: **Boolean (bool)**, **Byt
 !!!
 
 !!!
-Although not a recommended practice, you can pass **Null Pointers (nullptr)**, typing any string for that parameter. To pass a pointer to a valid reference, check [Script References](todo).
+Although not a recommended practice, you can pass **Null Pointers (nullptr)**, typing any string for that parameter. To pass a pointer to a valid reference, check [Script References](./function-call.md#script-references).
 !!!
 
 ---
@@ -166,7 +166,7 @@ $ MyFunction {&Engine.Actor}
 
 ```
 
-Script assets will also reference these assets in the [Reference Viewer](todo).
+Script assets will also reference these assets in the [Reference Viewer](../../CodingAndDesign/Editor/reference_viewer.md).
 
 #### Script Reference Search Paths
 Also, often your assets are all in the same folder. For such cases, you can add that folder to a list of **"Search Paths"**, either project-wide on plugin settings, or per script on the script asset itself. An asset in this specified folder does not need to be referenced by its entire path, but just by its name.

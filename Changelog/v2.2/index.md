@@ -16,7 +16,7 @@ Alongside these significant upgrades, this update also includes various minor en
 **Engine Version**: 5.4
 
 !!!warning
-If you use **settings nodes**, check the [Possible Breaking Changes section](todo)
+If you use **settings nodes**, check the [Possible Breaking Changes section](#possible-breaking-changes)
 !!!
 
 ---

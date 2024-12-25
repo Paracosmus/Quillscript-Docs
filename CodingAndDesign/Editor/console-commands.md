@@ -1,6 +1,7 @@
 ---
 label: Console Commands
 icon: terminal
+order: 1
 ---
 # Console Commands
 

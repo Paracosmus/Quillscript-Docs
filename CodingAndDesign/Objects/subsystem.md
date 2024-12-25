@@ -72,7 +72,7 @@ void UMyObject::ScriptEnd(FName ScriptId)
 +++
 
 ### On Notified
-This event fires when the Interpreter's [Notify built-in function](../../static/img/Command/built-in-functions.md) is called from script or code.
+This event fires when the Interpreter's [Notify built-in function](../../Language/Command/built-in-functions.md) is called from script or code.
 
 +++Script
 ```q

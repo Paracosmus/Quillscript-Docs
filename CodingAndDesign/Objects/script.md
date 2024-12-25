@@ -12,7 +12,7 @@ When the **Play Script** function is executed, the function creates an [Interpre
 ---
 
 ## Local Settings
-When opening a Script Asset in Editor, you can access and edit its local settings. Check [Script Local Settings](todo) page for more information.
+When opening a Script Asset in Editor, you can access and edit its local settings. Check [Script Local Settings](../Settings/index.md#script-local-settings) page for more information.
 
 ---
 

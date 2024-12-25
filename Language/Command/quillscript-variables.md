@@ -212,7 +212,7 @@ $ place_RightTrade = Market
 It is possible to use more elaborated replacement pattern if necessary
 
 ```q
-{{varName}}, {{var1}{var2}}, {text_{var}}, {{{var1}_text}_{var2}{var3}}, etc.
+{ {varName}}, { {var1}{var2}}, {text_{var}}, { { {var1}_text}_{var2}{var3}}, etc.
 ```
 
 ---
@@ -234,7 +234,7 @@ $ PI = 3.14
 ## Deleting Variables
 You should always remove variables that aren’t required to be permanently stored, as the more variables there are, the more time it takes to execute some tasks.
 
-To delete a variable, call the built-in function [Delete](todo) and pass the variable's name.
+To delete a variable, call the built-in function [Delete](./built-in-functions.md) and pass the variable's name.
 
 ```q
 $ Delete name
@@ -258,7 +258,7 @@ $ response = `This text is localizable.`
 ---
 
 ## Using Variables in Code
-Quillscript variables are stored as an [Unreal Engine Map](https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/Blueprints/BP_HowTo/WorkingWithMaps/) of [Name](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Engine/Engine/FActorSpawnParameters/Name/) to [Text](https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/StringHandling/FText/). This map is declared in Quillscript Subsystem and is accessible in Blueprints and C++. Check [Quillscript Static Library](todo) for detailed usage.
+Quillscript variables are stored as an [Unreal Engine Map](https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/Blueprints/BP_HowTo/WorkingWithMaps/) of [Name](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Engine/Engine/FActorSpawnParameters/Name/) to [Text](https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/StringHandling/FText/). This map is declared in Quillscript Subsystem and is accessible in Blueprints and C++. Check [Quillscript Static Library](../../CodingAndDesign/Libraries/quill.md) for detailed usage.
 
 ---
 
