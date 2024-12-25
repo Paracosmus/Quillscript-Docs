@@ -49,10 +49,13 @@ You can concatenate as many Command instructions as required. They execute in th
 
 The Command instruction has a different behavior for each statement type.
 
-| {.compact}
---- | ---
-<span class="dialogue">Dialogue</span> | Execute before the dialogue plays
-<span class="option">Option</span>     | Execute when the option is selected
-<span class="command">Command</span>   | Execute after the main command
+<span class="dialogue">Dialogue</span>
+:   Execute before the dialogue plays
+
+<span class="option">Option</span>
+:   Execute when the option is selected
+
+<span class="command">Command</span>
+:   Execute after the main command
 
 ---
