@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788382637263">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788463054220">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -12,6 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Widgets</title>
     <meta name="title" content="Widgets">
+    <meta name="description" content="Quillscript uses 2 main widget base classes to receive data from the Script and show it to the player through the user interface.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://paracosmus.github.io/Quillscript-Docs/codinganddesign/widgets/">
@@ -20,20 +21,24 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://paracosmus.github.io/Quillscript-Docs/codinganddesign/widgets/">
     <meta property="og:title" content="Widgets">
+    <meta property="og:description" content="Quillscript uses 2 main widget base classes to receive data from the Script and show it to the player through the user interface.">
+    <meta property="og:image" content="https://paracosmus.github.io/Quillscript-Docs/static/img/examples/default_widgets.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://paracosmus.github.io/Quillscript-Docs/codinganddesign/widgets/">
     <meta property="twitter:title" content="Widgets">
+    <meta property="twitter:description" content="Quillscript uses 2 main widget base classes to receive data from the Script and show it to the player through the user interface.">
+    <meta property="twitter:image" content="https://paracosmus.github.io/Quillscript-Docs/static/img/examples/default_widgets.jpg">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../static/img/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.788382637263" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.788463054220" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.788382637263" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.788463054220" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.788382637263" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.788463054220" data-turbo-eval="false" defer></script>
 
     <!-- Styles -->
     <style>
@@ -583,6 +588,47 @@
         <span>Widgets</span>
     </h1>
 </doc-anchor-target>
+<p>Quillscript uses 2 main widget base classes to receive data from the Script and show it to the player through the user interface. These widgets are Unreal Engine’s UMGs UI; therefore, they can be created, customized, and programmed using the same methods with no additional limitations.</p>
+<dl>
+<dt><a href="dialog-box/">Dialog Box</a></dt>
+<dd>Base class to show dialogue text</dd>
+<dt><a href="selection-box/">Selection Box</a></dt>
+<dd>Base class to show player options</dd>
+</dl>
+<hr>
+<doc-anchor-target id="default-widgets">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#default-widgets">#</doc-anchor-trigger>
+        <span>Default Widgets</span>
+    </h2>
+</doc-anchor-target>
+<p>Quillscript provides a Default Widget for each base class.</p>
+<p><figure class="content-center">
+    <img src="../../static/img/examples/default_widgets.jpg" alt="Quillscript Main Widgets">
+    <figcaption class="caption">Quillscript Main Widgets</figcaption>
+</figure>
+</p>
+<p>Although fully functional, these default widgets are intended as basic examples and for general purposes, for most projects, it may be required to create custom widgets that suits better the project’s required functionalities, game design, visual identity, and aesthetics.</p>
+<hr>
+<doc-anchor-target id="custom-widgets">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#custom-widgets">#</doc-anchor-trigger>
+        <span>Custom Widgets</span>
+    </h2>
+</doc-anchor-target>
+<p>If your project requires a custom widget, create a Blueprint/C++ Widget child of the respective base class. Quillscript provides shortcuts for this on its content browser’s menu.</p>
+<p><figure class="content-center">
+    <img src="../../static/img/examples/custom_widgets.jpg" alt="Quillscript's Content Browser Menu">
+    <figcaption class="caption">Quillscript&#x27;s Content Browser Menu</figcaption>
+</figure>
+</p>
+<p>Each class has a <strong>Play</strong> function that must be overridden by child widgets, this function is automatically called by the Interpreter and receives all data you need from the Script on each statement iteration.</p>
+<p><figure class="content-center">
+    <img src="../../static/img/examples/play_events.jpg" alt="Main Widgets Play Event">
+    <figcaption class="caption">Main Widgets Play Event</figcaption>
+</figure>
+</p>
+<hr>
 
                                 
                                 <!-- Required only on API pages -->

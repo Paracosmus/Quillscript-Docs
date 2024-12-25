@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788382637263">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788463054220">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -32,12 +32,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../static/img/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.788382637263" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.788463054220" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.788382637263" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.788463054220" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.788382637263" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.788382637263" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.788463054220" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.788463054220" defer></script>
 
     <!-- Styles -->
     <style>
@@ -666,30 +666,14 @@ $ Restore | Play 5 | $ a = 10</code></pre>
 </div>
 <p>You can concatenate as many Command instructions as required. They execute in the order they are written.</p>
 <p>The Command instruction has a different behavior for each statement type.</p>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="compact">
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="dialogue">Dialogue</span></td>
-<td>Execute before the dialogue plays</td>
-</tr>
-<tr>
-<td><span class="option">Option</span></td>
-<td>Execute when the option is selected</td>
-</tr>
-<tr>
-<td><span class="command">Command</span></td>
-<td>Execute after the main command</td>
-</tr>
-</tbody>
-</table>
-</div>
+<dl>
+<dt><span class="dialogue">Dialogue</span></dt>
+<dd>Execute before the dialogue plays</dd>
+<dt><span class="option">Option</span></dt>
+<dd>Execute when the option is selected</dd>
+<dt><span class="command">Command</span></dt>
+<dd>Execute after the main command</dd>
+</dl>
 <hr>
 
                                 

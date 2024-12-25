@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788382637263">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788463054220">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -12,6 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Loops</title>
     <meta name="title" content="Loops">
+    <meta name="description" content="Labels and Routers can be used to create common code loops like a while, for and for each loop.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://paracosmus.github.io/Quillscript-Docs/codinganddesign/guides/loops/">
@@ -20,20 +21,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://paracosmus.github.io/Quillscript-Docs/codinganddesign/guides/loops/">
     <meta property="og:title" content="Loops">
+    <meta property="og:description" content="Labels and Routers can be used to create common code loops like a while, for and for each loop.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://paracosmus.github.io/Quillscript-Docs/codinganddesign/guides/loops/">
     <meta property="twitter:title" content="Loops">
+    <meta property="twitter:description" content="Labels and Routers can be used to create common code loops like a while, for and for each loop.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/img/favicon.ico" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.788382637263" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.788463054220" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788382637263" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788463054220" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788382637263" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788463054220" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788463054220" defer></script>
 
     <!-- Styles -->
     <style>
@@ -583,6 +587,97 @@
         <span>Loops</span>
     </h1>
 </doc-anchor-target>
+<p><a href="../../../language/label/">Labels</a> and <a href="../../language/routers/">Routers</a> can be used to create common code loops like a while, for and for each loop.</p>
+<p>Below we list a few examples to base your own script code and story loops.</p>
+<hr>
+<doc-anchor-target id="for">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#for">#</doc-anchor-trigger>
+        <span>For</span>
+    </h2>
+</doc-anchor-target>
+<p>The following loop runs 10 times before continuing the story flow.</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-q" data-line="1,2,7,8"><code v-pre class="language-q">$ :i = 0
+@ MyForLoop | ? {:i} &lt; 10
+
+  - .
+    Index: {:i}
+
+$ :i += 1
+-&gt; MyForLoop
+</code></pre>
+</doc-codeblock></div>
+<hr>
+<doc-anchor-target id="while">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#while">#</doc-anchor-trigger>
+        <span>While</span>
+    </h2>
+</doc-anchor-target>
+<p>The following loop runs until the custom function <span class="command">$ MyEscapeFunction</span> changes the value of the temporary variable <span class="command">:flag</span> to <span class="keyword">on</span>.</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-q" data-line="1,2,7,8"><code v-pre class="language-q">$ :flag = off
+@ MyWhileLoop | ? {:flag} == off
+
+  // This function changes the value of the 'flag' quillscript variable.
+  $ MyEscapeFunction
+
+$ Wait 0.1    // Prevent an infinity loop from locking the frame
+-&gt; MyWhileLoop
+</code></pre>
+</doc-codeblock></div>
+<hr>
+<doc-anchor-target id="for-each">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#for-each">#</doc-anchor-trigger>
+        <span>For Each</span>
+    </h2>
+</doc-anchor-target>
+<p>The following loop shows the value of all elements in an array.</p>
+<doc-anchor-target id="array-or-set">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#array-or-set">#</doc-anchor-trigger>
+        <span>Array or Set</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-q" data-line="4,5,10,11"><code v-pre class="language-q">$ &amp;Level.ArrayVar		             // Custom function: Store the Array in a variable called '$Array'
+$ ^Quillscript.Tools.Length {$Array} // Custom function: Store the length in a variable called '$ReturnValue'
+
+$ :i = 0
+@ MyArrayForEachLoop | ? {:i} &lt; {$ReturnValue}
+
+  - .
+    Array Value: &lt;b&gt;{$Array::{:i}}&lt;/&gt;
+
+$ :i += 1
+-&gt; MyArrayForEachLoop
+</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="map">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#map">#</doc-anchor-trigger>
+        <span>Map</span>
+    </h3>
+</doc-anchor-target>
+<p>The following loop shows the key-value pair of all elements in a map.</p>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<pre class="language-q" data-line="5,6,11,12"><code v-pre class="language-q">$ MyMapVar			               // Custom function: Store the Map in a variable called '$Map'
+$ MyMapKeys		                   // Custom function: Store the Map keys in a variable called '$Keys'
+$ ^Quillscript.Tools.Length {$Map} // Store the length in a variable called '$ReturnValue'
+
+$ :i = 0
+@ MyMapForEachLoop | ? {:i} &lt; {$ReturnValue}
+
+  - .
+    Map Key-Value Pair: &lt;b&gt;{$Keys::{:i}} = {$Map::{$Keys::{:i}}}&lt;/&gt;
+
+$ :i += 1
+-&gt; MyMapForEachLoop
+</code></pre>
+</doc-codeblock></div>
+<hr>
 
                                 
                                 <!-- Required only on API pages -->
@@ -649,7 +744,7 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Loops", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Loops", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 
     <!-- Footer -->
     <footer>

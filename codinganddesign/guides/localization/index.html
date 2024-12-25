@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788382637263">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788463054220">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -12,6 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Localization</title>
     <meta name="title" content="Localization">
+    <meta name="description" content="Quillscript is localizable out of the box, meaning no setup or configuration is required to make your scripts localizable.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://paracosmus.github.io/Quillscript-Docs/codinganddesign/guides/localization/">
@@ -20,20 +21,25 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://paracosmus.github.io/Quillscript-Docs/codinganddesign/guides/localization/">
     <meta property="og:title" content="Localization">
+    <meta property="og:description" content="Quillscript is localizable out of the box, meaning no setup or configuration is required to make your scripts localizable.">
+    <meta property="og:image" content="https://paracosmus.github.io/Quillscript-Docs/static/img/examples/loc_dashboard.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://paracosmus.github.io/Quillscript-Docs/codinganddesign/guides/localization/">
     <meta property="twitter:title" content="Localization">
+    <meta property="twitter:description" content="Quillscript is localizable out of the box, meaning no setup or configuration is required to make your scripts localizable.">
+    <meta property="twitter:image" content="https://paracosmus.github.io/Quillscript-Docs/static/img/examples/loc_dashboard.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/img/favicon.ico" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.788382637263" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.788463054220" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788382637263" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788463054220" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788382637263" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788463054220" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788463054220" defer></script>
 
     <!-- Styles -->
     <style>
@@ -583,6 +589,86 @@
         <span>Localization</span>
     </h1>
 </doc-anchor-target>
+<p>Quillscript is localizable out of the box, meaning no setup or configuration is required to make your scripts localizable. Every text line in your script file is stored in the Quillscript asset as an Unreal Engine&#x27;s Text type data, making it localizable as any other Text in the project.</p>
+<p>This also means that the localization dashboard can gather your scripts&#x27; dialogues using the same method as other localizable data.</p>
+<p>This article supposes the reader is familiarized with Unreal Engine&#x27;s Localization Dashboard; if not, it&#x27;s recommended to read <a href="https://docs.unrealengine.com/latest/ProductionPipelines/Localization/LocalizationTools/">this page from the documentation</a> and come back here after.</p>
+<hr>
+<doc-anchor-target id="example">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#example">#</doc-anchor-trigger>
+        <span>Example</span>
+    </h2>
+</doc-anchor-target>
+<p>As an example, let&#x27;s localize the following script from <em>English US (en-US)</em> to <em>Brazilian Portuguese (pt-BR)</em>:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">SCENE - LOCALIZATION
+====================
+This script is a localization example.
+It shows a small dialogue with most common localization use cases.
+
+$ name := Flynn
+$ captain := `Captain`
+
+- {captain} | #happy
+  Hello, {name}! Just who I was looking for.
+  I have a job for you.
+
+* I can use some cash. | -&gt; Accept
+* I'm not interested.  | -&gt; Deny
+
+
+&lt;@&gt; Accept
+    Accept Quest
+
+  - {captain}
+    Just what I wanted to hear.
+    I need you to go to the planet X and capture a &lt;b&gt;space worm&lt;/&gt;.
+
+    $ GiveQuest Fetch 'Space Worm' `Quest Accepted`
+
+
+&lt;@&gt; Deny
+
+  - {captain}
+    You're a waste of space, {name}. Get out of my sight.</code></pre>
+</doc-codeblock></div>
+<p>Let&#x27;s analyze it line by line:</p>
+<ul>
+<li><strong>Lines 1 to 4</strong> are header comments and are ignored by the parser; hence, they do not need localization.</li>
+<li><strong>Lines 6 and 7</strong> set some naming variables. This is here for the sake of this example. Usually, such variables are set on a <em>&quot;New Game&quot;</em>, when the character is first met, or comes from another source, like a Blueprint or list. You can notice that the variable <code v-pre>{captain}</code> was set surrounded by <strong>&#x60;&#x60; (<em>Backtics</em>)</strong>, this marks this variable as localizable.</li>
+<li><strong>Line 9</strong> is a dialogue header and is not localized, since it contains metadata such as speaker&#x27;s names, conditions, and tags. In this specific case, the speaker&#x27;s name must be localized, since it&#x27;s a military hank, instead of a character name; for this reason, we used a previous localized variable here.</li>
+<li><strong>Lines 10 and 11</strong> are the dialogue, what we most want to localize, and require no setup. Notice the use of the variable <code v-pre>{name}</code> here; when translated, this value must keep the same because it&#x27;s not actual text, but data.</li>
+<li><strong>Lines 13 and 14</strong> are player options and must be localized too, but not its Router target.</li>
+<li><strong>Lines 17 and 27</strong> are labels that must keep as static text, meaning it can&#x27;t be localized. But <strong>line 18</strong> is a <em>Label Display Name</em>, that may be displayed to players in some cases, and should be localized.</li>
+<li><strong>Line 24</strong> is a custom function call, supposedly created for this game to give a quest to the player. It has 3 fictional parameters, and as you can see, only the last one is an actual text that is displayed to the player after accepting the quest, for that reason, it is surrounded by <strong>backticks</strong> also.</li>
+</ul>
+<hr>
+<doc-anchor-target id="dashboard">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dashboard">#</doc-anchor-trigger>
+        <span>Dashboard</span>
+    </h2>
+</doc-anchor-target>
+<p>Once you have your Localization Dashboard all set and configured to gather Quillscript Assets (Gather from package + assets directories), you can hit the gather button and open the &quot;Edit Translation for This Culture&quot; panel.</p>
+<p>The first thing you can notice is that the metadata and non-localizable data is all cleaned automatically, and just the localizable relevant data is present.</p>
+<p>After translating each entry, the resulting table should look like this:</p>
+<p><figure class="content-center">
+    <img src="../../../static/img/examples/loc_dashboard.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>And the result:</p>
+<p><figure class="content-center">
+    <img src="../../../static/img/examples/loc_en_example.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+<br />
+<figure class="content-center">
+    <img src="../../../static/img/examples/loc_pt_example.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<hr>
 
                                 
                                 <!-- Required only on API pages -->
@@ -592,11 +678,11 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../codinganddesign/guides/videotutorials/quicky/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../codinganddesign/editor/console-commands/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Quicky</span>
+                                                <span class="block mt-1">Console Commands</span>
                                             </span>
                                         </a>
                                     </div>
@@ -649,7 +735,7 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Localization", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Localization", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 
     <!-- Footer -->
     <footer>
