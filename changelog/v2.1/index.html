@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788464327917">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788477204266">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -34,11 +34,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../static/img/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.788464327917" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.788477204266" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.788464327917" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.788477204266" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.788464327917" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.788477204266" data-turbo-eval="false" defer></script>
 
     <!-- Styles -->
     <style>
@@ -51,6 +51,14 @@
         /* Body */
         div.container {
             max-width: 1440px;
+        }
+
+        .blueprint {
+            color: #197dcf;
+        }
+
+        .cpp {
+            color: #fa9d52;
         }
 
         /* --- Quillscript syntax highlighting --- */
@@ -596,6 +604,113 @@
 <p>This is the first major update for Quillscript since it became the plugin&#x27;s main branch. It adds new features like new built-in functions, the Inject directive, and some new delegates, among other things. It also fixes issues with commands and saving.</p>
 <p><strong>Release Date</strong>: 2023-08-02<br />
 <strong>Engine Version</strong>: 5.2</p>
+<hr>
+<doc-anchor-target id="commands">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#commands">#</doc-anchor-trigger>
+        <span><span class="command">Commands</span></span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Add built-in function <span class="command">$ Voice</span></li>
+<li>Add built-in function <span class="command">$ Music</span></li>
+<li>Add built-in function <span class="command">$ SFX</span></li>
+<li>Add built-in function <span class="command">$ PlayAnimation</span></li>
+<li>Add built-in function <span class="command">$ Timer</span></li>
+<li>Add built-in function alias <span class="command">$ Bg</span></li>
+</ul>
+<hr>
+<doc-anchor-target id="directives">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#directives">#</doc-anchor-trigger>
+        <span><span class="directive">Directives</span></span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Add the <span class="directive">~ inject</span> directive</li>
+</ul>
+<hr>
+<doc-anchor-target id="subsystem">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#subsystem">#</doc-anchor-trigger>
+        <span>Subsystem</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>The <strong>On Script End</strong> event now have a Script Id parameter</li>
+</ul>
+<hr>
+<doc-anchor-target id="scripts">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#scripts">#</doc-anchor-trigger>
+        <span>Scripts</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Local Script Settings will keep its original value instead of updating to Project Defaults</li>
+<li>Add <strong>On Variable Set</strong> delegate</li>
+<li>Scripts linked by Id in directives or Travel will now be properly linked in the reference viewer</li>
+</ul>
+<hr>
+<doc-anchor-target id="interpreter">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#interpreter">#</doc-anchor-trigger>
+        <span>Interpreter</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>The <span class="command">$ Travel</span> built-in function accepts referencing scripts by id</li>
+<li>The <span class="command">$ Travel</span> built-in function won&#x27;t apply &#x27;Script Settings After&#x27; on script change</li>
+</ul>
+<hr>
+<doc-anchor-target id="widgets">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#widgets">#</doc-anchor-trigger>
+        <span>Widgets</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>It&#x27;s now possible to override the Play method on child C++ classes</li>
+</ul>
+<hr>
+<doc-anchor-target id="settings">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#settings">#</doc-anchor-trigger>
+        <span>Settings</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Add <strong>Manage Background Box</strong> setting</li>
+<li>Add the <strong>Get Settings Asset by Path</strong> helper function</li>
+<li>Default variables and references from Settings Assets are properly added on Script Asset set</li>
+</ul>
+<hr>
+<doc-anchor-target id="extra">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#extra">#</doc-anchor-trigger>
+        <span>Extra</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Add <strong>Remove Accentuation</strong> function</li>
+<li>Add <strong>Property to String</strong> function</li>
+<li>Add <strong>String to Property</strong> function</li>
+<li>Minor improvements to performance and stability</li>
+</ul>
+<hr>
+<doc-anchor-target id="fixes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fixes">#</doc-anchor-trigger>
+        <span>Fixes</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Fix an issue preventing commands to call functions by class</li>
+<li>Fix some minor issues with default widget&#x27;s rich text and components</li>
+<li>Fix a missing include preventing compile on Mac OS</li>
+<li>Fix a crash during save</li>
+<li>Fix an issue causing a crash when the Script Target reference was mistakenly Garbage Collected</li>
+</ul>
 <hr>
 
                                 

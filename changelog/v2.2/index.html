@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788464327917">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788477204266">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -34,11 +34,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../static/img/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.788464327917" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.788477204266" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.788464327917" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.788477204266" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.788464327917" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.788477204266" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.788477204266" defer></script>
 
     <!-- Styles -->
     <style>
@@ -51,6 +52,14 @@
         /* Body */
         div.container {
             max-width: 1440px;
+        }
+
+        .blueprint {
+            color: #197dcf;
+        }
+
+        .cpp {
+            color: #fa9d52;
         }
 
         /* --- Quillscript syntax highlighting --- */
@@ -615,6 +624,155 @@
     </div>
 </div>
 <hr>
+<doc-anchor-target id="commands">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#commands">#</doc-anchor-trigger>
+        <span><span class="command">Commands</span></span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Add <span class="command">$ TravelPass</span> built-in command</li>
+<li>Add <span class="command">$ Sprite</span> built-in command</li>
+</ul>
+<hr>
+<doc-anchor-target id="directives">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#directives">#</doc-anchor-trigger>
+        <span><span class="directive">Directives</span></span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Add <span class="directive">~ checkpoint</span> directive</li>
+</ul>
+<hr>
+<doc-anchor-target id="script">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#script">#</doc-anchor-trigger>
+        <span>Script</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>New <strong>Variable Modifiers</strong> feature</li>
+<li>Add <strong>Is Script Playing</strong> function</li>
+<li>Add <strong>Is Any Script Playing</strong> function</li>
+<li>Quillscript References can now pass <strong>SubclassOf</strong> parameters, as a <em>Script Reference Path</em></li>
+<li>Quillscript can now capture <strong>Soft Object</strong>, <strong>Soft Class</strong>, and <strong>Weak Pointer</strong> references</li>
+</ul>
+<hr>
+<doc-anchor-target id="interpreter">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#interpreter">#</doc-anchor-trigger>
+        <span>Interpreter</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Change the method <strong>Option Selected</strong> from private to public, to simplify code for self-managing UI developers</li>
+<li>Change how the <strong>Audio Components</strong> map is exposed to Blueprints, to allow direct access</li>
+<li>Add the <strong>On Audio Finished</strong> event, to track when a <span class="command">$ PlaySound</span> audio channel finishes to play</li>
+<li>Add an Interpreter reference outer parameter to the <em>OnStatementPlayed</em>, <em>OnScriptStarted</em>, <em>OnScriptResumed</em>, <em>OnEnded</em>, <em>OnPlayDialogueBox</em>, <em>OnPlaySelectionBox</em> and <em>OnPlayBackgroundBox</em></li>
+</ul>
+<hr>
+<doc-anchor-target id="widgets">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#widgets">#</doc-anchor-trigger>
+        <span>Widgets</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Add the new <strong>Sprite Box</strong> creation, as an experimental feature</li>
+<li>Change the script widgets&#x27; creation time and lifecycle to be ready when a script starts to play, allowing widget functions and instances to be called and referenced anytime</li>
+</ul>
+<hr>
+<doc-anchor-target id="settings">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#settings">#</doc-anchor-trigger>
+        <span>Settings</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Change how Quillscript handles settings, from the Unreal Engine settings defaults to an instanced object. (Check <doc-anchor-trigger to="#possible-breaking-changes">Possible Breaking Changes</doc-anchor-trigger>)</li>
+<li>Move Quillscript Settings from <em>Plugins</em> category to <em>Game</em> category</li>
+<li>Rename <strong>SetSettingsAsset</strong> to <strong>UseSettingsAsset</strong></li>
+<li>Add <strong>ClearSettingsAsset</strong> function to stop using a previous given Settings Asset and use Plugin Settings instead</li>
+<li>Invoke <strong>ClearSettingsAsset</strong> when Quillscript Subsystem is created, to reset the Settings Asset reference. This helps to test game in editor and to ensure no Settings Asset is set on game startup</li>
+</ul>
+<hr>
+<doc-anchor-target id="extra">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#extra">#</doc-anchor-trigger>
+        <span>Extra</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Add <strong>Capture Widget</strong> utility function</li>
+<li>Add <strong>Sort Strings Alphabetically</strong> utility function</li>
+<li>Add <strong>Get Class Default Object</strong> utility function</li>
+<li>Add <strong>Call Function By Name</strong> utility function</li>
+<li>Improve the <strong>Remove Accentuation</strong> function to deal with more foreign characters</li>
+</ul>
+<hr>
+<doc-anchor-target id="fixes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fixes">#</doc-anchor-trigger>
+        <span>Fixes</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Fix an issue where the Blueprint won&#x27;t compile when assigning <strong>OnPlaySelectionBox</strong></li>
+<li>Fix <span class="command">&amp;PlayerState</span> shortcut redirecting to <strong>Player Controller</strong></li>
+<li>Fix an issue where a misleading error message prints when a script asset is moved to another folder</li>
+<li>Fix an issue where the Target object is reset to its previous value when <em>Update at Runtime</em> is enabled</li>
+<li>Fix an issue preventing reference an array or map element in script</li>
+<li>Fix an issue where local script settings were overridden when using <strong>PlayScriptUsingCustomSettings()</strong> or <strong>StartScriptUsingCustomSettings()</strong></li>
+<li>Fix an issue where Template Arguments can&#x27;t have spaces between them</li>
+<li>Fix an issue where a false or <em>zeroed</em> value UProperty could not be captured by script</li>
+<li>Fix an issue where the Interpreter Class on Script&#x27;s settings won&#x27;t update when the Interpreter is created manually using a class different from the default one</li>
+<li>Fix an issue where the wrong settings were verified before applying <em>Script Settings After</em> <strong>On Ended</strong></li>
+<li>Fix <strong>Is Empty</strong> macro inverted pins</li>
+<li>Fix audio components not stopping on script end</li>
+<li>Fix a crash when an <strong>Audio Component</strong> from the Interpreter were referenced after being garbage collected</li>
+<li>Fix a crash when a Default Class setting is null</li>
+<li>Fix a crash when the &#x27;define&#x27; directive declaration and usage have a different number of parameters</li>
+<li>Fix a crash caused when an Interpreter&#x27;s Audio Component were destroyed manually or automatically</li>
+<li>Minor performance improvements</li>
+</ul>
+<hr>
+<doc-anchor-target id="possible-breaking-changes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#possible-breaking-changes">#</doc-anchor-trigger>
+        <span>Possible Breaking Changes</span>
+    </h2>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><strong>Settings Handling</strong></p>
+<p><strong>In Blueprints</strong><br />
+Replace all occurrences of the settings&#x27; nodes, and get them as a property from the instanced settings object.</p>
+<p><figure class="content-center">
+    <img src="../../static/img/examples/current_settings.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p><strong>In C++</strong></p>
+<p>Replace all static function calls, and use the instanced singleton.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">UQuillscriptSettings::MethodName()         // From
+UQuillscriptSettings::Get()-&gt;MethodName()  // To</code></pre>
+</doc-codeblock></div>
+        </div>
+    </div>
+</div>
+<hr>
 
                                 
                                 <!-- Required only on API pages -->
@@ -681,7 +839,7 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "v2.2", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "v2.2", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 
     <!-- Footer -->
     <footer>

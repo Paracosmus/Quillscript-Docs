@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788464327917">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788477204266">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -34,11 +34,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../static/img/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.788464327917" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.788477204266" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.788464327917" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.788477204266" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.788464327917" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.788477204266" data-turbo-eval="false" defer></script>
 
     <!-- Styles -->
     <style>
@@ -51,6 +51,14 @@
         /* Body */
         div.container {
             max-width: 1440px;
+        }
+
+        .blueprint {
+            color: #197dcf;
+        }
+
+        .cpp {
+            color: #fa9d52;
         }
 
         /* --- Quillscript syntax highlighting --- */
@@ -596,6 +604,78 @@
 <p>This update features three major additions to Quillscript, among other things. It introduces <strong>Named Parameters</strong> in function calls, allows the use of <strong>Nested Variable</strong> patterns replacement, and provides many new features to the <strong>Sprit Box</strong>.</p>
 <p><strong>Release Date</strong>: 2024-08-22<br />
 <strong>Engine Version</strong>: 5.4</p>
+<hr>
+<doc-anchor-target id="commands">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#commands">#</doc-anchor-trigger>
+        <span><span class="command">Commands</span></span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Add support for <strong>named parameters</strong> in function call commands</li>
+<li>Add <span class="command">$ Sleep</span> built-in command</li>
+<li>Add <span class="command">$ Wakeup</span> built-in command</li>
+</ul>
+<hr>
+<doc-anchor-target id="variables">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#variables">#</doc-anchor-trigger>
+        <span>Variables</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Refactored the <strong>Replace Variables</strong> function to handle nested variables patterns</li>
+<li>Add a Boolean return value to the Script reference&#x27;s remove function, and a log message</li>
+</ul>
+<hr>
+<doc-anchor-target id="widgets">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#widgets">#</doc-anchor-trigger>
+        <span>Widgets</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Add a content menu entry to create custom <strong>Sprite Box</strong> blueprints</li>
+<li>Add support for <strong>Paper Sprite</strong> asset type in the built-in <strong>Sprite Box</strong>&#x27;s Show function</li>
+<li>Add support for <strong>Paper Flipbook</strong> asset type in the built-in <strong>Sprite Box</strong>&#x27;s Show function</li>
+<li>Add support for <strong>File Media Source</strong> asset type in the built-in <strong>Sprite Box</strong>&#x27;s Show function</li>
+<li>Add support for <strong>Material</strong> asset type in the built-in <strong>Sprite Box</strong>&#x27;s Show function</li>
+<li>Add the <strong>Size</strong> function to the built-in <strong>Sprite Box</strong></li>
+<li>Add the <strong>FlipH</strong> function to the built-in <strong>Sprite Box</strong></li>
+<li>Add the <strong>FlipV</strong> function to the built-in <strong>Sprite Box</strong></li>
+<li>Add basic gamepad support for the built-in widgets</li>
+<li>Add the tag <strong>#auto</strong> to the build-in Dialog Box widget</li>
+<li>Add getter functions and state variables to the Dialog Box to control auto proceed settings</li>
+</ul>
+<hr>
+<doc-anchor-target id="extras">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#extras">#</doc-anchor-trigger>
+        <span>Extras</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Add <strong>Find Property By Name</strong> utility function</li>
+<li>Add <strong>Is Same Unique Net ID</strong> utility function</li>
+<li>Add <strong>List Files</strong> utility function</li>
+<li>Add <strong>List Subdirectories</strong> utility function</li>
+<li>Add <strong>Launch File</strong> utility function</li>
+<li>Add <strong>Has Key Value Tag</strong> utility function</li>
+</ul>
+<hr>
+<doc-anchor-target id="fixes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fixes">#</doc-anchor-trigger>
+        <span>Fixes</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Fix a missing header preventing the plugin source code from compiling on Linux (clang)</li>
+<li>Fix a broken reference warning when packaging the game</li>
+<li>Fix an outdated code preventing the built-in Dialog Box&#x27;s tags from working</li>
+<li>Fix an issue where a script reference of the same name can&#x27;t be added twice</li>
+<li>Fix a misleading error message when <em>Update at Runtime</em> is enabled while playing a transient script</li>
+</ul>
 <hr>
 
                                 
