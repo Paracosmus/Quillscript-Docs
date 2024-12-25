@@ -128,6 +128,7 @@ $ value *= 5
 $ value /= 5 - 6
 $ value %= 2 * 2
 $ value ^= 2
+
 ```
 
 #### Valid Operators
