@@ -11,12 +11,12 @@ When the **Play Script** function is executed, the function creates an [Interpre
 
 ---
 
-## Local Settings
+## <span class="directive">Local Settings</span>
 When opening a Script Asset in Editor, you can access and edit its local settings. Check [Script Local Settings](../settings/index.md#script-local-settings) page for more information.
 
 ---
 
-## Parsing
+## <span class="directive">Parsing</span>
 Parsing a script refers to the process of analyzing the structure and syntax of a script. It involves breaking down the script into its individual components, such as keywords, operators, and expressions.
 
 During parsing, each statement is converted into a <a href="https://docs.unrealengine.com/latest/ProgrammingAndScripting/GameplayArchitecture/Structs/" target="_blank">Struct</a>, and the Script Asset stores them in an array. The [Interpreter](./interpreter.md) then uses this array to further analyze and execute the statements into something the player can experience.
@@ -42,7 +42,7 @@ You can combine this code with other Quillscript extra functions like Load Text 
 
 ---
 
-## Permissions
+## <span class="directive">Permissions</span>
 
 ### Permission Modes
 
@@ -67,7 +67,7 @@ This is most useful when modders should not have total access over game code but
 
 ---
 
-## Permissions
+## <span class="directive">Permissions</span>
 You can also set script permissions manually.
 
 - `CallBuiltInFunctions`

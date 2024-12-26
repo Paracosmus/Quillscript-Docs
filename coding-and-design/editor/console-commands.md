@@ -5,22 +5,22 @@ order: 1
 ---
 # Console Commands
 
-==- qsc.**Next**
+==- `qsc.Next`
 Go to next story node
 
-==- qsc.**Rollback**
+==- `qsc.Rollback`
 Go to previous story node
 
-==- qsc.**End**
+==- `qsc.End`
 Terminate script play
 
-==- qsc.**Stop**
+==- `qsc.Stop`
 Block script from proceeding to other statements
 
-==- qsc.**Restore**
+==- `qsc.Restore`
 Unblock script to proceed to other statements
 
-==- qsc.**Play**
+==- `qsc.Play`
 Go to given story node by index.
 
 ```rust Parameters
@@ -31,7 +31,7 @@ Index: positive integer. (0 if empty)
 qsc.Play 72
 ```
 
-==- qsc.**PlayByLabel**
+==- `qsc.PlayByLabel`
 Play given story node by label.
 
 ```rust Parameters
@@ -42,7 +42,7 @@ LabelName: string
 qsc.PlayByLabel MyLabelName
 ```
 
-==- qsc.**Var**
+==- `qsc.Var`
 Set the value of a variable.
 
 ```rust Parameters
@@ -54,7 +54,7 @@ LabelName: string
 qsc.Var counter 10
 ```
 
-==- qsc.**Del**
+==- `qsc.Del`
 Delete a variable.
 
 ```rust Parameters
@@ -65,7 +65,7 @@ Variable: string
 qsc.Del counter
 ```
 
-==- qsc.**Eval**
+==- `qsc.Eval`
 Evaluate a Quillscript expression.
 
 ```rust Parameters
@@ -76,13 +76,13 @@ Expression: string
 qsc.Eval ( 10 + 2 ) * 5 / 2
 ```
 
-==- qsc.**Bypass**
+==- `qsc.Bypass`
 Ignore all conditions set by script.
 
-==- qsc.**NotBypass**
+==- `qsc.NotBypass`
 Stop ignoring conditions set by script.
 
-==- qsc.**Debug**
+==- `qsc.Debug`
 Toggle Quillscript's debugger widget.
 
 ===

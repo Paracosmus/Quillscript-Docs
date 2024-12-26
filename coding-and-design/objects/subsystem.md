@@ -10,7 +10,7 @@ manages the plugin as a hole, it holds state properties, and stores Quillscript'
 
 ---
 
-## Data Storage
+## <span class="router">Data Storage</span>
 The Quillscript Subsystem centralizes all Quillscript relevant data in a single object.
 
 ### Variables
@@ -24,7 +24,7 @@ This is where Quillscript stores the map of object references to use in script.
 
 ---
 
-## Events
+## <span class="router">Events</span>
 The Subsystem also centralizes some important assignable events.
 
 ### On Script Play

@@ -1,7 +1,7 @@
 ---
 label: Tools
 icon: tools
-order: 1
+order: 3
 ---
 # Tools
 > Tools Function Library
@@ -44,11 +44,9 @@ Print a message on screen and/or console. (In Development, Debug or Editor mode)
 
 Check your Verbosity setting to select where this message is printed.
 
-```rust #1-3
-Parameters
-Copy
+```rust !#1 Parameters
 Message: string
-(Omittable) Owner: ref    // Object that called this function.
+[Omittable] Owner: ref    // Object that called this function.
 ```
 
 ==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
@@ -136,18 +134,19 @@ Please refer to the in-engine documentation
 <br>
 
 
-[//]: <> (=========================================================================================)
-
-
+---
 
 ## <span class="tag">Utilities</span>
+
+
+[//]: <> (=========================================================================================)
 
 [comment]: <> ( Rename a given object. )
 [comment]: <> ( Whitespaces will be removed. )
 [comment]: <> ( void RenameObject | UObject* Object, FString NewName )
 
 :::api
-### RenameObject
+### Rename Object
 
 !!!ghost
 :construction: Under construction :construction:
@@ -164,7 +163,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( UClass* FindClassByPath | FString Path )
 
 :::api
-### FindClassByPath
+### Find Class by Path
 
 !!!ghost
 :construction: Under construction :construction:
@@ -180,7 +179,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( UObject* GetClassDefaultObject | const UClass* Class )
 
 :::api
-### GetClassDefaultObject
+### Get Class Default Object
 
 !!!ghost
 :construction: Under construction :construction:
@@ -201,7 +200,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( bool PropertyExists | UObject* Object, const FName PropertyName, FString& Type )
 
 :::api
-### PropertyExists
+### Property Exists
 
 !!!ghost
 :construction: Under construction :construction:
@@ -222,7 +221,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString GetPropertyByName | UObject* Object, const FName PropertyName, FString& Type )
 
 :::api
-### GetPropertyByName
+### Get Property by Name
 
 !!!ghost
 :construction: Under construction :construction:
@@ -242,7 +241,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void SetPropertyByName | UObject* Object, const FName PropertyName, const FString ValueAsString )
 
 :::api
-### SetPropertyByName
+### Set Property by Name
 
 !!!ghost
 :construction: Under construction :construction:
@@ -264,7 +263,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void* FindPropertyByName | UObject* Object, const FName PropertyName, FString& Type )
 
 :::api
-### FindPropertyByName
+### Find Property by Name
 
 !!!ghost
 :construction: Under construction :construction:
@@ -288,7 +287,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void InsertPropertyByName | UObject* Object, const FName PropertyName, const void* ValuePtr )
 
 :::api
-### InsertPropertyByName
+### Insert Property by Name
 
 !!!ghost
 :construction: Under construction :construction:
@@ -312,7 +311,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( TMap<FName, FString> CallFunctionByName | UObject* WorldContextObject, UObject* Target, const FName FunctionName, const TArray<FString>& Parameters )
 
 :::api
-### CallFunctionByName
+### Call Function by Name
 
 !!!ghost
 :construction: Under construction :construction:
@@ -331,7 +330,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( bool HasAuthority | const UObject* WorldContextObject )
 
 :::api
-### HasAuthority
+### Has Authority
 
 !!!ghost
 :construction: Under construction :construction:
@@ -348,7 +347,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( bool IsModuleLoaded | const FName ModuleName )
 
 :::api
-### IsModuleLoaded
+### Is Module Loaded
 
 !!!ghost
 :construction: Under construction :construction:
@@ -365,7 +364,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString GenerateRandomString | const uint8 Size = 8, const bool bLetters = true, const bool bNumbers = true, const bool bSymbols = false )
 
 :::api
-### GenerateRandomString
+### Generate Random String
 
 !!!ghost
 :construction: Under construction :construction:
@@ -386,7 +385,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( bool RetrieveOption | const UObject* WorldContextObject, const FString& Key, FString& Value )
 
 :::api
-### RetrieveOption
+### Retrieve Option
 
 !!!ghost
 :construction: Under construction :construction:
@@ -402,7 +401,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( TArray<FString> SortStringsAlphabetically | TArray<FString> Strings )
 
 :::api
-### SortStringsAlphabetically
+### Sort Strings Alphabetically
 
 !!!ghost
 :construction: Under construction :construction:
@@ -419,7 +418,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void RegisterStringTable | const FName StringTablePath )
 
 :::api
-### RegisterStringTable
+### Register String Table
 
 !!!ghost
 :construction: Under construction :construction:
@@ -436,7 +435,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString FindStringTableKey | const FText& Text, FName& StringTableId )
 
 :::api
-### FindStringTableKey
+### Find String Table Key
 
 !!!ghost
 :construction: Under construction :construction:
@@ -453,7 +452,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( TArray<FString> GetVariablesInString | FString String )
 
 :::api
-### GetVariablesInString
+### Get Variables in String
 
 !!!ghost
 :construction: Under construction :construction:
@@ -482,17 +481,18 @@ Please refer to the in-engine documentation
 <br>
 
 
-[//]: <> (=========================================================================================)
-
-
+---
 
 ## <span class="tag">Metadata</span>
+
+
+[//]: <> (=========================================================================================)
 
 [comment]: <> ( Return the project name set in the 'Edit > Project Settings > Project > Description > Project Name' field. )
 [comment]: <> ( FString GetProjectName )
 
 :::api
-### GetProjectName
+### Get Project Name
 
 !!!ghost
 :construction: Under construction :construction:
@@ -509,7 +509,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString GetProjectVersion )
 
 :::api
-### GetProjectVersion
+### Get Project Version
 
 !!!ghost
 :construction: Under construction :construction:
@@ -526,7 +526,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString GetCompanyName )
 
 :::api
-### GetCompanyName
+### Get Company Name
 
 !!!ghost
 :construction: Under construction :construction:
@@ -537,9 +537,7 @@ Please refer to the in-engine documentation
 <br>
 
 
-[//]: <> (=========================================================================================)
-
-
+---
 
 ## <span class="tag">Assets</span>
 
@@ -550,7 +548,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void MarkAssetDirty | const UObject* Asset )
 
 :::api
-### MarkAssetDirty
+### Mark Asset Dirty
 
 !!!ghost
 :construction: Under construction :construction:
@@ -567,7 +565,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void SaveAsset | UObject* Asset )
 
 :::api
-### SaveAsset
+### Save Asset
 
 !!!ghost
 :construction: Under construction :construction:
@@ -587,7 +585,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( TArray<FString> GetAllSaveGameSlotNames )
 
 :::api
-### GetAllSaveGameSlotNames
+### Get All Save Game Slot Names
 
 !!!ghost
 :construction: Under construction :construction:
@@ -608,7 +606,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( bool SaveToTextFile | const FString FileName, const FString FileContent, const EDirectory BaseDirectory = EDirectory::Custom )
 
 :::api
-### SaveToTextFile
+### Save to Text File
 
 !!!ghost
 :construction: Under construction :construction:
@@ -629,7 +627,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( bool LoadTextFile | FString& FileContent, const FString FileName, const EDirectory BaseDirectory = EDirectory::Custom )
 
 :::api
-### LoadTextFile
+### Load Text File
 
 !!!ghost
 :construction: Under construction :construction:
@@ -649,7 +647,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( UTexture2D* LoadImage | const FString FileName, const EDirectory BaseDirectory = EDirectory::Custom )
 
 :::api
-### LoadImage
+### Load Image
 
 !!!ghost
 :construction: Under construction :construction:
@@ -669,7 +667,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void TakeScreenshot | const EDirectory BaseDirectory = EDirectory::ScreenShot, const FString FileName = "screenshot", const bool bCaptureUI = true )
 
 :::api
-### TakeScreenshot
+### Take Screenshot
 
 !!!ghost
 :construction: Under construction :construction:
@@ -686,7 +684,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString DirectoryToString | const EDirectory Directory )
 
 :::api
-### DirectoryToString
+### Directory to String
 
 !!!ghost
 :construction: Under construction :construction:
@@ -703,7 +701,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( TArray<FString> ListFiles | FString Directory, const TArray<FString> FileExtensionFilter, const EDirectory BaseDirectory = EDirectory::Project, const bool bRecursively = false )
 
 :::api
-### ListFiles
+### List Files
 
 !!!ghost
 :construction: Under construction :construction:
@@ -720,7 +718,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( TArray<FString> ListDirectories | FString Directory, const EDirectory BaseDirectory = EDirectory::Project, const bool bRecursively = false )
 
 :::api
-### ListDirectories
+### List Directories
 
 !!!ghost
 :construction: Under construction :construction:
@@ -737,7 +735,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void LaunchFile | FString FilePath, const EDirectory BaseDirectory = EDirectory::Project )
 
 :::api
-### LaunchFile
+### Launch File
 
 !!!ghost
 :construction: Under construction :construction:
@@ -748,17 +746,18 @@ Please refer to the in-engine documentation
 <br>
 
 
-[//]: <> (=========================================================================================)
-
-
+---
 
 ## <span class="tag">Settings</span>
+
+
+[//]: <> (=========================================================================================)
 
 [comment]: <> ( Load a boolean setting from a '.ini' setting file. )
 [comment]: <> ( bool GetBoolSetting | const ESettingsFile SettingFile, const FString Section, const FString Key, bool& SettingValue )
 
 :::api
-### GetBoolSetting
+### Get Bool Setting
 
 !!!ghost
 :construction: Under construction :construction:
@@ -776,7 +775,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void SetBoolSetting | const ESettingsFile SettingFile, const FString Section, const FString Key, const bool Value, const FString CustomFile = "" )
 
 :::api
-### SetBoolSetting
+### Set Bool Setting
 
 !!!ghost
 :construction: Under construction :construction:
@@ -793,7 +792,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( bool GetStringSetting | const ESettingsFile SettingFile, const FString Section, const FString Key, FString& SettingValue )
 
 :::api
-### GetStringSetting
+### Get String Setting
 
 !!!ghost
 :construction: Under construction :construction:
@@ -811,7 +810,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void SetStringSetting | const ESettingsFile SettingFile, const FString Section, const FString Key, const FString Value, const FString CustomFile = "" )
 
 :::api
-### SetStringSetting
+### Set String Setting
 
 !!!ghost
 :construction: Under construction :construction:
@@ -828,7 +827,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( bool GetIntSetting | const ESettingsFile SettingFile, const FString Section, const FString Key, int32& SettingValue )
 
 :::api
-### GetIntSetting
+### Get Int Setting
 
 !!!ghost
 :construction: Under construction :construction:
@@ -846,7 +845,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void SetIntSetting | const ESettingsFile SettingFile, const FString Section, const FString Key, const int32 Value, const FString CustomFile = "" )
 
 :::api
-### SetIntSetting
+### Set Int Setting
 
 !!!ghost
 :construction: Under construction :construction:
@@ -863,7 +862,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( bool GetFloatSetting | const ESettingsFile SettingFile, const FString Section, const FString Key, float& SettingValue )
 
 :::api
-### GetFloatSetting
+### Get Float Setting
 
 !!!ghost
 :construction: Under construction :construction:
@@ -881,7 +880,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void SetFloatSetting | const ESettingsFile SettingFile, const FString Section, const FString Key, const float Value, const FString CustomFile = "" )
 
 :::api
-### SetFloatSetting
+### Set Float Setting
 
 !!!ghost
 :construction: Under construction :construction:
@@ -898,7 +897,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString SettingFileToString | const ESettingsFile SettingFile )
 
 :::api
-### SettingFileToString
+### Setting File to String
 
 !!!ghost
 :construction: Under construction :construction:
@@ -909,17 +908,18 @@ Please refer to the in-engine documentation
 <br>
 
 
-[//]: <> (=========================================================================================)
-
-
+---
 
 ## <span class="tag">UI</span>
+
+
+[//]: <> (=========================================================================================)
 
 [comment]: <> ( Remove the widget from memory. )
 [comment]: <> ( void DestroyWidget | UWidget* Widget )
 
 :::api
-### DestroyWidget
+### Destroy Widget
 
 !!!ghost
 :construction: Under construction :construction:
@@ -936,7 +936,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void AddToConstraintViewport | UUserWidget* Widget, const int32 ZOrder = 0, const FVector2D Ratio = FVector2D | 1920, 1080 )
 
 :::api
-### AddToConstraintViewport
+### Add to Constraint Viewport
 
 !!!ghost
 :construction: Under construction :construction:
@@ -953,7 +953,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( UTexture2D* CaptureWidget | UUserWidget* UserWidget, const FVector2D DrawSize = FVector2D | 512, 512 )
 
 :::api
-### CaptureWidget
+### Capture Widget
 
 !!!ghost
 :construction: Under construction :construction:
@@ -970,7 +970,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( TArray<UWidget*> GetNestedWidgets | UWidget* RootWidget )
 
 :::api
-### GetNestedWidgets
+### Get Nested Widgets
 
 !!!ghost
 :construction: Under construction :construction:
@@ -987,7 +987,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( TArray<UWidget*> GetNestedWidgetsOfClass | UWidget* RootWidget, const TArray<TSubclassOf<UWidget>> Classes )
 
 :::api
-### GetNestedWidgetsOfClass
+### Get Nested Widgets Of Class
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1004,7 +1004,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( TArray<UWidget*> RemoveVisibleWidgets | TArray<UWidget*> Widgets )
 
 :::api
-### RemoveVisibleWidgets
+### Remove Visible Widgets
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1021,7 +1021,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( TArray<UWidget*> RemoveHiddenWidgets | TArray<UWidget*> Widgets )
 
 :::api
-### RemoveHiddenWidgets
+### Remove Hidden Widgets
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1050,7 +1050,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( 		const float Interval = 0.02, USoundBase* Sound = nullptr, const bool bOverlapSound = false, const bool bSanitize = true )
 
 :::api
-### PlayTypewriterEffect
+### Play Typewriter Effect
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1074,7 +1074,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString ReplaceVariables | const UObject* WorldContextObject, const FString String, const TMap<FName, FString> VariablesMap, const TArray<UStringTable*> StringTables, FString Escape = "" )
 
 :::api
-### ReplaceVariables
+### Replace Variables
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1092,7 +1092,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( static FText ToSignedNumber | const float Number )
 
 :::api
-### ToSignedNumber
+### To Signed Number
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1110,7 +1110,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( static FText ToDisplayText | const FString& String, const bool bIsBool = false )
 
 :::api
-### ToDisplayText
+### To Display Text
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1127,7 +1127,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( static FString UpperFirstLetter | const FString& String )
 
 :::api
-### UpperFirstLetter
+### Upper First Letter
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1144,7 +1144,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FText TextUpperFirstLetter | const FText& Text )
 
 :::api
-### TextUpperFirstLetter
+### Text Upper First Letter
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1161,7 +1161,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString RemoveAccentuation | FString String )
 
 :::api
-### RemoveAccentuation
+### Remove Accentuation
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1178,7 +1178,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString RemoveRichTextTags | FString String )
 
 :::api
-### RemoveRichTextTags
+### Remove Rich Text Tags
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1195,7 +1195,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString ToHash | const FString String )
 
 :::api
-### ToHash
+### To Hash
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1212,7 +1212,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString ToHex | int64 Decimal )
 
 :::api
-### ToHex
+### To Hex
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1263,7 +1263,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( static bool IsKeyValuePair | const FString& Pair )
 
 :::api
-### IsKeyValuePair
+### Is Key Value Pair
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1281,7 +1281,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( void ToKeyValuePair | const FString& Pair, FString& Key, FString& Value )
 
 :::api
-### ToKeyValuePair
+### To Key Value Pair
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1298,7 +1298,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( bool HasKeyValueTag | ToKeyValuePairt TArray<FString>& Tags, const FString& Key, FString& Value )
 
 :::api
-### HasKeyValueTag
+### Has Key Value Tag
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1316,7 +1316,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( TArray<T> RemoveRepeatedValues | TArray<T> Array )
 
 :::api
-### RemoveRepeatedValues
+### Remove Repeated Values
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1361,7 +1361,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( FString ToString | const Type& Enum )
 
 :::api
-### ToString
+### To String
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1380,7 +1380,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( UObject* NullCoalescingOperator | UObject* A, UObject* B )
 
 :::api
-### NullCoalescingOperator
+### Null Coalescing Operator
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1397,7 +1397,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( double SolveMathExpression | const FString Expression )
 
 :::api
-### SolveMathExpression
+### Solve Math Expression
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1418,7 +1418,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( bool IsSameUniqueNetId | const FUniqueNetIdRepl& UniqueIdA, const FUniqueNetIdRepl& UniqueIdB )
 
 :::api
-### IsSameUniqueNetId
+### Is Same Unique Net Id
 
 !!!ghost
 :construction: Under construction :construction:
@@ -1435,7 +1435,7 @@ Please refer to the in-engine documentation
 [comment]: <> ( bool IsHost | const APlayerState* PlayerState )
 
 :::api
-### IsHost
+### Is Host
 
 !!!ghost
 :construction: Under construction :construction:

@@ -1,7 +1,7 @@
 ---
-label: Reference Viewer
-icon: file-symlink-file
-order: 3
+label: Debugger
+icon: bug
+order: 2
 visibility: hidden
 ---
 # Reference Viewer

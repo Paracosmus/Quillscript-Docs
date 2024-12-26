@@ -8,7 +8,7 @@ Detailed explanation for each setting entry
 
 ---
 
-## Interpreter
+## <span class="tag">Interpreter</span>
 
 ### Can Rollback
 If enabled, the Interpreter keeps a list with the sequence of Dialogue statements played and Quillscript variables' state at that point, allowing the player to return to previously played dialogues to reread it if they missed something.
@@ -22,7 +22,7 @@ If enabled, the Interpreter looks ahead of the current Dialogue statement; if th
 
 ---
 
-## Variables
+## <span class="tag">Variables</span>
 
 ### Default Variables
 A collection of predefined Quillscript variables. they are initialized when the game is played.
@@ -61,7 +61,7 @@ Create a system Quillscript variable holding the last selected option text, name
 
 ---
 
-## Editor
+## <span class="tag">Editor</span>
 
 ### Verbosity
 Define where Quillscript help messages, and other messages using [Quillscript's print helper functions](../../language/command/built-in-functions.md), are printed. The messages can be printed in **screen** (top left corner), **console** or **neither**.

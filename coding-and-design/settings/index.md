@@ -11,7 +11,7 @@ There are 3 methods you can use to set custom settings: [Plugin Settings](#plugi
 
 ---
 
-## Plugin Settings
+## <span class="tag">Plugin Settings</span>
 You can find these settings at:
 
 `Edit > Project Settings > Game > Quillscript`
@@ -22,7 +22,7 @@ These are project-wide public settings. Here you can customize default settings 
 
 ---
 
-## Script Local Settings
+## <span class="tag">Script Local Settings</span>
 You can find these settings in your Script Asset:
 
 ![](../../static/img/examples/local_settings.png)
@@ -33,7 +33,7 @@ They have precedence over any other project settings and are enforced when in co
 
 ---
 
-## Settings Asset
+## <span class="tag">Settings Asset</span>
 This is the preferable method to create project-wide settings because it's protected from user editing. It is also more versatile, since you can have multiple assets with different setups and easily change between them during runtime.
 
 You can create this asset using Quillscript's content browser menu:

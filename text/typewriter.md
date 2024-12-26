@@ -1,10 +1,10 @@
 ---
-label: Reference Viewer
-icon: file-symlink-file
-order: 3
+label: Typewriter
+icon: note
+order: 2
 visibility: hidden
 ---
-# Reference Viewer
+# Typewriter
 
 !!!ghost
 :construction: Under construction :construction:

@@ -1,10 +1,10 @@
 ---
-label: Reference Viewer
-icon: file-symlink-file
-order: 3
+label: Smart Text Block
+icon: quote
+order: 1
 visibility: hidden
 ---
-# Reference Viewer
+# Smart Text Block
 
 !!!ghost
 :construction: Under construction :construction:

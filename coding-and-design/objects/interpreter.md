@@ -11,12 +11,12 @@ This <a href="https://docs.unrealengine.com/latest/ProgrammingAndScripting/Progr
 
 ---
 
-## Built-In Functions
+## <span class="command">Built-In Functions</span>
 The so called [built-in functions](../../language/command/built-in-functions.md) are methods of this object's class. That's why they do not require a prefix when called in a command statement, like with methods from other objects.
 
 ---
 
-## Events
+## <span class="command">Events</span>
 The Interpreter has assignable events, related to a specific script play.
 
 ### Statement Played
@@ -173,7 +173,7 @@ void UMyObject::OnAudioFinished_Event(AQuillscriptInterpreter* Interpreter, cons
 
 ---
 
-## Custom Interpreter
+## <span class="command">Custom Interpreter</span>
 If you want to add custom behavior to your story play, script execution, statements behavior, among other things, in most cases, you need a custom Interpreter.
 
 The Quillscript Interpreter class is designed in a way you can override, add, and modify most of its core functions, like how a dialogue plays or a script ends.

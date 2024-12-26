@@ -35,3 +35,15 @@ Description.
 ===
 :::
 <br>
+
+---
+
+## Non-Listed Objects
+
+This is a reminder list of objects that are not listed or mentioned in the documentation because it is not necessary, they are used as helpers or base by other already documented functions.
+
+* Lexer
+* Evaluator
+* Network
+
+---

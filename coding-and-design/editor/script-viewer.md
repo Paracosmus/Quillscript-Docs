@@ -1,7 +1,7 @@
 ---
-label: Reference Viewer
-icon: file-symlink-file
-order: 3
+label: Script Viewer
+icon: codescan
+order: 4
 visibility: hidden
 ---
 # Reference Viewer
