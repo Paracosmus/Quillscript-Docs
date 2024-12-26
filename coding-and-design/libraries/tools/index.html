@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788539946185">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788545349663">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -32,12 +32,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/img/favicon.ico" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.788539946185" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.788545349663" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788539946185" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788545349663" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788539946185" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788539946185" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788545349663" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788545349663" defer></script>
 
     <!-- Styles -->
     <style>
@@ -651,11 +651,10 @@ Please refer to the in-engine documentation</p>
 </doc-anchor-target>
 <p>Print a message on screen and/or console. (In Development, Debug or Editor mode)</p>
 <p>Check your Verbosity setting to select where this message is printed.</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-rust" data-line="1-3"><code v-pre class="language-rust">Parameters
-Copy
-Message: string
-(Omittable) Owner: ref    // Object that called this function.</code></pre>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">Message: string
+[Omittable] Owner: ref    // Object that called this function.</code></pre>
 </doc-codeblock></div>
 <doc-panels>
    <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
@@ -780,16 +779,17 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
+<hr>
 <doc-anchor-target id="utilities">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#utilities">#</doc-anchor-trigger>
         <span><span class="tag">Utilities</span></span>
     </h2>
 </doc-anchor-target>
-<div class="api"><doc-anchor-target id="renameobject">
+<div class="api"><doc-anchor-target id="rename-object">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#renameobject">#</doc-anchor-trigger>
-        <span>RenameObject</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rename-object">#</doc-anchor-trigger>
+        <span>Rename Object</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -812,10 +812,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="findclassbypath">
+<div class="api"><doc-anchor-target id="find-class-by-path">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#findclassbypath">#</doc-anchor-trigger>
-        <span>FindClassByPath</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#find-class-by-path">#</doc-anchor-trigger>
+        <span>Find Class by Path</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -838,10 +838,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="getclassdefaultobject">
+<div class="api"><doc-anchor-target id="get-class-default-object">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getclassdefaultobject">#</doc-anchor-trigger>
-        <span>GetClassDefaultObject</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-class-default-object">#</doc-anchor-trigger>
+        <span>Get Class Default Object</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -864,10 +864,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="propertyexists">
+<div class="api"><doc-anchor-target id="property-exists">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#propertyexists">#</doc-anchor-trigger>
-        <span>PropertyExists</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#property-exists">#</doc-anchor-trigger>
+        <span>Property Exists</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -890,10 +890,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="getpropertybyname">
+<div class="api"><doc-anchor-target id="get-property-by-name">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getpropertybyname">#</doc-anchor-trigger>
-        <span>GetPropertyByName</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-property-by-name">#</doc-anchor-trigger>
+        <span>Get Property by Name</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -916,10 +916,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="setpropertybyname">
+<div class="api"><doc-anchor-target id="set-property-by-name">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setpropertybyname">#</doc-anchor-trigger>
-        <span>SetPropertyByName</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#set-property-by-name">#</doc-anchor-trigger>
+        <span>Set Property by Name</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -942,10 +942,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="findpropertybyname">
+<div class="api"><doc-anchor-target id="find-property-by-name">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#findpropertybyname">#</doc-anchor-trigger>
-        <span>FindPropertyByName</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#find-property-by-name">#</doc-anchor-trigger>
+        <span>Find Property by Name</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -968,10 +968,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="insertpropertybyname">
+<div class="api"><doc-anchor-target id="insert-property-by-name">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#insertpropertybyname">#</doc-anchor-trigger>
-        <span>InsertPropertyByName</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#insert-property-by-name">#</doc-anchor-trigger>
+        <span>Insert Property by Name</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -994,10 +994,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="callfunctionbyname">
+<div class="api"><doc-anchor-target id="call-function-by-name">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#callfunctionbyname">#</doc-anchor-trigger>
-        <span>CallFunctionByName</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#call-function-by-name">#</doc-anchor-trigger>
+        <span>Call Function by Name</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1020,10 +1020,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="hasauthority">
+<div class="api"><doc-anchor-target id="has-authority">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#hasauthority">#</doc-anchor-trigger>
-        <span>HasAuthority</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#has-authority">#</doc-anchor-trigger>
+        <span>Has Authority</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1046,10 +1046,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="ismoduleloaded">
+<div class="api"><doc-anchor-target id="is-module-loaded">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ismoduleloaded">#</doc-anchor-trigger>
-        <span>IsModuleLoaded</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#is-module-loaded">#</doc-anchor-trigger>
+        <span>Is Module Loaded</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1072,10 +1072,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="generaterandomstring">
+<div class="api"><doc-anchor-target id="generate-random-string">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#generaterandomstring">#</doc-anchor-trigger>
-        <span>GenerateRandomString</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#generate-random-string">#</doc-anchor-trigger>
+        <span>Generate Random String</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1098,10 +1098,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="retrieveoption">
+<div class="api"><doc-anchor-target id="retrieve-option">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#retrieveoption">#</doc-anchor-trigger>
-        <span>RetrieveOption</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#retrieve-option">#</doc-anchor-trigger>
+        <span>Retrieve Option</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1124,10 +1124,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="sortstringsalphabetically">
+<div class="api"><doc-anchor-target id="sort-strings-alphabetically">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#sortstringsalphabetically">#</doc-anchor-trigger>
-        <span>SortStringsAlphabetically</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sort-strings-alphabetically">#</doc-anchor-trigger>
+        <span>Sort Strings Alphabetically</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1150,10 +1150,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="registerstringtable">
+<div class="api"><doc-anchor-target id="register-string-table">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#registerstringtable">#</doc-anchor-trigger>
-        <span>RegisterStringTable</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#register-string-table">#</doc-anchor-trigger>
+        <span>Register String Table</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1176,10 +1176,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="findstringtablekey">
+<div class="api"><doc-anchor-target id="find-string-table-key">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#findstringtablekey">#</doc-anchor-trigger>
-        <span>FindStringTableKey</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#find-string-table-key">#</doc-anchor-trigger>
+        <span>Find String Table Key</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1202,10 +1202,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="getvariablesinstring">
+<div class="api"><doc-anchor-target id="get-variables-in-string">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getvariablesinstring">#</doc-anchor-trigger>
-        <span>GetVariablesInString</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-variables-in-string">#</doc-anchor-trigger>
+        <span>Get Variables in String</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1254,16 +1254,17 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
+<hr>
 <doc-anchor-target id="metadata">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#metadata">#</doc-anchor-trigger>
         <span><span class="tag">Metadata</span></span>
     </h2>
 </doc-anchor-target>
-<div class="api"><doc-anchor-target id="getprojectname">
+<div class="api"><doc-anchor-target id="get-project-name">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getprojectname">#</doc-anchor-trigger>
-        <span>GetProjectName</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-project-name">#</doc-anchor-trigger>
+        <span>Get Project Name</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1286,10 +1287,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="getprojectversion">
+<div class="api"><doc-anchor-target id="get-project-version">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getprojectversion">#</doc-anchor-trigger>
-        <span>GetProjectVersion</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-project-version">#</doc-anchor-trigger>
+        <span>Get Project Version</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1312,10 +1313,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="getcompanyname">
+<div class="api"><doc-anchor-target id="get-company-name">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getcompanyname">#</doc-anchor-trigger>
-        <span>GetCompanyName</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-company-name">#</doc-anchor-trigger>
+        <span>Get Company Name</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1338,16 +1339,17 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
+<hr>
 <doc-anchor-target id="assets">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#assets">#</doc-anchor-trigger>
         <span><span class="tag">Assets</span></span>
     </h2>
 </doc-anchor-target>
-<div class="api"><doc-anchor-target id="markassetdirty">
+<div class="api"><doc-anchor-target id="mark-asset-dirty">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#markassetdirty">#</doc-anchor-trigger>
-        <span>MarkAssetDirty</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mark-asset-dirty">#</doc-anchor-trigger>
+        <span>Mark Asset Dirty</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1370,10 +1372,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="saveasset">
+<div class="api"><doc-anchor-target id="save-asset">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#saveasset">#</doc-anchor-trigger>
-        <span>SaveAsset</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#save-asset">#</doc-anchor-trigger>
+        <span>Save Asset</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1403,10 +1405,10 @@ Please refer to the in-engine documentation</p>
         <span><span class="tag">Files</span></span>
     </h2>
 </doc-anchor-target>
-<div class="api"><doc-anchor-target id="getallsavegameslotnames">
+<div class="api"><doc-anchor-target id="get-all-save-game-slot-names">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getallsavegameslotnames">#</doc-anchor-trigger>
-        <span>GetAllSaveGameSlotNames</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-all-save-game-slot-names">#</doc-anchor-trigger>
+        <span>Get All Save Game Slot Names</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1429,10 +1431,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="savetotextfile">
+<div class="api"><doc-anchor-target id="save-to-text-file">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#savetotextfile">#</doc-anchor-trigger>
-        <span>SaveToTextFile</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#save-to-text-file">#</doc-anchor-trigger>
+        <span>Save to Text File</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1455,10 +1457,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="loadtextfile">
+<div class="api"><doc-anchor-target id="load-text-file">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#loadtextfile">#</doc-anchor-trigger>
-        <span>LoadTextFile</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#load-text-file">#</doc-anchor-trigger>
+        <span>Load Text File</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1481,10 +1483,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="loadimage">
+<div class="api"><doc-anchor-target id="load-image">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#loadimage">#</doc-anchor-trigger>
-        <span>LoadImage</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#load-image">#</doc-anchor-trigger>
+        <span>Load Image</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1507,10 +1509,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="takescreenshot">
+<div class="api"><doc-anchor-target id="take-screenshot">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#takescreenshot">#</doc-anchor-trigger>
-        <span>TakeScreenshot</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#take-screenshot">#</doc-anchor-trigger>
+        <span>Take Screenshot</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1533,10 +1535,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="directorytostring">
+<div class="api"><doc-anchor-target id="directory-to-string">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#directorytostring">#</doc-anchor-trigger>
-        <span>DirectoryToString</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#directory-to-string">#</doc-anchor-trigger>
+        <span>Directory to String</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1559,10 +1561,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="listfiles">
+<div class="api"><doc-anchor-target id="list-files">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#listfiles">#</doc-anchor-trigger>
-        <span>ListFiles</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#list-files">#</doc-anchor-trigger>
+        <span>List Files</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1585,10 +1587,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="listdirectories">
+<div class="api"><doc-anchor-target id="list-directories">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#listdirectories">#</doc-anchor-trigger>
-        <span>ListDirectories</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#list-directories">#</doc-anchor-trigger>
+        <span>List Directories</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1611,10 +1613,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="launchfile">
+<div class="api"><doc-anchor-target id="launch-file">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#launchfile">#</doc-anchor-trigger>
-        <span>LaunchFile</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#launch-file">#</doc-anchor-trigger>
+        <span>Launch File</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1637,16 +1639,17 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
+<hr>
 <doc-anchor-target id="settings">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#settings">#</doc-anchor-trigger>
         <span><span class="tag">Settings</span></span>
     </h2>
 </doc-anchor-target>
-<div class="api"><doc-anchor-target id="getboolsetting">
+<div class="api"><doc-anchor-target id="get-bool-setting">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getboolsetting">#</doc-anchor-trigger>
-        <span>GetBoolSetting</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-bool-setting">#</doc-anchor-trigger>
+        <span>Get Bool Setting</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1669,10 +1672,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="setboolsetting">
+<div class="api"><doc-anchor-target id="set-bool-setting">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setboolsetting">#</doc-anchor-trigger>
-        <span>SetBoolSetting</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#set-bool-setting">#</doc-anchor-trigger>
+        <span>Set Bool Setting</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1695,10 +1698,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="getstringsetting">
+<div class="api"><doc-anchor-target id="get-string-setting">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getstringsetting">#</doc-anchor-trigger>
-        <span>GetStringSetting</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-string-setting">#</doc-anchor-trigger>
+        <span>Get String Setting</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1721,10 +1724,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="setstringsetting">
+<div class="api"><doc-anchor-target id="set-string-setting">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setstringsetting">#</doc-anchor-trigger>
-        <span>SetStringSetting</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#set-string-setting">#</doc-anchor-trigger>
+        <span>Set String Setting</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1747,10 +1750,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="getintsetting">
+<div class="api"><doc-anchor-target id="get-int-setting">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getintsetting">#</doc-anchor-trigger>
-        <span>GetIntSetting</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-int-setting">#</doc-anchor-trigger>
+        <span>Get Int Setting</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1773,10 +1776,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="setintsetting">
+<div class="api"><doc-anchor-target id="set-int-setting">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setintsetting">#</doc-anchor-trigger>
-        <span>SetIntSetting</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#set-int-setting">#</doc-anchor-trigger>
+        <span>Set Int Setting</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1799,10 +1802,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="getfloatsetting">
+<div class="api"><doc-anchor-target id="get-float-setting">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getfloatsetting">#</doc-anchor-trigger>
-        <span>GetFloatSetting</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-float-setting">#</doc-anchor-trigger>
+        <span>Get Float Setting</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1825,10 +1828,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="setfloatsetting">
+<div class="api"><doc-anchor-target id="set-float-setting">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setfloatsetting">#</doc-anchor-trigger>
-        <span>SetFloatSetting</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#set-float-setting">#</doc-anchor-trigger>
+        <span>Set Float Setting</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1851,10 +1854,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="settingfiletostring">
+<div class="api"><doc-anchor-target id="setting-file-to-string">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#settingfiletostring">#</doc-anchor-trigger>
-        <span>SettingFileToString</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setting-file-to-string">#</doc-anchor-trigger>
+        <span>Setting File to String</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1877,16 +1880,17 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
+<hr>
 <doc-anchor-target id="ui">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#ui">#</doc-anchor-trigger>
         <span><span class="tag">UI</span></span>
     </h2>
 </doc-anchor-target>
-<div class="api"><doc-anchor-target id="destroywidget">
+<div class="api"><doc-anchor-target id="destroy-widget">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#destroywidget">#</doc-anchor-trigger>
-        <span>DestroyWidget</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#destroy-widget">#</doc-anchor-trigger>
+        <span>Destroy Widget</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1909,10 +1913,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="addtoconstraintviewport">
+<div class="api"><doc-anchor-target id="add-to-constraint-viewport">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#addtoconstraintviewport">#</doc-anchor-trigger>
-        <span>AddToConstraintViewport</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#add-to-constraint-viewport">#</doc-anchor-trigger>
+        <span>Add to Constraint Viewport</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1935,10 +1939,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="capturewidget">
+<div class="api"><doc-anchor-target id="capture-widget">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#capturewidget">#</doc-anchor-trigger>
-        <span>CaptureWidget</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#capture-widget">#</doc-anchor-trigger>
+        <span>Capture Widget</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1961,10 +1965,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="getnestedwidgets">
+<div class="api"><doc-anchor-target id="get-nested-widgets">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getnestedwidgets">#</doc-anchor-trigger>
-        <span>GetNestedWidgets</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-nested-widgets">#</doc-anchor-trigger>
+        <span>Get Nested Widgets</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -1987,10 +1991,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="getnestedwidgetsofclass">
+<div class="api"><doc-anchor-target id="get-nested-widgets-of-class">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getnestedwidgetsofclass">#</doc-anchor-trigger>
-        <span>GetNestedWidgetsOfClass</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-nested-widgets-of-class">#</doc-anchor-trigger>
+        <span>Get Nested Widgets Of Class</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2013,10 +2017,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="removevisiblewidgets">
+<div class="api"><doc-anchor-target id="remove-visible-widgets">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#removevisiblewidgets">#</doc-anchor-trigger>
-        <span>RemoveVisibleWidgets</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#remove-visible-widgets">#</doc-anchor-trigger>
+        <span>Remove Visible Widgets</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2039,10 +2043,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="removehiddenwidgets">
+<div class="api"><doc-anchor-target id="remove-hidden-widgets">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#removehiddenwidgets">#</doc-anchor-trigger>
-        <span>RemoveHiddenWidgets</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#remove-hidden-widgets">#</doc-anchor-trigger>
+        <span>Remove Hidden Widgets</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2065,10 +2069,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="playtypewritereffect">
+<div class="api"><doc-anchor-target id="play-typewriter-effect">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#playtypewritereffect">#</doc-anchor-trigger>
-        <span>PlayTypewriterEffect</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#play-typewriter-effect">#</doc-anchor-trigger>
+        <span>Play Typewriter Effect</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2098,10 +2102,10 @@ Please refer to the in-engine documentation</p>
         <span><span class="tag">Pipes</span></span>
     </h2>
 </doc-anchor-target>
-<div class="api"><doc-anchor-target id="replacevariables">
+<div class="api"><doc-anchor-target id="replace-variables">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#replacevariables">#</doc-anchor-trigger>
-        <span>ReplaceVariables</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#replace-variables">#</doc-anchor-trigger>
+        <span>Replace Variables</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2124,10 +2128,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="tosignednumber">
+<div class="api"><doc-anchor-target id="to-signed-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#tosignednumber">#</doc-anchor-trigger>
-        <span>ToSignedNumber</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#to-signed-number">#</doc-anchor-trigger>
+        <span>To Signed Number</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2150,10 +2154,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="todisplaytext">
+<div class="api"><doc-anchor-target id="to-display-text">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#todisplaytext">#</doc-anchor-trigger>
-        <span>ToDisplayText</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#to-display-text">#</doc-anchor-trigger>
+        <span>To Display Text</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2176,10 +2180,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="upperfirstletter">
+<div class="api"><doc-anchor-target id="upper-first-letter">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#upperfirstletter">#</doc-anchor-trigger>
-        <span>UpperFirstLetter</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#upper-first-letter">#</doc-anchor-trigger>
+        <span>Upper First Letter</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2202,10 +2206,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="textupperfirstletter">
+<div class="api"><doc-anchor-target id="text-upper-first-letter">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#textupperfirstletter">#</doc-anchor-trigger>
-        <span>TextUpperFirstLetter</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#text-upper-first-letter">#</doc-anchor-trigger>
+        <span>Text Upper First Letter</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2228,10 +2232,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="removeaccentuation">
+<div class="api"><doc-anchor-target id="remove-accentuation">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#removeaccentuation">#</doc-anchor-trigger>
-        <span>RemoveAccentuation</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#remove-accentuation">#</doc-anchor-trigger>
+        <span>Remove Accentuation</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2254,10 +2258,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="removerichtexttags">
+<div class="api"><doc-anchor-target id="remove-rich-text-tags">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#removerichtexttags">#</doc-anchor-trigger>
-        <span>RemoveRichTextTags</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#remove-rich-text-tags">#</doc-anchor-trigger>
+        <span>Remove Rich Text Tags</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2280,10 +2284,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="tohash">
+<div class="api"><doc-anchor-target id="to-hash">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#tohash">#</doc-anchor-trigger>
-        <span>ToHash</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#to-hash">#</doc-anchor-trigger>
+        <span>To Hash</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2306,10 +2310,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="tohex">
+<div class="api"><doc-anchor-target id="to-hex">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#tohex">#</doc-anchor-trigger>
-        <span>ToHex</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#to-hex">#</doc-anchor-trigger>
+        <span>To Hex</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2384,10 +2388,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="iskeyvaluepair">
+<div class="api"><doc-anchor-target id="is-key-value-pair">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#iskeyvaluepair">#</doc-anchor-trigger>
-        <span>IsKeyValuePair</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#is-key-value-pair">#</doc-anchor-trigger>
+        <span>Is Key Value Pair</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2410,10 +2414,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="tokeyvaluepair">
+<div class="api"><doc-anchor-target id="to-key-value-pair">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#tokeyvaluepair">#</doc-anchor-trigger>
-        <span>ToKeyValuePair</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#to-key-value-pair">#</doc-anchor-trigger>
+        <span>To Key Value Pair</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2436,10 +2440,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="haskeyvaluetag">
+<div class="api"><doc-anchor-target id="has-key-value-tag">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#haskeyvaluetag">#</doc-anchor-trigger>
-        <span>HasKeyValueTag</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#has-key-value-tag">#</doc-anchor-trigger>
+        <span>Has Key Value Tag</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2462,10 +2466,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="removerepeatedvalues">
+<div class="api"><doc-anchor-target id="remove-repeated-values">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#removerepeatedvalues">#</doc-anchor-trigger>
-        <span>RemoveRepeatedValues</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#remove-repeated-values">#</doc-anchor-trigger>
+        <span>Remove Repeated Values</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2488,10 +2492,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="tostring">
+<div class="api"><doc-anchor-target id="to-string">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#tostring">#</doc-anchor-trigger>
-        <span>ToString</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#to-string">#</doc-anchor-trigger>
+        <span>To String</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2521,10 +2525,10 @@ Please refer to the in-engine documentation</p>
         <span><span class="tag">Operators</span></span>
     </h2>
 </doc-anchor-target>
-<div class="api"><doc-anchor-target id="nullcoalescingoperator">
+<div class="api"><doc-anchor-target id="null-coalescing-operator">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#nullcoalescingoperator">#</doc-anchor-trigger>
-        <span>NullCoalescingOperator</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#null-coalescing-operator">#</doc-anchor-trigger>
+        <span>Null Coalescing Operator</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2547,10 +2551,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="solvemathexpression">
+<div class="api"><doc-anchor-target id="solve-math-expression">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#solvemathexpression">#</doc-anchor-trigger>
-        <span>SolveMathExpression</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#solve-math-expression">#</doc-anchor-trigger>
+        <span>Solve Math Expression</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2573,10 +2577,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="issameuniquenetid">
+<div class="api"><doc-anchor-target id="is-same-unique-net-id">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#issameuniquenetid">#</doc-anchor-trigger>
-        <span>IsSameUniqueNetId</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#is-same-unique-net-id">#</doc-anchor-trigger>
+        <span>Is Same Unique Net Id</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">
@@ -2599,10 +2603,10 @@ Please refer to the in-engine documentation</p>
 </div>
 </div>
 <br>
-<div class="api"><doc-anchor-target id="ishost">
+<div class="api"><doc-anchor-target id="is-host">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ishost">#</doc-anchor-trigger>
-        <span>IsHost</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#is-host">#</doc-anchor-trigger>
+        <span>Is Host</span>
     </h3>
 </doc-anchor-target>
 <div class="flex mb-6">

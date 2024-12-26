@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788539946185">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788545349663">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -32,12 +32,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/img/favicon.ico" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.788539946185" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.788545349663" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788539946185" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788545349663" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788539946185" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788539946185" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788545349663" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788545349663" defer></script>
 
     <!-- Styles -->
     <style>
@@ -1549,7 +1549,8 @@ Please refer to the in-engine documentation</p>
 <p>Register a variable modifier.</p>
 <p>When a Quillscript variable value is requested, the delegate event is played before retrieving the value, allowing the code to modify the variable value beforehand or to play some required code.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-rust"><code v-pre class="language-rust">VariableName: name
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust" data-line="1-2"><code v-pre class="language-rust">VariableName: name
 Delegate: event</code></pre>
 </doc-codeblock></div>
 <doc-panels>
@@ -1598,7 +1599,8 @@ UQuill::RegisterVariableModifier(this, &quot;HasCheckpointFinished&quot;, OnVari
 </doc-anchor-target>
 <p>Unregister a variable modifier.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-rust"><code v-pre class="language-rust">VariableName: name</code></pre>
+<div class="codeblock-title">Parameters</div>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">VariableName: name</code></pre>
 </doc-codeblock></div>
 <doc-panels>
    <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
