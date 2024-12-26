@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788545349663">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788559753041">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -32,12 +32,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/img/favicon.ico" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.788545349663" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.788559753041" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788545349663" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788559753041" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788545349663" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788545349663" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788559753041" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788559753041" defer></script>
 
     <!-- Styles -->
     <style>
@@ -623,24 +623,52 @@
         <span>Log</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Print a message on screen and/or console with control params. (In Development, Debug or Editor mode)</p>
+<p>Check your <a href="../../settings/settings-details/#verbosity">Verbosity setting</a> to select where this message is printed.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">Message: string
+(Omittable) Owner: ref              // Object that called this function.
+(Omittable) PrintType: PrintType    [ Log, Success, Warning, Error ]</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">$ ^Quillscript.Tools.Log Hello
+$ ^Quillscript.Tools.Log 'Print this message'
+$ ^Quillscript.Tools.Log 'Print this message' {&amp;Script} Error
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+UTools::Log(&quot;Print this message&quot;, MyObject, EPrintType::Error);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="print-1">
@@ -650,11 +678,11 @@ Please refer to the in-engine documentation</p>
     </h3>
 </doc-anchor-target>
 <p>Print a message on screen and/or console. (In Development, Debug or Editor mode)</p>
-<p>Check your Verbosity setting to select where this message is printed.</p>
+<p>Check your <a href="../../settings/settings-details/#verbosity">Verbosity setting</a> to select where this message is printed.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1"><code v-pre class="language-rust">Message: string
-[Omittable] Owner: ref    // Object that called this function.</code></pre>
+(Omittable) Owner: ref    // Object that called this function.</code></pre>
 </doc-codeblock></div>
 <doc-panels>
    <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
@@ -707,24 +735,55 @@ UTools::Print(&quot;Print this message&quot;, MyObject)</code></pre>
         <span>Success</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Print a success message on screen and/or console. (In Development, Debug or Editor mode)</p>
+<p>Check your <a href="../../settings/settings-details/#verbosity">Verbosity setting</a> to select where this message is printed.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">Message: string
+(Omittable) Owner: ref    // Object that called this function.</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">$ ^Quillscript.Tools.Success Hello
+$ ^Quillscript.Tools.Success 'Print this message'
+$ ^Quillscript.Tools.Success 'Print this message' {&amp;Script}
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+// Macro (Only inside an UObject method)
+SUCCESS(&quot;Print this message&quot;);
+
+// Function call.
+UTools::Success(&quot;Print this message&quot;, MyObject);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="warning">
@@ -733,24 +792,55 @@ Please refer to the in-engine documentation</p>
         <span>Warning</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Print a warning message on screen and/or console. (In Development, Debug or Editor mode)</p>
+<p>Check your <a href="../../settings/settings-details/#verbosity">Verbosity setting</a> to select where this message is printed.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">Message: string
+(Omittable) Owner: ref    // Object that called this function.</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">$ ^Quillscript.Tools.Warning Hello
+$ ^Quillscript.Tools.Warning 'Print this message'
+$ ^Quillscript.Tools.Warning 'Print this message' {&amp;Script}
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+// Macro (Only inside an UObject method)
+WARNING(&quot;Print this message&quot;);
+
+// Function call.
+UTools::Warning(&quot;Print this message&quot;, MyObject);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="error">
@@ -759,24 +849,55 @@ Please refer to the in-engine documentation</p>
         <span>Error</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Print an error message on screen and/or console. (In Development, Debug or Editor mode)</p>
+<p>Check your <a href="../../settings/settings-details/#verbosity">Verbosity setting</a> to select where this message is printed.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">Message: string
+(Omittable) Owner: ref    // Object that called this function.</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">$ ^Quillscript.Tools.Error Hello
+$ ^Quillscript.Tools.Error 'Print this message'
+$ ^Quillscript.Tools.Error 'Print this message' {&amp;Script}
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+// Macro (Only inside an UObject method)
+ERROR(&quot;Print this message&quot;);
+
+// Function call.
+UTools::Error(&quot;Print this message&quot;, MyObject);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <hr>
@@ -792,24 +913,51 @@ Please refer to the in-engine documentation</p>
         <span>Rename Object</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Rename the given object.</p>
+<p>This function is useful to give a know name to an object and reference it later by name in script like:<br />
+<code v-pre>$ &amp;ObjName.ObjFunction</code></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1-2"><code v-pre class="language-rust">Object: ref
+NewName: string</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">$ ^Quillscript.Tools.RenameObject {&amp;RefName} NewRefName
+$ &amp;NewRefName.MyFunction
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+UTools::RenameObject(MyObject, &quot;RefName&quot;);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="find-class-by-path">
@@ -818,24 +966,56 @@ Please refer to the in-engine documentation</p>
         <span>Find Class by Path</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Attempts to locate a class by its path, specified as a string. This function is a valuable utility for dynamically finding and accessing classes within your Unreal Engine project based on their defined paths.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">Path: string</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store class reference in {&amp;ReturnValue}.
+$ ^Quillscript.Tools.FindClassByPath /Game/Path/To/Blueprint.Blueprint
+$ ^Quillscript.Tools.FindClassByPath /Game/Path/To/Blueprint.Blueprint_C
+$ ^Quillscript.Tools.FindClassByPath Module.ClassName
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+// Blueprint class.
+TObjectPtr&lt;UClass&gt; BlueprintPath{ UTools::FindClassByPath(&quot;/Game/Path/To/My/Blueprint.Blueprint&quot;) };
+TObjectPtr&lt;UClass&gt; ClassPath{ UTools::FindClassByPath(&quot;/Game/Path/To/My/Blueprint.Blueprint_C&quot;) };
+
+// C++ class.
+TObjectPtr&lt;UClass&gt; CppClass{ UTools::FindClassByPath(&quot;Module.ClassName&quot;) };
+TObjectPtr&lt;UClass&gt; CppClassExample{ UTools::FindClassByPath(&quot;Engine.Actor&quot;) };</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="get-class-default-object">
@@ -844,24 +1024,48 @@ Please refer to the in-engine documentation</p>
         <span>Get Class Default Object</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Get the default object from the given class. This function is useful to expose the Default Object to Blueprints.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">Class: ref[Class]</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store class reference in {&amp;ReturnValue}.
+$ ^Quillscript.Tools.GetClassDefaultObject {&amp;Class}
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+TObjectPtr&lt;UClass&gt; DefaultObject{ UTools::GetClassDefaultObject(Class) };</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="property-exists">
@@ -1000,24 +1204,59 @@ Please refer to the in-engine documentation</p>
         <span>Call Function by Name</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Call a Target&#x27;s function by name and return its Return Value and Outer Parameters.</p>
+<p>This is a simplified general usage version of <em>Interpreter.CallFunctionOnTarget()</em> that do not create Quillscript variables and script references.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1-4"><code v-pre class="language-rust">WorldContextObject: ref
+Target: ref
+FunctionName: name
+Parameters: array[string]</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store class reference in {&amp;ReturnValue}.
+$ ^Quillscript.Tools.CallFunctionByName {&amp;Target} MyFunction '(&quot;10&quot;,&quot;true&quot;)'
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+TMap&lt;FName, FString&gt; OuterParams{
+    UTools::CallFunctionByName(
+        WorldContextObject,
+        Target,
+        &quot;MyFunction&quot;,
+        TArray&lt;FString&gt;({&quot;10&quot;, &quot;true&quot;})
+    )
+};</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="has-authority">
@@ -1026,24 +1265,59 @@ Please refer to the in-engine documentation</p>
         <span>Has Authority</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Serves as a shortcut utility designed for use inside static methods that have a <strong>WorldContextObject</strong> parameter. It allows you to determine whether the current execution context possesses authority, using the <strong>GetFirstPlayerController</strong>, which is often associated with server or authoritative roles in networked multiplayer games.</p>
+<p>While this function provides a convenient way to check authority within static methods, it&#x27;s important to note that if your function already has access to <strong>HasAuthority()</strong> through other means, it&#x27;s advisable to use those methods instead.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">WorldContextObject: ref</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store result in {&amp;ReturnValue}.
+$ ^Quillscript.Tools.HasAuthority
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+// Macro (Only inside functions with a 'WorldContextObject' variable)
+if (HAS_AUTHORITY())
+{
+    // Implementation.
+}
+
+// Function call.
+if (UTools::HasAuthority(WorldContextObject))
+{
+    // Implementation.
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="is-module-loaded">
@@ -1052,24 +1326,51 @@ Please refer to the in-engine documentation</p>
         <span>Is Module Loaded</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Check whether a specific module or plugin is currently loaded within the Unreal Engine project. This function provides a straightforward way to determine if a particular module or plugin is available and active for use in your project.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">ModuleName: name</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store result in {&amp;ReturnValue}.
+$ ^Quillscript.Tools.IsModuleLoaded ModuleName
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+if (UTools::IsModuleLoaded(ModuleName))
+{
+    // Implementation.
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="generate-random-string">
@@ -1078,24 +1379,52 @@ Please refer to the in-engine documentation</p>
         <span>Generate Random String</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Check whether a specific module or plugin is currently loaded within the Unreal Engine project. This function provides a straightforward way to determine if a particular module or plugin is available and active for use in your project.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust"><code v-pre class="language-rust">(Omittable) Size: byte = 8
+(Omittable) Letters: bool = true
+(Omittable) Numbers: bool = true
+(Omittable) Symbols: bool = false</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store result in {&amp;ReturnValue}.
+$ ^Quillscript.Tools.GenerateRandomString
+$ ^Quillscript.Tools.GenerateRandomString 8 true true true
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+FString RandomString{ UTools::GenerateRandomString() };</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="retrieve-option">
@@ -1104,24 +1433,52 @@ Please refer to the in-engine documentation</p>
         <span>Retrieve Option</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Fetch a level transition option by providing the option&#x27;s key. This function is particularly useful when you need to access specific transition options after a level change, allowing you to retrieve and utilize option values as needed.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1-3"><code v-pre class="language-rust">WorldContextObject: ref
+Key: string
+Value: string</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store if level option exists in {$ReturnValue}.
+// Store level option value in {&amp;Value}.
+$ ^Quillscript.Tools.RetrieveOption MyKey
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+FString Key, Value;
+FString RandomString{ UTools::RetrieveOption(WorldContextObject, Key, Value) };</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="sort-strings-alphabetically">
@@ -1130,24 +1487,49 @@ Please refer to the in-engine documentation</p>
         <span>Sort Strings Alphabetically</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Sort an array of strings in alphabetical order. This function allows you to arrange a collection of strings into ascending alphabetical sequence, making it easier to manage and organize string data.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">Strings: array[string]</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store result in {&amp;ReturnValue}.
+$ MyArray = '(&quot;Snowfall&quot;,&quot;Unreal Engine&quot;,&quot;Quillscript&quot;)'
+$ ^Quillscript.Tools.SortStringsAlphabetically {MyArray}
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+TArray&lt;FString&gt; SortedArray{ UTools::SortStringsAlphabetically(StringsArray) };</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="register-string-table">
@@ -1156,24 +1538,48 @@ Please refer to the in-engine documentation</p>
         <span>Register String Table</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Register a string table by path. This function is useful when a string table is used by path and never referenced, causing it to not be loaded during runtime.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">StringTablepPath: name</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store result in {&amp;ReturnValue}.
+$ ^Quillscript.Tools.RegisterStringTable /Game/Folder/MyTable.MyTable
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+UTools::RegisterStringTable(&quot;/Game/Folder/MyTable.MyTable&quot;);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="find-string-table-key">
@@ -1267,24 +1673,45 @@ Please refer to the in-engine documentation</p>
         <span>Get Project Name</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Retrieves the project name that is configured in the <code v-pre>Edit &gt; Project Settings &gt; Project &gt; Description &gt; Project Name</code> field. This function allows you to access the project&#x27;s name programmatically.</p>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store result in {&amp;ReturnValue}.
+$ ^Quillscript.Tools.GetProjectName
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+FString ProjectName{ UTools::GetProjectName() };</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="get-project-version">
@@ -1293,24 +1720,45 @@ Please refer to the in-engine documentation</p>
         <span>Get Project Version</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Retrieves the project version that is set in the <code v-pre>Edit &gt; Project Settings &gt; Project &gt; Description &gt; Project Version</code> field. You can use this function to access the project&#x27;s version number within your code.</p>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store result in {&amp;ReturnValue}.
+$ ^Quillscript.Tools.GetProjectVersion
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+FString ProjectVersion{ UTools::GetProjectVersion() };</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="get-company-name">
@@ -1319,24 +1767,45 @@ Please refer to the in-engine documentation</p>
         <span>Get Company Name</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Fetches the company name specified in the <code v-pre>Edit &gt; Project Settings &gt; Project &gt; Description &gt; Company Name</code> field. This function is useful for obtaining the company name associated with your project.</p>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store result in {&amp;ReturnValue}.
+$ ^Quillscript.Tools.GetCompanyName
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Tools.h&quot;
+...
+
+FString CompanyName{ UTools::GetCompanyName() };</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <hr>

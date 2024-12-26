@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/Quillscript-Docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788545349663">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788559753041">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -32,12 +32,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/img/favicon.ico" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.788545349663" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.788559753041" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788545349663" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788559753041" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788545349663" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788545349663" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788559753041" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788559753041" defer></script>
 
     <!-- Styles -->
     <style>
@@ -622,24 +622,58 @@
         <span>Play Script</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Initiate the execution of a Quillscript asset.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1-2"><code v-pre class="language-rust">WorldContextObject: ref
+Script: ref[QuillscriptAsset]
+(Omittable) StartingLabel: Name
+(Omittable) Target: ref            // Object referenced by this Script as {&amp;Target}</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Get a script reference.
+$ ^Quillscript.Quill.GetScriptById MyScriptId
+
+// Play script.
+$ ^Quillscript.Quill.PlayScript {&amp;ReturnValue}
+
+// End current script. (Optional)
+$ End
+</code></pre>
+</doc-codeblock></div>
+<p>Notice that this process produces the same result as the <span class="command">$ Travel</span> built-in function and is useful only if you need extra control of the code behavior or order.</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+UQuill::PlayScript(WorldContextObject, UQuill::GetScriptById(&quot;MyScriptId&quot;));</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="play-script-using-custom-settings">
@@ -648,24 +682,51 @@ Please refer to the in-engine documentation</p>
         <span>Play Script Using Custom Settings</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Play the given script using a custom set of settings passed as a parameter to this function. It allows you to fine-tune the behavior of the script execution according to your specific requirements.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1-3"><code v-pre class="language-rust">WorldContextObject: ref
+Script: ref[QuillscriptAsset]
+Settings: ScriptSettings
+(Omittable) StartingLabel: Name
+(Omittable) Target: ref            // Object referenced by this Script as {&amp;Target}</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+// Configure custom settings.
+FScriptSettings Settings;
+Settings.EnableInputDuring = EPicker::No;
+Settings.ShowMouseCursorAfter = EPicker::Yes;
+
+// Play script using custom settings.
+UQuill::PlayScriptUsingCustomSettings(
+    WorldContextObject,
+    UQuill::GetScriptById(&quot;MyScriptId&quot;),
+    Settings
+);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="start-script">
@@ -674,24 +735,57 @@ Please refer to the in-engine documentation</p>
         <span>Start Script</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Same as <doc-anchor-trigger to="#play-script">Play Script</doc-anchor-trigger> but clears any previous script history to ensure a fresh start.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1-2"><code v-pre class="language-rust">WorldContextObject: ref
+Script: ref[QuillscriptAsset]
+(Omittable) StartingLabel: Name
+(Omittable) Target: ref            // Object referenced by this Script as {&amp;Target}</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Get a script reference.
+$ ^Quillscript.Quill.GetScriptById MyScriptId
+
+// Start script.
+$ ^Quillscript.Quill.StartScript {&amp;ReturnValue}
+
+// End current script. (Optional)
+$ End
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+UQuill::StartScript(WorldContextObject, UQuill::GetScriptById(&quot;MyScriptId&quot;));</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="start-script-using-custom-settings">
@@ -700,24 +794,51 @@ Please refer to the in-engine documentation</p>
         <span>Start Script Using Custom Settings</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Same as <doc-anchor-trigger to="#play-script-using-custom-settings">Play Script Using Custom Settings</doc-anchor-trigger> but clears any previous script history to ensure a fresh start.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1-3"><code v-pre class="language-rust">WorldContextObject: ref
+Script: ref[QuillscriptAsset]
+Settings: ScriptSettings
+(Omittable) StartingLabel: Name
+(Omittable) Target: ref            // Object referenced by this Script as {&amp;Target}</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+// Configure custom settings.
+FScriptSettings Settings;
+Settings.EnableInputDuring = EPicker::No;
+Settings.ShowMouseCursorAfter = EPicker::Yes;
+
+// Start script using custom settings.
+UQuill::StartScriptUsingCustomSettings(
+    WorldContextObject,
+    UQuill::GetScriptById(&quot;MyScriptId&quot;),
+    Settings
+);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="resume-script">
@@ -726,24 +847,55 @@ Please refer to the in-engine documentation</p>
         <span>Resume Script</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Continue the execution of a Quillscript from the last saved state entry in the script&#x27;s history. It enables you to pick up the script where it left off, making it useful for scenarios where you need to maintain script continuity or when the game was saved during a script play and need to continue from that point.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1-2"><code v-pre class="language-rust">WorldContextObject: ref
+Script: ref[QuillscriptAsset]</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Get a script reference.
+$ ^Quillscript.Quill.GetScriptById MyScriptId
+
+// Play script.
+$ ^Quillscript.Quill.ResumeScript {&amp;ReturnValue}
+
+// End current script. (Optional)
+$ End
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+UQuill::ResumeScript(WorldContextObject, UQuill::GetScriptById(&quot;MyScriptId&quot;));</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="parse-script">
@@ -752,24 +904,60 @@ Please refer to the in-engine documentation</p>
         <span>Parse Script</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Takes a Quillscript language valid string as input and converts it into a Quillscript asset. This is particularly useful when you need to dynamically create or modify scripts at runtime, or when you allow modders or user to create their own scripts.</p>
+<p>You can also specify a permission mode to control the script&#x27;s behavior. See <a href="../../objects/script/#permissions">Permissions</a> for more details.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">Text: string
+(Omittable) Permission: PermissionMode        [ All, Safe, Sandbox ]</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Get a valid Quillscript language string.
+$ :QuillscriptLanguageValidString := '$ x = 1'
+
+// Create script object reference.
+$ ^Quillscript.Quill.ParseScript {:QuillscriptLanguageValidString}
+
+// Play created script.
+$ ^Quillscript.Quill.PlayScript {&amp;ReturnValue}
+
+// End current script. (Optional)
+$ End
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+const TObjectPtr&lt;UQuillscriptAsset&gt; Script{ UQuill::ParseScript(QuillscriptLanguageValidString, EPermissionMode::Sandbox) };
+UQuill::PlayScript(WorldContextObject, Script);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="get-scripts">
@@ -778,24 +966,49 @@ Please refer to the in-engine documentation</p>
         <span>Get Scripts</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Retrieves a list of all available Quillscript script assets within your project. This can be useful when you need to access and manage multiple scripts programmatically.</p>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">$ ^Quillscript.Quill.GetScripts
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+TArray&lt;UQuillscriptAsset*&gt; Scripts{ UQuill::GetScripts() };
+
+for (auto Script : Scripts)
+{
+    // Implementation.
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="get-script-by-path">
@@ -804,24 +1017,55 @@ Please refer to the in-engine documentation</p>
         <span>Get Script by Path</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Retrieve a specific Quillscript asset by providing its path within your project. This function simplifies script asset retrieval, making it easy to access the script you need for execution or manipulation.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">Path: string</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Get a script reference.
+$ ^Quillscript.Quill.GetScriptByPath /Game/Path/To/MyScript.MyScript
+
+// Play script.
+$ ^Quillscript.Quill.PlayScript {&amp;ReturnValue}
+
+// End current script. (Optional)
+$ End
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+const TObjectPtr&lt;UQuillscriptAsset&gt; Script{ UQuill::GetScriptByPath(&quot;/Game/Path/To/MyScript.MyScript&quot;) };
+UQuill::PlayScript(WorldContextObject, Script);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="get-script-by-id">
@@ -830,24 +1074,54 @@ Please refer to the in-engine documentation</p>
         <span>Get Script by Id</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Retrieve a Quillscript asset by its unique identifier (Id). Keep in mind that this function may have performance implications in projects with a large number of assets. Use it when you need to specifically locate a script by its Id.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">Id: name</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Get a script reference.
+$ ^Quillscript.Quill.GetScriptById MyScriptId
+
+// Play script.
+$ ^Quillscript.Quill.PlayScript {&amp;ReturnValue}
+
+// End current script. (Optional)
+$ End
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+const TObjectPtr&lt;UQuillscriptAsset&gt; Script{ UQuill::GetScriptById(&quot;MyScriptId&quot;) };
+UQuill::PlayScript(WorldContextObject, Script);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="find-script">
@@ -882,24 +1156,59 @@ Please refer to the in-engine documentation</p>
         <span>Is Script Playing</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Checks whether a specified Quillscript script is currently playing.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">WorldContextObject: ref
+Script: ref[QuillscriptAsset]</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">$ ^Quillscript.Quill.GetScriptById MyScriptId
+$ ^Quillscript.Quill.IsScriptPlaying {&amp;ReturnValue}
+
+if: {$ReturnValue} == on
+
+    // Do something
+
+endif
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+const TObjectPtr&lt;UQuillscriptAsset&gt; Script{ UQuill::GetScriptById(&quot;MyScriptId&quot;) };
+
+if (UQuill::IsScriptPlaying(WorldContextObject, Script))
+{
+    // Implementation
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="is-any-script-playing">
@@ -908,24 +1217,55 @@ Please refer to the in-engine documentation</p>
         <span>Is Any Script Playing</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Checks whether any Quillscript script is currently playing.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">WorldContextObject: ref</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">$ ^Quillscript.Quill.IsAnyScriptPlaying
+
+if: {$ReturnValue} == on
+
+    // Do something
+
+endif
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+if (UQuill::IsAnyScriptPlaying(WorldContextObject))
+{
+    // Implementation
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="make-permissions-list">
@@ -934,24 +1274,49 @@ Please refer to the in-engine documentation</p>
         <span>Make Permissions List</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Generates a list of script permissions based on the specified permission mode. This function is helpful when you need to create a list of permissions for your scripts programmatically, allowing you to control the behavior of the scripts according to your permission requirements.</p>
+<p>See <a href="../../objects/script/#permissions">Permissions</a> for more details.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">PermissionMode: PermissionMode                [ All, Safe, Sandbox ]</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Get a script reference.
+$ ^Quillscript.Quill.MakePermissionsList Sandbox
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+TArray&lt;EPermission&gt; Permissions{ UQuill::MakePermissionsList(EPermissionMode::Sandbox) };</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="set-script-play-counter">
@@ -1019,24 +1384,49 @@ Please refer to the in-engine documentation</p>
         <span>Create Interpreter</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Spawn an interpreter actor. It is recommended to use this method instead of manually spawning an interpreter actor.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">WorldContextObject: ref
+(Omittable) InterpreterClass: SubclassOf[QuillscriptInterpreter]</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">$ ^Quillscript.Quill.CreateInterpreter
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+const TSubclassOf&lt;AQuillscriptInterpreter&gt; InterpreterClass{ LoadClass&lt;AQuillscriptInterpreter&gt;(nullptr, TEXT(&quot;/Game/Path/To/MyInterpreter.MyInterpreter_C&quot;)) };
+const TObjectPtr&lt;AQuillscriptInterpreter&gt; Interpreter{ UQuill::CreateInterpreter(WorldContextObject, InterpreterClass) };</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="get-interpreters">
@@ -1045,24 +1435,52 @@ Please refer to the in-engine documentation</p>
         <span>Get Interpreters</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Retrieve all instantiated interpreter objects in the specified world context.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">WorldContextObject: ref</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">$ ^Quillscript.Quill.GetInterpreters
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+TArray&lt;AQuillscriptInterpreter*&gt; Interpreters{ UQuill::StartScript(WorldContextObject) };
+
+for (auto Interpreter : Interpreters)
+{
+    // Implementation.
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="get-network">
@@ -1104,24 +1522,52 @@ Please refer to the in-engine documentation</p>
         <span>Quillscript Variable Exists</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Check the existence of a Quillscript variable with a specified name. This function is particularly useful when you need to determine whether a specific variable is defined.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1"><code v-pre class="language-rust">WorldContextObject: ref
+VariableName: name</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store result in {$ReturnValue}.
+$ ^Quillscript.Quill.QuillscriptVariableExists VariableName
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+if (UQuill::QuillscriptVariableExists(WorldContextObject, FName(&quot;VariableName&quot;)))
+{
+    // Implementation.
+}</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="get-quillscript-variable">
@@ -1130,24 +1576,60 @@ Please refer to the in-engine documentation</p>
         <span>Get Quillscript Variable</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>Retrieves the value of a Quillscript variable with the specified name. If the variable does not exist, it returns &quot;off&quot; as a default value.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1-2"><code v-pre class="language-rust">WorldContextObject: ref
+VariableName: name</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Store result in {$ReturnValue}.
+$ ^Quillscript.Quill.GetQuillscriptVariable VariableName
+</code></pre>
+</doc-codeblock></div>
+<p>Notice that this produces the same result as using the variable directly like<br />
+<code v-pre>$ x = {VariableName}</code></p>
+<p>But this is useful to get a variable using a dynamic name.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">$ ^Quillscript.Quill.GetQuillscriptVariable {dynamicName}
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+// Macro (Only inside an UObject method)
+FString VariableValue{ VAR(&quot;VariableName&quot;) };
+
+// Function call.
+FString VariableValue{ UQuill::GetQuillscriptVariable(WorldContextObject, FName(&quot;VariableName&quot;)) };</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="get-quillscript-number">
@@ -1669,24 +2151,53 @@ Please refer to the in-engine documentation</p>
         <span>Save Game and Story to Slot</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>This function behaves the same as the native <a href="https://docs.unrealengine.com/latest/BlueprintAPI/SaveGame/SaveGametoSlot/">Save Game to Slot</a>, but additionally injects Quillscript data to the save game file.</p>
+<p>Saves game data and Quillscript data to a specified save slot. The function returns true if the save operation is successful, and false otherwise.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1-4"><code v-pre class="language-rust">WorldContextObject: ref
+SaveGameObject: ref[SaveGame]
+SlotName: string
+UserIndex: number</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Save game and Quillscript data to 'MySlot'.
+$ ^Quillscript.Quill.SaveGameAndStoryToSlot {&amp;SaveGame} &quot;MySlot&quot; 0
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+TObjectPtr&lt;UMySaveGame&gt; SaveGame{ Cast&lt;UMySaveGame&gt;(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass())) };
+UQuill::SaveGameAndStoryToSlot(WorldContextObjet, SaveGame, &quot;MySlot&quot;, 0);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="load-game-and-story-from-slot">
@@ -1695,24 +2206,51 @@ Please refer to the in-engine documentation</p>
         <span>Load Game and Story from Slot</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-gray-300 dark:bg-dark-900"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-gray-400 dark:text-dark-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><span class="docs-emoji">&#x1F6A7;</span> Under construction <span class="docs-emoji">&#x1F6A7;</span><br />
-Please refer to the in-engine documentation</p>
-        </div>
+<p>This function behaves the same as the native <a href="https://docs.unrealengine.com/latest/BlueprintAPI/SaveGame/LoadGamefromSlot/">Load Game from Slot</a>, but additionally extracts Quillscript data from the save game file and update Quillscript subsystem with the extracted data.</p>
+<p>Returns a Save Game object containing the loaded data.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-rust" data-line="1-3"><code v-pre class="language-rust">WorldContextObject: ref
+SlotName: string
+UserIndex: number</code></pre>
+</doc-codeblock></div>
+<doc-panels>
+   <doc-panel id="badge-variant-success-size-l-icon-file-symlink-file-corners-square-text-quillscript" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-green-700 bg-green-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm6.308 11.5-2.104-2.236a.751.751 0 0 1 .369-1.255.749.749 0 0 1 .723.227l3.294 3.5a.75.75 0 0 1 0 1.028l-3.294 3.5a.749.749 0 0 1-1.275-.293.751.751 0 0 1 .183-.735L9.308 16H4.09a2.59 2.59 0 0 0-2.59 2.59v3.16a.75.75 0 0 1-1.5 0v-3.16a4.09 4.09 0 0 1 4.09-4.09ZM15 2.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/></g></svg></span>
+    <span>Quillscript</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-q"><code v-pre class="language-q">// Load game and Quillscript data from 'MySlot'.
+$ ^Quillscript.Quill.LoadGameAndStoryFromSlot &quot;MySlot&quot; 0
+</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+   <doc-panel id="badge-variant-primary-size-l-icon-file-binary-corners-square-text-blueprint" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M0 13.75C0 12.784.784 12 1.75 12h3c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 0 17.75Zm1.75-.25a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h3a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM9 12a.75.75 0 0 0 0 1.5h1.5V18H9a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5H12v-5.25a.75.75 0 0 0-.75-.75H9Z"/></g></svg></span>
+    <span>Blueprint</span>
+</span></template>
+<p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="" allowfullscreen></iframe>
     </div>
-</div>
+</figure>
+</p>
+   </doc-panel>
+   <doc-panel id="badge-variant-warning-size-l-icon-file-code-corners-square-text-c" collapsed>
+       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-8 px-3 text-sm">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="22" height="22" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"/></g></svg></span>
+    <span>C++</span>
+</span></template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-cpp"><code v-pre class="language-cpp">#include &quot;Utils/Quill.h&quot;
+...
+
+UQuill::LoadGameAndStoryFromSlot(WorldContextObjet, &quot;MySlot&quot;, 0);</code></pre>
+</doc-codeblock></div>
+   </doc-panel>
+</doc-panels>
 </div>
 <br>
 <div class="api"><doc-anchor-target id="resume-game-and-story-from-slot">
