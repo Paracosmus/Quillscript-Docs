@@ -28,7 +28,7 @@ links:
 
 - text: Roadmap
   link: ./changelog/
-  icon: repo-forked
+  icon: git-branch
 
 - text: Contact
   link: ./contact.md

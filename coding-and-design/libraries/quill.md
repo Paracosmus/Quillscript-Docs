@@ -12,10 +12,10 @@ This library offers a set of specialized tools and features for Quillscript Plug
 
 ---
 
-## Variables
+## <span class="dialogue">Variables</span>
 
 :::api
-### <span class="comment">Register Variable Modifier</span>
+### Register Variable Modifier
 
 Register a variable modifier.
 
@@ -52,7 +52,7 @@ void UMyObject::MyFunction(const FName& VariableName, const FString& VariableVal
 <br>
 
 :::api
-### <span class="comment">Unregister Variable Modifier</span>
+### Unregister Variable Modifier
 
 Unregister a variable modifier.
 

@@ -7,7 +7,7 @@ order: 1
 
 List all built-in functions available in script
 
-## Flow
+## <span class="command">Flow</span>
 
 ==- <span class="command">Restart</span>
 Go back to the beginning of the script.
@@ -195,7 +195,7 @@ $ TravelPass {&/Plugin/Screenplay/Act1.Act1} Chapter2    // Travel pass and play
 
 ---
 
-## State
+## <span class="command">State</span>
 
 ==- <span class="command">Print</span>
 Debugger function to print the given Quillscript variable's value.
@@ -239,7 +239,7 @@ $ Notify 'Boss defeated'
 
 ---
 
-## Input
+## <span class="command">Input</span>
 
 ==- <span class="command">Set Input Mode</span>
 Change the game input mode.
@@ -297,7 +297,7 @@ $ HideMouseCursor
 
 ---
 
-## User Interface
+## <span class="command">User Interface</span>
 
 ==- <span class="command">Use</span>
 Use the specified class or keyword for Dialog Box, Selection Box and Background Box and Sprite Box.
@@ -467,7 +467,7 @@ $ &Alice.Show 	   {&/Game/Assets/Alice_Happy.Alice_Happy}
 
 ---
 
-## Media
+## <span class="command">Media</span>
 
 ==- <span class="command">Play Sound</span>
 Play a sound asset.
@@ -588,7 +588,7 @@ $ PlayAnimation {&Mesh} {&/Game/Animations/Running.Running} true
 
 ---
 
-## Helper
+## <span class="command">Helper</span>
 
 ==- <span class="command">Roll</span>
 Roll a die. Select a random number in range.

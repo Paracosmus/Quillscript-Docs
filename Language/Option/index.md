@@ -23,7 +23,7 @@ You can sequence as many options as you want; just remember to design your [Sele
 
 ---
 
-## Multiline Text Option
+## <span class="option">Multiline Text Option</span>
 
 Options' texts can also come in multiple lines, using a second asterisk, and adding the option text in the following line.
 
@@ -40,7 +40,7 @@ Options' texts can also come in multiple lines, using a second asterisk, and add
 
 ---
 
-## Navigation
+## <span class="option">Navigation</span>
 
 As you can see, the above options do nothing after being chosen. You can use an option to move to a desired point of the story by concatenating a [Router as instruction](../router/index.md#router-as-instruction).
 
@@ -66,7 +66,7 @@ $ End
 
 ---
 
-## Execute Commands
+## <span class="option">Execute Commands</span>
 Another common use is executing a [Command as instruction](../command/index.md#command-as-instruction) within an option, like handling a variable or calling a function.
 
 ```q #4-6

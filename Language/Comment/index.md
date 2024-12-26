@@ -23,7 +23,7 @@ $ name = {$MyCustomFunctionReturnValue}
 
 ---
 
-## Inline Comment
+## <span class="comment">Inline Comment</span>
 An inline comment is a comment within another statement line. It is set the same way as a line comment. Be aware that anything after an inline comment opening, is ignored by the parser.
 
 ```q #
@@ -37,7 +37,7 @@ $ gold = 10 // main currency
 
 ---
 
-## Header Comment
+## <span class="comment">Header Comment</span>
 If a [free text](../free-text/) line is set before any other statement in script, these lines are called header comments and differ from usual comments because they don't have a comment marker. They are also ignored and discarded by the parser.
 
 ```q #1-4
@@ -54,7 +54,7 @@ Scene description.
 
 ---
 
-# Section
+## <span class="comment">Section</span>
 Sections are organizational brackets with no impact on how your script runs. Their goal is to help writers better organize sections of the story without the need for any workarounds.
 
 They also allow you to use the folding feature in most editors, like <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>.

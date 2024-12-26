@@ -26,7 +26,7 @@ $ Play 1
 
 ---
 
-## Command as Instruction
+## <span class="command">Command as Instruction</span>
 A Command can also be concatenated to Dialogue, Option, and other Command statements as an instruction.
 
 ```q #

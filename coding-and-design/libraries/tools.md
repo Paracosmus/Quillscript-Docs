@@ -12,10 +12,10 @@ This library is a useful resource for any Unreal Engine project, offering a wide
 
 ---
 
-## Print
+## <span class="tag">Print</span>
 
 :::api
-### <span class="comment">Print</span>
+### Print
 
 Print a message on screen and/or console. (In Development, Debug or Editor mode)
 

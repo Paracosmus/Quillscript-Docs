@@ -38,7 +38,7 @@ Your custom widgets will receive these tags as an Array of Strings in its Play e
 
 ---
 
-## Key-Value Pair
+## <span class="tag">Key-Value Pair</span>
 A tag can be formatted in a key-value pair pattern using : (Colon) like the example below.
 
 ```q #
@@ -77,7 +77,7 @@ void UMyDialogBox::Play_Implementation(const FString& Speaker, const FText& Text
 
 ---
 
-## Custom Patterns
+## <span class="tag">Custom Patterns</span>
 Notice that tags are simple strings, meaning you can use custom patterns and formats to pass data, and later, you code your widgets and/or Interpreter to identify these patterns and act accordingly.
 
 For example, you can write a tag using commas or semicolons and split the data later in your custom code.

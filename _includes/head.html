@@ -21,8 +21,12 @@
 
     .api {
         padding: 15px;
+        border: 1px solid #EEEEEE;
         border-radius: 8px;
         background-color: #FBFBFB;
+    } .api h3 {
+        padding-bottom: 10px;
+        border-right: 3px solid #854be9;
     }
 
     /* --- Quillscript syntax highlighting --- */
@@ -91,11 +95,11 @@
     }
 
     /* Directive */
-    .language-q .token.directive .token.tilde.punctuation {
+    .language-q .token.directive .token.tilde.punctuation, .directive {
         color: #fbc02d;
         font-weight: bold
     }
-    .language-q .token.directive .token.name.keyword, .directive {
+    .language-q .token.directive .token.name.keyword {
         color: #FFF176;
         font-weight: bold
     }

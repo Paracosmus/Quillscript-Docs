@@ -22,7 +22,7 @@ Routers are navigation controllers to move from one point of the story to a give
 
 ---
 
-# Router as Instruction
+## <span class="router">Router as Instruction</span>
 A Router can also be concatenated to other statements and used as an instruction.
 
 In **Dialogue**, **Label**, **Command**, and Other **Router** statements, a router instruction is executed only if the statement conditions fail.

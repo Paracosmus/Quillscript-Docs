@@ -93,7 +93,7 @@ You can nest **if** conditions inside each other, just remember to close each in
 
 ---
 
-## Expression
+## <span class="condition">Expression</span>
 A condition is always an [expression](../command/quillscript-variables.md#expressions), the same method used to assign value to a variable. Therefore, conditions can use the same operators and syntax used by command expressions and be as complex as required.
 
 ```q #
@@ -106,7 +106,7 @@ A condition is always an [expression](../command/quillscript-variables.md#expres
 
 ---
 
-## Condition as Instruction
+## <span class="condition">Condition as Instruction</span>
 You can use a condition instruction within any other statement to check if that single statement can be played or should be ignored.
 
 - A condition instruction starts with a ? (Question Mark) followed by an expression.

@@ -27,7 +27,7 @@ $ name = Bob
 
 ---
 
-## Variable Type
+## <span class="command">Variable Type</span>
 Quillscript is an inferred type language, meaning that the variable type is automatically deduced. There are three variable types: **Switch**, **Number**, and **Text**. The variable type is used to determine the behavior of this variable for each operator, **a** Number type variable can be used for math operations, for example.
 
 ### Switch
@@ -60,7 +60,7 @@ $ text = Hi! My name is Ed.
 
 ---
 
-## Variable Access
+## <span class="command">Variable Access</span>
 The variable mark describes how Quillscript interpreter handles its lifecycle and other automatized tasks.
 
 ### Global
@@ -91,7 +91,7 @@ These variables are created by Quillscript to be used as arguments by **a** temp
 
 ---
 
-## Assigning Variables
+## <span class="command">Assigning Variables</span>
 Besides assigning static hard-coded values, variables also accept math expressions and other value concatenation methods.
 
 ### Expressions
@@ -218,7 +218,7 @@ It is possible to use more elaborated replacement pattern if necessary
 
 ---
 
-## Constants
+## <span class="command">Constants</span>
 Constants work just like variables, they are assigned and handled the same way, but once created, they can't have their value changed.
 
 Constants are declared on all uppercase.
@@ -232,7 +232,7 @@ $ PI = 3.14
 
 ---
 
-## Deleting Variables
+## <span class="command">Deleting Variables</span>
 You should always remove variables that aren’t required to be permanently stored, as the more variables there are, the more time it takes to execute some tasks.
 
 To delete a variable, call the built-in function [Delete](./built-in-functions.md) and pass the variable's name.
@@ -248,7 +248,7 @@ Temporary variables are automatically deleted when the script ends, but you can 
 
 ---
 
-## Localizing Variables' Text
+## <span class="command">Localizing Variables' Text</span>
 Although being stored as an Unreal Engin's Text type, Quillscript's Text variables are marked as cultural invariants by default. If the value of a variable must be localized, set its value inside **`` (_backticks_)**
 
 ```q
@@ -258,12 +258,12 @@ $ response = `This text is localizable.`
 
 ---
 
-## Using Variables in Code
+## <span class="command">Using Variables in Code</span>
 Quillscript variables are stored as an <a href="https://dev.epicgames.com/documentation/unreal-engine/map-containers-in-unreal-engine" target="_blank">Unreal Engine Map</a> of <a href="https://dev.epicgames.com/documentation/unreal-engine/fname-in-unreal-engine" target="_blank">Name</a> to <a href="https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine" target="_blank">Text</a>. This map is declared in Quillscript Subsystem and is accessible in Blueprints and C++. Check <a href="../../coding-and-design/libraries/quill.md" target="_blank">Quillscript Static Library</a> for detailed usage.
 
 ---
 
-## Variable Modifier
+## <span class="command">Variable Modifier</span>
 Check [Register Variable Modifier](../../coding-and-design/libraries/quill.md#register-variable-modifier) and [Unregister Variable Modifier](../../coding-and-design/libraries/quill.md#unregister-variable-modifier).
 
 !!!ghost
@@ -272,7 +272,7 @@ Check [Register Variable Modifier](../../coding-and-design/libraries/quill.md#re
 
 ---
 
-## Hard Coding Default Variables
+## <span class="command">Hard Coding Default Variables</span>
 
 !!!ghost
 :construction: Under construction :construction:

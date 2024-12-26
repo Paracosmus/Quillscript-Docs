@@ -29,7 +29,7 @@ As written in the example above, all statements below the declaration of a label
 
 ---
 
-## Label as Instruction
+## <span class="label">Label as Instruction</span>
 Any statement can be labeled by adding a label as instruction to it. Router statements can use these labels as any other label statement.
 
 ```q
@@ -49,7 +49,7 @@ It's important to notice that statements can be jumped if they belong to a label
 
 ---
 
-## Display Name
+## <span class="label">Display Name</span>
 When naming labels, it's common to emerge project patterns that are often non-friendly, containing dots, slashes, prefixes, postfixes, and other marks.
 
 If your project shows labels' names to users for some reason, like in a story tracker, these names are not ideal to be displayed to other developers or players.

@@ -16,7 +16,7 @@ Quillscript Plugin provides a built-in Dialog Box widget. Although fully functio
 
 ---
 
-## Create a Custom Dialog Box
+## <span class="dialogue">Create a Custom Dialog Box</span>
 To create your own Dialog Box widget, it must conform with two requirements:
 
 **Be a child class of the Dialog Box Base class (Blueprint or C++)**
@@ -68,12 +68,12 @@ The Play event is called by the Interpreter for every Dialogue statement.
 
 ---
 
-## Use Custom Dialog Box
+## <span class="dialogue">Use Custom Dialog Box</span>
 Once your Dialogue Box is done, you can use it by setting your _Default Dialogue Box Class_ in [Quillscript Settings](../settings/) or change it on demand using the built-in function <span class="command">$ Use</span>.
 
 ---
 
-## Self-Manage Dialog Box
+## <span class="dialogue">Self-Manage Dialog Box</span>
 For some projects, Quillscript user interface management may be incompatible with its design or code. For these cases, you can turn off UI management in Quillscript Plugin settings.
 
 `Settings > User Interface > Advanced > Manage Dialogue Box`

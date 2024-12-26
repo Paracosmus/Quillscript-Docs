@@ -11,7 +11,7 @@ Directives are tasks that can execute either during runtime or before a Script s
 
 ---
 
-## Start
+## <span class="directive">Start</span>
 Defines a different starting point for this script.
 
 By default, Quillscript scripts start at the beginning of the text file. With this directive, you can set a custom starting point.
@@ -41,7 +41,7 @@ If you have the **Keep Script History** setting enabled in Quillscript Settings,
 
 ---
 
-## Define
+## <span class="directive">Define</span>
 Replaces all occurrences of a pre-defined string during parsing time.
 
 ```q #
@@ -77,7 +77,7 @@ $ &Bob.Show [path:Bob;Idle]
 
 ---
 
-## Replace
+## <span class="directive">Replace</span>
 Replaces all occurrences of a pre-defined parameter, before the script starts.
 
 ```q #
@@ -95,7 +95,7 @@ $ height = 1.5
 
 ---
 
-## Include
+## <span class="directive">Include</span>
 Inserts the data of a given Quillscript Script asset, at this point, either by id or by path.
 
 To include a Script by id, use the script id starting with a @.
@@ -127,7 +127,7 @@ Be aware not to cyclically include one script into another creating an infinite 
 
 ---
 
-## Import
+## <span class="directive">Import</span>
 Inserts the data of a given Quillscript Script asset, at the start of this script, only once, either by id or by path.
 
 To import a Script by id, use the script id starting with a @.
@@ -159,7 +159,7 @@ Be aware not to cyclically include one script into another creating an infinite 
 
 ---
 
-## Inject
+## <span class="directive">Inject</span>
 Inserts the content of a given label from an external script, at this point, either by id or by path.
 
 To inject a label content by id, use the script id starting with a @.
@@ -191,7 +191,7 @@ Be aware not to cyclically include one script or label into another creating an 
 
 ---
 
-## Checkpoint
+## <span class="directive">Checkpoint</span>
 This directive halts the execution of the script until a specified condition is met. The Interpreter remains in a waiting state and does not proceed to the next line of code until the condition evaluates to true. The condition is an expression that can be evaluated.
 
 ```q

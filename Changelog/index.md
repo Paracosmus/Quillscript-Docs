@@ -1,6 +1,6 @@
 ---
 label: Changelog
-icon: repo-forked
+icon: git-branch
 order: 1
 ---
 # Changelog

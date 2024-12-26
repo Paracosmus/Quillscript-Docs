@@ -8,7 +8,7 @@ Special tags are tags with built-in behavior. They are used to decorate statemen
 
 ---
 
-## Once
+## <span class="tag">Once</span>
 This Special Tag can be used if you want a statement to play only once, doesn't matter how many times the script flow passes through that point.
 
 ```q #
@@ -29,7 +29,7 @@ $ ShowShopInventory
 
 ---
 
-## Mark
+## <span class="tag">Mark</span>
 The #mark tag is used to tell the Interpreter to store a counter of how many times this statement played when the Keep Visited Statements setting is turned off.
 
 ```q

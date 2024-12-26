@@ -40,7 +40,7 @@ In the example above, the **@Where** and **@Eat** labels only play if selected, 
 
 ---
 
-## Covert Label as Instruction
+## <span class="label">Covert Label as Instruction</span>
 If a covert label is used as an instruction in other types of statements, that statement is also jumped unless it is called directly by a router.
 
 ```q

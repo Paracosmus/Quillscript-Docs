@@ -32,7 +32,7 @@ Although not a recommended practice, you can pass **Null Pointers (nullptr)**, t
 
 ---
 
-## Built-in
+## <span class="command">Built-in</span>
 If the above function belongs to the Interpreter, including custom interpreters, you call it by typing its name and passing the parameters separated by spaces.
 
 ```q
@@ -42,7 +42,7 @@ $ MyFunction 10 true
 
 ---
 
-## Named Object
+## <span class="command">Named Object</span>
 You can execute functions that belong to an instanced object by referencing its name, editor's name or display name. For example, if an object is named 'MyActor', start the function with an **& (_ampersand_)** followed by the object name, and place a dot between the object name and the function name.
 
 ```q
@@ -184,7 +184,7 @@ $ Background {&Shop}
 
 ---
 
-## Object, Actors, Widgets or Function Library of Class
+## <span class="command">Object, Actors, Widgets or Function Library of Class</span>
 You can execute functions in all objects of a given class. For example, if an object has the class _"MyClass"_, start the function with an **^ (_Circumflex_)** and the class name.
 
 +++Blueprint Class
@@ -215,7 +215,7 @@ $ ^Engine.Actor.MyFunction 10 true
 
 ---
 
-## Tagged Actors
+## <span class="command">Tagged Actors</span>
 Start with the blueprint reference path, without the extension at the end:
 
 You can execute functions that belong to instanced Actors using their tags. For example, if an Actor has the tag _'MyTag'_, start the function with a **% (_Percent Sign_)** and the tag name.
@@ -229,7 +229,7 @@ $ %MyTag.MyFunction 10 true
 
 ---
 
-## Calling Nested Objects
+## <span class="command">Calling Nested Objects</span>
 You can also call functions from nested objects. For example:
 
 ```q
@@ -243,7 +243,7 @@ You cannot call functions from objects in **arrays**, **sets**, **maps**, and ne
 
 ---
 
-## Return Values and Outer Parameters
+## <span class="command">Return Values and Outer Parameters</span>
 
 ### Functions
 You can capture the return values of a called function and store it in a Quillscript variable.
@@ -348,7 +348,7 @@ The following types are supported: **Boolean (bool)**, **Byte (uint8)**, **Integ
 
 ---
 
-## Localizing Parameters' Text
+## <span class="command">Localizing Parameters' Text</span>
 Although being stored as an <a href="https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine" target="_blank">Unreal Engine's Text type</a>, Quillscript's Text are <a href="https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine" target="_blank">culture-invariant</a> by default. If the value of a parameter must be localized, set its value inside **`` (_backticks_)** and it will be changed to <a href="https://dev.epicgames.com/documentation/unreal-engine/text-localization-in-unreal-engine" target="_blank">culture-correct</a>.
 
 ```q
@@ -359,7 +359,7 @@ $ MyFunction `This param value should be localized` 'This param should not'
 
 ---
 
-## Named Parameters
+## <span class="command">Named Parameters</span>
 Is a versatile feature that allows users to call functions with parameters passed in any order. This is achieved by explicitly naming the parameters using the @ParamName:ParamValue syntax. This approach enhances code readability and flexibility, making it easier to understand and edit. At the same time, it also lets the writer pass only the desired parameters in the desired order and omits unnecessary ones.
 
 Consider the following function:

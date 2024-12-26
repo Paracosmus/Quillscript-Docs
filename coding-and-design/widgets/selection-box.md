@@ -15,7 +15,7 @@ Quillscript Plugin provides a built-in Selection Box widget. Although fully func
 
 ---
 
-## Create a Custom Dialog Box
+## <span class="option">Create a Custom Dialog Box</span>
 To create your own Selection Box widget, it must conform with two requirements:
 
 **Be a child class of the Selection Box Base class (Blueprint or C++)**
@@ -80,12 +80,12 @@ The **Valid** property is a _Boolean_ value storing the evaluated result of all 
 
 ---
 
-## Use Custom Selection Box
+## <span class="option">Use Custom Selection Box</span>
 Once your Selection Box is done, you can use it by setting your _Default Selection Box Class_ in [Quillscript Settings](../settings/) or change it on demand using the built-in function <span class="command">$ Use</span>.
 
 ---
 
-## Self-Manage Selection Box
+## <span class="option">Self-Manage Selection Box</span>
 For some projects, Quillscript user interface management may be incompatible with its design or code. For these cases, you can turn off UI management in Quillscript Plugin settings.
 
 `Settings > User Interface > Advanced > Manage Selection Box`

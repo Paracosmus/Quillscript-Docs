@@ -9,7 +9,7 @@ visibility: hidden
 -----------------------------------------------------------------------
 
 :::api
-### <span class="comment">Name</span>
+### Name
 
 Description.
 

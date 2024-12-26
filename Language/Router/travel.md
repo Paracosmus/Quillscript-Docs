@@ -27,7 +27,7 @@ Be aware that the Travel built-in function will immediately terminate the curren
 
 ---
 
-## Travel Pass
+## <span class="router">Travel Pass</span>
 It's often required to keep the current script and interpreter settings while traveling from one script to another. The **$ Travel** built-in function will start the new script in a clean instance.
 
 If you need to keep the current settings, use the **\$ TravelPass** instead. It works the same as **\$ Travel**, but it makes a copy of the current Interpreter and keeps Interpreter and Script settings.
