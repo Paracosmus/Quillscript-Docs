@@ -14,164 +14,365 @@ This library offers a set of specialized tools and features for Quillscript Plug
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Play the given Quillscript script asset. )
-[comment]: <> ( static AQuillscriptInterpreter* PlayScript | const UObject* WorldContextObject, UQuillscriptAsset* Script, const FName StartingLabel = NAME_None, UObject* Target = nullptr )
-
-
 :::api
 ### Play Script
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Initiate the execution of a Quillscript asset.
 
+```rust !#1-2
+WorldContextObject: ref
+Script: ref[QuillscriptAsset]
+(Omittable) StartingLabel: Name
+(Omittable) Target: ref            // Object referenced by this Script as {&Target}
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Get a script reference.
+$ ^Quillscript.Quill.GetScriptById MyScriptId
+
+// Play script.
+$ ^Quillscript.Quill.PlayScript {&ReturnValue}
+
+// End current script. (Optional)
+$ End
+
+```
+Notice that this process produces the same result as the <span class="command">$ Travel</span> built-in function and is useful only if you need extra control of the code behavior or order.
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+UQuill::PlayScript(WorldContextObject, UQuill::GetScriptById("MyScriptId"));
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Play script from start using custom settings instead of script settings. )
-[comment]: <> ( static AQuillscriptInterpreter* PlayScriptUsingCustomSettings | const UObject* WorldContextObject, UQuillscriptAsset* Script, FScriptSettings Settings, const FName StartingLabel = NAME_None, UObject* Target = nullptr )
-
 
 :::api
 ### Play Script Using Custom Settings
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Play the given script using a custom set of settings passed as a parameter to this function. It allows you to fine-tune the behavior of the script execution according to your specific requirements.
 
+```rust !#1-3
+WorldContextObject: ref
+Script: ref[QuillscriptAsset]
+Settings: ScriptSettings
+(Omittable) StartingLabel: Name
+(Omittable) Target: ref            // Object referenced by this Script as {&Target}
+```
+
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+// Configure custom settings.
+FScriptSettings Settings;
+Settings.EnableInputDuring = EPicker::No;
+Settings.ShowMouseCursorAfter = EPicker::Yes;
+
+// Play script using custom settings.
+UQuill::PlayScriptUsingCustomSettings(
+    WorldContextObject,
+    UQuill::GetScriptById("MyScriptId"),
+    Settings
+);
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Play script from start. Delete any previous script history. )
-[comment]: <> ( static AQuillscriptInterpreter* StartScript | const UObject* WorldContextObject, UQuillscriptAsset* Script, const FName StartingLabel = NAME_None, UObject* Target = nullptr )
-
 
 :::api
 ### Start Script
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Same as [Play Script](#play-script) but clears any previous script history to ensure a fresh start.
 
+```rust !#1-2
+WorldContextObject: ref
+Script: ref[QuillscriptAsset]
+(Omittable) StartingLabel: Name
+(Omittable) Target: ref            // Object referenced by this Script as {&Target}
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Get a script reference.
+$ ^Quillscript.Quill.GetScriptById MyScriptId
+
+// Start script.
+$ ^Quillscript.Quill.StartScript {&ReturnValue}
+
+// End current script. (Optional)
+$ End
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+UQuill::StartScript(WorldContextObject, UQuill::GetScriptById("MyScriptId"));
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Play script from start using custom settings instead of script settings. Delete any previous script history. )
-[comment]: <> ( static AQuillscriptInterpreter* StartScriptUsingCustomSettings | const UObject* WorldContextObject, UQuillscriptAsset* Script, FScriptSettings Settings, const FName StartingLabel = NAME_None, UObject* Target = nullptr )
-
 
 :::api
 ### Start Script Using Custom Settings
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Same as [Play Script Using Custom Settings](#play-script-using-custom-settings) but clears any previous script history to ensure a fresh start.
 
+```rust !#1-3
+WorldContextObject: ref
+Script: ref[QuillscriptAsset]
+Settings: ScriptSettings
+(Omittable) StartingLabel: Name
+(Omittable) Target: ref            // Object referenced by this Script as {&Target}
+```
+
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+// Configure custom settings.
+FScriptSettings Settings;
+Settings.EnableInputDuring = EPicker::No;
+Settings.ShowMouseCursorAfter = EPicker::Yes;
+
+// Start script using custom settings.
+UQuill::StartScriptUsingCustomSettings(
+    WorldContextObject,
+    UQuill::GetScriptById("MyScriptId"),
+    Settings
+);
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Play script from last history's save state entry. )
-[comment]: <> ( Used when the game was saved during a script play, and resume from that saved point. )
-[comment]: <> ( static AQuillscriptInterpreter* ResumeScript | const UObject* WorldContextObject, UQuillscriptAsset* Script )
-
 
 :::api
 ### Resume Script
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Continue the execution of a Quillscript from the last saved state entry in the script's history. It enables you to pick up the script where it left off, making it useful for scenarios where you need to maintain script continuity or when the game was saved during a script play and need to continue from that point.
 
+```rust !#1-2
+WorldContextObject: ref
+Script: ref[QuillscriptAsset]
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Get a script reference.
+$ ^Quillscript.Quill.GetScriptById MyScriptId
+
+// Play script.
+$ ^Quillscript.Quill.ResumeScript {&ReturnValue}
+
+// End current script. (Optional)
+$ End
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+UQuill::ResumeScript(WorldContextObject, UQuill::GetScriptById("MyScriptId"));
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Parse a Quillscript text into a script object. )
-[comment]: <> ( static UQuillscriptAsset* ParseScript | const FString Text, const EPermissionMode Permission = EPermissionMode::Safe )
-
 
 :::api
 ### Parse Script
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Takes a Quillscript language valid string as input and converts it into a Quillscript asset. This is particularly useful when you need to dynamically create or modify scripts at runtime, or when you allow modders or user to create their own scripts.
 
+You can also specify a permission mode to control the script's behavior. See [Permissions](../objects/script.md#permissions) for more details.
+
+```rust !#1
+Text: string
+(Omittable) Permission: PermissionMode        [ All, Safe, Sandbox ]
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Get a valid Quillscript language string.
+$ :QuillscriptLanguageValidString := '$ x = 1'
+
+// Create script object reference.
+$ ^Quillscript.Quill.ParseScript {:QuillscriptLanguageValidString}
+
+// Play created script.
+$ ^Quillscript.Quill.PlayScript {&ReturnValue}
+
+// End current script. (Optional)
+$ End
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+const TObjectPtr<UQuillscriptAsset> Script{ UQuill::ParseScript(QuillscriptLanguageValidString, EPermissionMode::Sandbox) };
+UQuill::PlayScript(WorldContextObject, Script);
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Get a list of all Quillscript script assets. )
-[comment]: <> ( static TArray<UQuillscriptAsset*> GetScripts )
-
 
 :::api
 ### Get Scripts
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Retrieves a list of all available Quillscript script assets within your project. This can be useful when you need to access and manage multiple scripts programmatically.
 
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+$ ^Quillscript.Quill.GetScripts
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+TArray<UQuillscriptAsset*> Scripts{ UQuill::GetScripts() };
+
+for (auto Script : Scripts)
+{
+    // Implementation.
+}
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Get a Quillscript asset by path. |/Game/Folder/MyScript.MyScript| )
-[comment]: <> ( static UQuillscriptAsset* GetScriptByPath | const FString& Path )
-
 
 :::api
 ### Get Script by Path
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Retrieve a specific Quillscript asset by providing its path within your project. This function simplifies script asset retrieval, making it easy to access the script you need for execution or manipulation.
 
+```rust !#1
+Path: string
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Get a script reference.
+$ ^Quillscript.Quill.GetScriptByPath /Game/Path/To/MyScript.MyScript
+
+// Play script.
+$ ^Quillscript.Quill.PlayScript {&ReturnValue}
+
+// End current script. (Optional)
+$ End
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+const TObjectPtr<UQuillscriptAsset> Script{ UQuill::GetScriptByPath("/Game/Path/To/MyScript.MyScript") };
+UQuill::PlayScript(WorldContextObject, Script);
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Get a Quillscript asset by it's Id. )
-[comment]: <> ( ! This function may be slow on large project with thousands of assets. )
-[comment]: <> ( static UQuillscriptAsset* GetScriptById | const FName Id )
-
-
 :::api
 ### Get Script by Id
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Retrieve a Quillscript asset by its unique identifier (Id). Keep in mind that this function may have performance implications in projects with a large number of assets. Use it when you need to specifically locate a script by its Id.
 
+```rust !#1
+Id: name
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Get a script reference.
+$ ^Quillscript.Quill.GetScriptById MyScriptId
+
+// Play script.
+$ ^Quillscript.Quill.PlayScript {&ReturnValue}
+
+// End current script. (Optional)
+$ End
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+const TObjectPtr<UQuillscriptAsset> Script{ UQuill::GetScriptById("MyScriptId") };
+UQuill::PlayScript(WorldContextObject, Script);
+```
+===
 :::
 <br>
 
@@ -199,54 +400,119 @@ Please refer to the in-engine documentation
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Check if the given Quillscript script is currently playing. )
-[comment]: <> ( static bool IsScriptPlaying | const UObject* WorldContextObject, const UQuillscriptAsset* Script )
-
-
 :::api
 ### Is Script Playing
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Checks whether a specified Quillscript script is currently playing.
 
+```rust !#1
+WorldContextObject: ref
+Script: ref[QuillscriptAsset]
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+$ ^Quillscript.Quill.GetScriptById MyScriptId
+$ ^Quillscript.Quill.IsScriptPlaying {&ReturnValue}
+
+if: {$ReturnValue} == on
+
+    // Do something
+
+endif
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+const TObjectPtr<UQuillscriptAsset> Script{ UQuill::GetScriptById("MyScriptId") };
+
+if (UQuill::IsScriptPlaying(WorldContextObject, Script))
+{
+    // Implementation
+}
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Check if any Quillscript script is currently playing. )
-[comment]: <> ( static bool IsAnyScriptPlaying | const UObject* WorldContextObject )
-
 
 :::api
 ### Is Any Script Playing
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Checks whether any Quillscript script is currently playing.
 
+```rust !#1
+WorldContextObject: ref
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+$ ^Quillscript.Quill.IsAnyScriptPlaying
+
+if: {$ReturnValue} == on
+
+    // Do something
+
+endif
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+if (UQuill::IsAnyScriptPlaying(WorldContextObject))
+{
+    // Implementation
+}
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Make a list with all script permissions. )
-[comment]: <> ( static TArray<EPermission> MakePermissionsList | const EPermissionMode PermissionMode )
-
-
 :::api
 ### Make Permissions List
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Generates a list of script permissions based on the specified permission mode. This function is helpful when you need to create a list of permissions for your scripts programmatically, allowing you to control the behavior of the scripts according to your permission requirements.
 
+See [Permissions](../objects/script.md#permissions) for more details.
+
+```rust !#1
+PermissionMode: PermissionMode                [ All, Safe, Sandbox ]
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Get a script reference.
+$ ^Quillscript.Quill.MakePermissionsList Sandbox
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+TArray<EPermission> Permissions{ UQuill::MakePermissionsList(EPermissionMode::Sandbox) };
+```
+===
 :::
 <br>
 
@@ -294,37 +560,71 @@ Please refer to the in-engine documentation
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Spawn an interpreter actor. )
-[comment]: <> ( Use this method instead of spawning it manually. )
-[comment]: <> ( static AQuillscriptInterpreter* CreateInterpreter | const UObject* WorldContextObject, TSubclassOf<AQuillscriptInterpreter> InterpreterClass = nullptr )
-
-
 :::api
 ### Create Interpreter
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Spawn an interpreter actor. It is recommended to use this method instead of manually spawning an interpreter actor.
 
+```rust !#1
+WorldContextObject: ref
+(Omittable) InterpreterClass: SubclassOf[QuillscriptInterpreter]
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+$ ^Quillscript.Quill.CreateInterpreter
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+const TSubclassOf<AQuillscriptInterpreter> InterpreterClass{ LoadClass<AQuillscriptInterpreter>(nullptr, TEXT("/Game/Path/To/MyInterpreter.MyInterpreter_C")) };
+const TObjectPtr<AQuillscriptInterpreter> Interpreter{ UQuill::CreateInterpreter(WorldContextObject, InterpreterClass) };
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Get all instantiated interpreter objects. )
-[comment]: <> ( static TArray<AQuillscriptInterpreter*> GetInterpreters | const UObject* WorldContextObject )
-
-
 :::api
 ### Get Interpreters
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Retrieve all instantiated interpreter objects in the specified world context.
 
+```rust !#1
+WorldContextObject: ref
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+$ ^Quillscript.Quill.GetInterpreters
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+TArray<AQuillscriptInterpreter*> Interpreters{ UQuill::StartScript(WorldContextObject) };
+
+for (auto Interpreter : Interpreters)
+{
+    // Implementation.
+}
+```
+===
 :::
 <br>
 
@@ -354,35 +654,83 @@ Please refer to the in-engine documentation
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( static bool QuillscriptVariableExists | const UObject* WorldContextObject, const FName VariableName )
-
-
 :::api
 ### Quillscript Variable Exists
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Check the existence of a Quillscript variable with a specified name. This function is particularly useful when you need to determine whether a specific variable is defined.
 
+```rust !#1
+WorldContextObject: ref
+VariableName: name
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store result in {$ReturnValue}.
+$ ^Quillscript.Quill.QuillscriptVariableExists VariableName
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+if (UQuill::QuillscriptVariableExists(WorldContextObject, FName("VariableName")))
+{
+    // Implementation.
+}
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Get the value of a Quillscript variable. Return "off" if does not it exists. )
-[comment]: <> ( static FString GetQuillscriptVariable | const UObject* WorldContextObject, const FName VariableName )
-
-
 :::api
 ### Get Quillscript Variable
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Retrieves the value of a Quillscript variable with the specified name. If the variable does not exist, it returns "off" as a default value.
 
+```rust !#1-2
+WorldContextObject: ref
+VariableName: name
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store result in {$ReturnValue}.
+$ ^Quillscript.Quill.GetQuillscriptVariable VariableName
+
+```
+Notice that this produces the same result as using the variable directly like
+`$ x = {VariableName}`
+
+But this is useful to get a variable using a dynamic name.
+```q
+$ ^Quillscript.Quill.GetQuillscriptVariable {dynamicName}
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+// Macro (Only inside an UObject method)
+FString VariableValue{ VAR("VariableName") };
+
+// Function call.
+FString VariableValue{ UQuill::GetQuillscriptVariable(WorldContextObject, FName("VariableName")) };
+```
+===
 :::
 <br>
 
@@ -743,34 +1091,76 @@ Please refer to the in-engine documentation
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( static bool SaveGameAndStoryToSlot | const UObject* WorldContextObject, USaveGame* SaveGameObject, const FString SlotName, const int32 UserIndex )
-
-
 :::api
 ### Save Game and Story to Slot
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+This function behaves the same as the native [Save Game to Slot](https://docs.unrealengine.com/latest/BlueprintAPI/SaveGame/SaveGametoSlot/), but additionally injects Quillscript data to the save game file.
 
+Saves game data and Quillscript data to a specified save slot. The function returns true if the save operation is successful, and false otherwise.
+
+```rust !#1-4
+WorldContextObject: ref
+SaveGameObject: ref[SaveGame]
+SlotName: string
+UserIndex: number
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Save game and Quillscript data to 'MySlot'.
+$ ^Quillscript.Quill.SaveGameAndStoryToSlot {&SaveGame} "MySlot" 0
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+TObjectPtr<UMySaveGame> SaveGame{ Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass())) };
+UQuill::SaveGameAndStoryToSlot(WorldContextObjet, SaveGame, "MySlot", 0);
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( static USaveGame* LoadGameAndStoryFromSlot | const UObject* WorldContextObject, const FString SlotName, const int32 UserIndex )
-
-
 :::api
 ### Load Game and Story from Slot
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+This function behaves the same as the native [Load Game from Slot](https://docs.unrealengine.com/latest/BlueprintAPI/SaveGame/LoadGamefromSlot/), but additionally extracts Quillscript data from the save game file and update Quillscript subsystem with the extracted data.
 
+Returns a Save Game object containing the loaded data.
+
+```rust !#1-3
+WorldContextObject: ref
+SlotName: string
+UserIndex: number
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Load game and Quillscript data from 'MySlot'.
+$ ^Quillscript.Quill.LoadGameAndStoryFromSlot "MySlot" 0
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+UQuill::LoadGameAndStoryFromSlot(WorldContextObjet, "MySlot", 0);
+```
+===
 :::
 <br>
 

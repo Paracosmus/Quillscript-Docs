@@ -17,20 +17,38 @@ This library is a useful resource for any Unreal Engine project, offering a wide
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Print a log message in editor. )
-[comment]: <> ( @param	Message )
-[comment]: <> ( @param	Owner		Object that called this function. Can be null. )
-[comment]: <> ( @param	PrintType	Message type, to change text color accordingly. )
-[comment]: <> ( void Log | FString Message, const UObject* Owner = nullptr, const EPrintType PrintType = EPrintType::Log )
-
 :::api
 ### Log
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Print a message on screen and/or console with control params. (In Development, Debug or Editor mode)
 
+Check your [Verbosity setting](../settings/settings-details.md#verbosity) to select where this message is printed.
+
+```rust !#1
+Message: string
+(Omittable) Owner: ref              // Object that called this function.
+(Omittable) PrintType: PrintType    [ Log, Success, Warning, Error ]
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+$ ^Quillscript.Tools.Log Hello
+$ ^Quillscript.Tools.Log 'Print this message'
+$ ^Quillscript.Tools.Log 'Print this message' {&Script} Error
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+UTools::Log("Print this message", MyObject, EPrintType::Error);
+```
+===
 :::
 <br>
 
@@ -42,11 +60,11 @@ Please refer to the in-engine documentation
 
 Print a message on screen and/or console. (In Development, Debug or Editor mode)
 
-Check your Verbosity setting to select where this message is printed.
+Check your [Verbosity setting](../settings/settings-details.md#verbosity) to select where this message is printed.
 
 ```rust !#1 Parameters
 Message: string
-[Omittable] Owner: ref    // Object that called this function.
+(Omittable) Owner: ref    // Object that called this function.
 ```
 
 ==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
@@ -79,57 +97,123 @@ UTools::Print("Print this message", MyObject)
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Print a success message in editor. )
-[comment]: <> ( @param	Message )
-[comment]: <> ( @param	Owner	Object that called this function. Can be left blank. )
-[comment]: <> ( void Success | const FString Message, const UObject* Owner = nullptr )
-
 :::api
 ### Success
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Print a success message on screen and/or console. (In Development, Debug or Editor mode)
 
+Check your [Verbosity setting](../settings/settings-details.md#verbosity) to select where this message is printed.
+
+```rust !#1
+Message: string
+(Omittable) Owner: ref    // Object that called this function.
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+$ ^Quillscript.Tools.Success Hello
+$ ^Quillscript.Tools.Success 'Print this message'
+$ ^Quillscript.Tools.Success 'Print this message' {&Script}
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+// Macro (Only inside an UObject method)
+SUCCESS("Print this message");
+
+// Function call.
+UTools::Success("Print this message", MyObject);
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Print a warning message in editor. )
-[comment]: <> ( @param	Message )
-[comment]: <> ( @param	Owner	Object that called this function. Can be left blank. )
-[comment]: <> ( void Warning | const FString Message, const UObject* Owner = nullptr )
 
 :::api
 ### Warning
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Print a warning message on screen and/or console. (In Development, Debug or Editor mode)
 
+Check your [Verbosity setting](../settings/settings-details.md#verbosity) to select where this message is printed.
+
+```rust !#1
+Message: string
+(Omittable) Owner: ref    // Object that called this function.
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+$ ^Quillscript.Tools.Warning Hello
+$ ^Quillscript.Tools.Warning 'Print this message'
+$ ^Quillscript.Tools.Warning 'Print this message' {&Script}
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+// Macro (Only inside an UObject method)
+WARNING("Print this message");
+
+// Function call.
+UTools::Warning("Print this message", MyObject);
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Print an error message in editor. )
-[comment]: <> ( @param	Message )
-[comment]: <> ( @param	Owner	Object that called this function. Can be left blank. )
-[comment]: <> ( void Error | const FString Message, const UObject* Owner = nullptr )
-
 :::api
 ### Error
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Print an error message on screen and/or console. (In Development, Debug or Editor mode)
 
+Check your [Verbosity setting](../settings/settings-details.md#verbosity) to select where this message is printed.
+
+```rust !#1
+Message: string
+(Omittable) Owner: ref    // Object that called this function.
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+$ ^Quillscript.Tools.Error Hello
+$ ^Quillscript.Tools.Error 'Print this message'
+$ ^Quillscript.Tools.Error 'Print this message' {&Script}
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+// Macro (Only inside an UObject method)
+ERROR("Print this message");
+
+// Function call.
+UTools::Error("Print this message", MyObject);
+```
+===
 :::
 <br>
 
@@ -141,51 +225,111 @@ Please refer to the in-engine documentation
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Rename a given object. )
-[comment]: <> ( Whitespaces will be removed. )
-[comment]: <> ( void RenameObject | UObject* Object, FString NewName )
-
 :::api
 ### Rename Object
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Rename the given object.
 
+This function is useful to give a know name to an object and reference it later by name in script like:
+`$ &ObjName.ObjFunction`
+
+```rust !#1-2
+Object: ref
+NewName: string
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+$ ^Quillscript.Tools.RenameObject {&RefName} NewRefName
+$ &NewRefName.MyFunction
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+UTools::RenameObject(MyObject, "RefName");
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Try to find a class by path. )
-[comment]: <> ( UClass* FindClassByPath | FString Path )
 
 :::api
 ### Find Class by Path
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Attempts to locate a class by its path, specified as a string. This function is a valuable utility for dynamically finding and accessing classes within your Unreal Engine project based on their defined paths.
 
+```rust !#1
+Path: string
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store class reference in {&ReturnValue}.
+$ ^Quillscript.Tools.FindClassByPath /Game/Path/To/Blueprint.Blueprint
+$ ^Quillscript.Tools.FindClassByPath /Game/Path/To/Blueprint.Blueprint_C
+$ ^Quillscript.Tools.FindClassByPath Module.ClassName
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+// Blueprint class.
+TObjectPtr<UClass> BlueprintPath{ UTools::FindClassByPath("/Game/Path/To/My/Blueprint.Blueprint") };
+TObjectPtr<UClass> ClassPath{ UTools::FindClassByPath("/Game/Path/To/My/Blueprint.Blueprint_C") };
+
+// C++ class.
+TObjectPtr<UClass> CppClass{ UTools::FindClassByPath("Module.ClassName") };
+TObjectPtr<UClass> CppClassExample{ UTools::FindClassByPath("Engine.Actor") };
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( UObject* GetClassDefaultObject | const UClass* Class )
-
 :::api
 ### Get Class Default Object
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Get the default object from the given class. This function is useful to expose the Default Object to Blueprints.
 
+```rust !#1
+Class: ref[Class]
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store class reference in {&ReturnValue}.
+$ ^Quillscript.Tools.GetClassDefaultObject {&Class}
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+TObjectPtr<UClass> DefaultObject{ UTools::GetClassDefaultObject(Class) };
+```
+===
 :::
 <br>
 
@@ -300,131 +444,267 @@ Please refer to the in-engine documentation
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Call a Target's function by name. )
-[comment]: <> ( This is a simplified general usage version of 'Interpreter.CallFunctionOnTarget' )
-[comment]: <> ( that does not create Quillscript variables and script references. )
-[comment]: <> ( @param WorldContextObject )
-[comment]: <> ( @param Target		Object to call the function from. )
-[comment]: <> ( @param FunctionName	Name of the function to call. )
-[comment]: <> ( @param Parameters	Function entry parameters to pass as strings. The parameters must be in the same order they are declared. )
-[comment]: <> ( @return	Return value and outer parameters of the function. )
-[comment]: <> ( TMap<FName, FString> CallFunctionByName | UObject* WorldContextObject, UObject* Target, const FName FunctionName, const TArray<FString>& Parameters )
-
 :::api
 ### Call Function by Name
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Call a Target's function by name and return its Return Value and Outer Parameters.
 
+This is a simplified general usage version of _Interpreter.CallFunctionOnTarget()_ that do not create Quillscript variables and script references.
+
+```rust !#1-4
+WorldContextObject: ref
+Target: ref
+FunctionName: name
+Parameters: array[string]
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store class reference in {&ReturnValue}.
+$ ^Quillscript.Tools.CallFunctionByName {&Target} MyFunction '("10","true")'
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+TMap<FName, FString> OuterParams{
+    UTools::CallFunctionByName(
+        WorldContextObject,
+        Target,
+        "MyFunction",
+        TArray<FString>({"10", "true"})
+    )
+};
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Shortcut function to be used inside static methods that have a 'WorldContextObject' parameter. )
-[comment]: <> ( If your function has access to 'HasAuthority' by other means, use those instead. )
-[comment]: <> ( Can also be used with the macro 'HAS_AUTHORITY'. )
-[comment]: <> ( bool HasAuthority | const UObject* WorldContextObject )
 
 :::api
 ### Has Authority
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Serves as a shortcut utility designed for use inside static methods that have a **WorldContextObject** parameter. It allows you to determine whether the current execution context possesses authority, using the **GetFirstPlayerController**, which is often associated with server or authoritative roles in networked multiplayer games.
 
+While this function provides a convenient way to check authority within static methods, it's important to note that if your function already has access to **HasAuthority()** through other means, it's advisable to use those methods instead.
+
+```rust !#1
+WorldContextObject: ref
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store result in {&ReturnValue}.
+$ ^Quillscript.Tools.HasAuthority
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+// Macro (Only inside functions with a 'WorldContextObject' variable)
+if (HAS_AUTHORITY())
+{
+    // Implementation.
+}
+
+// Function call.
+if (UTools::HasAuthority(WorldContextObject))
+{
+    // Implementation.
+}
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Check if a module/plugin is loaded. )
-[comment]: <> ( bool IsModuleLoaded | const FName ModuleName )
 
 :::api
 ### Is Module Loaded
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Check whether a specific module or plugin is currently loaded within the Unreal Engine project. This function provides a straightforward way to determine if a particular module or plugin is available and active for use in your project.
 
+```rust !#1
+ModuleName: name
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store result in {&ReturnValue}.
+$ ^Quillscript.Tools.IsModuleLoaded ModuleName
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+if (UTools::IsModuleLoaded(ModuleName))
+{
+    // Implementation.
+}
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Generate a random string of characters including numbers and symbols. )
-[comment]: <> ( FString GenerateRandomString | const uint8 Size = 8, const bool bLetters = true, const bool bNumbers = true, const bool bSymbols = false )
 
 :::api
 ### Generate Random String
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Check whether a specific module or plugin is currently loaded within the Unreal Engine project. This function provides a straightforward way to determine if a particular module or plugin is available and active for use in your project.
 
+```rust !#
+(Omittable) Size: byte = 8
+(Omittable) Letters: bool = true
+(Omittable) Numbers: bool = true
+(Omittable) Symbols: bool = false
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store result in {&ReturnValue}.
+$ ^Quillscript.Tools.GenerateRandomString
+$ ^Quillscript.Tools.GenerateRandomString 8 true true true
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+FString RandomString{ UTools::GenerateRandomString() };
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Get a Level transition option. )
-[comment]: <> ( @param	WorldContextObject )
-[comment]: <> ( @param	Key					Option key. )
-[comment]: <> ( @param	Value				Receive option value. )
-[comment]: <> ( @return	True, if the option key exists. )
-[comment]: <> ( bool RetrieveOption | const UObject* WorldContextObject, const FString& Key, FString& Value )
 
 :::api
 ### Retrieve Option
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Fetch a level transition option by providing the option's key. This function is particularly useful when you need to access specific transition options after a level change, allowing you to retrieve and utilize option values as needed.
 
+```rust !#1-3
+WorldContextObject: ref
+Key: string
+Value: string
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store if level option exists in {$ReturnValue}.
+// Store level option value in {&Value}.
+$ ^Quillscript.Tools.RetrieveOption MyKey
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+FString Key, Value;
+FString RandomString{ UTools::RetrieveOption(WorldContextObject, Key, Value) };
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( TArray<FString> SortStringsAlphabetically | TArray<FString> Strings )
 
 :::api
 ### Sort Strings Alphabetically
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Sort an array of strings in alphabetical order. This function allows you to arrange a collection of strings into ascending alphabetical sequence, making it easier to manage and organize string data.
 
+```rust !#1
+Strings: array[string]
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store result in {&ReturnValue}.
+$ MyArray = '("Snowfall","Unreal Engine","Quillscript")'
+$ ^Quillscript.Tools.SortStringsAlphabetically {MyArray}
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+TArray<FString> SortedArray{ UTools::SortStringsAlphabetically(StringsArray) };
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Load a String Table if it is not. )
-[comment]: <> ( void RegisterStringTable | const FName StringTablePath )
-
 :::api
 ### Register String Table
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Register a string table by path. This function is useful when a string table is used by path and never referenced, causing it to not be loaded during runtime.
 
+```rust !#1
+StringTablepPath: name
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store result in {&ReturnValue}.
+$ ^Quillscript.Tools.RegisterStringTable /Game/Folder/MyTable.MyTable
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+UTools::RegisterStringTable("/Game/Folder/MyTable.MyTable");
+```
+===
 :::
 <br>
 
@@ -488,51 +768,87 @@ Please refer to the in-engine documentation
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Return the project name set in the 'Edit > Project Settings > Project > Description > Project Name' field. )
-[comment]: <> ( FString GetProjectName )
-
 :::api
 ### Get Project Name
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Retrieves the project name that is configured in the `Edit > Project Settings > Project > Description > Project Name` field. This function allows you to access the project's name programmatically.
 
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store result in {&ReturnValue}.
+$ ^Quillscript.Tools.GetProjectName
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+FString ProjectName{ UTools::GetProjectName() };
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
-
-[comment]: <> ( Return the project version set in the 'Edit > Project Settings > Project > Description > Project Version' field. )
-[comment]: <> ( FString GetProjectVersion )
 
 :::api
 ### Get Project Version
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Retrieves the project version that is set in the `Edit > Project Settings > Project > Description > Project Version` field. You can use this function to access the project's version number within your code.
 
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store result in {&ReturnValue}.
+$ ^Quillscript.Tools.GetProjectVersion
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+FString ProjectVersion{ UTools::GetProjectVersion() };
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Return the company name set in the 'Edit > Project Settings > Project > Description > Company Name' field. )
-[comment]: <> ( FString GetCompanyName )
-
 :::api
 ### Get Company Name
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Fetches the company name specified in the `Edit > Project Settings > Project > Description > Company Name` field. This function is useful for obtaining the company name associated with your project.
 
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Store result in {&ReturnValue}.
+$ ^Quillscript.Tools.GetCompanyName
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed]()
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Tools.h"
+...
+
+FString CompanyName{ UTools::GetCompanyName() };
+```
+===
 :::
 <br>
 
