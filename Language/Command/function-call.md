@@ -166,7 +166,7 @@ $ MyFunction {&Engine.Actor}
 
 ```
 
-Script assets will also reference these assets in the [Reference Viewer](../../CodingAndDesign/Editor/reference_viewer.md).
+Script assets will also reference these assets in the [Reference Viewer](../../coding-and-design/editor/reference_viewer.md).
 
 #### Script Reference Search Paths
 Also, often your assets are all in the same folder. For such cases, you can add that folder to a list of **"Search Paths"**, either project-wide on plugin settings, or per script on the script asset itself. An asset in this specified folder does not need to be referenced by its entire path, but just by its name.
@@ -349,7 +349,7 @@ The following types are supported: **Boolean (bool)**, **Byte (uint8)**, **Integ
 ---
 
 ## Localizing Parameters' Text
-Although being stored as an [Unreal Engine's Text type](https://dev.epicgames.com/documentation/en-us/unreal-engine/ftext-in-unreal-engine), Quillscript's Text are [culture-invariant](https://dev.epicgames.com/documentation/en-us/unreal-engine/ftext-in-unreal-engine) by default. If the value of a parameter must be localized, set its value inside **`` (_backticks_)** and it will be changed to [culture-correct](https://dev.epicgames.com/documentation/en-us/unreal-engine/text-localization-in-unreal-engine).
+Although being stored as an [Unreal Engine's Text type](https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine), Quillscript's Text are [culture-invariant](https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine) by default. If the value of a parameter must be localized, set its value inside **`` (_backticks_)** and it will be changed to [culture-correct](https://dev.epicgames.com/documentation/unreal-engine/text-localization-in-unreal-engine).
 
 ```q
 // void MyFunction(FString Param1, FString Param2)

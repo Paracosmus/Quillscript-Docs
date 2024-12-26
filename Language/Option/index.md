@@ -18,7 +18,7 @@ An Option statement starts with an **\* (_asterisk_)**, immediately followed by 
 ```
 
 !!!
-You can sequence as many options as you want; just remember to design your [Selection Box](../../CodingAndDesign/Widgets/selection-box.md) widget accordingly.
+You can sequence as many options as you want; just remember to design your [Selection Box](../../coding-and-design/widgets/selection-box.md) widget accordingly.
 !!!
 
 ---
@@ -42,7 +42,7 @@ Options' texts can also come in multiple lines, using a second asterisk, and add
 
 ## Navigation
 
-As you can see, the above options do nothing after being chosen. You can use an option to move to a desired point of the story by concatenating a [Router as instruction](../Router/index.md#router-as-instruction).
+As you can see, the above options do nothing after being chosen. You can use an option to move to a desired point of the story by concatenating a [Router as instruction](../router/index.md#router-as-instruction).
 
 ```q #4,5,8,13
 - Jack
@@ -67,7 +67,7 @@ $ End
 ---
 
 ## Execute Commands
-Another common use is executing a [Command as instruction](../Command/index.md#command-as-instruction) within an option, like handling a variable or calling a function.
+Another common use is executing a [Command as instruction](../command/index.md#command-as-instruction) within an option, like handling a variable or calling a function.
 
 ```q #4-6
 - Alice

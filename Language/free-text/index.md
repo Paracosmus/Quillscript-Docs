@@ -27,7 +27,7 @@ Any free text line found in your script (with not Quillscript syntax symbol in t
 ```
 
 !!!
-Free text lines in the beginning of a script are [Header Comments](../Comment/index.md#header-comment).
+Free text lines in the beginning of a script are [Header Comments](../comment/index.md#header-comment).
 !!!
 
 ---

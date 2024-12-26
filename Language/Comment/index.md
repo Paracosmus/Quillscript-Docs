@@ -38,7 +38,7 @@ $ gold = 10 // main currency
 ---
 
 ## Header Comment
-If a [free text](../FreeText/) line is set before any other statement in script, these lines are called header comments and differ from usual comments because they don't have a comment marker. They are also ignored and discarded by the parser.
+If a [free text](../free-text/) line is set before any other statement in script, these lines are called header comments and differ from usual comments because they don't have a comment marker. They are also ignored and discarded by the parser.
 
 ```q #1-4
 SCENE 1 - PILOT

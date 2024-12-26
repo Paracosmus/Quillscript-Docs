@@ -4,7 +4,7 @@ icon: iterations
 order: 2
 ---
 # Loops
-[Labels](../Language/Label/) and [Routers](../Language/Router/) can be used to create common code loops like a while, for and for each loop.
+[Labels](../language/label/) and [Routers](../language/router/) can be used to create common code loops like a while, for and for each loop.
 
 Below we list a few examples to base your own script code and story loops.
 

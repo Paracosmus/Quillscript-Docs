@@ -259,12 +259,12 @@ $ response = `This text is localizable.`
 ---
 
 ## Using Variables in Code
-Quillscript variables are stored as an [Unreal Engine Map](https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/Blueprints/BP_HowTo/WorkingWithMaps/) of [Name](https://docs.unrealengine.com/4.27/en-US/API/Runtime/Engine/Engine/FActorSpawnParameters/Name/) to [Text](https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/StringHandling/FText/). This map is declared in Quillscript Subsystem and is accessible in Blueprints and C++. Check [Quillscript Static Library](../../CodingAndDesign/Libraries/quill.md) for detailed usage.
+Quillscript variables are stored as an [Unreal Engine Map](https://dev.epicgames.com/documentation/unreal-engine/map-containers-in-unreal-engine) of [Name](https://dev.epicgames.com/documentation/unreal-engine/fname-in-unreal-engine) to [Text](https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine). This map is declared in Quillscript Subsystem and is accessible in Blueprints and C++. Check [Quillscript Static Library](../../coding-and-design/libraries/quill.md) for detailed usage.
 
 ---
 
 ## Variable Modifier
-Check [Register Variable Modifier](todo) and [Unregister Variable Modifier](todo).
+Check [Register Variable Modifier](../../coding-and-design/libraries/quill.md#register-variable-modifier) and [Unregister Variable Modifier](../../coding-and-design/libraries/quill.md#unregister-variable-modifier).
 
 !!!ghost
 :construction: Under construction :construction:

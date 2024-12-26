@@ -24,7 +24,7 @@ $ ShowShopInventory
 ```
 
 !!!warning
-**Keep Visited Statements** must be enabled in [Quillscript Settings](../../CodingAndDesign/Settings/) for this tag to work
+**Keep Visited Statements** must be enabled in [Quillscript Settings](../../coding-and-design/settings/) for this tag to work
 !!!
 
 ---

@@ -64,7 +64,7 @@ Create a system Quillscript variable holding the last selected option text, name
 ## Editor
 
 ### Verbosity
-Define where Quillscript help messages, and other messages using [Quillscript's print helper functions](../../Language/Command/built-in-functions.md), are printed. The messages can be printed in **screen** (top left corner), **console** or **neither**.
+Define where Quillscript help messages, and other messages using [Quillscript's print helper functions](../../language/command/built-in-functions.md), are printed. The messages can be printed in **screen** (top left corner), **console** or **neither**.
 
 These messages are useful to keep track of what is happening in your script and under the hood, like variables, states, etc.
 

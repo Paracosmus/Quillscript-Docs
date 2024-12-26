@@ -12,7 +12,7 @@ This [Actor](https://docs.unrealengine.com/latest/ProgrammingAndScripting/Progra
 ---
 
 ## Built-In Functions
-The so called [built-in functions](../../Language/Command/built-in-functions.md) are methods of this object's class. That's why they do not require a prefix when called in a command statement, like with methods from other objects.
+The so called [built-in functions](../../language/command/built-in-functions.md) are methods of this object's class. That's why they do not require a prefix when called in a command statement, like with methods from other objects.
 
 ---
 
@@ -118,12 +118,12 @@ void UMyObject::OnEnded_Event(AQuillscriptInterpreter* Interpreter)
 ### Play Dialogue Box
 This event fires when the **Manage Dialogue Box** setting is off, and a Dialogue statement is played.
 
-[Check Dialog Box](../Widgets/dialog-box.md)
+[Check Dialog Box](../widgets/dialog-box.md)
 
 ### Play Selection Box
 This event fires when the **Manage Selection Box** setting is off, and a set of Options statements is played.
 
-[Check Selection Box](../Widgets/selection-box.md)
+[Check Selection Box](../widgets/selection-box.md)
 
 ### Play Background Box
 This event fires when the **Manage Background Box** setting is off, and the <span class="command">$ Background</span> or <span class="command">$ Bg</span> built-in function is played.
@@ -218,7 +218,7 @@ void AMyInterpreter::Play_Implementation(const int32 StatementIndex)
 
 You can now override the required functions and add the desired behavior.
 
-Then, in your [settings](../Settings/) change the default class, if required, to the custom Interpreter class.
+Then, in your [settings](../settings/) change the default class, if required, to the custom Interpreter class.
 
 ![](../../static/img/examples/interpreter_class.png)
 

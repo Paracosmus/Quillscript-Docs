@@ -36,7 +36,7 @@ You will be prompted to copy the built-in Selection Box widget or create a blank
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Widgets/SelectionBox.h"
+#include "widgets/SelectionBox.h"
 #include "MySelectionBox.generated.h"
 
 UCLASS()
@@ -50,7 +50,7 @@ public:
 ```
 
 ```cpp # MySelectionBox.cpp
-#include "MyWidgets/MySelectionBox.h"
+#include "Mywidgets/MySelectionBox.h"
 
 
 void UMySelectionBox::Play_Implementation(const TArray<FEvaluatedOption>& Options)
@@ -81,7 +81,7 @@ The **Valid** property is a _Boolean_ value storing the evaluated result of all 
 ---
 
 ## Use Custom Selection Box
-Once your Selection Box is done, you can use it by setting your _Default Selection Box Class_ in [Quillscript Settings](../Settings/) or change it on demand using the built-in function <span class="command">$ Use</span>.
+Once your Selection Box is done, you can use it by setting your _Default Selection Box Class_ in [Quillscript Settings](../settings/) or change it on demand using the built-in function <span class="command">$ Use</span>.
 
 ---
 

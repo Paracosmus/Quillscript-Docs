@@ -38,7 +38,7 @@ You will be prompted to copy the built-in Dialog Box widget or create a blank on
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Widgets/DialogBox.h"
+#include "widgets/DialogBox.h"
 #include "MyDialogBox.generated.h"
 
 UCLASS()
@@ -52,7 +52,7 @@ public:
 ```
 
 ```cpp # MyDialogBox.cpp
-#include "MyWidgets/MyDialogBox.h"
+#include "Mywidgets/MyDialogBox.h"
 
 
 void UMyDialogBox::Play_Implementation(const FString& Speaker, const FText& Text, const TArray<FString>& Tags)
@@ -69,7 +69,7 @@ The Play event is called by the Interpreter for every Dialogue statement.
 ---
 
 ## Use Custom Dialog Box
-Once your Dialogue Box is done, you can use it by setting your _Default Dialogue Box Class_ in [Quillscript Settings](../Settings/) or change it on demand using the built-in function <span class="command">$ Use</span>.
+Once your Dialogue Box is done, you can use it by setting your _Default Dialogue Box Class_ in [Quillscript Settings](../settings/) or change it on demand using the built-in function <span class="command">$ Use</span>.
 
 ---
 

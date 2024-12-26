@@ -5,7 +5,7 @@ order: 2
 ---
 # Covert
 
-A covert label has the same behavior as a standard label, except that a covert label won't play unless explicitly called by a [Router](../Router/). This means if the script flow ever reaches a covert label, it jumps to the following standard label.
+A covert label has the same behavior as a standard label, except that a covert label won't play unless explicitly called by a [Router](../router/). This means if the script flow ever reaches a covert label, it jumps to the following standard label.
 
 A Covert Label starts with **<@> (_Less Than, At Sign, and Greater Than_)**, immediately followed by a whitespace.
 

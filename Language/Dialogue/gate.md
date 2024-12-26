@@ -5,7 +5,7 @@ order: 1
 ---
 # Gate
 
-Split a dialogue into two texts, one for true [condition](../Condition/), and other for false
+Split a dialogue into two texts, one for true [condition](../condition/), and other for false
 
 By default, when a dialogue condition fails, that dialogue line is ignored. A gate can select a different dialogue text if the condition fails.
 

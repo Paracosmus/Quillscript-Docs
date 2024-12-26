@@ -78,7 +78,7 @@ Video tutorials
 
 !!!
 ## ⚡ Ready to get started? ⚡
-To start with **Quillscript**, you need <a href="https://www.unrealengine.com/download" target="_blank">Unreal Engine</a> installed and basic knowledge of how to use <a href="https://docs.unrealengine.com/latest/understanding-the-basics-of-unreal-engine/" target="_blank">Unreal's Editor</a>. Follow our [Getting Started](./GettingStarted.md) guide to begin authoring stories within Unreal Engine.
+To start with **Quillscript**, you need <a href="https://www.unrealengine.com/download" target="_blank">Unreal Engine</a> installed and basic knowledge of how to use <a href="https://docs.unrealengine.com/latest/understanding-the-basics-of-unreal-engine/" target="_blank">Unreal's Editor</a>. Follow our [Getting Started](./getting-started.md) guide to begin authoring stories within Unreal Engine.
 !!!
 
 <br>

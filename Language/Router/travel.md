@@ -5,7 +5,7 @@ order: 1
 ---
 # Travel
 
-Travel is actually a [built-in function](../Command/built-in-functions.md) disguised as a Router statement. It works as other routers, navigating from that point to a given target, but differently from a Router statement, the Travel built-in function allows you to target another script.
+Travel is actually a [built-in function](../command/built-in-functions.md) disguised as a Router statement. It works as other routers, navigating from that point to a given target, but differently from a Router statement, the Travel built-in function allows you to target another script.
 
 The target Script is referenced using its **id** or **Script Reference by Path**.
 

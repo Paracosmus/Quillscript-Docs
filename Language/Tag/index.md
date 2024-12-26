@@ -24,7 +24,7 @@ Tags allow you to decorate your script statements for specific behaviors in cust
 You can place multiple tags in a single instruction or concatenate multiple instructions, both methods result in the same array of tags. A statement can have as many tags as required.
 !!!
 
-As a usage example, your project may have a [Dialog Box](../../CodingAndDesign/Widgets/dialog-box.md) widget that shows your character expression when saying a sentence or a [Selection Box](../../CodingAndDesign/Widgets/selection-box.md) widget that colorizes an option.
+As a usage example, your project may have a [Dialog Box](../../coding-and-design/widgets/dialog-box.md) widget that shows your character expression when saying a sentence or a [Selection Box](../../coding-and-design/widgets/selection-box.md) widget that colorizes an option.
 
 ```q #
 - Garfield | #angry | #fast

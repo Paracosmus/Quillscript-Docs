@@ -5,7 +5,7 @@ order: 8
 ---
 # Label
 
-Labels are markers in specific points of your script flow. They are used as [routing points](../Router/) to navigate from one point of the script to another, creating story branches and story flow control.
+Labels are markers in specific points of your script flow. They are used as [routing points](../router/) to navigate from one point of the script to another, creating story branches and story flow control.
 
 - A Label statement starts with an **@ (_At Sign)_**, immediately followed by a whitespace.
 - The label name must be a **static name** with no variables or text replacements that can alter it during runtime.
@@ -45,7 +45,7 @@ $ x = 10 | @MyCommandLabel
 ? if: {x} == 10 | @MyConditionLabel
 ```
 
-It's important to notice that statements can be jumped if they belong to a label statement with a false condition or when they are within a [condition statement](../Condition/) that is also false. When a router statement points to a label instruction, the flow goes to that point, ignoring any parenting condition and evaluating only the target statement condition, if any.
+It's important to notice that statements can be jumped if they belong to a label statement with a false condition or when they are within a [condition statement](../condition/) that is also false. When a router statement points to a label instruction, the flow goes to that point, ignoring any parenting condition and evaluating only the target statement condition, if any.
 
 ---
 

@@ -65,7 +65,7 @@ You can also download our [sample project](https://1drv.ms/f/s!AhimAtOsSqD6ifgus
 ---
 
 ## Where Should I Go Next?
-The recommended next step is to familiarize yourself with the base language elements: [Dialogue](./Language/Dialogue/), [Option](./Language/Option), [Label](./Language/Label), [Router](./Language/Router), [Command](./Language/Command), [Condition](./Language/Condition), [Directive](./Language/Directive), [Tag](./Language/Tag), and [Comment](./Language/Comment).
+The recommended next step is to familiarize yourself with the base language elements: [Dialogue](./language/dialogue/), [Option](./language/Option), [Label](./language/Label), [Router](./language/Router), [Command](./language/Command), [Condition](./language/Condition), [Directive](./language/Directive), [Tag](./language/Tag), and [Comment](./language/Comment).
 
 When you feel confident that you know and understand the basics of each language element, we recommend you move to the **Guides** or **Coding and Design** sections.
 
