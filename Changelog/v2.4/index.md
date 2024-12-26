@@ -27,9 +27,9 @@ Next version to be announced.
 
 ## <span class="command">Commands</span>
 
-- Add the **<span class="command">&HUD</span> shortcut to access the HUD object from script
-- Add the **<span class="command">&World</span> shortcut to access the World object from script
-- Add the **<span class="command">&Subsystem</span> shortcut to access the Quillscript Subsystem from script
+- Add the <span class="command">&HUD</span> shortcut to access the HUD object from script
+- Add the <span class="command">&World</span> shortcut to access the World object from script
+- Add the <span class="command">&Subsystem</span> shortcut to access the Quillscript Subsystem from script
 
 ---
 
@@ -41,22 +41,22 @@ Next version to be announced.
 
 ## Script
 
-- Add the ****Set Script Play Counter**** utility function
-- Add the ****Reset Script Play Counter**** utility function
+- Add the **Set Script Play Counter** utility function
+- Add the **Reset Script Play Counter** utility function
 - <span class="blueprint">(Blueprint)</span> Blueprints can read and write Statement structs
 
 ---
 
 ## Widgets
 
-- Add the ****Typewriter** object class
+- Add the **Typewriter** object class
     - Reusable function
     - Timer delays
     - Substring delays
     - Typing sound
     - Sync duration with voice audio
 - Update the built-in Dialog Box to use the new **Typewriter** object and its new features
-- Add the ****Smart Text Block Decorator**, **Smart Text Decorator** and **Tooltip Text Style** classes to allow the use of tooltips and widget inside _Rich Text Blocks_.
+- Add the **Smart Text Block Decorator**, **Smart Text Decorator** and **Tooltip Text Style** classes to allow the use of tooltips and widget inside _Rich Text Blocks_.
     - Show a tooltip text when a substring is hovered
     - Show a tooltip widget when a substring is hovered
 

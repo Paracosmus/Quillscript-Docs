@@ -47,3 +47,12 @@ This is a reminder list of objects that are not listed or mentioned in the docum
 * Network
 
 ---
+
+## Non-Listed Features
+
+This is a reminder list of features that are not listed or properly mentioned in the documentation.
+
+* The script can pass and receive any type of Unreal Engine data from functions, like Structs, Maps, Arrays, and Sets. The entry and outer string must follow Unreal Engine's pattern for that data type. Map:(("key","value")), Array: ("a","b",c"), etc.
+* {&Target}
+
+---
