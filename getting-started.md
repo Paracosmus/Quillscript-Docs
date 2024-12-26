@@ -10,7 +10,7 @@ If you are a beginner with Quillscript Plugin, this article helps you start from
 Follow the steps below to get your project up and running and create your own stories.
 
 !!!
-You can also download our [sample project](https://1drv.ms/f/s!AhimAtOsSqD6ifgusJ6qDCQoOnD1ZA?e=UhbR5N).
+You can also download our <a href="https://1drv.ms/f/s!AhimAtOsSqD6ifgusJ6qDCQoOnD1ZA?e=UhbR5N" target="_blank">sample project</a>.
 !!!
 
 <br>
@@ -18,7 +18,7 @@ You can also download our [sample project](https://1drv.ms/f/s!AhimAtOsSqD6ifgus
 ## Step by Step
 
 - **Step 1 - Enable Quillscript in your Project**
-    - [Add Quillscript to the Engine](https://dev.epicgames.com/documentation/unreal-engine/working-with-plugins-in-unreal-engine#installingpluginsfromtheunrealenginemarketplace) through the [Epic Games Launcher](https://store.epicgames.com/download)
+    - <a href="https://dev.epicgames.com/documentation/unreal-engine/working-with-plugins-in-unreal-engine#installingpluginsfromtheunrealenginemarketplace" target="_blank">Add Quillscript to the Engine</a> through the <a href="https://store.epicgames.com/download" target="_blank">Epic Games Launcher</a>
     - Create and/or start a project
     - Go to `Edit > Plugins > Installed > Gameplay` and enable _Quillscript_
     - Restart the Editor
@@ -27,7 +27,7 @@ You can also download our [sample project](https://1drv.ms/f/s!AhimAtOsSqD6ifgus
 - **Step 2 - Write your Story**
     - Create a **plain text** file using your preferred text editor software and write your story following _Quillscript Language_ rules. Save it with a **.qsc** extension.
     <br>
-    > We provide [sample scripts](https://1drv.ms/f/s!AhimAtOsSqD6ifgw3m5MFBZ7Pufmqg?e=d8TKKN) you can use to test and experiment.
+    > We provide <a href="https://1drv.ms/f/s!AhimAtOsSqD6ifgw3m5MFBZ7Pufmqg?e=d8TKKN" target="_blank">sample scripts</a> you can use to test and experiment.
 
     - Drag your script file into Unreal Editor's content browser. This action will generate a **Quillscript Asset**, which is a resource that contains your script and can be used within the Unreal Editor for various purposes.
     ![](./static/img/examples/drag_and_drop.jpg)

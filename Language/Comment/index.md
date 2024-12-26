@@ -57,7 +57,7 @@ Scene description.
 # Section
 Sections are organizational brackets with no impact on how your script runs. Their goal is to help writers better organize sections of the story without the need for any workarounds.
 
-They also allow you to use the folding feature in most editors, like [Visual Studio Code](https://code.visualstudio.com/).
+They also allow you to use the folding feature in most editors, like <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>.
 
 You start a section with a line containing a single { (Open Bracket) and end it with another line containing a single } (Close Bracket).
 

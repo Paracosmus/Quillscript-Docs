@@ -5,7 +5,7 @@ order: 1
 ---
 # Subsystem
 
-The Quillscript Subsystem is an [Unreal Engine's Game Instance Subsystem](https://docs.unrealengine.com/latest/ProgrammingAndScripting/Subsystems/). This object
+The Quillscript Subsystem is an <a href="https://docs.unrealengine.com/latest/ProgrammingAndScripting/Subsystems/" target="_blank">Unreal Engine's Game Instance Subsystem</a>. This object
 manages the plugin as a hole, it holds state properties, and stores Quillscript's data.
 
 ---
