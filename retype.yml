@@ -37,5 +37,9 @@ links:
 markdown:
   lineBreaks: hard
 
+integrations:
+  googleAnalytics:
+    id: G-5YRMZ8JWMV
+
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
