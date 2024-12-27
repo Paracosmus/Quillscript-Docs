@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://paracosmus.github.io/Quillscript-Docs/sitemap.xml.gz
+Sitemap: https://quillscript.ink/sitemap.xml.gz
