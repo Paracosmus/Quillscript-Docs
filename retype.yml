@@ -1,8 +1,8 @@
 input: .
 output: .retype
-url: paracosmus.github.io/Quillscript-Docs/ # quillscript.ink
+url: quillscript.ink
 favicon: ./static/img/favicon.ico
-# poweredByRetype: false
+poweredByRetype: false
 
 cache:
   strategy: query
