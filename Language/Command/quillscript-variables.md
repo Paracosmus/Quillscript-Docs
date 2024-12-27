@@ -259,7 +259,7 @@ $ response = `This text is localizable.`
 ---
 
 ## <span class="command">Using Variables in Code</span>
-Quillscript variables are stored as an <a href="https://dev.epicgames.com/documentation/unreal-engine/map-containers-in-unreal-engine" target="_blank">Unreal Engine Map</a> of <a href="https://dev.epicgames.com/documentation/unreal-engine/fname-in-unreal-engine" target="_blank">Name</a> to <a href="https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine" target="_blank">Text</a>. This map is declared in Quillscript Subsystem and is accessible in Blueprints and C++. Check <a href="../../coding-and-design/libraries/quill.md" target="_blank">Quillscript Static Library</a> for detailed usage.
+Quillscript variables are stored as an [Unreal Engine Map](https://dev.epicgames.com/documentation/unreal-engine/map-containers-in-unreal-engine) of [Name](https://dev.epicgames.com/documentation/unreal-engine/fname-in-unreal-engine) to [Text](https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine). This map is declared in Quillscript Subsystem and is accessible in Blueprints and C++. Check [Quillscript Static Library](../../coding-and-design/libraries/quill.md) for detailed usage.
 
 ---
 

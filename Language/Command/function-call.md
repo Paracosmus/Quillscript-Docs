@@ -349,7 +349,7 @@ The following types are supported: **Boolean (bool)**, **Byte (uint8)**, **Integ
 ---
 
 ## <span class="command">Localizing Parameters' Text</span>
-Although being stored as an <a href="https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine" target="_blank">Unreal Engine's Text type</a>, Quillscript's Text are <a href="https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine" target="_blank">culture-invariant</a> by default. If the value of a parameter must be localized, set its value inside **`` (_backticks_)** and it will be changed to <a href="https://dev.epicgames.com/documentation/unreal-engine/text-localization-in-unreal-engine" target="_blank">culture-correct</a>.
+Although being stored as an [Unreal Engine's Text type](https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine), Quillscript's Text are [culture-invariant](https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine) by default. If the value of a parameter must be localized, set its value inside **`` (_backticks_)** and it will be changed to [culture-correct](https://dev.epicgames.com/documentation/unreal-engine/text-localization-in-unreal-engine).
 
 ```q
 // void MyFunction(FString Param1, FString Param2)

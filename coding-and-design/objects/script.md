@@ -19,7 +19,7 @@ When opening a Script Asset in Editor, you can access and edit its local setting
 ## <span class="directive">Parsing</span>
 Parsing a script refers to the process of analyzing the structure and syntax of a script. It involves breaking down the script into its individual components, such as keywords, operators, and expressions.
 
-During parsing, each statement is converted into a <a href="https://docs.unrealengine.com/latest/ProgrammingAndScripting/GameplayArchitecture/Structs/" target="_blank">Struct</a>, and the Script Asset stores them in an array. The [Interpreter](./interpreter.md) then uses this array to further analyze and execute the statements into something the player can experience.
+During parsing, each statement is converted into a [Struct](https://docs.unrealengine.com/latest/ProgrammingAndScripting/GameplayArchitecture/Structs/), and the Script Asset stores them in an array. The [Interpreter](./interpreter.md) then uses this array to further analyze and execute the statements into something the player can experience.
 
 ### Runtime Parsing
 Quillscript allows parsing any valid string into a Script Asset, in editor and during runtime. This lets you create temporary scripts on demand, combining strings and code.

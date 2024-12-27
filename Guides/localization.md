@@ -9,7 +9,7 @@ Quillscript is localizable out of the box, meaning no setup or configuration is 
 
 This also means that the localization dashboard can gather your scripts' dialogues using the same method as other localizable data.
 
-This article supposes the reader is familiarized with Unreal Engine's Localization Dashboard; if not, it's recommended to read <a href="https://docs.unrealengine.com/latest/ProductionPipelines/Localization/LocalizationTools/" target="_blank">this page from the documentation</a> and come back here after.
+This article supposes the reader is familiarized with Unreal Engine's Localization Dashboard; if not, it's recommended to read [this page from the documentation](https://docs.unrealengine.com/latest/ProductionPipelines/Localization/LocalizationTools/) and come back here after.
 
 ---
 

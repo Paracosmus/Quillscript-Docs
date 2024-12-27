@@ -37,6 +37,9 @@ links:
 markdown:
   lineBreaks: hard
 
+outbound:
+  enabled: true
+
 integrations:
   googleAnalytics:
     id: G-5YRMZ8JWMV

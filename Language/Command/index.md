@@ -7,7 +7,7 @@ order: 6
 
 It's often required to execute programming code during your script play. Command statements can perform two tasks: Handle Quillscript Variables and Call Functions.
 
-Quillscript is completely compatible with <a href="https://docs.unrealengine.com/latest/unreal-engine-programming-and-scripting/" target="_blank">Unreal Engine programming</a>, being it Blueprint Visual Scripting or C++, you can call almost any function from your script at any point.
+Quillscript is completely compatible with [Unreal Engine programming](https://docs.unrealengine.com/latest/unreal-engine-programming-and-scripting/), being it Blueprint Visual Scripting or C++, you can call almost any function from your script at any point.
 
 - A Command statement starts with a **$ (_Dollar Sign_)**, immediately followed by a space.
 

@@ -7,7 +7,7 @@ order: 2
 
 The Interpreter object serves as a crucial component responsible for executing and interpreting the Script Asset. It acts as a bridge between the parsed script data and Unreal Engine's system.
 
-This <a href="https://docs.unrealengine.com/latest/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/Actors/" target="_blank">Actor</a> object is spawned in world when the **Play Script** function is executed, and it receives the Script Asset as input, analyzes the content one statement at a time, and executes the corresponding actions in real-time. It handles tasks such as playing statements, evaluating expressions, resolving variable references, and executing commands and story flow management.
+This [Actor](https://docs.unrealengine.com/latest/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/Actors/) object is spawned in world when the **Play Script** function is executed, and it receives the Script Asset as input, analyzes the content one statement at a time, and executes the corresponding actions in real-time. It handles tasks such as playing statements, evaluating expressions, resolving variable references, and executing commands and story flow management.
 
 ---
 
