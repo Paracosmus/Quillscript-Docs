@@ -39,7 +39,7 @@ $ ^Quillscript.Tools.Log 'Print this message' {&Script} Error
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/02vrlz41/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -118,7 +118,7 @@ $ ^Quillscript.Tools.Success 'Print this message' {&Script}
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/r774746_/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -159,7 +159,7 @@ $ ^Quillscript.Tools.Warning 'Print this message' {&Script}
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/a_n_egnm/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -200,7 +200,7 @@ $ ^Quillscript.Tools.Error 'Print this message' {&Script}
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/zu0udd5r/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -246,7 +246,7 @@ $ &NewRefName.MyFunction
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/5rav4ast/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -281,7 +281,7 @@ $ ^Quillscript.Tools.FindClassByPath Module.ClassName
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/ycrh00ia/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -320,7 +320,7 @@ $ ^Quillscript.Tools.GetClassDefaultObject {&Class}
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/nmoejq13/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -466,7 +466,7 @@ $ ^Quillscript.Tools.CallFunctionByName {&Target} MyFunction '("10","true")'
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/enu_tzm2/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -508,7 +508,7 @@ $ ^Quillscript.Tools.HasAuthority
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/l0mx63ik/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -551,7 +551,7 @@ $ ^Quillscript.Tools.IsModuleLoaded ModuleName
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/ok4lwslr/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -591,7 +591,7 @@ $ ^Quillscript.Tools.GenerateRandomString 8 true true true
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/z_h5ovvb/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -627,7 +627,7 @@ $ ^Quillscript.Tools.RetrieveOption MyKey
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/e2i7s1s9/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -662,7 +662,7 @@ $ ^Quillscript.Tools.SortStringsAlphabetically {MyArray}
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/noqcdf4a/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -695,7 +695,7 @@ $ ^Quillscript.Tools.RegisterStringTable /Game/Folder/MyTable.MyTable
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/aqe91sbo/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -781,7 +781,7 @@ $ ^Quillscript.Tools.GetProjectName
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/ijyuc495/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -810,7 +810,7 @@ $ ^Quillscript.Tools.GetProjectVersion
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/b4o5zq1w/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -839,7 +839,7 @@ $ ^Quillscript.Tools.GetCompanyName
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/24z61e34/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp

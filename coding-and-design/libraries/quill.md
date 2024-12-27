@@ -41,7 +41,7 @@ $ End
 Notice that this process produces the same result as the <span class="command">$ Travel</span> built-in function and is useful only if you need extra control of the code behavior or order.
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/1ulnr4ow/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -72,7 +72,7 @@ Settings: ScriptSettings
 
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/32l7f9vk/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -124,7 +124,7 @@ $ End
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/3nvpq675/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -155,7 +155,7 @@ Settings: ScriptSettings
 
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/hxev1qvc/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -205,7 +205,7 @@ $ End
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/3rpxv0wp/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -250,7 +250,7 @@ $ End
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/rmm-pt77/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -279,7 +279,7 @@ $ ^Quillscript.Quill.GetScripts
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/3lyor2zq/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -323,7 +323,7 @@ $ End
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/b15w4531/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -363,7 +363,7 @@ $ End
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/ds2mnsuz/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -424,7 +424,7 @@ endif
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/lquq2s2q/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -466,7 +466,7 @@ endif
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/z2-akkyt/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -503,7 +503,7 @@ $ ^Quillscript.Quill.MakePermissionsList Sandbox
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/dp9-3jxf/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -577,7 +577,7 @@ $ ^Quillscript.Quill.CreateInterpreter
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/lgn5zn9v/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -610,7 +610,7 @@ $ ^Quillscript.Quill.GetInterpreters
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/zddcvf3n/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -672,7 +672,7 @@ $ ^Quillscript.Quill.QuillscriptVariableExists VariableName
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/xetocjea/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -717,7 +717,7 @@ $ ^Quillscript.Quill.GetQuillscriptVariable {dynamicName}
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/9j94tmxj/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -1113,7 +1113,7 @@ $ ^Quillscript.Quill.SaveGameAndStoryToSlot {&SaveGame} "MySlot" 0
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/aury0c-9/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
@@ -1151,7 +1151,7 @@ $ ^Quillscript.Quill.LoadGameAndStoryFromSlot "MySlot" 0
 ```
 ==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
 
-[!embed]()
+[!embed](https://blueprintue.com/render/-qfrj-z8/)
 
 ==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
 ```cpp
