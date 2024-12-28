@@ -1,7 +1,7 @@
 ---
 label: Visual Studio Code Extension
 icon: plug
-order: 1
+order: 100
 ---
 # Visual Studio Code Extension
 

@@ -1,7 +1,7 @@
 ---
 label: Localization
 icon: globe
-order: 13
+order: 2
 ---
 # Localization
 

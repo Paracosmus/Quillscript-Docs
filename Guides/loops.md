@@ -1,7 +1,7 @@
 ---
 label: Loops
 icon: iterations
-order: 2
+order: 3
 ---
 # Loops
 [Labels](../language/label/) and [Routers](../language/router/) can be used to create common code loops like a while, for and for each loop.
