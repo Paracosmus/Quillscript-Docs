@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788720203004">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.788732187879">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -34,12 +34,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/img/favicon.ico" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.788720203004" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.788732187879" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788720203004" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.788732187879" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788720203004" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788720203004" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.788732187879" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.788732187879" defer></script>
 
     <!-- Styles -->
     <style>
@@ -651,6 +651,7 @@
 </doc-anchor-target>
 <p>Initiate the execution of a Quillscript asset.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1-2"><code v-pre class="language-rust">WorldContextObject: ref
 Script: ref[QuillscriptAsset]
 (Omittable) StartingLabel: Name
@@ -711,6 +712,7 @@ UQuill::PlayScript(WorldContextObject, UQuill::GetScriptById(&quot;MyScriptId&qu
 </doc-anchor-target>
 <p>Play the given script using a custom set of settings passed as a parameter to this function. It allows you to fine-tune the behavior of the script execution according to your specific requirements.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1-3"><code v-pre class="language-rust">WorldContextObject: ref
 Script: ref[QuillscriptAsset]
 Settings: ScriptSettings
@@ -764,6 +766,7 @@ UQuill::PlayScriptUsingCustomSettings(
 </doc-anchor-target>
 <p>Same as <doc-anchor-trigger to="#play-script">Play Script</doc-anchor-trigger> but clears any previous script history to ensure a fresh start.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1-2"><code v-pre class="language-rust">WorldContextObject: ref
 Script: ref[QuillscriptAsset]
 (Omittable) StartingLabel: Name
@@ -823,6 +826,7 @@ UQuill::StartScript(WorldContextObject, UQuill::GetScriptById(&quot;MyScriptId&q
 </doc-anchor-target>
 <p>Same as <doc-anchor-trigger to="#play-script-using-custom-settings">Play Script Using Custom Settings</doc-anchor-trigger> but clears any previous script history to ensure a fresh start.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1-3"><code v-pre class="language-rust">WorldContextObject: ref
 Script: ref[QuillscriptAsset]
 Settings: ScriptSettings
@@ -876,6 +880,7 @@ UQuill::StartScriptUsingCustomSettings(
 </doc-anchor-target>
 <p>Continue the execution of a Quillscript from the last saved state entry in the script&#x27;s history. It enables you to pick up the script where it left off, making it useful for scenarios where you need to maintain script continuity or when the game was saved during a script play and need to continue from that point.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1-2"><code v-pre class="language-rust">WorldContextObject: ref
 Script: ref[QuillscriptAsset]</code></pre>
 </doc-codeblock></div>
@@ -934,6 +939,7 @@ UQuill::ResumeScript(WorldContextObject, UQuill::GetScriptById(&quot;MyScriptId&
 <p>Takes a Quillscript language valid string as input and converts it into a Quillscript asset. This is particularly useful when you need to dynamically create or modify scripts at runtime, or when you allow modders or user to create their own scripts.</p>
 <p>You can also specify a permission mode to control the script&#x27;s behavior. See <a href="../../objects/script/#permissions">Permissions</a> for more details.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1"><code v-pre class="language-rust">Text: string
 (Omittable) Permission: PermissionMode        [ All, Safe, Sandbox ]</code></pre>
 </doc-codeblock></div>
@@ -1046,6 +1052,7 @@ for (auto Script : Scripts)
 </doc-anchor-target>
 <p>Retrieve a specific Quillscript asset by providing its path within your project. This function simplifies script asset retrieval, making it easy to access the script you need for execution or manipulation.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1"><code v-pre class="language-rust">Path: string</code></pre>
 </doc-codeblock></div>
 <doc-panels>
@@ -1103,6 +1110,7 @@ UQuill::PlayScript(WorldContextObject, Script);</code></pre>
 </doc-anchor-target>
 <p>Retrieve a Quillscript asset by its unique identifier (Id). Keep in mind that this function may have performance implications in projects with a large number of assets. Use it when you need to specifically locate a script by its Id.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1"><code v-pre class="language-rust">Id: name</code></pre>
 </doc-codeblock></div>
 <doc-panels>
@@ -1185,6 +1193,7 @@ Please refer to the in-engine documentation</p>
 </doc-anchor-target>
 <p>Checks whether a specified Quillscript script is currently playing.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1"><code v-pre class="language-rust">WorldContextObject: ref
 Script: ref[QuillscriptAsset]</code></pre>
 </doc-codeblock></div>
@@ -1246,6 +1255,7 @@ if (UQuill::IsScriptPlaying(WorldContextObject, Script))
 </doc-anchor-target>
 <p>Checks whether any Quillscript script is currently playing.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1"><code v-pre class="language-rust">WorldContextObject: ref</code></pre>
 </doc-codeblock></div>
 <doc-panels>
@@ -1304,6 +1314,7 @@ if (UQuill::IsAnyScriptPlaying(WorldContextObject))
 <p>Generates a list of script permissions based on the specified permission mode. This function is helpful when you need to create a list of permissions for your scripts programmatically, allowing you to control the behavior of the scripts according to your permission requirements.</p>
 <p>See <a href="../../objects/script/#permissions">Permissions</a> for more details.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1"><code v-pre class="language-rust">PermissionMode: PermissionMode                [ All, Safe, Sandbox ]</code></pre>
 </doc-codeblock></div>
 <doc-panels>
@@ -1413,6 +1424,7 @@ Please refer to the in-engine documentation</p>
 </doc-anchor-target>
 <p>Spawn an interpreter actor. It is recommended to use this method instead of manually spawning an interpreter actor.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1"><code v-pre class="language-rust">WorldContextObject: ref
 (Omittable) InterpreterClass: SubclassOf[QuillscriptInterpreter]</code></pre>
 </doc-codeblock></div>
@@ -1464,6 +1476,7 @@ const TObjectPtr&lt;AQuillscriptInterpreter&gt; Interpreter{ UQuill::CreateInter
 </doc-anchor-target>
 <p>Retrieve all instantiated interpreter objects in the specified world context.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1"><code v-pre class="language-rust">WorldContextObject: ref</code></pre>
 </doc-codeblock></div>
 <doc-panels>
@@ -1551,6 +1564,7 @@ Please refer to the in-engine documentation</p>
 </doc-anchor-target>
 <p>Check the existence of a Quillscript variable with a specified name. This function is particularly useful when you need to determine whether a specific variable is defined.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1"><code v-pre class="language-rust">WorldContextObject: ref
 VariableName: name</code></pre>
 </doc-codeblock></div>
@@ -1605,6 +1619,7 @@ if (UQuill::QuillscriptVariableExists(WorldContextObject, FName(&quot;VariableNa
 </doc-anchor-target>
 <p>Retrieves the value of a Quillscript variable with the specified name. If the variable does not exist, it returns &quot;off&quot; as a default value.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1-2"><code v-pre class="language-rust">WorldContextObject: ref
 VariableName: name</code></pre>
 </doc-codeblock></div>
@@ -2181,6 +2196,7 @@ Please refer to the in-engine documentation</p>
 <p>This function behaves the same as the native <a href="https://docs.unrealengine.com/latest/BlueprintAPI/SaveGame/SaveGametoSlot/" class="outbound" target="_blank"><span>Save Game to Slot</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>, but additionally injects Quillscript data to the save game file.</p>
 <p>Saves game data and Quillscript data to a specified save slot. The function returns true if the save operation is successful, and false otherwise.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1-4"><code v-pre class="language-rust">WorldContextObject: ref
 SaveGameObject: ref[SaveGame]
 SlotName: string
@@ -2236,6 +2252,7 @@ UQuill::SaveGameAndStoryToSlot(WorldContextObjet, SaveGame, &quot;MySlot&quot;, 
 <p>This function behaves the same as the native <a href="https://docs.unrealengine.com/latest/BlueprintAPI/SaveGame/LoadGamefromSlot/" class="outbound" target="_blank"><span>Load Game from Slot</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>, but additionally extracts Quillscript data from the save game file and update Quillscript subsystem with the extracted data.</p>
 <p>Returns a Save Game object containing the loaded data.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Parameters</div>
 <pre class="language-rust" data-line="1-3"><code v-pre class="language-rust">WorldContextObject: ref
 SlotName: string
 UserIndex: number</code></pre>
