@@ -19,7 +19,7 @@ This library offers a set of specialized tools and features for Quillscript Plug
 
 Initiate the execution of a Quillscript asset.
 
-```rust !#1-2
+```rust !#1-2 Parameters
 WorldContextObject: ref
 Script: ref[QuillscriptAsset]
 (Omittable) StartingLabel: Name
@@ -62,7 +62,7 @@ UQuill::PlayScript(WorldContextObject, UQuill::GetScriptById("MyScriptId"));
 
 Play the given script using a custom set of settings passed as a parameter to this function. It allows you to fine-tune the behavior of the script execution according to your specific requirements.
 
-```rust !#1-3
+```rust !#1-3 Parameters
 WorldContextObject: ref
 Script: ref[QuillscriptAsset]
 Settings: ScriptSettings
@@ -103,7 +103,7 @@ UQuill::PlayScriptUsingCustomSettings(
 
 Same as [Play Script](#play-script) but clears any previous script history to ensure a fresh start.
 
-```rust !#1-2
+```rust !#1-2 Parameters
 WorldContextObject: ref
 Script: ref[QuillscriptAsset]
 (Omittable) StartingLabel: Name
@@ -145,7 +145,7 @@ UQuill::StartScript(WorldContextObject, UQuill::GetScriptById("MyScriptId"));
 
 Same as [Play Script Using Custom Settings](#play-script-using-custom-settings) but clears any previous script history to ensure a fresh start.
 
-```rust !#1-3
+```rust !#1-3 Parameters
 WorldContextObject: ref
 Script: ref[QuillscriptAsset]
 Settings: ScriptSettings
@@ -186,7 +186,7 @@ UQuill::StartScriptUsingCustomSettings(
 
 Continue the execution of a Quillscript from the last saved state entry in the script's history. It enables you to pick up the script where it left off, making it useful for scenarios where you need to maintain script continuity or when the game was saved during a script play and need to continue from that point.
 
-```rust !#1-2
+```rust !#1-2 Parameters
 WorldContextObject: ref
 Script: ref[QuillscriptAsset]
 ```
@@ -228,7 +228,7 @@ Takes a Quillscript language valid string as input and converts it into a Quills
 
 You can also specify a permission mode to control the script's behavior. See [Permissions](../objects/script.md#permissions) for more details.
 
-```rust !#1
+```rust !#1 Parameters
 Text: string
 (Omittable) Permission: PermissionMode        [ All, Safe, Sandbox ]
 ```
@@ -305,7 +305,7 @@ for (auto Script : Scripts)
 
 Retrieve a specific Quillscript asset by providing its path within your project. This function simplifies script asset retrieval, making it easy to access the script you need for execution or manipulation.
 
-```rust !#1
+```rust !#1 Parameters
 Path: string
 ```
 
@@ -345,7 +345,7 @@ UQuill::PlayScript(WorldContextObject, Script);
 
 Retrieve a Quillscript asset by its unique identifier (Id). Keep in mind that this function may have performance implications in projects with a large number of assets. Use it when you need to specifically locate a script by its Id.
 
-```rust !#1
+```rust !#1 Parameters
 Id: name
 ```
 
@@ -405,7 +405,7 @@ Please refer to the in-engine documentation
 
 Checks whether a specified Quillscript script is currently playing.
 
-```rust !#1
+```rust !#1 Parameters
 WorldContextObject: ref
 Script: ref[QuillscriptAsset]
 ```
@@ -449,7 +449,7 @@ if (UQuill::IsScriptPlaying(WorldContextObject, Script))
 
 Checks whether any Quillscript script is currently playing.
 
-```rust !#1
+```rust !#1 Parameters
 WorldContextObject: ref
 ```
 
@@ -491,7 +491,7 @@ Generates a list of script permissions based on the specified permission mode. T
 
 See [Permissions](../objects/script.md#permissions) for more details.
 
-```rust !#1
+```rust !#1 Parameters
 PermissionMode: PermissionMode                [ All, Safe, Sandbox ]
 ```
 
@@ -565,7 +565,7 @@ Please refer to the in-engine documentation
 
 Spawn an interpreter actor. It is recommended to use this method instead of manually spawning an interpreter actor.
 
-```rust !#1
+```rust !#1 Parameters
 WorldContextObject: ref
 (Omittable) InterpreterClass: SubclassOf[QuillscriptInterpreter]
 ```
@@ -599,7 +599,7 @@ const TObjectPtr<AQuillscriptInterpreter> Interpreter{ UQuill::CreateInterpreter
 
 Retrieve all instantiated interpreter objects in the specified world context.
 
-```rust !#1
+```rust !#1 Parameters
 WorldContextObject: ref
 ```
 
@@ -659,7 +659,7 @@ Please refer to the in-engine documentation
 
 Check the existence of a Quillscript variable with a specified name. This function is particularly useful when you need to determine whether a specific variable is defined.
 
-```rust !#1
+```rust !#1 Parameters
 WorldContextObject: ref
 VariableName: name
 ```
@@ -696,7 +696,7 @@ if (UQuill::QuillscriptVariableExists(WorldContextObject, FName("VariableName"))
 
 Retrieves the value of a Quillscript variable with the specified name. If the variable does not exist, it returns "off" as a default value.
 
-```rust !#1-2
+```rust !#1-2 Parameters
 WorldContextObject: ref
 VariableName: name
 ```
@@ -1098,7 +1098,7 @@ This function behaves the same as the native [Save Game to Slot](https://docs.un
 
 Saves game data and Quillscript data to a specified save slot. The function returns true if the save operation is successful, and false otherwise.
 
-```rust !#1-4
+```rust !#1-4 Parameters
 WorldContextObject: ref
 SaveGameObject: ref[SaveGame]
 SlotName: string
@@ -1137,7 +1137,7 @@ This function behaves the same as the native [Load Game from Slot](https://docs.
 
 Returns a Save Game object containing the loaded data.
 
-```rust !#1-3
+```rust !#1-3 Parameters
 WorldContextObject: ref
 SlotName: string
 UserIndex: number

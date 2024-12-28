@@ -24,7 +24,7 @@ Print a message on screen and/or console with control params. (In Development, D
 
 Check your [Verbosity setting](../settings/settings-details.md#verbosity) to select where this message is printed.
 
-```rust !#1
+```rust !#1 Parameters
 Message: string
 (Omittable) Owner: ref              // Object that called this function.
 (Omittable) PrintType: PrintType    [ Log, Success, Warning, Error ]
@@ -104,7 +104,7 @@ Print a success message on screen and/or console. (In Development, Debug or Edit
 
 Check your [Verbosity setting](../settings/settings-details.md#verbosity) to select where this message is printed.
 
-```rust !#1
+```rust !#1 Parameters
 Message: string
 (Omittable) Owner: ref    // Object that called this function.
 ```
@@ -145,7 +145,7 @@ Print a warning message on screen and/or console. (In Development, Debug or Edit
 
 Check your [Verbosity setting](../settings/settings-details.md#verbosity) to select where this message is printed.
 
-```rust !#1
+```rust !#1 Parameters
 Message: string
 (Omittable) Owner: ref    // Object that called this function.
 ```
@@ -186,7 +186,7 @@ Print an error message on screen and/or console. (In Development, Debug or Edito
 
 Check your [Verbosity setting](../settings/settings-details.md#verbosity) to select where this message is printed.
 
-```rust !#1
+```rust !#1 Parameters
 Message: string
 (Omittable) Owner: ref    // Object that called this function.
 ```
@@ -233,7 +233,7 @@ Rename the given object.
 This function is useful to give a know name to an object and reference it later by name in script like:
 `$ &ObjName.ObjFunction`
 
-```rust !#1-2
+```rust !#1-2 Parameters
 Object: ref
 NewName: string
 ```
@@ -267,7 +267,7 @@ UTools::RenameObject(MyObject, "RefName");
 
 Attempts to locate a class by its path, specified as a string. This function is a valuable utility for dynamically finding and accessing classes within your Unreal Engine project based on their defined paths.
 
-```rust !#1
+```rust !#1 Parameters
 Path: string
 ```
 
@@ -308,7 +308,7 @@ TObjectPtr<UClass> CppClassExample{ UTools::FindClassByPath("Engine.Actor") };
 
 Get the default object from the given class. This function is useful to expose the Default Object to Blueprints.
 
-```rust !#1
+```rust !#1 Parameters
 Class: ref[Class]
 ```
 
@@ -451,7 +451,7 @@ Call a Target's function by name and return its Return Value and Outer Parameter
 
 This is a simplified general usage version of _Interpreter.CallFunctionOnTarget()_ that do not create Quillscript variables and script references.
 
-```rust !#1-4
+```rust !#1-4 Parameters
 WorldContextObject: ref
 Target: ref
 FunctionName: name
@@ -496,7 +496,7 @@ Serves as a shortcut utility designed for use inside static methods that have a 
 
 While this function provides a convenient way to check authority within static methods, it's important to note that if your function already has access to **HasAuthority()** through other means, it's advisable to use those methods instead.
 
-```rust !#1
+```rust !#1 Parameters
 WorldContextObject: ref
 ```
 
@@ -539,7 +539,7 @@ if (UTools::HasAuthority(WorldContextObject))
 
 Check whether a specific module or plugin is currently loaded within the Unreal Engine project. This function provides a straightforward way to determine if a particular module or plugin is available and active for use in your project.
 
-```rust !#1
+```rust !#1 Parameters
 ModuleName: name
 ```
 
@@ -575,7 +575,7 @@ if (UTools::IsModuleLoaded(ModuleName))
 
 Check whether a specific module or plugin is currently loaded within the Unreal Engine project. This function provides a straightforward way to determine if a particular module or plugin is available and active for use in your project.
 
-```rust !#
+```rust !# Parameters
 (Omittable) Size: byte = 8
 (Omittable) Letters: bool = true
 (Omittable) Numbers: bool = true
@@ -612,7 +612,7 @@ FString RandomString{ UTools::GenerateRandomString() };
 
 Fetch a level transition option by providing the option's key. This function is particularly useful when you need to access specific transition options after a level change, allowing you to retrieve and utilize option values as needed.
 
-```rust !#1-3
+```rust !#1-3 Parameters
 WorldContextObject: ref
 Key: string
 Value: string
@@ -649,7 +649,7 @@ FString RandomString{ UTools::RetrieveOption(WorldContextObject, Key, Value) };
 
 Sort an array of strings in alphabetical order. This function allows you to arrange a collection of strings into ascending alphabetical sequence, making it easier to manage and organize string data.
 
-```rust !#1
+```rust !#1 Parameters
 Strings: array[string]
 ```
 
@@ -683,7 +683,7 @@ TArray<FString> SortedArray{ UTools::SortStringsAlphabetically(StringsArray) };
 
 Register a string table by path. This function is useful when a string table is used by path and never referenced, causing it to not be loaded during runtime.
 
-```rust !#1
+```rust !#1 Parameters
 StringTablepPath: name
 ```
 
