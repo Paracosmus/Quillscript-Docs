@@ -1,6 +1,7 @@
 ---
 label: Home
 icon: home
+layout: page
 ---
 ![](./static/img/banner.gif)
 #

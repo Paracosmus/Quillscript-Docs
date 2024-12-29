@@ -43,7 +43,16 @@ Visual Studio Marketplace
 
 <br>
 
+<style>
+    .center {
+        text-align: center;
+    }
+</style>
+:::center
+
 !!!Success
-<span style="font-size: 1.5rem;">Are you enjoying our plugin?
-**Please rate us on FAB** 😄</span>
+<span style="font-size: 1.5rem;">Are you enjoying Quillscript?
+**Please rate us on [FAB](https://www.fab.com/listings/3dab3d58-9249-48a6-a039-ada7457c7e4e)** 😄</span>
 !!!
+
+:::
