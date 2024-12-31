@@ -103,7 +103,7 @@ You can assign to the **On Play Selection Box** event, to be notified when a dia
 
 const TObjectPtr<AQuillscriptInterpreter> Interpreter{ UQuill::CreateInterpreter(WorldContextObject) };const TObjectPtr<AQuillscriptInterpreter> Interpreter{ UQuill::CreateInterpreter(WorldContextObject) };
 Interpreter->OnPlaySelectionBox.AddDynamic(this, &UMyObject::PlaySelection);
-Interpreter->Start_Implementation(UQuill::GetScriptById("MyScriptId"));
+Interpreter->Start(UQuill::GetScriptById("MyScriptId"));
 ```
 
 ```cpp

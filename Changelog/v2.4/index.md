@@ -92,6 +92,7 @@ Next version to be announced.
 
 ## Fixes
 
+- Fix an issue where the **Roll** function returns 0 when called from script while omitting the 'quantity' parameter
 - Update deprecated code to UE 5.5 version
 - Minor performance and stability improvements
 - Minor code documentation improvements
@@ -101,7 +102,7 @@ Next version to be announced.
 # Possible Breaking Changes
 
 !!!warning
-The deprecated** utility functions ~~Property to String~~ and ~~String to Property~~ were removed.
+The deprecated utility functions ~~Property to String~~ and ~~String to Property~~ were removed.
 
 Use **Get Property by Name** and **Set Property by Name** instead
 !!!

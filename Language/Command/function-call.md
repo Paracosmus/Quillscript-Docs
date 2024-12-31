@@ -23,7 +23,7 @@ Must be a **UFunction**
 +++
 
 !!!
-By default, you can pass only primary type parameters: **Boolean (bool)**, **Byte (uint8)**, **Integer (int32)**, **Integer64 (int64)**, **Float (float/double)**, **String (FString)**, **Name (FName)**, **Text (FText)** and **Enumerators (UEnum)**.
+By default, you can pass only primary type parameters: **Boolean (bool)**, **Byte (uint8)**, **Integer (int32)**, **Integer64 (int64)**, **Float (float/double)**, **String (FString)**, **Name (FName)**, **Text (FText)**, **Enumerators (UEnum)** and **Gameplay Tag (FGameplayTag)**.
 !!!
 
 !!!
@@ -343,7 +343,7 @@ $ MyParentObject.MyMap
 ```
 
 !!!warning
-The following types are supported: **Boolean (bool)**, **Byte (uint8)**, **Integer (int32)**, **Integer64 (int64)**, **Float (float/double)**, **String (FString)**, **Name (FName)** and **Enumerators (UEnum)**.
+The following types are supported: **Boolean (bool)**, **Byte (uint8)**, **Integer (int32)**, **Integer64 (int64)**, **Float (float/double)**, **String (FString)**, **Name (FName)**, **Enumerators (UEnum)** and **Gameplay Tag (FGameplayTag)**.
 !!!
 
 ---

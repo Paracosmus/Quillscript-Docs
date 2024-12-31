@@ -1121,7 +1121,7 @@ $ ^Quillscript.Quill.SaveGameAndStoryToSlot {&SaveGame} "MySlot" 0
 ...
 
 TObjectPtr<UMySaveGame> SaveGame{ Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass())) };
-UQuill::SaveGameAndStoryToSlot(WorldContextObjet, SaveGame, "MySlot", 0);
+UQuill::SaveGameAndStoryToSlot(WorldContextObject, SaveGame, "MySlot", 0);
 ```
 ===
 :::
@@ -1158,7 +1158,7 @@ $ ^Quillscript.Quill.LoadGameAndStoryFromSlot "MySlot" 0
 #include "Utils/Quill.h"
 ...
 
-UQuill::LoadGameAndStoryFromSlot(WorldContextObjet, "MySlot", 0);
+UQuill::LoadGameAndStoryFromSlot(WorldContextObject, "MySlot", 0);
 ```
 ===
 :::

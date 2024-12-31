@@ -549,7 +549,6 @@ Stop the sound asset playing.
 ```
 
 ```q Example
-$ StopSound
 $ StopSound voice
 $ StopSound music 0.5
 
@@ -591,18 +590,24 @@ $ PlayAnimation {&Mesh} {&/Game/Animations/Running.Running} true
 ## Helper
 
 ==- <span class="command">Roll</span>
-Roll a die. Select a random number in range.
+Roll a number of dice. Select a random number in range.
+The result is stored in a Quillscript variable named `{$ReturnValue}`.
 
 ```rust Parameters
 DieSides: integer
+Quantity: integer
 ```
 
 ```q Example
-$ Roll 2    // heads or tails
-$ Roll 6    // d6
-$ Roll 20   // d20
+$ Roll 2     // heads or tails
+$ Roll 6     // d6
+$ Roll 20    // d20
 $ Roll 100
-$ Roll 17
+$ Roll 17 2
+$ Roll 12 10
+
+if: {$ReturnValue} > 10
+    $ ^Quillscript.Tools.Success 'You win!'
 
 ```
 ===

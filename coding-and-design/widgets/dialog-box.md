@@ -91,7 +91,7 @@ You can assign to the **On Play Dialogue Box** event, to be notified when a dial
 
 const TObjectPtr<AQuillscriptInterpreter> Interpreter{ UQuill::CreateInterpreter(WorldContextObject) };
 Interpreter->OnPlayDialogueBox.AddDynamic(this, &UMyObject::PlayDialogue);
-Interpreter->Start_Implementation(UQuill::GetScriptById("MyScriptId"));
+Interpreter->Start(UQuill::GetScriptById("MyScriptId"));
 ```
 
 ```cpp
