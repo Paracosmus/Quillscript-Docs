@@ -30,9 +30,9 @@ links:
   link: ./changelog/
   icon: git-branch
 
-- text: Contact
+- text: Support
   link: ./contact.md
-  icon: paper-airplane
+  icon: question
 
 markdown:
   lineBreaks: hard

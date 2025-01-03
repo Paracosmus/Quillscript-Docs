@@ -124,7 +124,7 @@ $ MyOtherFunction {&MyRef}
 Although the interpreter tries to check if the parameter type and the referenced object type are different, you should avoid passing an object with a different type, this can result in a crash.
 !!!
 
-Object references are also be captured when they are sent as return value of a function. For example, the function with the following signature:
+Object references are also captured when they are sent as return value of a function. For example, the function with the following signature:
 
 +++Blueprint
 ![](../../static/img/examples/output_function.png)
@@ -144,6 +144,8 @@ An object reference for the output parameter is added and becomes immediately av
 ```q
 $ &ReturnValue.MyFunction 10 true
 $ &MyOutputObject.MyFunction 10 true
+
+$ MyOtherFunction {&MyOutputObject}
 
 ```
 
@@ -188,7 +190,7 @@ $ Background {&Shop}
 You can execute functions in all objects of a given class. For example, if an object has the class _"MyClass"_, start the function with an **^ (_Circumflex_)** and the class name.
 
 +++Blueprint Class
-Start with the module name and the class name.
+Start with the blueprint reference path, without the extension at the end:
 
 ```q
 $ ^Path/To/My/Blueprint/MyClass.MyFunction 10 true
@@ -216,7 +218,6 @@ $ ^Engine.Actor.MyFunction 10 true
 ---
 
 ## <span class="command">Tagged Actors</span>
-Start with the blueprint reference path, without the extension at the end:
 
 You can execute functions that belong to instanced Actors using their tags. For example, if an Actor has the tag _'MyTag'_, start the function with a **% (_Percent Sign_)** and the tag name.
 

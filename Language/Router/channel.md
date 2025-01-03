@@ -1,6 +1,6 @@
 ---
 label: Channel
-icon: workflow
+icon: arrow-both
 order: 2
 ---
 # Channel
@@ -9,7 +9,7 @@ A Channel memorises the point where a Router was played, and return to that poin
 
 - A Channel statement starts with a **<-> (_Less Than, Dash and Greater Than_)**, immediately followed by a space.
 
-```q #
+```q #12,20
 <@> Answer
 
   - George

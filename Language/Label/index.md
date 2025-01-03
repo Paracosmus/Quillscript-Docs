@@ -43,6 +43,7 @@ Any statement can be labeled by adding a label as instruction to it. Router stat
 $ x = 10 | @MyCommandLabel
 
 ? if: {x} == 10 | @MyConditionLabel
+
 ```
 
 It's important to notice that statements can be jumped if they belong to a label statement with a false condition or when they are within a [condition statement](../condition/) that is also false. When a router statement points to a label instruction, the flow goes to that point, ignoring any parenting condition and evaluating only the target statement condition, if any.
