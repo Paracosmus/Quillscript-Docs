@@ -90,7 +90,10 @@ You can use these names to reference common Unreal Engine objects.
 <span class="command">&DialogBox</span>            | Dialog Box Widget
 <span class="command">&SelectionBox</span>         | Selection Box Widget
 <span class="command">&BackgroundBox</span>        | Background Box Widget
+<span class="command">&HUD</span>                  | Head-up Display Object
 <span class="command">&Level</span>                | Current Level Script Actor
+<span class="command">&World</span>                | World Object
+<span class="command">&Subsystem</span>            | Quillscript Subsystem Object
 
 ### Script References
 In addition, you can create a list of object references to use in scripts. To add an object to the list, use the method below:

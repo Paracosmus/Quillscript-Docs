@@ -83,8 +83,8 @@ $ ^Quillscript.Tools.Print 'Print this message' {&Script}
 #include "Utils/Tools.h"
 ...
 
-// Macro (Only inside an UObject method)
-PRINT("Print this message" )
+// Macro (Only inside an UObject method. Type cast is NOT required)
+PRINT("Print this message")
 
 // Function call.
 UTools::Print("Print this message", MyObject)
@@ -125,7 +125,7 @@ $ ^Quillscript.Tools.Success 'Print this message' {&Script}
 #include "Utils/Tools.h"
 ...
 
-// Macro (Only inside an UObject method)
+// Macro (Only inside an UObject method. Type cast is NOT required)
 SUCCESS("Print this message");
 
 // Function call.
@@ -166,7 +166,7 @@ $ ^Quillscript.Tools.Warning 'Print this message' {&Script}
 #include "Utils/Tools.h"
 ...
 
-// Macro (Only inside an UObject method)
+// Macro (Only inside an UObject method. Type cast is NOT required)
 WARNING("Print this message");
 
 // Function call.
@@ -207,7 +207,7 @@ $ ^Quillscript.Tools.Error 'Print this message' {&Script}
 #include "Utils/Tools.h"
 ...
 
-// Macro (Only inside an UObject method)
+// Macro (Only inside an UObject method. Type cast is NOT required)
 ERROR("Print this message");
 
 // Function call.
@@ -1350,29 +1350,60 @@ Please refer to the in-engine documentation
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Return the given string in the 'On Printed Event' character-by-character in the given interval. )
-[comment]: <> ( @param WorldContextObject )
-[comment]: <> ( @param Text				Text to typewrite. )
-[comment]: <> ( @param PrintedDelegate	Callback event to be called each time a character is printed. )
-[comment]: <> ( @param CompletedDelegate Callback event to be called when the typewriting is completed. )
-[comment]: <> ( @param Interval			Interval between each character print. )
-[comment]: <> ( @param Sound				Sound to play when printing. )
-[comment]: <> ( @param bOverlapSound		Play each key sound in an individual Audio Component or use the same Audio Component. )
-[comment]: <> ( @param bSanitize			Remove trailing whitespaces. )
-[comment]: <> ( @return Timer handle to control the effect. )
-[comment]: <> ( ASmartTypewriter* PlayTypewriterEffect | UObject* WorldContextObject, const FText Text, )
-[comment]: <> ( UPARAM | DisplayName = "On Printed Event" | const FTextPrintedDelegate& PrintedDelegate, )
-[comment]: <> ( 		UPARAM | DisplayName = "On Completed Event" | const FTextCompletedDelegate& CompletedDelegate, )
-[comment]: <> ( 		const float Interval = 0.02, USoundBase* Sound = nullptr, const bool bOverlapSound = false, const bool bSanitize = true )
-
 :::api
 ### Play Typewriter Effect
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Return the given string in the 'On Printed Event' character-by-character in the given interval.
 
+```rust !#1-3
+Text: text
+PrintedDelegate: event
+CompletedDelegate: event
+(Omittable) Interval: float = 0.02
+(Omittable) Sound: ref[Sound Base] = nullptr
+(Omittable) bOverlapSound: bool = false
+(Omittable) bSanitize: bool = true
+```
+
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed](https://blueprintue.com/render/devhhybq/)
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp #10-17
+#include "Utils/Tools.h"
+...
+
+FTextPrintedDelegate OnPrinted;
+OnPrinted.BindDynamic(this, &UMyObject::Printed);
+
+FTextCompletedDelegate OnCompleted;
+OnCompleted.BindDynamic(this, &UMyObject::Completed);
+
+TObjectPtr<ASmartTypewriter> Typewriter{
+    UTools::PlayTypewriterEffect(
+        WorldContextObject,
+        TXT("Hello, world!"),
+        OnPrinted,
+        OnCompleted
+    )
+};
+```
+
+```cpp # On Printed
+void UMyObject::Printed(const FText& Text, const FString& Character, const int32& Index)
+{
+	// Implementation
+}
+```
+
+```cpp # On Completed
+void UMyObject::Completed()
+{
+	// Implementation
+}
+```
+===
 :::
 <br>
 

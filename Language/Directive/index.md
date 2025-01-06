@@ -198,7 +198,7 @@ This directive halts the execution of the script until a specified condition is 
 ~ checkpoint | ? {myVar} < 10 OR {flat} == on
 ```
 
-It accepts a number parameter to set the delay in seconds between condition checks, this help to improve performance, it check every 0.1 seconds otherwise.
+It accepts a number parameter to set the delay in seconds between condition checks, this help to improve performance, it checks every frame otherwise.
 
 ```q
 ~ checkpoint 0.5 | ? {myVar} + 3 < 10 AND {flat} == on

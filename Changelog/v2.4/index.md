@@ -17,7 +17,7 @@ Next version to be announced.
 
 ## <span class="option">Options</span>
 
-- Feature Dynamic Options
+- Feature [Dynamic Options](../../language/option/dynamic-options.md)
     - **List Options**: Automatically add options to the options set using arrays and sets
     - **Inject Options**
         - **From Function Call**: Inject options into the options set using a Command Statement
@@ -49,16 +49,16 @@ Next version to be announced.
 
 ## Widgets
 
-- Add the **Typewriter** object class
+- Add the [Smart Typewriter](../../coding-and-design/smart-text/smart-typewriter.md) object class
     - Reusable function
     - Timer delays
     - Substring delays
     - Typing sound
     - Sync duration with voice audio
-- Update the built-in Dialog Box to use the new **Typewriter** object and its new features
+- Update the built-in Dialog Box to use the new **Smart Typewriter** object and its new features
 - Add the **Smart Text Block Decorator**, **Smart Text Decorator** and **Tooltip Text Style** classes to allow the use of tooltips and widget inside _Rich Text Blocks_.
-    - Show a tooltip text when a substring is hovered
-    - Show a tooltip widget when a substring is hovered
+    - [Show a tooltip text when a substring is hovered](../../coding-and-design/smart-text/rich-text.md#tooltip-text-style)
+    - [Show a tooltip widget when a substring is hovered](../../coding-and-design/smart-text/rich-text.md#smart-text-block-decorator)
 
 ---
 
