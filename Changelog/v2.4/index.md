@@ -6,9 +6,9 @@ order: 4
 
 ![](../../static/img/changelog/2.4.avif)
 
-This update includes new three major new features to add to Quillscript's pool of tools. It introduces the new [Dynamic Options](../../language/option/dynamic-options.md), [Smart Typewriter](../../coding-and-design/smart-text/smart-typewriter.md), and [Tooltip Text](../../coding-and-design/smart-text/rich-text.md#tooltip-decorator).
+This update includes three major new features to add to Quillscript's pool of tools. It introduces the new [Dynamic Options](../../language/option/dynamic-options.md), [Smart Typewriter](../../coding-and-design/smart-text/smart-typewriter.md), and [Tooltip Text](../../coding-and-design/smart-text/rich-text.md#tooltip-decorator).
 
-**Dynamic Options** used when to generate an options set during runtime. The **Smart Typewriter** is our new reusable object to display typewrite effect, text pauses and other functions. And **Tooltip Text** is an new text decorator used to display a tooltip text or widget when a substring is hovered inside a rich text text block.
+**Dynamic Options** are used to generate an options set during runtime. The **Smart Typewriter** is our new reusable object to display typewrite effect, text pauses and other functions. And **Tooltip Text** is an new text decorator used to display a tooltip text or widget when a substring is hovered inside a Rich Text Block.
 
 **Release Date**: 2025-01-07
 **Engine Version**: 5.5
