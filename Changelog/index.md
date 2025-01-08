@@ -7,12 +7,15 @@ order: 1
 
 <br>
 
-### v2.4 | [!badge text=":icon-calendar: 2025-MM-DD" variant="info" corners="pill"] [!badge text="next" variant="dark"]
+[//]: <> ([!badge text="next" variant="dark"])
+[//]: <> ([!badge text="latest" variant="primary"])
+
+### v2.4 | [!badge text=":icon-calendar: 2025-01-07" variant="info" corners="pill"] [!badge text="latest" variant="primary"]
 [!ref](./v2.4/)
 
 ---
 
-### v2.3.2 | [!badge text=":icon-calendar: 2024-12-04" variant="info" corners="pill"] [!badge text="latest" variant="primary"]
+### v2.3.2 | [!badge text=":icon-calendar: 2024-12-04" variant="info" corners="pill"]
 [!ref](./v2.3/v2.3.2)
 
 ---

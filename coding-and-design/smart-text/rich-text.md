@@ -7,10 +7,32 @@ order: 3
 
 ---
 
-## <span class="dialogue">Built-in Tags</span>
+## <span class="dialogue">Built-in Rich Text Tags</span>
 
-!!!ghost
-:construction: Under construction :construction:
+Quillscript comes packed with a set of built-in rich text tags that can be used to format text in a Rich Text Block.
+
+And you can also create your own custom rich text data table with custom tags, and apply it to any Rich Text Block, including to custom Dialog Box and Selection Box widgets.
+
+The built-in Dialog Box and Selection Box widget supports the following tags:
+
+Rich Text Tag | Source Text              | Formatted Text Result {.compact}
+---           | ---                      | ---
+b             | `<b>bold</>`             | **bold**
+i             | `<i>italic</>`           | _italic_
+bi            | `<bi>bold and italic</>` | **_bold and italic_**
+u             | `<u>underline</>`        | <u>underline</u>
+s             | `<s>strike</>`           | ~~strike~~
+a             | `<a>anchor</>`           | <span style="color: blue; text-decoration: underline;">anchor</span>
+info          | `<info>info</>`          | <span style="color: #00E592;">info</span>
+warning       | `<warning>warning</>`    | <span style="color: #FFC107; font-style: italic;">warning</span>
+danger        | `<danger>danger</>`      | <span style="color: #F44336; font-weight: bold">danger</span>
+disable       | `<disable>disable</>`    | <span style="color: #666666; font-weight: 200">disable</span>
+big           | `<big>big</>`            | <span style="font-size: 24px">big</span>
+small         | `<small>small</>`        | <span style="font-size: 11px">small</span>
+
+!!!
+You can find the rich text **data table** at
+`(Quillscript Folder) > Runtime > Utils > QuillscriptRichTextStyles`.
 !!!
 
 ---
@@ -33,12 +55,18 @@ Tooltips are floating text that appears when the mouse hovers over a specific ar
 
 Show a tooltip text when a substring is hovered.
 
-```q
+```q #
 - .
-  This text is written using <data tooltip="Our custom scripting language tailored for dialogues">Quillscript Language</>, as any other dialogue in this project.
+  As the radiant light of the <wiki id="Solgem">Solgem</> waned,
+  Elder Kael turned to you, his voice heavy with urgency.
+
+- Elder Kael
+  The <wiki id="Riftveil">Riftveil</> is growing unstable, and without the resources to mend it.
+  You must journey to the <location tooltip="North of the Green River">Obsidian Hollows</> and
+  retrieve the <wiki id="Emberheart">Emberheart</> before it's too late!
 ```
 
-![](../../static/img/examples/tooltiptext.png)
+![](../../static/img/examples/tooltiptext.gif)
 
 You can customize the tooltip text and content text style, including the background color or image.
 
@@ -62,10 +90,30 @@ In the newly created blueprint, add a new entry to the **Tooltip Tags** array.
 
 Here you can customize the appearance of the source text content and the tooltip text.
 
-If you set a **Widget Class**, the text or tooltip will be displayed as a widget instead of a text and any related style setting is ignored.
+Now, when you add the tag attribute `tooltip` to a substring, the tooltip will be displayed when the mouse hovers over it.
 
-The selected **Widget Class** must have 3 required variables, where Quillscript will inject the data you need to display information inside your widget.
+```q
+- Bob
+  Hello, <mytag tooltip="Alice's brother">Bob</>!
+```
+
+### Tooltip Widget
+
+If you set a **Widget Class**, the text and/or tooltip will be displayed as a custom widget instead.
+
+The used **Widget Class** must have 3 required variables, where Quillscript will inject the data you need to display information inside your widget.
 
 ![](../../static/img/examples/decorator-variables.png)
+
+Variable     | Type                                    | Data {.compact}
+---          | ---                                     | ---
+**Name**     | String `FString`                        | The name of the rich text tag used
+**Content**  | Text `FText`                            | The content text inside of the rich text tag
+**Metadata** | Map of Strings `TMap<FString, FString>` | The metadata attributes of the rich text tag
+
+!!!warning
+**For C++ Widgets**
+These variables must be **UProperty**
+!!!
 
 ---
