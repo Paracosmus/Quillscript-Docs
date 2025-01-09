@@ -70,6 +70,8 @@ Show a tooltip text when a substring is hovered.
 
 You can customize the tooltip text and content text style, including the background color or image.
 
+For a more advanced tooltip, you can use a custom widget class to display the text and/or tooltip content; these widgets are just standard UMG, having no additional limitations; they are interactable and can be coded and styled to achieve the desired aesthetic and functionality.
+
 ### Smart Text Block Decorator
 
 Add a tooltip widget to the viewport when a substring is hovered
