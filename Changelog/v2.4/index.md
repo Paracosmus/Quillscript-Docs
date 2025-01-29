@@ -108,7 +108,7 @@ Use **Get Property by Name** and **Set Property by Name** instead
 !!!
 
 !!!warning
-(C++) The **Smart Text Block** class was moved from the _Widgets_ folder to the _Text_ folder.
+<span class="cpp">(C++)</span> The **Smart Text Block** class was moved from the _Widgets_ folder to the _Text_ folder.
 
 It may be necessary to update the related `#include` paths
 !!!

@@ -1,7 +1,7 @@
 input: .
 output: .retype
 url: quillscript.ink
-favicon: ./static/img/favicon.ico
+favicon: /static/img/favicon.ico
 poweredByRetype: false
 
 cache:
@@ -23,15 +23,15 @@ breadcrumb:
 
 links:
 - text: Home
-  link: ./
+  link: /index.md
   icon: home
 
 - text: Roadmap
-  link: ./changelog/
+  link: /changelog/
   icon: git-branch
 
 - text: Support
-  link: ./contact.md
+  link: /contact.md
   icon: question
 
 markdown:
