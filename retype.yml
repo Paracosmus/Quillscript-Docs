@@ -46,3 +46,50 @@ integrations:
 
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
+
+data:
+  dialogue:      '[Dialogue](/language/dialogue/index.md)'
+  repeater:      '[](/language/)'
+  gate:          '[](/language/)'
+
+  option:        '[](/language/)'
+  dynamic:       '[](/language/)'
+
+  label:         '[](/language/)'
+  covert:        '[](/language/)'
+  template:      '[](/language/)'
+
+  router:        '[](/language/)'
+  channel:       '[](/language/)'
+  template:      '[](/language/)'
+
+  command:       '[](/language/)'
+  var:           '[](/language/)'
+  call:          '[](/language/)'
+  func:          '[](/language/)'
+
+  conditions:    '[](/language/)'
+  directive:     '[](/language/)'
+  tag:           '[](/language/)'
+  special-tag:   '[](/language/)'
+  comment:       '[](/language/)'
+  freeText:      '[](/language/)'
+
+  script:        '[](/coding-and-design/objects/)'
+  interpreter:   '[](/coding-and-design/objects/)'
+  subsystem:     '[](/coding-and-design/objects/)'
+
+  dialog-box:    '[](/coding-and-design/widgets/)'
+  selection-box: '[](/coding-and-design/widgets/)'
+  bg-box:        '[](/coding-and-design/widgets/)'
+  sprite-box:    '[](/coding-and-design/widgets/)'
+
+  typewriter:    '[](/coding-and-design/smart-text/)'
+  text-block:    '[](/coding-and-design/smart-text/)'
+
+  quill:         '[](/coding-and-design/libraries/)'
+  tools:         '[](/coding-and-design/libraries/)'
+  macros:        '[](/coding-and-design/libraries/)'
+  editor-tools:  '[](/coding-and-design/libraries/)'
+
+  settings:      '[](/coding-and-design/settings/)'

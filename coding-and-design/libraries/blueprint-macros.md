@@ -1,12 +1,12 @@
 ---
 label: Blueprint Macros
-icon: paintbrush
+icon: paperclip
 order: 2
 ---
 # Blueprint Macros
 > Blueprint Macros Library
 
-A collection of general usage <span class="blueprint">Blueprint Macros</span> that can be used in any project to improve the workflow and reduce the amount of code duplication.
+A collection of general usage [Blueprint Macros](https://dev.epicgames.com/documentation/unreal-engine/macros-in-unreal-engine) that can be used in any project to improve the workflow and reduce the amount of code duplication.
 
 ---
 

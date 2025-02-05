@@ -6,7 +6,7 @@ order: 1
 # Editor Tools
 > Editor Tools Function Library
 
-A collection of functions that can be used to perform various task in the <span class="cpp">editor</span> and <span class="cpp">editor utility</span> functions.
+A collection of functions that can be used to perform various task in the [Editor](https://dev.epicgames.com/documentation/unreal-engine/tools-and-editors-in-unreal-engine) and [Editor Utility](https://dev.epicgames.com/documentation/unreal-engine/scripting-the-unreal-editor-using-blueprints) functions.
 
 ---
 

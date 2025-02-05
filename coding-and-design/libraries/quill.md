@@ -6,7 +6,7 @@ order: 4
 # Quill
 > Quillscript Function Library
 
-This library offers a set of specialized tools and features for Quillscript Plugin users, enabling efficient coding, automation, and customization within your Quillscript-powered projects.
+This [Blueprint Function Library](https://dev.epicgames.com/documentation/unreal-engine/blueprint-function-libraries-in-unreal-engine) offers a set of specialized tools and features for Quillscript related tasks, enabling efficient coding, automation, and customization within your Quillscript-powered projects.
 
 ---
 
