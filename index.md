@@ -8,14 +8,16 @@ layout: page
 
 [Quillscript](https://www.fab.com/listings/3dab3d58-9249-48a6-a039-ada7457c7e4e), formerly known as _Snowfall_, is an [Unreal Engine](https://www.unrealengine.com/) code plugin. It controls the story and narrative flow for RPGs, visual novels, and other story-driven games. Including player choices, story branching, conditions, code integration, and much more. All of that is done through an easy-to-use screenplay-style scripting language.
 
-### For Writers
-Writers have a screenplay-style scripting language to author their stories.
+<br>
 
-### For Artists
-UI designers can easily create their own Dialog Boxes and Selection Boxes widgets using UMG full power.
+For Writers
+:   Writers have a screenplay-style scripting language to author their stories.
 
-### For Programmers
-Programmers can run their own custom code within script, either Blueprint or C++.
+For Artists
+:   UI designers can easily create their own Dialog Boxes and Selection Boxes widgets using UMG full power.
+
+For Programmers
+:   Programmers can run their own custom code within script, either Blueprint or C++.
 
 ---
 
@@ -27,19 +29,20 @@ A scripting-based dialogue has many advantages over common dialogue systems like
 
 ### Features
 
-* Easy to use, no setup required
-* Dialogue and player choices
-* Conditions and conditional branching
-* Story flow control and navigation
-* Execute any Engine's or Project's Blueprint/C++ code from script and capture the return back to script
-* Variables and variables replacement
-* Easy to create a custom User Interface using UMG full power
-* Localizable out of the box
-* Integrates with any save system for persistence
-* Full Blueprint and C++ support
-* Any text editor can be used, there are no spreadsheets or complex data tables
-* Optional Visual Studio Code extension for syntax highlighting and autocompletion
-* Easy to customize and extend
+{.list-icon}
+- :icon-check-circle-fill: Easy to use, no setup required
+- :icon-check-circle-fill: Dialogue and player choices
+- :icon-check-circle-fill: Conditions and conditional branching
+- :icon-check-circle-fill: Story flow control and navigation
+- :icon-check-circle-fill: Execute any Engine's or Project's Blueprint/C++ code from script and capture the return back
+- :icon-check-circle-fill: Variables and variables replacement
+- :icon-check-circle-fill: Easy to create a custom User Interface using UMG full power
+- :icon-check-circle-fill: Localizable out of the box
+- :icon-check-circle-fill: Integrates with any save system for persistence
+- :icon-check-circle-fill: Full Blueprint and C++ support
+- :icon-check-circle-fill: Any text editor can be used, there are no spreadsheets or complex data tables
+- :icon-check-circle-fill: Optional Visual Studio Code extension for syntax highlighting and autocompletion
+- :icon-check-circle-fill: Easy to customize and extend
 
 <br>
 

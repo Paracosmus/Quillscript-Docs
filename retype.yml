@@ -4,10 +4,6 @@ url: quillscript.ink
 favicon: /static/img/favicon.ico
 poweredByRetype: false
 
-cache:
-  strategy: query
-  # token: v1
-
 branding:
   title: Quillscript
   label: doc
@@ -39,6 +35,12 @@ markdown:
 
 outbound:
   enabled: true
+
+templating:
+  liquid: false
+
+start:
+  pro: true
 
 integrations:
   googleAnalytics:

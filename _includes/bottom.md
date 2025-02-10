@@ -1,7 +1,4 @@
-<!-- Tooltips -->
-<!-- *[HTML]: Hyper Text Markup Language -->
+<!-- Insert this at the bottom of each markdown page -->
 
-<!-- Scriban (Not Liquid, there is a project wide option to enable Liquid?) -->
-<!-- {{~ for item in term ~}} -->
-<!-- *[{{ item.key }}]: {{ item.value }} -->
-<!-- {{~ end ~}} -->
+<!-- Tooltips -->
+<!-- *[AWS]: Amazon Web Services -->
