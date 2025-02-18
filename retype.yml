@@ -30,6 +30,10 @@ links:
   link: /contact.md
   icon: question
 
+- text: Discord
+  link: https://discord.com/invite/YTYxhCFJGC
+  icon: /static/img/icons/discord-icon.svg
+
 markdown:
   lineBreaks: hard
 

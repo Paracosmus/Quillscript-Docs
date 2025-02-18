@@ -49,28 +49,28 @@ A scripting-based dialogue has many advantages over common dialogue systems like
 ||| Unreal Engine
 <a href="https://docs.unrealengine.com/latest/unreal-engine-programming-and-scripting/" target="_blank" style="font-size: 13px;">
 
-![](./static/img/icons/ue.svg)
+![](/static/img/icons/ue.svg)
 Compatible both with Unreal Engine Blueprints and C++
 </a>
 
 ||| VS Code Extension
 <a href="https://marketplace.visualstudio.com/items?itemName=BrunoCaxito.quillscript-language" target="_blank" style="font-size: 13px;">
 
-![](./static/img/icons/vscode.svg)
+![](/static/img/icons/vscode.svg)
 Syntax highlighting and autocompletion for Quillscript Language
 </a>
 
 ||| Discord Community
 <a href="https://discord.com/invite/YTYxhCFJGC" target="_blank" style="font-size: 13px;">
 
-![](./static/img/icons/discord.svg)
+![](/static/img/icons/discord.svg)
 Join our Discord server to get help and share your projects
 </a>
 
 ||| Youtube Channel
 <a href="https://www.youtube.com/channel/UCdUBIYVRJKtqyTIy0Yg-K1Q" target="_blank" style="font-size: 13px;">
 
-![](./static/img/icons/youtube.svg)
+![](/static/img/icons/youtube.svg)
 Video tutorials
 </a>
 
