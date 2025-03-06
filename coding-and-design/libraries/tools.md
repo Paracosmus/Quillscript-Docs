@@ -745,6 +745,23 @@ Please refer to the in-engine documentation
 
 [//]: <> (=========================================================================================)
 
+[comment]: <> ( Check if the given string table contains the given key. )
+[comment]: <> ( bool StringTableContains | const FName StringTableName, const FString Key, FString& OutSourceString )
+
+:::api
+### String Table Contains
+
+!!!ghost
+:construction: Under construction :construction:
+Please refer to the in-engine documentation
+!!!
+
+:::
+<br>
+
+
+[//]: <> (=========================================================================================)
+
 [comment]: <> ( Get the length of a container as string  | Array, Set, Map. )
 [comment]: <> ( This is useful to get the length of an array in a Quillscript script, use the engine methods for all other cases. )
 [comment]: <> ( int32 Length | FString ContainerAsString )
@@ -1304,6 +1321,23 @@ Please refer to the in-engine documentation
 
 :::api
 ### Get Nested Widgets Of Class
+
+!!!ghost
+:construction: Under construction :construction:
+Please refer to the in-engine documentation
+!!!
+
+:::
+<br>
+
+
+[//]: <> (=========================================================================================)
+
+[comment]: <> ( Add the given widget as a child of the parent widget at the given index. )
+[comment]: <> ( void AddChildWidgetAt | UWidget* Parent, UWidget* Child, const int32 Index )
+
+:::api
+### Add Child Widget at
 
 !!!ghost
 :construction: Under construction :construction:
