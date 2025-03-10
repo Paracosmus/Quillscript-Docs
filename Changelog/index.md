@@ -10,7 +10,12 @@ order: 1
 [//]: <> ([!badge text="next" variant="dark"])
 [//]: <> ([!badge text="latest" variant="primary"])
 
-### v2.4 | [!badge text=":icon-calendar: 2025-01-07" variant="info" corners="pill"] [!badge text="latest" variant="primary"]
+### v2.4.1 | [!badge text=":icon-calendar: 2025-03-06" variant="info" corners="pill"] [!badge text="latest" variant="primary"]
+[!ref](./v2.4/v2.4.1)
+
+---
+
+### v2.4 | [!badge text=":icon-calendar: 2025-01-07" variant="info" corners="pill"]
 [!ref](./v2.4/)
 
 ---
