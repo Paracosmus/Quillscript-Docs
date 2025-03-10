@@ -13,7 +13,7 @@ To create dynamic options, you can use add a second **\* (asterisk)**. This tell
 
 ## <span class="option">From List</span>
 
-The interpreter will automatically generate the options based on the array or set. Add an **\* (asterisk)** before the arrat/set variable name and the interpreter will generate a set of options based on that array entries.
+The interpreter will automatically generate the options based on the array or set. Add an **\* (asterisk)** before the array/set variable name and the interpreter will generate a set of options based on that array entries.
 
 ```q #7
 // Store all save game slot names into an array called '$ReturnValue'
@@ -38,7 +38,7 @@ $ &GameMode.GetPlayersScores
 - .
   Select a player.
 
-* * {*$PlayersNames} | $ $MyObject.CheckScore {$PlayersScores}
+* * {*$PlayersNames} | $ $MyObject.CheckScore {*$PlayersScores}
 * Continue
 ```
 
