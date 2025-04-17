@@ -7,7 +7,7 @@ order: 5
 ![](../../static/img/changelog/2.5.png)
 
 !!!
-This version is a **major** update and is a **work in progress**. It is not yet available for public use. Please check back later for updates.
+This version is a **work in progress**. It is not yet available for public use.
 
 When a new feature is completed, it will be added to the list. Please note that this is not a complete list of all changes and improvements yet.
 
