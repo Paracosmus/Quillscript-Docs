@@ -17,13 +17,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 9.0.x
-
       - uses: retypeapp/action-build@latest
-        with:
-          license: ${{ secrets.RETYPE_SECRET }}
+        env:
+          RETYPE_SECRET: ${{ secrets.RETYPE_SECRET }}
+          RETYPE_PASSWORD: ${{ secrets.RETYPE_PASSWORD }}
 
       - uses: retypeapp/action-github-pages@latest
         with:

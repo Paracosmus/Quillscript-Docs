@@ -21,7 +21,9 @@ New features and improvements are being added regularly, so stay tuned for the f
 
 ## <span class="command">Commands</span>
 
-- Add support for **Interfaces** to the Function Calls by class command
+- Add support for **Interfaces** to the Function Call by class command
+- Support for RPG dice regular expressions pattern in commands and conditions expressions
+    - Ex.: `{1d6} + 2 + ( {2d20} / 3 )`
 
 ---
 
