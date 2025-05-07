@@ -6,10 +6,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.799363906447">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.8.1.799942714075">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.7.0">
+    <meta name="generator" content="Retype 3.8.1">
 
     <!-- Primary Meta Tags -->
     <title>Quillscript Variables</title>
@@ -34,12 +34,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/img/favicon.ico" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.7.0.799363906447" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.8.1.799942714075" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.7.0.799363906447" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.7.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.7.0.799363906447" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.7.0.799363906447" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.8.1.799942714075" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.8.1" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.8.1.799942714075" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.8.1.799942714075" defer></script>
 
     <!-- Styles -->
     <style>
@@ -434,7 +434,7 @@
                                 <img class="max-h-10 dark:hidden md:inline-block" src="../../../static/img/logo.svg">
                                 <img class="max-h-10 hidden dark:inline-block" src="../../../static/img/logo.svg">
                             </span>
-                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Quillscript</span>
+                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Quillscript</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">doc</span>
                     </div>
         
@@ -523,7 +523,7 @@
     
         <div class="container relative flex bg-white">
             <!-- Sidebar Skeleton -->
-            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-white border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
             
                 <div class="flex items-center h-16 px-6">
                     <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
@@ -644,8 +644,8 @@
         <span>Quillscript Variables</span>
     </h1>
 </doc-anchor-target>
-<p>A variable is <strong>a</strong> named location in memory that holds <strong>a</strong> value.</p>
-<p>To declare <strong>a</strong> Quillscript variable, type the desired name, and use the <strong>= (<em>Assignment Operator</em>)</strong> to assign <strong>a</strong> value.</p>
+<p>A variable is a named location in memory that holds a value.</p>
+<p>To declare a Quillscript variable, type the desired name, and use the <strong>= (<em>Assignment Operator</em>)</strong> to assign a value.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-q"><code v-pre class="language-q">$ my_variable = 10
 </code></pre>
@@ -666,7 +666,7 @@
         <span><span class="command">Variable Type</span></span>
     </h2>
 </doc-anchor-target>
-<p>Quillscript is an inferred type language, meaning that the variable type is automatically deduced. There are three variable types: <strong>Switch</strong>, <strong>Number</strong>, and <strong>Text</strong>. The variable type is used to determine the behavior of this variable for each operator, <strong>a</strong> Number type variable can be used for math operations, for example.</p>
+<p>Quillscript is an inferred type language, meaning that the variable type is automatically deduced. There are three variable types: <strong>Switch</strong>, <strong>Number</strong>, and <strong>Text</strong>. The variable type is used to determine the behavior of this variable for each operator, a Number type variable can be used for math operations, for example.</p>
 <doc-anchor-target id="switch">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#switch">#</doc-anchor-trigger>
@@ -718,7 +718,7 @@ $ text = Hi! My name is Ed.
         <span>Global</span>
     </h3>
 </doc-anchor-target>
-<p>By default, any Quillscript variable is global. Once created, <strong>a</strong> global variable can be used in any other script, allowing script intercommunication.</p>
+<p>By default, any Quillscript variable is global. Once created, a global variable can be used in any other script, allowing script intercommunication.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -742,9 +742,9 @@ $ text = Hi! My name is Ed.
         <span>Temporary Variables</span>
     </h3>
 </doc-anchor-target>
-<p>A Temporary Variable is <strong>a</strong> Quillscript variable that only exists during that script play. Temporary variables are automatically deleted when the script ends.</p>
-<p>These variables are the preferred method for declaring variables when they don&#x27;t need to exist after <strong>a</strong> script play. The use of these variables saves computing resources, since Quillscript has <strong>a</strong> smaller list of variables to search and apply tasks.</p>
-<p>To declare <strong>a</strong> Temporary Variable, you name it starting with <strong>: (<em>colons</em>)</strong>.</p>
+<p>A Temporary Variable is a Quillscript variable that only exists during that script play. Temporary variables are automatically deleted when the script ends.</p>
+<p>These variables are the preferred method for declaring variables when they don&#x27;t need to exist after a script play. The use of these variables saves computing resources, since Quillscript has a smaller list of variables to search and apply tasks.</p>
+<p>To declare a Temporary Variable, you name it starting with <strong>: (<em>colons</em>)</strong>.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-q"><code v-pre class="language-q">$ :greetings = on
 $ :name = Doug
@@ -763,7 +763,7 @@ $ :name = Doug
         <span>Template Variables</span>
     </h3>
 </doc-anchor-target>
-<p>These variables are created by Quillscript to be used as arguments by <strong>a</strong> template call. They are deleted when <strong>a</strong> label statement is reached. Check Template section for more details.</p>
+<p>These variables are created by Quillscript to be used as arguments by a template call. They are deleted when a label statement is reached. Check Template section for more details.</p>
 <hr>
 <doc-anchor-target id="assigning-variables">
     <h2>
@@ -778,25 +778,25 @@ $ :name = Doug
         <span>Expressions</span>
     </h3>
 </doc-anchor-target>
-<p>You can assign <strong>a</strong> complete math expression to <strong>a</strong> single variable, from <strong>a</strong> simple addition to <strong>a</strong> complex equation.</p>
+<p>You can assign a complete math expression to a single variable, from a simple addition to a complex equation.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-q"><code v-pre class="language-q">$ x = 10 + 5
 $ y = ((2 + 2) * 4) ^ 2
 </code></pre>
 </doc-codeblock></div>
-<p>It&#x27;s possible to use other variable values in expressions. Notice the use of <strong> (<em>brackets</em>)</strong> to use <strong>a</strong> variable value instead of the literal string <em>&quot;value&quot;</em>.</p>
+<p>It&#x27;s possible to use other variable values in expressions. Notice the use of <strong> (<em>brackets</em>)</strong> to use a variable value instead of the literal string <em>&quot;value&quot;</em>.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-q"><code v-pre class="language-q">$ value = 5
 $ result = {value} / 2
 </code></pre>
 </doc-codeblock></div>
-<p>You can self-reference the assigned variable in an expression using <strong>a</strong> <strong>{&amp;}</strong>.</p>
+<p>You can self-reference the assigned variable in an expression using a <strong>{&amp;}</strong>.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-q"><code v-pre class="language-q">$ value = 10
 $ value = {&amp;} + 5
 // value equals 15</code></pre>
 </doc-codeblock></div>
-<p>Or use <strong>a</strong> reduced assignment operation.</p>
+<p>Or use a reduced assignment operation.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-q"><code v-pre class="language-q">$ value += 10
 $ value -= 10 + 2
@@ -960,7 +960,7 @@ $ text = Hello Mr. {surname}.
         <span>Nested Variables Replacement</span>
     </h3>
 </doc-anchor-target>
-<p>The use of brackets can also be done nesting <strong>a</strong> variable inside other variable brackets.</p>
+<p>The use of brackets can also be done nesting a variable inside other variable brackets.</p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-q" data-line="20"><code v-pre class="language-q">$ place_LeftFight = Arena
 $ place_LeftTrade = Store
