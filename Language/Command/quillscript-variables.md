@@ -5,9 +5,9 @@ order: 3
 ---
 # Quillscript Variables
 
-A variable is **a** named location in memory that holds **a** value.
+A variable is a named location in memory that holds a value.
 
-To declare **a** Quillscript variable, type the desired name, and use the **= (_Assignment Operator_)** to assign **a** value.
+To declare a Quillscript variable, type the desired name, and use the **= (_Assignment Operator_)** to assign a value.
 
 ```q
 $ my_variable = 10
@@ -28,7 +28,7 @@ $ name = Bob
 ---
 
 ## <span class="command">Variable Type</span>
-Quillscript is an inferred type language, meaning that the variable type is automatically deduced. There are three variable types: **Switch**, **Number**, and **Text**. The variable type is used to determine the behavior of this variable for each operator, **a** Number type variable can be used for math operations, for example.
+Quillscript is an inferred type language, meaning that the variable type is automatically deduced. There are three variable types: **Switch**, **Number**, and **Text**. The variable type is used to determine the behavior of this variable for each operator, a Number type variable can be used for math operations, for example.
 
 ### Switch
 Represents an **on**/**off** state, also known as **Boolean**.
@@ -64,18 +64,18 @@ $ text = Hi! My name is Ed.
 The variable mark describes how Quillscript interpreter handles its lifecycle and other automatized tasks.
 
 ### Global
-By default, any Quillscript variable is global. Once created, **a** global variable can be used in any other script, allowing script intercommunication.
+By default, any Quillscript variable is global. Once created, a global variable can be used in any other script, allowing script intercommunication.
 
 !!!
 Use global variables when persistence or intercommunication is necessary, and use temporary variables otherwise, since persistent variables take memory space, increase save file size, and increase the duration of certain tasks, like variable replacement in texts and expressions.
 !!!
 
 ### Temporary Variables
-A Temporary Variable is **a** Quillscript variable that only exists during that script play. Temporary variables are automatically deleted when the script ends.
+A Temporary Variable is a Quillscript variable that only exists during that script play. Temporary variables are automatically deleted when the script ends.
 
-These variables are the preferred method for declaring variables when they don't need to exist after **a** script play. The use of these variables saves computing resources, since Quillscript has **a** smaller list of variables to search and apply tasks.
+These variables are the preferred method for declaring variables when they don't need to exist after a script play. The use of these variables saves computing resources, since Quillscript has a smaller list of variables to search and apply tasks.
 
-To declare **a** Temporary Variable, you name it starting with **: (_colons_)**.
+To declare a Temporary Variable, you name it starting with **: (_colons_)**.
 
 ```q
 $ :greetings = on
@@ -87,7 +87,7 @@ $ :name = Doug
 Quillscript creates these variables to capture the return value of called functions. They have the same lifecycle of temporary variables and are deleted when the script ends. Check [Function Call](./function-call.md) section for more details.
 
 ### Template Variables
-These variables are created by Quillscript to be used as arguments by **a** template call. They are deleted when **a** label statement is reached. Check Template section for more details.
+These variables are created by Quillscript to be used as arguments by a template call. They are deleted when a label statement is reached. Check Template section for more details.
 
 ---
 
@@ -95,7 +95,7 @@ These variables are created by Quillscript to be used as arguments by **a** temp
 Besides assigning static hard-coded values, variables also accept math expressions and other value concatenation methods.
 
 ### Expressions
-You can assign **a** complete math expression to **a** single variable, from **a** simple addition to **a** complex equation.
+You can assign a complete math expression to a single variable, from a simple addition to a complex equation.
 
 ```q
 $ x = 10 + 5
@@ -103,7 +103,7 @@ $ y = ((2 + 2) * 4) ^ 2
 
 ```
 
-It's possible to use other variable values in expressions. Notice the use of **{} (_brackets_)** to use **a** variable value instead of the literal string _"value"_.
+It's possible to use other variable values in expressions. Notice the use of **{} (_brackets_)** to use a variable value instead of the literal string _"value"_.
 
 ```q
 $ value = 5
@@ -111,7 +111,7 @@ $ result = {value} / 2
 
 ```
 
-You can self-reference the assigned variable in an expression using **a** **{&}**.
+You can self-reference the assigned variable in an expression using a **{&}**.
 
 ```q
 $ value = 10
@@ -119,7 +119,7 @@ $ value = {&} + 5
 // value equals 15
 ```
 
-Or use **a** reduced assignment operation.
+Or use a reduced assignment operation.
 
 ```q
 $ value += 10
@@ -185,7 +185,7 @@ $ text = Hello Mr. {surname}.
 ```
 
 ### Nested Variables Replacement
-The use of brackets can also be done nesting **a** variable inside other variable brackets.
+The use of brackets can also be done nesting a variable inside other variable brackets.
 
 ```q #20
 $ place_LeftFight = Arena
