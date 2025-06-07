@@ -389,11 +389,34 @@ UQuill::PlayScript(WorldContextObject, Script);
 :::api
 ### Find Script
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Get a Quillscript asset by its reference, which can be either an Id, a path, or a script reference.
 
+```rust !#1 Parameters
+ScriptRef: string
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+$ ^Quillscript.Quill.FindScript @MyScript
+
+$ ^Quillscript.Quill.FindScript /Game/Folder/MyScript.MyScript
+
+$ ^Quillscript.Quill.FindScript {&/Game/Folder/MyScript.MyScript}
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed](https://blueprintue.com/render/irhgj-74/)
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+TObjectPtr<UQuillscriptAsset> ScriptById{ UQuill::FindScript("@MyScript") };
+TObjectPtr<UQuillscriptAsset> ScriptByPath{ UQuill::FindScript("/Game/Folder/MyScript.MyScript") };
+```
+===
 :::
 <br>
 

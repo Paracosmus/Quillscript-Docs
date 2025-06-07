@@ -17,10 +17,9 @@ A collection of general usage [Blueprint Macros](https://dev.epicgames.com/docum
 :::api
 ### Is None
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Check if a Name variable is None.
+
+![](/static/img/examples/is-none.png)
 
 :::
 <br>
@@ -30,10 +29,9 @@ Please refer to the in-engine documentation
 :::api
 ### Is Empty Text
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Check if a Text variable is empty.
+
+![](/static/img/examples/is-empty-text.png)
 
 :::
 <br>
@@ -43,10 +41,9 @@ Please refer to the in-engine documentation
 :::api
 ### Is Empty
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Check if a String variable is empty.
+
+![](/static/img/examples/is-empty.png)
 
 :::
 <br>
@@ -56,23 +53,9 @@ Please refer to the in-engine documentation
 :::api
 ### Is Populated
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Check if an array variable has any elements.
 
-:::
-<br>
-
-[//]: <> (=========================================================================================)
-
-:::api
-### Is Valid Class
-
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+![](/static/img/examples/is-populated.png)
 
 :::
 <br>
@@ -86,10 +69,9 @@ Please refer to the in-engine documentation
 :::api
 ### Is in Viewport
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Check if a Widget is currently in the viewport.
+
+![](/static/img/examples/is-in-viewport.png)
 
 :::
 <br>
@@ -103,10 +85,9 @@ Please refer to the in-engine documentation
 :::api
 ### Is with Editor
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Check if the game is running in the editor.
+
+![](/static/img/examples/is-with-editor.png)
 
 :::
 <br>
@@ -120,10 +101,9 @@ Please refer to the in-engine documentation
 :::api
 ### Is Animation Playing
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Check if an Animation is currently playing on a Widget.
+
+![](/static/img/examples/is-animation-playing.png)
 
 :::
 <br>
@@ -137,10 +117,9 @@ Please refer to the in-engine documentation
 :::api
 ### Is Host
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Check if the current instance is the host of the game (Server).
+
+![](/static/img/examples/is-host.png)
 
 :::
 <br>
@@ -150,10 +129,9 @@ Please refer to the in-engine documentation
 :::api
 ### Has Authority
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Check if this actor as network authority.
+
+![](/static/img/examples/has-authority.png)
 
 :::
 <br>
