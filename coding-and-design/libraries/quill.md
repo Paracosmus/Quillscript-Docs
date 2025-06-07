@@ -519,36 +519,77 @@ TArray<EPermission> Permissions{ UQuill::MakePermissionsList(EPermissionMode::Sa
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Reset the script 'Times Played' counter. )
-[comment]: <> ( static void SetScriptPlayCounter | const UObject* WorldContextObject, const UQuillscriptAsset* Script, const int32 TimesPlayed )
-
-
 :::api
 ### Set Script Play Counter
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Set the script **Times Played** counter value.
 
+```rust !#1-3 Parameters
+WorldContextObject: ref
+Script: ref[QuillscriptAsset]
+TimesPlayed: i32
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Get a script reference.
+$ ^Quillscript.Quill.GetScriptByPath /Game/Path/To/MyScript.MyScript
+
+// Set counter value.
+$ ^Quillscript.Quill.SetScriptPlayCounter {&ReturnValue} 5
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed](https://blueprintue.com/render/ym1w258m/)
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+const TObjectPtr<UQuillscriptAsset> Script{ UQuill::GetScriptByPath("/Game/Path/To/MyScript.MyScript") };
+UQuill::SetScriptPlayCounter(WorldContextObject, Script, 5);
+```
+===
 :::
 <br>
 
 
 [//]: <> (=========================================================================================)
 
-[comment]: <> ( Set the script 'Times Played' counter. )
-[comment]: <> ( static void ResetScriptPlayCounter | const UObject* WorldContextObject, const UQuillscriptAsset* Script )
-
-
 :::api
 ### Reset Script Play Counter
 
-!!!ghost
-:construction: Under construction :construction:
-Please refer to the in-engine documentation
-!!!
+Reset the script **Times Played** counter back to 0.
 
+```rust !#1-2 Parameters
+WorldContextObject: ref
+Script: ref[QuillscriptAsset]
+```
+
+==- [!badge variant="success" size="l" icon="file-symlink-file" corners="Square" text="Quillscript"]
+```q
+// Get a script reference.
+$ ^Quillscript.Quill.GetScriptByPath /Game/Path/To/MyScript.MyScript
+
+// Set counter value.
+$ ^Quillscript.Quill.ResetScriptPlayCounter {&ReturnValue}
+
+```
+==- [!badge variant="primary" size="l" icon="file-binary" corners="Square" text="Blueprint"]
+
+[!embed](https://blueprintue.com/render/oeppl6rt/)
+
+==- [!badge variant="warning" size="l" icon="file-code" corners="Square" text="C++"]
+```cpp
+#include "Utils/Quill.h"
+...
+
+const TObjectPtr<UQuillscriptAsset> Script{ UQuill::GetScriptByPath("/Game/Path/To/MyScript.MyScript") };
+UQuill::ResetScriptPlayCounter(WorldContextObject, Script);
+```
+===
 :::
 <br>
 

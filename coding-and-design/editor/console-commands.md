@@ -46,8 +46,8 @@ qsc.PlayByLabel MyLabelName
 Set the value of a variable.
 
 ```rust Parameters
-Name: string
-LabelName: string
+Variable: string
+Value: string
 ```
 
 ```sh
