@@ -277,7 +277,7 @@ $ InputDisable
 ```
 ===
 
-==- <span class="command">Input Mode</span>
+==- <span class="command">Show Mouse Cursor</span>
 Show mouse cursor.
 
 ```q Example
