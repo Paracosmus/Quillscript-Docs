@@ -909,6 +909,36 @@ Please refer to the in-engine documentation
 <br>
 
 
+[//]: <> (=========================================================================================)
+
+[comment]: <> ( bool AssetExists | FString Path )
+
+:::api
+### Asset Exists
+
+!!!ghost
+:construction: Under construction :construction:
+Please refer to the in-engine documentation
+!!!
+<br>
+
+
+[//]: <> (=========================================================================================)
+
+[comment]: <> ( UObject* LoadAssetBypath | FString Path )
+
+:::api
+### Load Asset by Path
+
+!!!ghost
+:construction: Under construction :construction:
+Please refer to the in-engine documentation
+!!!
+
+:::
+<br>
+
+
 ---
 
 ## <span class="tag">Files</span>
