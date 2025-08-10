@@ -32,6 +32,8 @@ New features and improvements are being added regularly, so stay tuned for the f
 - Add the **Get World Type as String** utility function
 - Add the **Asset Exists** utility function
 - Add the **Load Asset by Path** utility function
+- <span class="blueprint">(Blueprint)</span> Add the **Is Running** blueprint macro
+- <span class="blueprint">(Blueprint)</span> Add the **Is World Type** blueprint macro
 - <span class="cpp">(C++)</span> Add the **LOAD\<typename\>** utility macro to load assets by path
 
 ---

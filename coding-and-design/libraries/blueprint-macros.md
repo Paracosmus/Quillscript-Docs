@@ -94,6 +94,34 @@ Check if the game is running in the editor.
 
 ---
 
+[//]: <> (=========================================================================================)
+
+:::api
+### Is Running
+
+Check if the game is running, or is editing or design time.
+
+![](/static/img/examples/is-running.png)
+
+:::
+<br>
+
+---
+
+[//]: <> (=========================================================================================)
+
+:::api
+### Is World Type
+
+Check the current world type.
+
+![](/static/img/examples/is-world-type.png)
+
+:::
+<br>
+
+---
+
 ## <span class="label">Animation</span>
 
 [//]: <> (=========================================================================================)
