@@ -29,6 +29,7 @@ New features and improvements are being added regularly, so stay tuned for the f
 
 ## Extras
 
+- Add the **Get World Type as String** utility function
 - Add the **Asset Exists** utility function
 - Add the **Load Asset by Path** utility function
 - <span class="cpp">(C++)</span> Add the **LOAD\<typename\>** utility macro to load assets by path

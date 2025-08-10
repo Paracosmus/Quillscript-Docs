@@ -762,6 +762,22 @@ Please refer to the in-engine documentation
 
 [//]: <> (=========================================================================================)
 
+[comment]: <> ( bool GetWorldTypeAsString )
+
+:::api
+### Get World Type as String
+
+!!!ghost
+:construction: Under construction :construction:
+Please refer to the in-engine documentation
+!!!
+
+:::
+<br>
+
+
+[//]: <> (=========================================================================================)
+
 [comment]: <> ( Get the length of a container as string  | Array, Set, Map. )
 [comment]: <> ( This is useful to get the length of an array in a Quillscript script, use the engine methods for all other cases. )
 [comment]: <> ( int32 Length | FString ContainerAsString )
