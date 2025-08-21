@@ -35,12 +35,14 @@ New features and improvements are being added regularly, so stay tuned for the f
 - <span class="blueprint">(Blueprint)</span> Add the **Is Running** blueprint macro
 - <span class="blueprint">(Blueprint)</span> Add the **Is World Type** blueprint macro
 - <span class="cpp">(C++)</span> Add the **LOAD\<typename\>** utility macro to load assets by path
+- <span class="cpp">(C++)</span> Add support for _Gameplay Tags_ e _Gameplay Tag Containers_ to the **STR()** macros
 
 ---
 
 ## Fixes
 
 - Fix an issue when trying to print an **UEnum** using the [Print](/coding-and-design/libraries/tools.md#print) set of functions
+- Improve the **UQuillscriptSubsystem::World()** function to make it safer
 - Minor performance and stability improvements
 - Minor code documentation improvements
 
