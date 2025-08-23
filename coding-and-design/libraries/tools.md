@@ -794,6 +794,23 @@ Please refer to the in-engine documentation
 <br>
 
 
+[//]: <> (=========================================================================================)
+
+[comment]: <> ( Check if the given string matches the given regex pattern. )
+[comment]: <> ( bool RegexMatch | const FString& SourceString, const FString& Pattern, bool bCaseInsensitive = false )
+
+:::api
+### Regex Match
+
+!!!ghost
+:construction: Under construction :construction:
+Please refer to the in-engine documentation
+!!!
+
+:::
+<br>
+
+
 ---
 
 ## <span class="tag">Metadata</span>
