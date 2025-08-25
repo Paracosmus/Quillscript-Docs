@@ -36,7 +36,7 @@ New features and improvements are being added regularly, so stay tuned for the f
 - <span class="blueprint">(Blueprint)</span> Add the **Is Running** blueprint macro
 - <span class="blueprint">(Blueprint)</span> Add the **Is World Type** blueprint macro
 - <span class="cpp">(C++)</span> Add the **LOAD\<typename\>** utility macro to load assets by path
-- <span class="cpp">(C++)</span> Add support for _Gameplay Tags_ e _Gameplay Tag Containers_ to the **STR()** macros
+- <span class="cpp">(C++)</span> Add support for _Guid_, _Gameplay Tags_ e _Gameplay Tag Containers_ to the **STR()** macros
 
 ---
 
