@@ -42,6 +42,7 @@ New features and improvements are being added regularly, so stay tuned for the f
 
 ## Fixes
 
+- Fix an issue where the _Input Settings After_ are not applied properly on script ended, when the script is the final end of a <span class="command">$ Travel</span> sequence
 - Fix an issue when trying to print an **UEnum** using the [Print](/coding-and-design/libraries/tools.md#print) set of functions
 - Improve the **UQuillscriptSubsystem::World()** function to make it safer
 - Minor performance and stability improvements
