@@ -6,16 +6,12 @@ order: 5
 
 ![](../../static/img/changelog/2.5.png)
 
-!!!
-This version is a **work in progress**. It is not yet available for public use.
-
-When a new feature is completed, it will be added to the list. Please note that this is not a complete list of all changes and improvements yet.
-
-New features and improvements are being added regularly, so stay tuned for the final release!
-!!!
-
-**Release Date**: 2025-10-DD
+**Release Date**: 2025-10-08
 **Engine Version**: 5.6
+
+---
+
+This release brings features, improvements, and fixes to enhance your experience with Quillscript. Notable additions include support for **interfaces in function calls**, **RPG dice expressions** in commands, and various utility functions. Additionally, several bugs have been addressed to improve stability and performance.
 
 ---
 
@@ -24,6 +20,7 @@ New features and improvements are being added regularly, so stay tuned for the f
 - Add support for **Interfaces** to the Function Call by class command
 - Support for RPG dice regular expressions pattern in commands and conditions expressions
     - Ex.: `{1d6} + 2 + ( {2d20} / 3 )`
+- Delay the execution of the <span class="command">$ Show</span> command to the next frame to avoid potential issues when showing widgets during the same frame they are draw and to allow the next statement to execute properly before the widget is shown
 
 ---
 
@@ -44,7 +41,10 @@ New features and improvements are being added regularly, so stay tuned for the f
 
 - Fix an issue where the _Input Settings After_ are not applied properly on script ended, when the script is the final end of a <span class="command">$ Travel</span> sequence
 - Fix an issue when trying to print an **UEnum** using the [Print](/coding-and-design/libraries/tools.md#print) set of functions
+- Fix an issue where the previous voice asset duration was being used to all future dialogue typewriting speed.
 - Fix an issue preventing the use of _slot positioning_ with the built-in **Sprite Box**
+- Fix an issue causing the Interpreter widgets to be restored at the wrong layer after being hidden
+- Fix an issue where the <span class="command">$ Timer</span> command triggers <span class="command">$ Next</span> even when asynchronous execution is enabled
 - Improve the **UQuillscriptSubsystem::World()** function to make it safer
 - Minor performance and stability improvements
 - Minor code documentation improvements
