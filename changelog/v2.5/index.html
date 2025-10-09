@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.812989443327">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.813346981810">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>v2.5</title>
     <meta name="title" content="v2.5">
-    <meta name="description" content="This version is a work in progress. It is not yet available for public use.">
+    <meta name="description" content="Release Date: 2025-10-08 Engine Version: 5.6">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://quillscript.ink/changelog/v2.5/">
@@ -23,24 +23,24 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://quillscript.ink/changelog/v2.5/">
     <meta property="og:title" content="v2.5">
-    <meta property="og:description" content="This version is a work in progress. It is not yet available for public use.">
+    <meta property="og:description" content="Release Date: 2025-10-08 Engine Version: 5.6">
     <meta property="og:image" content="https://quillscript.ink/static/img/changelog/2.5.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://quillscript.ink/changelog/v2.5/">
     <meta property="twitter:title" content="v2.5">
-    <meta property="twitter:description" content="This version is a work in progress. It is not yet available for public use.">
+    <meta property="twitter:description" content="Release Date: 2025-10-08 Engine Version: 5.6">
     <meta property="twitter:image" content="https://quillscript.ink/static/img/changelog/2.5.png">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/img/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.812989443327" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.813346981810" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.812989443327" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.813346981810" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.812989443327" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.813346981810" data-turbo-eval="false" defer></script>
 
     <!-- Styles -->
     <style>
@@ -643,27 +643,10 @@
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
-    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-primary" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p>This version is a <strong>work in progress</strong>. It is not yet available for public use.</p>
-<p>When a new feature is completed, it will be added to the list. Please note that this is not a complete list of all changes and improvements yet.</p>
-<p>New features and improvements are being added regularly, so stay tuned for the final release!</p>
-        </div>
-    </div>
-</div>
-<p><strong>Release Date</strong>: 2025-10-DD<br />
+<p><strong>Release Date</strong>: 2025-10-08<br />
 <strong>Engine Version</strong>: 5.6</p>
+<hr>
+<p>This release brings features, improvements, and fixes to enhance your experience with Quillscript. Notable additions include support for <strong>interfaces in function calls</strong>, <strong>RPG dice expressions</strong> in commands, and various utility functions. Additionally, several bugs have been addressed to improve stability and performance.</p>
 <hr>
 <doc-anchor-target id="commands">
     <h2>
@@ -678,6 +661,7 @@
 <li>Ex.: <code v-pre>{1d6} + 2 + ( {2d20} / 3 )</code></li>
 </ul>
 </li>
+<li>Delay the execution of the <span class="command">$ Show</span> command to the next frame to avoid potential issues when showing widgets during the same frame they are draw and to allow the next statement to execute properly before the widget is shown</li>
 </ul>
 <hr>
 <doc-anchor-target id="extras">
@@ -706,7 +690,10 @@
 <ul>
 <li>Fix an issue where the <em>Input Settings After</em> are not applied properly on script ended, when the script is the final end of a <span class="command">$ Travel</span> sequence</li>
 <li>Fix an issue when trying to print an <strong>UEnum</strong> using the <a href="../../coding-and-design/libraries/tools/#print">Print</a> set of functions</li>
+<li>Fix an issue where the previous voice asset duration was being used to all future dialogue typewriting speed.</li>
 <li>Fix an issue preventing the use of <em>slot positioning</em> with the built-in <strong>Sprite Box</strong></li>
+<li>Fix an issue causing the Interpreter widgets to be restored at the wrong layer after being hidden</li>
+<li>Fix an issue where the <span class="command">$ Timer</span> command triggers <span class="command">$ Next</span> even when asynchronous execution is enabled</li>
 <li>Improve the <strong>UQuillscriptSubsystem::World()</strong> function to make it safer</li>
 <li>Minor performance and stability improvements</li>
 <li>Minor code documentation improvements</li>
