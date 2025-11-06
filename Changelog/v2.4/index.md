@@ -99,7 +99,7 @@ This update includes three major new features to add to Quillscript's pool of to
 
 ---
 
-# Possible Breaking Changes
+## Possible Breaking Changes
 
 !!!warning
 The deprecated utility functions ~~Property to String~~ and ~~String to Property~~ were removed.

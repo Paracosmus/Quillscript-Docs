@@ -26,7 +26,7 @@ This release brings features, improvements, and fixes to enhance your experience
 
 ## Extras
 
-- Add the **RegexMatch** utility function
+- Add the **Regex Match** utility function
 - Add the **Get World Type as String** utility function
 - Add the **Asset Exists** utility function
 - Add the **Load Asset by Path** utility function
