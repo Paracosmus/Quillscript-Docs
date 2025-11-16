@@ -7,7 +7,7 @@ order: 5
 ![](../../static/img/changelog/2.5.png)
 
 **Release Date**: 2025-10-08
-**Engine Version**: 5.6
+**Engine Version**: 5.6, 5.7
 
 ---
 

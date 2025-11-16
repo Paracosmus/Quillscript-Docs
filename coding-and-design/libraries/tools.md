@@ -444,6 +444,25 @@ Please refer to the in-engine documentation
 
 [//]: <> (=========================================================================================)
 
+[comment]: <> ( Find by name a property of type 'Object'. )
+[comment]: <> ( This is intended as a Blueprint wrapper for FindPropertyByName, use that method in C++ code. )
+[comment]: <> ( UFUNCTION BlueprintCallable, meta = DeterminesOutputType = "PropertyType" )
+[comment]: <> ( static UObject* GetPropertyObject UWidget* Object, const FName& PropertyName, TSubclassOf<UObject> PropertyType; )
+
+:::api
+### Get Property Object
+
+!!!ghost
+:construction: Under construction :construction:
+Please refer to the in-engine documentation
+!!!
+
+:::
+<br>
+
+
+[//]: <> (=========================================================================================)
+
 :::api
 ### Call Function by Name
 
@@ -1350,6 +1369,22 @@ Please refer to the in-engine documentation
 
 :::api
 ### Capture Widget
+
+!!!ghost
+:construction: Under construction :construction:
+Please refer to the in-engine documentation
+!!!
+
+:::
+<br>
+
+
+[//]: <> (=========================================================================================)
+
+[comment]: <> ( UObject* UTools::GetPropertyObject UWidget* Object, const FName& PropertyName, TSubclassOf<UObject> PropertyType )
+
+:::api
+### Get Parent Widget of Class
 
 !!!ghost
 :construction: Under construction :construction:

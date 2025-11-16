@@ -37,6 +37,8 @@ New features and improvements are being added regularly, so stay tuned for the f
 ## Extras
 
 - <span class="blueprint">(Blueprint)</span> Add the **Get Property Object** utility function
+- <span class="blueprint">(Blueprint)</span> Add the **Get Parent Widget of Class** utility function
+- <span class="cpp">(C++)</span> Add the **Find Parent Widget of Class** utility function
 
 ---
 
