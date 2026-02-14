@@ -10,7 +10,7 @@ If you are a beginner with Quillscript Plugin, this article helps you start from
 Follow the steps below to get your project up and running and create your own stories.
 
 !!!
-You can also download our [sample project](https://1drv.ms/f/s!AhimAtOsSqD6ifgusJ6qDCQoOnD1ZA?e=UhbR5N).
+You can also download our [sample project](https://drive.google.com/drive/folders/1wPVW5c0KIXK4W2I-Z-Yu7dvfAiyB10Bh).
 !!!
 
 <br>
@@ -27,7 +27,7 @@ You can also download our [sample project](https://1drv.ms/f/s!AhimAtOsSqD6ifgus
 - **Step 2 - Write your Story**
     - Create a **plain text** file using your preferred text editor software and write your story following _Quillscript Language_ rules. Save it with a **.qsc** extension.
     <br>
-    > We provide [sample scripts](https://1drv.ms/f/s!AhimAtOsSqD6ifgw3m5MFBZ7Pufmqg?e=d8TKKN) you can use to test and experiment.
+    > We provide [sample scripts](https://drive.google.com/drive/folders/1CwmEj3UDEFp7yAZWbJh4bhuyZ_vfIHfi) you can use to test and experiment.
 
     - Drag your script file into Unreal Editor's content browser. This action will generate a **Quillscript Asset**, which is a resource that contains your script and can be used within the Unreal Editor for various purposes.
     ![](./static/img/examples/drag_and_drop.jpg)
