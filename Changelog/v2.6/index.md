@@ -4,10 +4,10 @@ order: 6
 ---
 # v2.6
 
-<!-- ![](../../static/img/changelog/2.6.png) -->
+![](../../static/img/changelog/2.6.png)
 
 **Release Date**: 202Y-MM-DD
-**Engine Version**: 5.7
+**Engine Version**: 5.X
 
 ---
 
@@ -42,13 +42,19 @@ New features and improvements are being added regularly, so stay tuned for the f
 
 ---
 
+## Fixes
+
+- Fixed an issue where the **Typewriter** would display a fallback character in the last position when the character is surrogate pair, such as emojis. This was caused by the character being split into two separate characters, resulting in an incorrect display.
+
+---
+
 <br />
 <br />
 
 ## <span class="warning">:icon-alert-fill: Breaking Changes</span>
 
 ==- <span class="warning">:icon-alert-fill:</span> Sprite Box Animations
-Before updating, make sure the **Sprite Box** animations names match exactly — case sensitive — the name used in script. Otherwise, the animation will not be found.
+Before updating, make sure the **Sprite Box** animations names match exactly, case sensitive, the name used in script. Otherwise, the animation will not be found.
 ===
 
 ---
