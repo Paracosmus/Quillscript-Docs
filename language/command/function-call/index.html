@@ -6,10 +6,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0.824396812006">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.3.0.827093864276">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.12.0">
+    <meta name="generator" content="Retype 4.3.0">
 
     <!-- Primary Meta Tags -->
     <title>Function Call</title>
@@ -19,27 +20,35 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://quillscript.ink/language/command/function-call/">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://quillscript.ink/language/command/function-call/">
     <meta property="og:title" content="Function Call">
     <meta property="og:description" content="Quillscript can execute Blueprint/C++ functions using command lines.">
+    <meta property="og:image" content="https://quillscript.ink/static/img/examples/function.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Function Call">
+    <meta property="og:site_name" content="Quillscript">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://quillscript.ink/language/command/function-call/">
-    <meta property="twitter:title" content="Function Call">
-    <meta property="twitter:description" content="Quillscript can execute Blueprint/C++ functions using command lines.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://quillscript.ink/language/command/function-call/">
+    <meta name="twitter:title" content="Function Call">
+    <meta name="twitter:description" content="Quillscript can execute Blueprint/C++ functions using command lines.">
+    <meta name="twitter:image" content="https://quillscript.ink/static/img/examples/function.png">
+    <meta name="twitter:image:alt" content="Function Call">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/img/favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=3.12.0.824396812006" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.3.0.827093864276" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.12.0.824396812006" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.12.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.12.0.824396812006" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.12.0.824396812006" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.3.0.827093864276" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.3.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.3.0.827093864276" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.3.0.827093864276" defer></script>
 
     <!-- Styles -->
     <style>
@@ -422,215 +431,198 @@
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
-        <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
     
-        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
-            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
-                <!-- Mobile menu button skeleton -->
-                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
-                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
-        
-                <!-- Logo -->
-                <div class="flex items-center justify-between h-full py-2 md:w-75">
-                    <div class="flex items-center px-2 md:px-6">
-                        <a id="retype-branding-logo" href="../../../" class="flex items-center leading-snug text-2xl">
-                            <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../../../static/img/logo.svg">
-                                <img class="max-h-10 hidden dark:inline-block" src="../../../static/img/logo.svg">
-                            </span>
-                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Quillscript</span>
-                        </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">doc</span>
-                    </div>
-        
-                    <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://quillscript.ink/" class="flex items-center leading-snug text-2xl">
+                        <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
+                            <img class="max-h-10 dark:hidden md:inline-block" src="../../../static/img/logo.svg" alt="" width="512" height="512">
+                            <img class="max-h-10 hidden dark:inline-block" src="../../../static/img/logo.svg" alt="" width="512" height="512">
+                        </span>
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Quillscript</span>
+                    </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">doc</span>
                 </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                </svg>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../changelog/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <path d="M15 4.75a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM2.5 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0Zm0-14.5a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM5.75 6.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 6.5Zm0 14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 21Zm12.5-14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 18.25 6.5Z"/><path d="M5.75 16.75A.75.75 0 0 1 5 16V8a.75.75 0 0 1 1.5 0v8a.75.75 0 0 1-.75.75Z"/><path d="M17.5 8.75v-1H19v1a3.75 3.75 0 0 1-3.75 3.75h-7a1.75 1.75 0 0 0-1.75 1.75H5A3.25 3.25 0 0 1 8.25 11h7a2.25 2.25 0 0 0 2.25-2.25Z"/>
+                                </svg>
+                                <span>Roadmap</span>
+                            </a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../contact/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <path d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/>
+                                </svg>
+                                <span>Support</span>
+                            </a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://discord.com/invite/YTYxhCFJGC">
+                                <img class="mb-px mr-1.5" width="18" height="18" alt="" aria-hidden="true" src="../../../static/img/icons/discord-icon.svg">
+                                <span>Discord</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
         
-                <div class="flex justify-between md:grow">
-                    <!-- Top Nav -->
-                    <nav id="retype-header-nav" class="hidden md:flex">
-                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
-                            <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                        <g fill="currentColor">
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                                             <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
-                                        </g>
-                                    </svg>
-                                    <span>Home</span>
-                                </a>
-                            </li>
-                            <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../changelog/">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                        <g fill="currentColor">
+                                        </svg>
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../changelog/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                                             <path d="M15 4.75a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM2.5 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0Zm0-14.5a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM5.75 6.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 6.5Zm0 14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 21Zm12.5-14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 18.25 6.5Z"/><path d="M5.75 16.75A.75.75 0 0 1 5 16V8a.75.75 0 0 1 1.5 0v8a.75.75 0 0 1-.75.75Z"/><path d="M17.5 8.75v-1H19v1a3.75 3.75 0 0 1-3.75 3.75h-7a1.75 1.75 0 0 0-1.75 1.75H5A3.25 3.25 0 0 1 8.25 11h7a2.25 2.25 0 0 0 2.25-2.25Z"/>
-                                        </g>
-                                    </svg>
-                                    <span>Roadmap</span>
-                                </a>
-                            </li>
-                            <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../contact/">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                        <g fill="currentColor">
+                                        </svg>
+                                        <span>Roadmap</span>
+                                    </a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../contact/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                                             <path d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/>
-                                        </g>
-                                    </svg>
-                                    <span>Support</span>
-                                </a>
-                            </li>
-                            <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-tex font-header-text hover:text-header-text-hover" href="https://discord.com/invite/YTYxhCFJGC">
-                                    <img class="mb-px mr-1" width="18" alt="" src="../../../static/img/icons/discord-icon.svg">
-                                    <span>Discord</span>
-                                </a>
-                            </li>
+                                        </svg>
+                                        <span>Support</span>
+                                    </a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://discord.com/invite/YTYxhCFJGC">
+                                        <img class="mb-px mr-1.5" width="18" height="18" alt="" aria-hidden="true" src="../../../static/img/icons/discord-icon.svg">
+                                        <span>Discord</span>
+                                    </a>
+                                </li>
         
-                        </ul>
-                    </nav>
-        
-                    <div v-cloak class="flex justify-end grow">
-                        <div id="retype-mobile-search-button"></div>
-                        <doc-search-desktop></doc-search-desktop>
-        
-                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
-                        <doc-history></doc-history>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-            </div>
-        </header>
-    
-    
-        <div id="retype-container" class="container relative flex bg-white">
-            <!-- Sidebar Skeleton -->
-            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
-            
-                <div class="flex items-center h-16 px-6">
-                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
-                </div>
-            
-                <div class="pl-6 mt-1 mb-4">
-                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                </div>
-            
-            </div>
-            
-            <!-- Sidebar component -->
-            <doc-sidebar v-cloak>
-                <template #sidebar-footer>
-                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
-            
-                        <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
-                            <nav>
-                                <ul class="flex flex-wrap justify-center items-center">
-                                    <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                                <g fill="currentColor">
-                                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
-                                                </g>
-                                            </svg>
-                                            <span>Home</span>
-                                        </a>
-                                    </li>
-                                    <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../changelog/">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                                <g fill="currentColor">
-                                                    <path d="M15 4.75a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM2.5 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0Zm0-14.5a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM5.75 6.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 6.5Zm0 14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 21Zm12.5-14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 18.25 6.5Z"/><path d="M5.75 16.75A.75.75 0 0 1 5 16V8a.75.75 0 0 1 1.5 0v8a.75.75 0 0 1-.75.75Z"/><path d="M17.5 8.75v-1H19v1a3.75 3.75 0 0 1-3.75 3.75h-7a1.75 1.75 0 0 0-1.75 1.75H5A3.25 3.25 0 0 1 8.25 11h7a2.25 2.25 0 0 0 2.25-2.25Z"/>
-                                                </g>
-                                            </svg>
-                                            <span>Roadmap</span>
-                                        </a>
-                                    </li>
-                                    <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../contact/">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                                <g fill="currentColor">
-                                                    <path d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/>
-                                                </g>
-                                            </svg>
-                                            <span>Support</span>
-                                        </a>
-                                    </li>
-                                    <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-tex font-header-text hover:text-header-text-hover" href="https://discord.com/invite/YTYxhCFJGC">
-                                            <img class="mb-px mr-1" width="18" alt="" src="../../../static/img/icons/discord-icon.svg">
-                                            <span>Discord</span>
-                                        </a>
-                                    </li>
-            
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </template>
-            </doc-sidebar>
-    
-            <div class="grow min-w-0 bg-body-bg">
-                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
-                <div class="flex">
-                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
-                        <main class="relative pb-12 lg:pt-2">
-                            <div class="retype-markdown" id="retype-content">
-                                <!-- Rendered if sidebar right is enabled -->
-                                <div id="retype-sidebar-right-toggle"></div>
-                                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
-                                    <ol role="list">
-                                        <li class="pr-4">
-                                            <a href="../../../" class="pr-4">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
-                                                </svg>
-                                            </a>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
-                                            </svg>
-                                        </li>
-                                        <li class="pr-4">
-                                            <span class="pr-4">
-                                                Language
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
-                                            </svg>
-                                        </li>
-                                        <li class="pr-4">
-                                            <a href="../../../language/command/" class="pr-4">
-                                                Command
-                                            </a>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
-                                            </svg>
-                                        </li>
-                                        <li class="pr-4">
-                                            <a href="../../../language/command/function-call/" class="pr-4">
-                                                Function Call
-                                            </a>
-                                        </li>
-                                    </ol>
-                                </nav>
-                
-                                <!-- Page content  -->
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+                    <ol role="list">
+                        <li class="pr-4">
+                            <a href="../../../" class="pr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                </svg>
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <span class="pr-4">
+                                Language
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <a href="../../../language/command/" class="pr-4">
+                                Command
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <a href="../../../language/command/function-call/" class="pr-4">
+                                Function Call
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+
+                <!-- Page content  -->
 <!-- Insert this at the top of each markdown page -->
-<doc-anchor-target id="function-call" class="break-words">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#function-call">#</doc-anchor-trigger>
-        <span>Function Call</span>
-    </h1>
-</doc-anchor-target>
+<h1 id="function-call">Function Call</h1>
 <p>Quillscript can execute Blueprint/C++ functions using command lines.</p>
 <p>Supposing you want to run a function with the following signature.</p>
 <doc-tabs>
 <doc-tab v-cloak id="blueprint">
 <template #title>Blueprint</template>
 <p><figure class="content-center">
-    <img src="../../../static/img/examples/function.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="../../../static/img/examples/function.png" alt="" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="612" height="144" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
@@ -694,26 +686,16 @@ void MyFunction(int32 Num, bool Flag);</code></pre>
     </div>
 </div>
 <hr>
-<doc-anchor-target id="built-in">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#built-in">#</doc-anchor-trigger>
-        <span><span class="command">Built-in</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="built-in"><span class="command">Built-in</span></h2>
 <p>If the above function belongs to the Interpreter, including custom interpreters, you call it by typing its name and passing the parameters separated by spaces.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="built-in-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ MyFunction 10 true
 </code></pre>
 </doc-codeblock></div>
 <hr>
-<doc-anchor-target id="named-object">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#named-object">#</doc-anchor-trigger>
-        <span><span class="command">Named Object</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="named-object"><span class="command">Named Object</span></h2>
 <p>You can execute functions that belong to an instanced object by referencing its name, editor&#x27;s name or display name. For example, if an object is named &#x27;MyActor&#x27;, start the function with an <strong>&amp; (<em>ampersand</em>)</strong> followed by the object name, and place a dot between the object name and the function name.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="named-object-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ &amp;MyActor.MyFunction 10 true
 </code></pre>
 </doc-codeblock></div>
@@ -722,7 +704,7 @@ void MyFunction(int32 Num, bool Flag);</code></pre>
 <doc-tab v-cloak id="blueprint">
 <template #title>Blueprint</template>
 <p><figure class="content-center">
-    <img src="../../../static/img/examples/rename_object.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="../../../static/img/examples/rename_object.png" alt="" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="403" height="170" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
@@ -769,19 +751,14 @@ UTools::RenameObject(MyObject, &quot;RefName&quot;);</code></pre>
         </div>
     </div>
 </div>
-<doc-anchor-target id="shortcuts">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#shortcuts">#</doc-anchor-trigger>
-        <span>Shortcuts</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="shortcuts">Shortcuts</h3>
 <p>You can use these names to reference common Unreal Engine objects.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="compact">
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th> </th>
+<th> </th>
 </tr>
 </thead>
 <tbody>
@@ -860,18 +837,13 @@ UTools::RenameObject(MyObject, &quot;RefName&quot;);</code></pre>
 </tbody>
 </table>
 </div>
-<doc-anchor-target id="script-references">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#script-references">#</doc-anchor-trigger>
-        <span>Script References</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="script-references">Script References</h3>
 <p>In addition, you can create a list of object references to use in scripts. To add an object to the list, use the method below:</p>
 <doc-tabs>
 <doc-tab v-cloak id="blueprint">
 <template #title>Blueprint</template>
 <p><figure class="content-center">
-    <img src="../../../static/img/examples/add_script_reference.jpg" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="../../../static/img/examples/add_script_reference.jpg" alt="" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="333" height="203" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
@@ -887,12 +859,12 @@ UQuill::AddScriptReference(WorldContextObject, &quot;MyRef&quot;, Reference);</c
 </doc-tab>
 </doc-tabs>
 <p>And it becomes available in script, by name.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="script-references-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ &amp;MyRef.MyFunction 10 true
 </code></pre>
 </doc-codeblock></div>
 <p>These objects can also be passed as parameter variables to other functions if they match parameter type. A null pointer is passed otherwise.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="script-references-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ MyOtherFunction {&amp;MyRef}
 </code></pre>
 </doc-codeblock></div>
@@ -917,7 +889,7 @@ UQuill::AddScriptReference(WorldContextObject, &quot;MyRef&quot;, Reference);</c
 <doc-tab v-cloak id="blueprint">
 <template #title>Blueprint</template>
 <p><figure class="content-center">
-    <img src="../../../static/img/examples/output_function.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="../../../static/img/examples/output_function.png" alt="" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="915" height="199" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
@@ -947,26 +919,21 @@ AActor* ObjectOutputFunction(UObject*&amp; MyOutputObject);</code></pre>
 </doc-tab>
 </doc-tabs>
 <p>An object reference for the output parameter is added and becomes immediately available in script.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="script-references-code-3" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ &amp;ReturnValue.MyFunction 10 true
 $ &amp;MyOutputObject.MyFunction 10 true
 
 $ MyOtherFunction {&amp;MyOutputObject}
 </code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="script-reference-by-path">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#script-reference-by-path">#</doc-anchor-trigger>
-        <span>Script Reference By Path</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="script-reference-by-path">Script Reference By Path</h4>
 <p>It&#x27;s very common to pass an Unreal Engine asset as a parameter to a function. To avoid the need to create a named script reference for every asset required, script references can use the Unreal Engine path pattern to pass asset references without the need to previously name it.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="script-reference-by-path-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ Background {&amp;/Game/FolderName/AssetName.AssetName}
 </code></pre>
 </doc-codeblock></div>
 <p>The same method can be applied to pass class references:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="script-reference-by-path-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">// Blueprint classes.
 $ MyFunction {&amp;/Game/FolderName/MyBlueprint.MyBlueprint_C}
 
@@ -975,28 +942,18 @@ $ MyFunction {&amp;Engine.Actor}
 </code></pre>
 </doc-codeblock></div>
 <p>Script assets will also reference these assets in the <a href="../../../coding-and-design/editor/reference_viewer/">Reference Viewer</a>.</p>
-<doc-anchor-target id="script-reference-search-paths">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#script-reference-search-paths">#</doc-anchor-trigger>
-        <span>Script Reference Search Paths</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="script-reference-search-paths">Script Reference Search Paths</h4>
 <p>Also, often your assets are all in the same folder. For such cases, you can add that folder to a list of <strong>&quot;Search Paths&quot;</strong>, either project-wide on plugin settings, or per script on the script asset itself. An asset in this specified folder does not need to be referenced by its entire path, but just by its name.</p>
 <p>For example, suppose we have a folder named <em>&quot;Backgrounds&quot;</em> on the content browser. Inside this folder are 3 texture assets named <em>&quot;Classroom&quot;</em>, <em>&quot;Street&quot;</em>, and <em>&quot;Shop&quot;</em>. You add this folder to your project search paths and reference these assets by name, without the need to create a script reference manually.</p>
 <p>Search Path: <code translate="no" v-pre>/Game/Backgrounds/</code></p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="script-reference-search-paths-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ Background {&amp;Classroom}
 $ Background {&amp;Street}
 $ Background {&amp;Shop}
 </code></pre>
 </doc-codeblock></div>
 <hr>
-<doc-anchor-target id="object-actors-widgets-or-function-library-of-class">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#object-actors-widgets-or-function-library-of-class">#</doc-anchor-trigger>
-        <span><span class="command">Object, Actors, Widgets or Function Library of Class</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="object-actors-widgets-or-function-library-of-class"><span class="command">Object, Actors, Widgets or Function Library of Class</span></h2>
 <p>You can execute functions in all objects of a given class. For example, if an object has the class <em>&quot;MyClass&quot;</em>, start the function with an <strong>^ (<em>Circumflex</em>)</strong> and the class name.</p>
 <doc-tabs>
 <doc-tab v-cloak id="blueprint-class">
@@ -1027,27 +984,17 @@ $ Background {&amp;Shop}
 </doc-tab>
 </doc-tabs>
 <hr>
-<doc-anchor-target id="tagged-actors">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#tagged-actors">#</doc-anchor-trigger>
-        <span><span class="command">Tagged Actors</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="tagged-actors"><span class="command">Tagged Actors</span></h2>
 <p>You can execute functions that belong to instanced Actors using their tags. For example, if an Actor has the tag <em>&#x27;MyTag&#x27;</em>, start the function with a <strong>% (<em>Percent Sign</em>)</strong> and the tag name.</p>
 <p>This method will execute the function in all actors with the specified tag.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="tagged-actors-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ %MyTag.MyFunction 10 true
 </code></pre>
 </doc-codeblock></div>
 <hr>
-<doc-anchor-target id="calling-nested-objects">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#calling-nested-objects">#</doc-anchor-trigger>
-        <span><span class="command">Calling Nested Objects</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="calling-nested-objects"><span class="command">Calling Nested Objects</span></h2>
 <p>You can also call functions from nested objects. For example:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="calling-nested-objects-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ MyParentObject.ChildObject1.ChildObject2.MyFunction 10 true
 </code></pre>
 </doc-codeblock></div>
@@ -1068,25 +1015,15 @@ $ Background {&amp;Shop}
     </div>
 </div>
 <hr>
-<doc-anchor-target id="return-values-and-outer-parameters">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#return-values-and-outer-parameters">#</doc-anchor-trigger>
-        <span><span class="command">Return Values and Outer Parameters</span></span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="functions">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#functions">#</doc-anchor-trigger>
-        <span>Functions</span>
-    </h3>
-</doc-anchor-target>
+<h2 id="return-values-and-outer-parameters"><span class="command">Return Values and Outer Parameters</span></h2>
+<h3 id="functions">Functions</h3>
 <p>You can capture the return values of a called function and store it in a Quillscript variable.</p>
 <p>Suppose you want to capture the return value of the following function.</p>
 <doc-tabs>
 <doc-tab v-cloak id="blueprint">
 <template #title>Blueprint</template>
 <p><figure class="content-center">
-    <img src="../../../static/img/examples/outer_param.jpg" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="../../../static/img/examples/outer_param.jpg" alt="" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="801" height="207" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
@@ -1117,7 +1054,7 @@ bool MyFunction(int32&amp; IntParam, FString&amp; StringParam);</code></pre>
 </doc-tabs>
 <p>When this function is called by one of the methods above, the return values are stored in <strong>Quillscript Outer Variables</strong>, a particular type of temporary variable that exists during that script execution.</p>
 <p>These variables are named like the return value and outer parameters. The following variables are created in the example above: <code translate="no" v-pre>$ReturnValue</code>, <code translate="no" v-pre>$IntParam</code>, and <code translate="no" v-pre>$StringParam</code></p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div id="functions-example" class="codeblock-wrapper"><doc-codeblock line-numbers>
 <div class="codeblock-title">Example</div>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ &amp;MyParentObject.MyFunction
 
@@ -1126,19 +1063,14 @@ $ double = {$IntParam} * 2
 - Alice | ? {$ReturnValue} == on
   {$StringParam}</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="properties">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#properties">#</doc-anchor-trigger>
-        <span>Properties</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="properties">Properties</h3>
 <p>You can capture the value of an UObject property.</p>
 <p>Suppose you want to capture the return value of the following properties.</p>
 <doc-tabs>
 <doc-tab v-cloak id="blueprint">
 <template #title>Blueprint</template>
 <p><figure class="content-center">
-    <img src="../../../static/img/examples/properties.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="../../../static/img/examples/properties.png" alt="" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="178" height="135" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
@@ -1171,14 +1103,14 @@ FString MyString;</code></pre>
 </doc-tab>
 </doc-tabs>
 <p>Call the variable by its path and use the property name as an outer variable.</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div id="properties-code-1" class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ &amp;MyParentObject.MyNumber
 
 - Bob | ? {$MyNumber} &gt; 5
   Hello!</code></pre>
 </doc-codeblock></div>
 <p>And you can do the same for nested objects:</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div id="properties-code-2" class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ MyParentObject.ChildObject1.ChildObject2.MyString
 
 - Alice
@@ -1202,7 +1134,7 @@ FString MyString;</code></pre>
 </div>
 <p>It&#x27;s also possible to retrieve an element from some container types using the :: separator.</p>
 <p>From <strong>Arrays</strong> or <strong>Sets</strong> using the element index number:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="properties-code-3" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ MyParentObject.MyArray
 
 - Bob
@@ -1225,7 +1157,7 @@ FString MyString;</code></pre>
     </div>
 </div>
 <p>From <strong>Maps</strong> using the element key:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="properties-code-4" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ MyParentObject.MyMap
 
 - Bob
@@ -1248,32 +1180,22 @@ FString MyString;</code></pre>
     </div>
 </div>
 <hr>
-<doc-anchor-target id="localizing-parameters-text">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#localizing-parameters-text">#</doc-anchor-trigger>
-        <span><span class="command">Localizing Parameters&#x27; Text</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="localizing-parameters-text"><span class="command">Localizing Parameters&#x27; Text</span></h2>
 <p>Although being stored as an <a href="https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine" class="outbound" target="_blank"><span>Unreal Engine&#x27;s Text type</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>, Quillscript&#x27;s Text are <a href="https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine" class="outbound" target="_blank"><span>culture-invariant</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> by default. If the value of a parameter must be localized, set its value inside <strong>&#x60;&#x60; (<em>backticks</em>)</strong> and it will be changed to <a href="https://dev.epicgames.com/documentation/unreal-engine/text-localization-in-unreal-engine" class="outbound" target="_blank"><span>culture-correct</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="localizing-parameters-text-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">// void MyFunction(FString Param1, FString Param2)
 $ MyFunction `This param value should be localized` 'This param should not'
 </code></pre>
 </doc-codeblock></div>
 <hr>
-<doc-anchor-target id="named-parameters">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#named-parameters">#</doc-anchor-trigger>
-        <span><span class="command">Named Parameters</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="named-parameters"><span class="command">Named Parameters</span></h2>
 <p>Is a versatile feature that allows users to call functions with parameters passed in any order. This is achieved by explicitly naming the parameters using the @ParamName:ParamValue syntax. This approach enhances code readability and flexibility, making it easier to understand and edit. At the same time, it also lets the writer pass only the desired parameters in the desired order and omits unnecessary ones.</p>
 <p>Consider the following function:</p>
 <doc-tabs>
 <doc-tab v-cloak id="blueprint">
 <template #title>Blueprint</template>
 <p><figure class="content-center">
-    <img src="../../../static/img/examples/named_param.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="../../../static/img/examples/named_param.png" alt="" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="559" height="175" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
@@ -1303,7 +1225,7 @@ void MyFunction(int32 IntParam, FString StringParam, bool bBooleanParam);</code>
 </doc-tab>
 </doc-tabs>
 <p>In a Quillscript file, you can call this function like this.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="named-parameters-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">// Same order, but named for better readability.
 $ MyFunction @IntParam:10 @StringParam:String @bBooleanParam:true
 
@@ -1314,94 +1236,98 @@ $ MyFunction @bBooleanParam:true @StringParam:String @IntParam:10
 $ MyFunction @StringParam:String</code></pre>
 </doc-codeblock></div>
 <hr>
-<div id="backlinks">
+<div id="retype-backlinks">
     <h2>See also</h2>
-    <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
-        <a href="../../../language/command/" class="group no-link">
-            <div class="flex flex-col">
-                <div>
-                    <img class="w-4 h-4" width="20" src="../../static/img/icons/command.svg" alt="" />
-                    <span>Command</span>
-                </div>
-                <p>It's often required to execute programming code during your script play.</p>
+<div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/language/command/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-icon inline-flex shrink-0"><img width="20" src="../../static/img/icons/command.svg"></span>
+                <span class="card-compact-title">Command</span>
             </div>
-        </a>
-        <a href="../../../language/command/quillscript-variables/" class="group no-link">
-            <div class="flex flex-col">
-                <div>
-                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path d="M13.003 7.754a.75.75 0 0 1 .75-.75h5.232a.75.75 0 0 1 .53 1.28l-2.776 2.777c.55.097 1.057.253 1.492.483.905.477 1.504 1.284 1.504 2.418 0 .966-.471 1.75-1.172 2.27-.687.511-1.587.77-2.521.77-1.367 0-2.274-.528-2.667-.756a.75.75 0 0 1 .755-1.297c.331.193.953.553 1.912.553.673 0 1.243-.188 1.627-.473.37-.275.566-.635.566-1.067 0-.5-.219-.836-.703-1.091-.538-.284-1.375-.443-2.471-.443a.75.75 0 0 1-.53-1.28l2.643-2.644h-3.421a.75.75 0 0 1-.75-.75ZM7.88 15.215a1.4 1.4 0 0 0-1.446.83.75.75 0 0 1-1.37-.61 2.899 2.899 0 0 1 2.986-1.71c.589.06 1.139.323 1.557.743.434.446.685 1.058.685 1.778 0 1.641-1.254 2.437-2.12 2.986-.538.341-1.18.694-1.495 1.273H9.75a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75c0-1.799 1.337-2.63 2.243-3.21 1.032-.659 1.55-1.031 1.55-1.8 0-.355-.116-.584-.26-.732a1.071 1.071 0 0 0-.652-.298Zm.234-13.121a.75.75 0 0 1 .386.656V9h1.252a.75.75 0 0 1 0 1.5H5.75a.75.75 0 0 1 0-1.5H7V4.103l-.853.533a.749.749 0 1 1-.795-1.272l2-1.25a.749.749 0 0 1 .762-.02Z"/></svg>
-                    <span>Quillscript Variables</span>
-                </div>
-                <p>A variable is a named location in memory that holds a value.</p>
+            <p class="card-compact-description">It's often required to execute programming code during your script play. Command statements can perform two tasks: Handle Quillscript Variables and Call</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/language/command/quillscript-variables/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-icon inline-flex shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><!--icon--><path d="M13.003 7.754a.75.75 0 0 1 .75-.75h5.232a.75.75 0 0 1 .53 1.28l-2.776 2.777c.55.097 1.057.253 1.492.483.905.477 1.504 1.284 1.504 2.418 0 .966-.471 1.75-1.172 2.27-.687.511-1.587.77-2.521.77-1.367 0-2.274-.528-2.667-.756a.75.75 0 0 1 .755-1.297c.331.193.953.553 1.912.553.673 0 1.243-.188 1.627-.473.37-.275.566-.635.566-1.067 0-.5-.219-.836-.703-1.091-.538-.284-1.375-.443-2.471-.443a.75.75 0 0 1-.53-1.28l2.643-2.644h-3.421a.75.75 0 0 1-.75-.75ZM7.88 15.215a1.4 1.4 0 0 0-1.446.83.75.75 0 0 1-1.37-.61 2.899 2.899 0 0 1 2.986-1.71c.589.06 1.139.323 1.557.743.434.446.685 1.058.685 1.778 0 1.641-1.254 2.437-2.12 2.986-.538.341-1.18.694-1.495 1.273H9.75a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75c0-1.799 1.337-2.63 2.243-3.21 1.032-.659 1.55-1.031 1.55-1.8 0-.355-.116-.584-.26-.732a1.071 1.071 0 0 0-.652-.298Zm.234-13.121a.75.75 0 0 1 .386.656V9h1.252a.75.75 0 0 1 0 1.5H5.75a.75.75 0 0 1 0-1.5H7V4.103l-.853.533a.749.749 0 1 1-.795-1.272l2-1.25a.749.749 0 0 1 .762-.02Z"/></svg></span>
+                <span class="card-compact-title">Quillscript Variables</span>
             </div>
-        </a>
-    </div>
+            <p class="card-compact-description">A variable is a named location in memory that holds a value.</p>
+        </div>
+    </a>
+</div>
+</div>
 </div>
 <!-- Insert this at the bottom of each markdown page -->
 <!-- Tooltips -->
 <!-- *[AWS]: Amazon Web Services -->
 
-                                
-                                <!-- Required only on API pages -->
-                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
-                            </div>
-                            <footer id="retype-content-footer" class="clear-both">
-                            
-                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
-                                    <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../language/command/quillscript-variables/">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                            <span>
-                                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">Quillscript Variables</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                            
-                                    <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../language/command/built-in-functions/">
-                                            <span>
-                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">Built-​in Functions</span>
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                        </a>
-                                    </div>
-                                </nav>
-                            </footer>
-                        </main>
                 
-                        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
-                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
-                                <div id="retype-footer-links" class="print:hidden">
-                                    <ul class="flex flex-wrap items-center text-sm">
-                                    </ul>
-                                </div>
-                                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© Copyright 2026. All rights reserved.</p></div>
-                            </footer>
-                        </div>
-                    </div>
-                
-                    <!-- Rendered if sidebar right is enabled -->
-                    <!-- Sidebar right skeleton-->
-                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
-                        <div class="pl-5">
-                            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                        </div>
-                    </div>
-                
-                    <!-- User should be able to hide sidebar right -->
-                    <doc-sidebar-right v-cloak></doc-sidebar-right>
-                </div>
-
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
             </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../language/command/quillscript-variables/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Quillscript Variables</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../language/command/built-in-functions/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Built-​in Functions</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© Copyright 2026. All rights reserved.</p></div>
+            </footer>
         </div>
-    
-        <doc-search-mobile></doc-search-mobile>
-        <doc-back-to-top></doc-back-to-top>
     </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
 
 
     <div id="retype-overlay-target"></div>

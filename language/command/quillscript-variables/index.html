@@ -6,10 +6,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0.824396812006">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.3.0.827093864276">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.12.0">
+    <meta name="generator" content="Retype 4.3.0">
 
     <!-- Primary Meta Tags -->
     <title>Quillscript Variables</title>
@@ -19,27 +20,29 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://quillscript.ink/language/command/quillscript-variables/">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://quillscript.ink/language/command/quillscript-variables/">
     <meta property="og:title" content="Quillscript Variables">
     <meta property="og:description" content="A variable is a named location in memory that holds a value.">
+    <meta property="og:site_name" content="Quillscript">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://quillscript.ink/language/command/quillscript-variables/">
-    <meta property="twitter:title" content="Quillscript Variables">
-    <meta property="twitter:description" content="A variable is a named location in memory that holds a value.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://quillscript.ink/language/command/quillscript-variables/">
+    <meta name="twitter:title" content="Quillscript Variables">
+    <meta name="twitter:description" content="A variable is a named location in memory that holds a value.">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../static/img/favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=3.12.0.824396812006" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.3.0.827093864276" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.12.0.824396812006" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.12.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.12.0.824396812006" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.12.0.824396812006" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.3.0.827093864276" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.3.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.3.0.827093864276" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.3.0.827093864276" defer></script>
 
     <!-- Styles -->
     <style>
@@ -422,216 +425,199 @@
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
-        <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
     
-        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
-            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
-                <!-- Mobile menu button skeleton -->
-                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
-                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
-        
-                <!-- Logo -->
-                <div class="flex items-center justify-between h-full py-2 md:w-75">
-                    <div class="flex items-center px-2 md:px-6">
-                        <a id="retype-branding-logo" href="../../../" class="flex items-center leading-snug text-2xl">
-                            <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../../../static/img/logo.svg">
-                                <img class="max-h-10 hidden dark:inline-block" src="../../../static/img/logo.svg">
-                            </span>
-                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Quillscript</span>
-                        </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">doc</span>
-                    </div>
-        
-                    <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://quillscript.ink/" class="flex items-center leading-snug text-2xl">
+                        <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
+                            <img class="max-h-10 dark:hidden md:inline-block" src="../../../static/img/logo.svg" alt="" width="512" height="512">
+                            <img class="max-h-10 hidden dark:inline-block" src="../../../static/img/logo.svg" alt="" width="512" height="512">
+                        </span>
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Quillscript</span>
+                    </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">doc</span>
                 </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                </svg>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../changelog/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <path d="M15 4.75a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM2.5 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0Zm0-14.5a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM5.75 6.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 6.5Zm0 14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 21Zm12.5-14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 18.25 6.5Z"/><path d="M5.75 16.75A.75.75 0 0 1 5 16V8a.75.75 0 0 1 1.5 0v8a.75.75 0 0 1-.75.75Z"/><path d="M17.5 8.75v-1H19v1a3.75 3.75 0 0 1-3.75 3.75h-7a1.75 1.75 0 0 0-1.75 1.75H5A3.25 3.25 0 0 1 8.25 11h7a2.25 2.25 0 0 0 2.25-2.25Z"/>
+                                </svg>
+                                <span>Roadmap</span>
+                            </a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../contact/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <path d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/>
+                                </svg>
+                                <span>Support</span>
+                            </a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://discord.com/invite/YTYxhCFJGC">
+                                <img class="mb-px mr-1.5" width="18" height="18" alt="" aria-hidden="true" src="../../../static/img/icons/discord-icon.svg">
+                                <span>Discord</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
         
-                <div class="flex justify-between md:grow">
-                    <!-- Top Nav -->
-                    <nav id="retype-header-nav" class="hidden md:flex">
-                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
-                            <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                        <g fill="currentColor">
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                                             <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
-                                        </g>
-                                    </svg>
-                                    <span>Home</span>
-                                </a>
-                            </li>
-                            <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../changelog/">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                        <g fill="currentColor">
+                                        </svg>
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../changelog/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                                             <path d="M15 4.75a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM2.5 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0Zm0-14.5a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM5.75 6.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 6.5Zm0 14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 21Zm12.5-14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 18.25 6.5Z"/><path d="M5.75 16.75A.75.75 0 0 1 5 16V8a.75.75 0 0 1 1.5 0v8a.75.75 0 0 1-.75.75Z"/><path d="M17.5 8.75v-1H19v1a3.75 3.75 0 0 1-3.75 3.75h-7a1.75 1.75 0 0 0-1.75 1.75H5A3.25 3.25 0 0 1 8.25 11h7a2.25 2.25 0 0 0 2.25-2.25Z"/>
-                                        </g>
-                                    </svg>
-                                    <span>Roadmap</span>
-                                </a>
-                            </li>
-                            <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../contact/">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                        <g fill="currentColor">
+                                        </svg>
+                                        <span>Roadmap</span>
+                                    </a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../contact/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                                             <path d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/>
-                                        </g>
-                                    </svg>
-                                    <span>Support</span>
-                                </a>
-                            </li>
-                            <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-tex font-header-text hover:text-header-text-hover" href="https://discord.com/invite/YTYxhCFJGC">
-                                    <img class="mb-px mr-1" width="18" alt="" src="../../../static/img/icons/discord-icon.svg">
-                                    <span>Discord</span>
-                                </a>
-                            </li>
+                                        </svg>
+                                        <span>Support</span>
+                                    </a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://discord.com/invite/YTYxhCFJGC">
+                                        <img class="mb-px mr-1.5" width="18" height="18" alt="" aria-hidden="true" src="../../../static/img/icons/discord-icon.svg">
+                                        <span>Discord</span>
+                                    </a>
+                                </li>
         
-                        </ul>
-                    </nav>
-        
-                    <div v-cloak class="flex justify-end grow">
-                        <div id="retype-mobile-search-button"></div>
-                        <doc-search-desktop></doc-search-desktop>
-        
-                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
-                        <doc-history></doc-history>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-            </div>
-        </header>
-    
-    
-        <div id="retype-container" class="container relative flex bg-white">
-            <!-- Sidebar Skeleton -->
-            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
-            
-                <div class="flex items-center h-16 px-6">
-                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
-                </div>
-            
-                <div class="pl-6 mt-1 mb-4">
-                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                </div>
-            
-            </div>
-            
-            <!-- Sidebar component -->
-            <doc-sidebar v-cloak>
-                <template #sidebar-footer>
-                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
-            
-                        <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
-                            <nav>
-                                <ul class="flex flex-wrap justify-center items-center">
-                                    <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                                <g fill="currentColor">
-                                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
-                                                </g>
-                                            </svg>
-                                            <span>Home</span>
-                                        </a>
-                                    </li>
-                                    <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../changelog/">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                                <g fill="currentColor">
-                                                    <path d="M15 4.75a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM2.5 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0Zm0-14.5a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM5.75 6.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 6.5Zm0 14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 21Zm12.5-14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 18.25 6.5Z"/><path d="M5.75 16.75A.75.75 0 0 1 5 16V8a.75.75 0 0 1 1.5 0v8a.75.75 0 0 1-.75.75Z"/><path d="M17.5 8.75v-1H19v1a3.75 3.75 0 0 1-3.75 3.75h-7a1.75 1.75 0 0 0-1.75 1.75H5A3.25 3.25 0 0 1 8.25 11h7a2.25 2.25 0 0 0 2.25-2.25Z"/>
-                                                </g>
-                                            </svg>
-                                            <span>Roadmap</span>
-                                        </a>
-                                    </li>
-                                    <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../contact/">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                                <g fill="currentColor">
-                                                    <path d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/>
-                                                </g>
-                                            </svg>
-                                            <span>Support</span>
-                                        </a>
-                                    </li>
-                                    <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-tex font-header-text hover:text-header-text-hover" href="https://discord.com/invite/YTYxhCFJGC">
-                                            <img class="mb-px mr-1" width="18" alt="" src="../../../static/img/icons/discord-icon.svg">
-                                            <span>Discord</span>
-                                        </a>
-                                    </li>
-            
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </template>
-            </doc-sidebar>
-    
-            <div class="grow min-w-0 bg-body-bg">
-                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
-                <div class="flex">
-                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
-                        <main class="relative pb-12 lg:pt-2">
-                            <div class="retype-markdown" id="retype-content">
-                                <!-- Rendered if sidebar right is enabled -->
-                                <div id="retype-sidebar-right-toggle"></div>
-                                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
-                                    <ol role="list">
-                                        <li class="pr-4">
-                                            <a href="../../../" class="pr-4">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
-                                                </svg>
-                                            </a>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
-                                            </svg>
-                                        </li>
-                                        <li class="pr-4">
-                                            <span class="pr-4">
-                                                Language
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
-                                            </svg>
-                                        </li>
-                                        <li class="pr-4">
-                                            <a href="../../../language/command/" class="pr-4">
-                                                Command
-                                            </a>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
-                                            </svg>
-                                        </li>
-                                        <li class="pr-4">
-                                            <a href="../../../language/command/quillscript-variables/" class="pr-4">
-                                                Quillscript Variables
-                                            </a>
-                                        </li>
-                                    </ol>
-                                </nav>
-                
-                                <!-- Page content  -->
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+                    <ol role="list">
+                        <li class="pr-4">
+                            <a href="../../../" class="pr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                </svg>
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <span class="pr-4">
+                                Language
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <a href="../../../language/command/" class="pr-4">
+                                Command
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <a href="../../../language/command/quillscript-variables/" class="pr-4">
+                                Quillscript Variables
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+
+                <!-- Page content  -->
 <!-- Insert this at the top of each markdown page -->
-<doc-anchor-target id="quillscript-variables" class="break-words">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#quillscript-variables">#</doc-anchor-trigger>
-        <span>Quillscript Variables</span>
-    </h1>
-</doc-anchor-target>
+<h1 id="quillscript-variables">Quillscript Variables</h1>
 <p>A variable is a named location in memory that holds a value.</p>
 <p>To declare a Quillscript variable, type the desired name, and use the <strong>= (<em>Assignment Operator</em>)</strong> to assign a value.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="quillscript-variables-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ my_variable = 10
 </code></pre>
 </doc-codeblock></div>
 <p>Once assigned, you can use this data everywhere in your script and even in your Blueprint/C++ code.</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div id="quillscript-variables-code-2" class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ name = Bob
 
 - {name}
@@ -640,64 +626,34 @@
   My name is {name}.</code></pre>
 </doc-codeblock></div>
 <hr>
-<doc-anchor-target id="variable-type">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#variable-type">#</doc-anchor-trigger>
-        <span><span class="command">Variable Type</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="variable-type"><span class="command">Variable Type</span></h2>
 <p>Quillscript is an inferred type language, meaning that the variable type is automatically deduced. There are three variable types: <strong>Switch</strong>, <strong>Number</strong>, and <strong>Text</strong>. The variable type is used to determine the behavior of this variable for each operator, a Number type variable can be used for math operations, for example.</p>
-<doc-anchor-target id="switch">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#switch">#</doc-anchor-trigger>
-        <span>Switch</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="switch">Switch</h3>
 <p>Represents an <strong>on</strong>/<strong>off</strong> state, also known as <strong>Boolean</strong>.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="switch-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ flag = on
 $ state = off
 </code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="number">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#number">#</doc-anchor-trigger>
-        <span>Number</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="number">Number</h3>
 <p>For numeric values. <strong>Integers</strong> and <strong>floating points</strong>.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="number-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ number = 10
 $ negative = -79
 $ fraction = 4.88
 </code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="text">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#text">#</doc-anchor-trigger>
-        <span>Text</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="text">Text</h3>
 <p>For <strong>string</strong> values.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="text-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ word = hello
 $ text = Hi! My name is Ed.
 </code></pre>
 </doc-codeblock></div>
 <hr>
-<doc-anchor-target id="variable-access">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#variable-access">#</doc-anchor-trigger>
-        <span><span class="command">Variable Access</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="variable-access"><span class="command">Variable Access</span></h2>
 <p>The variable mark describes how Quillscript interpreter handles its lifecycle and other automatized tasks.</p>
-<doc-anchor-target id="global">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#global">#</doc-anchor-trigger>
-        <span>Global</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="global">Global</h3>
 <p>By default, any Quillscript variable is global. Once created, a global variable can be used in any other script, allowing script intercommunication.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
@@ -716,68 +672,43 @@ $ text = Hi! My name is Ed.
         </div>
     </div>
 </div>
-<doc-anchor-target id="temporary-variables">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#temporary-variables">#</doc-anchor-trigger>
-        <span>Temporary Variables</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="temporary-variables">Temporary Variables</h3>
 <p>A Temporary Variable is a Quillscript variable that only exists during that script play. Temporary variables are automatically deleted when the script ends.</p>
 <p>These variables are the preferred method for declaring variables when they don&#x27;t need to exist after a script play. The use of these variables saves computing resources, since Quillscript has a smaller list of variables to search and apply tasks.</p>
 <p>To declare a Temporary Variable, you name it starting with <strong>: (<em>colons</em>)</strong>.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="temporary-variables-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ :greetings = on
 $ :name = Doug
 </code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="outer-variables">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#outer-variables">#</doc-anchor-trigger>
-        <span>Outer Variables</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="outer-variables">Outer Variables</h3>
 <p>Quillscript creates these variables to capture the return value of called functions. They have the same lifecycle of temporary variables and are deleted when the script ends. Check <a href="../function-call/">Function Call</a> section for more details.</p>
-<doc-anchor-target id="template-variables">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#template-variables">#</doc-anchor-trigger>
-        <span>Template Variables</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="template-variables">Template Variables</h3>
 <p>These variables are created by Quillscript to be used as arguments by a template call. They are deleted when a label statement is reached. Check Template section for more details.</p>
 <hr>
-<doc-anchor-target id="assigning-variables">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#assigning-variables">#</doc-anchor-trigger>
-        <span><span class="command">Assigning Variables</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="assigning-variables"><span class="command">Assigning Variables</span></h2>
 <p>Besides assigning static hard-coded values, variables also accept math expressions and other value concatenation methods.</p>
-<doc-anchor-target id="expressions">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#expressions">#</doc-anchor-trigger>
-        <span>Expressions</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="expressions">Expressions</h3>
 <p>You can assign a complete math expression to a single variable, from a simple addition to a complex equation.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="expressions-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ x = 10 + 5
 $ y = ((2 + 2) * 4) ^ 2
 </code></pre>
 </doc-codeblock></div>
 <p>It&#x27;s possible to use other variable values in expressions. Notice the use of <strong> (<em>brackets</em>)</strong> to use a variable value instead of the literal string <em>&quot;value&quot;</em>.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="expressions-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ value = 5
 $ result = {value} / 2
 </code></pre>
 </doc-codeblock></div>
 <p>You can self-reference the assigned variable in an expression using a <strong>{&amp;}</strong>.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="expressions-code-3" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ value = 10
 $ value = {&amp;} + 5
 // value equals 15</code></pre>
 </doc-codeblock></div>
 <p>Or use a reduced assignment operation.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="expressions-code-4" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ value += 10
 $ value -= 10 + 2
 $ value *= 5
@@ -786,19 +717,14 @@ $ value %= 2 * 2
 $ value ^= 2
 </code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="valid-operators">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#valid-operators">#</doc-anchor-trigger>
-        <span>Valid Operators</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="valid-operators">Valid Operators</h4>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="compact">
 <thead>
 <tr>
-<th></th>
-<th></th>
-<th></th>
+<th> </th>
+<th> </th>
+<th> </th>
 </tr>
 </thead>
 <tbody>
@@ -906,27 +832,17 @@ $ value ^= 2
         </div>
     </div>
 </div>
-<doc-anchor-target id="constructor">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#constructor">#</doc-anchor-trigger>
-        <span>Constructor</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="constructor">Constructor</h3>
 <p>The operator <strong>constructor (:=)</strong> is used to assign a value to a variable only if that variable does not exist. This is useful for setup a script on its first play.</p>
 <p>Complement the <strong>assignment (=)</strong> operator with the <strong>new (:)</strong> operator:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="constructor-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ x := 1 + 1
 </code></pre>
 </doc-codeblock></div>
 <p>This is the same as <code translate="no" v-pre>$ x = 1 + 1</code>, but is executed only if there isn&#x27;t already a variable called <strong>x</strong>.</p>
-<doc-anchor-target id="text-concatenation">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#text-concatenation">#</doc-anchor-trigger>
-        <span>Text Concatenation</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="text-concatenation">Text Concatenation</h3>
 <p>The use of brackets allows the formation of texts by concatenation.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="text-concatenation-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ name = Dennis
 $ surname = Ritchie
 $ full_name = {name} {surname}
@@ -934,14 +850,9 @@ $ full_name = {name} {surname}
 $ text = Hello Mr. {surname}.
 </code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="nested-variables-replacement">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#nested-variables-replacement">#</doc-anchor-trigger>
-        <span>Nested Variables Replacement</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="nested-variables-replacement">Nested Variables Replacement</h3>
 <p>The use of brackets can also be done nesting a variable inside other variable brackets.</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div id="nested-variables-replacement-code-1" class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre translate="no" class="language-q" data-line="20"><code v-pre class="language-q">$ place_LeftFight = Arena
 $ place_LeftTrade = Store
 
@@ -964,34 +875,24 @@ $ place_RightTrade = Market
   You arrive at the {place_{direction}{place}}.</code></pre>
 </doc-codeblock></div>
 <p>It is possible to use more elaborated replacement pattern if necessary</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="nested-variables-replacement-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">{ {varName}}, { {var1}{var2}}, {text_{var}}, { { {var1}_text}_{var2}{var3}}, etc.</code></pre>
 </doc-codeblock></div>
 <hr>
-<doc-anchor-target id="constants">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#constants">#</doc-anchor-trigger>
-        <span><span class="command">Constants</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="constants"><span class="command">Constants</span></h2>
 <p>Constants work just like variables, they are assigned and handled the same way, but once created, they can&#x27;t have their value changed.</p>
 <p>Constants are declared on all uppercase.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="constants-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ CONST = 10
 $ NAME = Alice
 $ PI = 3.14
 </code></pre>
 </doc-codeblock></div>
 <hr>
-<doc-anchor-target id="deleting-variables">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#deleting-variables">#</doc-anchor-trigger>
-        <span><span class="command">Deleting Variables</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="deleting-variables"><span class="command">Deleting Variables</span></h2>
 <p>You should always remove variables that aren’t required to be permanently stored, as the more variables there are, the more time it takes to execute some tasks.</p>
 <p>To delete a variable, call the built-in function <a href="../built-in-functions/">Delete</a> and pass the variable&#x27;s name.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="deleting-variables-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ Delete name
 </code></pre>
 </doc-codeblock></div>
@@ -1013,32 +914,17 @@ $ PI = 3.14
     </div>
 </div>
 <hr>
-<doc-anchor-target id="localizing-variables-text">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#localizing-variables-text">#</doc-anchor-trigger>
-        <span><span class="command">Localizing Variables&#x27; Text</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="localizing-variables-text"><span class="command">Localizing Variables&#x27; Text</span></h2>
 <p>Although being stored as an Unreal Engin&#x27;s Text type, Quillscript&#x27;s Text variables are marked as cultural invariants by default. If the value of a variable must be localized, set its value inside <strong>&#x60;&#x60; (<em>backticks</em>)</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="localizing-variables-text-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-q"><code v-pre class="language-q">$ response = `This text is localizable.`
 </code></pre>
 </doc-codeblock></div>
 <hr>
-<doc-anchor-target id="using-variables-in-code">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#using-variables-in-code">#</doc-anchor-trigger>
-        <span><span class="command">Using Variables in Code</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="using-variables-in-code"><span class="command">Using Variables in Code</span></h2>
 <p>Quillscript variables are stored as an <a href="https://dev.epicgames.com/documentation/unreal-engine/map-containers-in-unreal-engine" class="outbound" target="_blank"><span>Unreal Engine Map</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> of <a href="https://dev.epicgames.com/documentation/unreal-engine/fname-in-unreal-engine" class="outbound" target="_blank"><span>Name</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> to <a href="https://dev.epicgames.com/documentation/unreal-engine/ftext-in-unreal-engine" class="outbound" target="_blank"><span>Text</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. This map is declared in Quillscript Subsystem and is accessible in Blueprints and C++. Check <a href="../../../coding-and-design/libraries/quill/">Quillscript Static Library</a> for detailed usage.</p>
 <hr>
-<doc-anchor-target id="variable-modifier">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#variable-modifier">#</doc-anchor-trigger>
-        <span><span class="command">Variable Modifier</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="variable-modifier"><span class="command">Variable Modifier</span></h2>
 <p>Check <a href="../../../coding-and-design/libraries/quill/#register-variable-modifier">Register Variable Modifier</a> and <a href="../../../coding-and-design/libraries/quill/#unregister-variable-modifier">Unregister Variable Modifier</a>.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-ghost"></div>
@@ -1058,12 +944,7 @@ $ PI = 3.14
     </div>
 </div>
 <hr>
-<doc-anchor-target id="hard-coding-default-variables">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#hard-coding-default-variables">#</doc-anchor-trigger>
-        <span><span class="command">Hard Coding Default Variables</span></span>
-    </h2>
-</doc-anchor-target>
+<h2 id="hard-coding-default-variables"><span class="command">Hard Coding Default Variables</span></h2>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-ghost"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -1082,103 +963,109 @@ $ PI = 3.14
     </div>
 </div>
 <hr>
-<div id="backlinks">
+<div id="retype-backlinks">
     <h2>See also</h2>
-    <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
-        <a href="../../../language/command/" class="group no-link">
-            <div class="flex flex-col">
-                <div>
-                    <img class="w-4 h-4" width="20" src="../../static/img/icons/command.svg" alt="" />
-                    <span>Command</span>
-                </div>
-                <p>It's often required to execute programming code during your script play.</p>
+<div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/language/command/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-icon inline-flex shrink-0"><img width="20" src="../../static/img/icons/command.svg"></span>
+                <span class="card-compact-title">Command</span>
             </div>
-        </a>
-        <a href="../../../language/condition/" class="group no-link">
-            <div class="flex flex-col">
-                <div>
-                    <img class="w-4 h-4" width="20" src="../../static/img/icons/condition.svg" alt="" />
-                    <span>Condition</span>
-                </div>
-                <p>Another important aspect of creating story branches is Conditions.</p>
+            <p class="card-compact-description">It's often required to execute programming code during your script play. Command statements can perform two tasks: Handle Quillscript Variables and Call</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/language/condition/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-icon inline-flex shrink-0"><img width="20" src="../../static/img/icons/condition.svg"></span>
+                <span class="card-compact-title">Condition</span>
             </div>
-        </a>
-        <a href="../../../coding-and-design/smart-text/smart-text-block/" class="group no-link">
-            <div class="flex flex-col">
-                <div>
-                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path d="M3 6.25a.75.75 0 0 1 .75-.75h13.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.25Zm5 6.063a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 0 1.5H8.75a.75.75 0 0 1-.75-.75Zm0 5.937a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 0 1.5H8.75a.75.75 0 0 1-.75-.75ZM3.75 11a.75.75 0 0 1 .75.75v7a.75.75 0 0 1-1.5 0v-7a.75.75 0 0 1 .75-.75Z"/></svg>
-                    <span>Smart Text Block</span>
-                </div>
-                <p>The Smart Text Block is a custom Rich Text Block that automatically applies a replace function to substitute</p>
+            <p class="card-compact-description">Another important aspect of creating story branches is Conditions. When writing a story, you often need a story section to be played only in specific</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/coding-and-design/smart-text/smart-text-block/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-icon inline-flex shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><!--icon--><path d="M3 6.25a.75.75 0 0 1 .75-.75h13.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.25Zm5 6.063a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 0 1.5H8.75a.75.75 0 0 1-.75-.75Zm0 5.937a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 0 1.5H8.75a.75.75 0 0 1-.75-.75ZM3.75 11a.75.75 0 0 1 .75.75v7a.75.75 0 0 1-1.5 0v-7a.75.75 0 0 1 .75-.75Z"/></svg></span>
+                <span class="card-compact-title">Smart Text Block</span>
             </div>
-        </a>
-    </div>
+            <p class="card-compact-description">The Smart Text Block is a custom Rich Text Block that automatically applies a replace function to substitute Quillscript variables and other supplied key</p>
+        </div>
+    </a>
+</div>
+</div>
 </div>
 <!-- Insert this at the bottom of each markdown page -->
 <!-- Tooltips -->
 <!-- *[AWS]: Amazon Web Services -->
 
-                                
-                                <!-- Required only on API pages -->
-                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
-                            </div>
-                            <footer id="retype-content-footer" class="clear-both">
-                            
-                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
-                                    <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../language/command/">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                            <span>
-                                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">Command</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                            
-                                    <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../language/command/function-call/">
-                                            <span>
-                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">Function Call</span>
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                        </a>
-                                    </div>
-                                </nav>
-                            </footer>
-                        </main>
                 
-                        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
-                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
-                                <div id="retype-footer-links" class="print:hidden">
-                                    <ul class="flex flex-wrap items-center text-sm">
-                                    </ul>
-                                </div>
-                                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© Copyright 2026. All rights reserved.</p></div>
-                            </footer>
-                        </div>
-                    </div>
-                
-                    <!-- Rendered if sidebar right is enabled -->
-                    <!-- Sidebar right skeleton-->
-                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
-                        <div class="pl-5">
-                            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                        </div>
-                    </div>
-                
-                    <!-- User should be able to hide sidebar right -->
-                    <doc-sidebar-right v-cloak></doc-sidebar-right>
-                </div>
-
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
             </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../language/command/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Command</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../language/command/function-call/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Function Call</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© Copyright 2026. All rights reserved.</p></div>
+            </footer>
         </div>
-    
-        <doc-search-mobile></doc-search-mobile>
-        <doc-back-to-top></doc-back-to-top>
     </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
 
 
     <div id="retype-overlay-target"></div>
