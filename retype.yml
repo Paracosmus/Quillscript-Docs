@@ -67,7 +67,6 @@ data:
 
   router:        '[](/language/)'
   channel:       '[](/language/)'
-  template:      '[](/language/)'
 
   command:       '[](/language/)'
   var:           '[](/language/)'
