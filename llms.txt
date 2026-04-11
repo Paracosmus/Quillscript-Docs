@@ -1,0 +1,125 @@
+﻿# Home
+
+> Quillscript, formerly known as Snowfall, is an Unreal Engine code plugin. It controls the story and narrative flow for RPGs, visual novels, and other story-driven games.
+
+- [Home](https://quillscript.ink/index.md): Home
+- [Getting Started](https://quillscript.ink/getting-started.md): If you are a beginner with Quillscript Plugin, this article helps you start from scratch.
+- [Changelog](https://quillscript.ink/changelog/index.md): Changelog
+- [Contact](https://quillscript.ink/contact.md): discord.gg
+
+## Language
+
+### Dialogue
+
+- [Dialogue](https://quillscript.ink/language/dialogue/index.md): An essential element of any text-based story is dialogue. Even in purely narrated games, the narrator has to say something or expose events and ideas to the player.
+- [Repeater](https://quillscript.ink/language/dialogue/repeater.md): It's common to have a story section where the same character talks successively, causing repetition. You can use this shortcut to avoid repetitive Dialogue header lines.
+- [Gate](https://quillscript.ink/language/dialogue/gate.md): Split a dialogue into two texts, one for true condition, and other for false
+
+### Option
+
+- [Option](https://quillscript.ink/language/option/index.md): Another essential element for games with story branching is asking the player what they want to do or say in a specific situation. This is expressed in Quillscript as an Options collection.
+- [Dynamic Options](https://quillscript.ink/language/option/dynamic-options.md): Dynamic options are used when you don't know the options at design time. They are generated at runtime based on some conditions or data. This is useful when we want to provide a list of options based on some user input or from a data model.
+
+### Label
+
+- [Label](https://quillscript.ink/language/label/index.md): Labels are markers in specific points of your script flow. They are used as routing points to navigate from one point of the script to another, creating story branches and story flow control.
+- [Covert](https://quillscript.ink/language/label/covert.md): A covert label has the same behavior as a standard label, except that a covert label won't play unless explicitly called by a Router. This means if the script flow ever reaches a covert label, it jumps to the following standard label.
+- [Template](https://quillscript.ink/language/label/template.md): Templates are a specific type of covert labels that receive entry arguments. A variable is created for each argument and exists until a new label statement is played.
+
+### Router
+
+- [Router](https://quillscript.ink/language/router/index.md): Routers are navigation controllers to move from one point of the story to a given label, by name. Its main functionality is control where the story should move to, based on player choices, variable values, and custom code.
+- [Channel](https://quillscript.ink/language/router/channel.md): A Channel memorises the point where a Router was played, and return to that point when the target label finishes to play.
+- [Travel](https://quillscript.ink/language/router/travel.md): Travel is actually a built-in function disguised as a Router statement. It works as other routers, navigating from that point to a given target, but differently from a Router statement, the Travel built-in function allows you to target another script.
+
+### Command
+
+- [Command](https://quillscript.ink/language/command/index.md): It's often required to execute programming code during your script play. Command statements can perform two tasks: Handle Quillscript Variables and Call Functions.
+- [Quillscript Variables](https://quillscript.ink/language/command/quillscript-variables.md): A variable is a named location in memory that holds a value.
+- [Function Call](https://quillscript.ink/language/command/function-call.md): Quillscript can execute Blueprint/C++ functions using command lines.
+- [Built-In Functions](https://quillscript.ink/language/command/built-in-functions.md): List all built-in functions available in script
+- [Condition](https://quillscript.ink/language/condition/index.md): Another important aspect of creating story branches is Conditions. When writing a story, you often need a story section to be played only in specific states.
+- [Directive](https://quillscript.ink/language/directive/index.md): Directives are tasks that can execute either during runtime or before a Script starts. They are intended for automation and do pre-processing tasks.
+
+### Tag
+
+- [Tag](https://quillscript.ink/language/tag/index.md): Tags allow you to decorate your script statements for specific behaviors in custom widgets and Interpreters. They are just additional metadata to be used by your own Blueprints/Classes; they do nothing by default.
+- [Special Tags](https://quillscript.ink/language/tag/special-tags.md): Special tags are tags with built-in behavior. They are used to decorate statements to obtain specific plugin behaviors.
+- [Comment](https://quillscript.ink/language/comment/index.md): Comment lines are ignored by the Lexer and discarded on parsing time. They are useful for adding comments, notes, and general reminders directly to your script.
+- [Free Text](https://quillscript.ink/language/free-text/index.md): Any free text line found in your script (with not Quillscript syntax symbol in the beginning of the line), is attached as a text line to the previous statement.
+
+## Code and Design
+
+### Objects
+
+- [Script](https://quillscript.ink/coding-and-design/objects/script.md): The Script Asset object represents your plain-text source script file in a format Unreal Engine can read and understand. It is created by the Lexer when you drag and drop your script file in Unreal Engine's content browser.
+- [Interpreter](https://quillscript.ink/coding-and-design/objects/interpreter.md): The Interpreter object serves as a crucial component responsible for executing and interpreting the Script Asset. It acts as a bridge between the parsed script data and Unreal Engine's system.
+- [Subsystem](https://quillscript.ink/coding-and-design/objects/subsystem.md): The Quillscript Subsystem is an Unreal Engine's Game Instance Subsystem. This object manages the plugin as a hole, it holds state properties, and stores Quillscript's data.
+
+### Widgets
+
+- [Widgets](https://quillscript.ink/coding-and-design/widgets/index.md): Quillscript uses 2 main widget base classes to receive data from the Script and show it to the player through the user interface. These widgets are Unreal Engine’s UMGs UI; therefore, they can be created, customized, and programmed using the same methods with no additional limitations.
+- [Dialog Box](https://quillscript.ink/coding-and-design/widgets/dialog-box.md): The Dialog Box is a widget the Quillscript Interpreter uses to display dialogue lines to the player, including the speaker's name. Every Dialogue statement in your script is displayed on the screen through a Dialog Box widget.
+- [Selection Box](https://quillscript.ink/coding-and-design/widgets/selection-box.md): The Selection Box is a widget the Quillscript Interpreter uses to display option lines to the player, including the evaluated condition. Every Option statement set in your script is displayed on the screen through a Selection Box widget.
+- [Background Box](https://quillscript.ink/coding-and-design/widgets/background-box.md): Check $ Background for reference on how to create a background.
+- [Sprite Box](https://quillscript.ink/coding-and-design/widgets/sprite-box.md): Check $ Sprite for reference on how to create a sprite.
+
+### Smart Text
+
+- [Rich Text](https://quillscript.ink/coding-and-design/smart-text/rich-text.md): Quillscript comes packed with a set of built-in rich text tags that can be used to format text in a Rich Text Block.
+- [Smart Typewriter](https://quillscript.ink/coding-and-design/smart-text/smart-typewriter.md): The Smart Typewriter is a reusable object class that can be used to create a typewriter effect in your game. It can be used to display text in a cinematic way, with a typing sound and a delay between each character.
+- [Smart Text Block](https://quillscript.ink/coding-and-design/smart-text/smart-text-block.md): The Smart Text Block is a custom Rich Text Block that automatically applies a replace function to substitute Quillscript variables and other supplied key value pairs.
+
+### Libraries
+
+- [Quill](https://quillscript.ink/coding-and-design/libraries/quill.md): Quillscript Function Library
+- [Tools](https://quillscript.ink/coding-and-design/libraries/tools.md): Tools Function Library
+- [Blueprint Macros](https://quillscript.ink/coding-and-design/libraries/blueprint-macros.md): Blueprint Macros Library
+- [Editor Tools](https://quillscript.ink/coding-and-design/libraries/editor-tools.md): Editor Tools Function Library
+
+### Settings
+
+- [Settings](https://quillscript.ink/coding-and-design/settings/index.md): You can configure and customize Quillscript's behavior through a myriad of settings.
+- [Settings Details](https://quillscript.ink/coding-and-design/settings/settings-details.md): Detailed explanation for each setting entry
+
+### Editor
+
+- [Console Commands](https://quillscript.ink/coding-and-design/editor/console-commands.md): Go to next story node
+
+## Guides
+
+- [Visual Studio Code Extension](https://quillscript.ink/guides/visual-studio-code-extension.md): Quillscript script files are plain-text files, so you can write them using any text editor.
+- [Loops](https://quillscript.ink/guides/loops.md): Labels and Routers can be used to create common code loops like a while, for and for each loop.
+- [Localization](https://quillscript.ink/guides/localization.md): Quillscript is localizable out of the box, meaning no setup or configuration is required to make your scripts localizable. Every text line in your script file is stored in the Quillscript asset as an Unreal Engine's Text type data, making it localizable as any other Text in the project.
+
+### Video Tutorials
+
+- [How-to](https://quillscript.ink/guides/video-tutorials/how-to.md): In depth step-by-step video tutorials Access the complete playlist here.
+- [Quicky](https://quillscript.ink/guides/video-tutorials/quicky.md): A series of fast and simple examples Access the complete playlist here.
+
+## Changelog
+
+- [v2.6](https://quillscript.ink/changelog/v2.6/index.md): Release Date: 202Y-MM-DD Engine Version: 5.X
+- [v2.5](https://quillscript.ink/changelog/v2.5/index.md): Release Date: 2025-10-08 Engine Version: 5.6, 5.7
+
+### v2.4
+
+- [v2.4](https://quillscript.ink/changelog/v2.4/index.md): This update includes three major new features to add to Quillscript's pool of tools. It introduces the new Dynamic Options, Smart Typewriter, and Tooltip Text.
+- [v2.4.1](https://quillscript.ink/changelog/v2.4/v2.4.1.md): Release Date: 2025-03-06 Engine Version: 5.5
+- [v2.4.2](https://quillscript.ink/changelog/v2.4/v2.4.2.md): Release Date: 2025-06-03 Engine Version: 5.6
+
+### v2.3
+
+- [v2.3](https://quillscript.ink/changelog/v2.3/index.md): This update features three major additions to Quillscript, among other things. It introduces Named Parameters in function calls, allows the use of Nested Variable patterns replacement, and provides many new features to the Sprit Box.
+- [v2.3.1](https://quillscript.ink/changelog/v2.3/v2.3.1.md): Release Date: 2024-09-17 Engine Version: 5.4 and 5.5
+- [v2.3.2](https://quillscript.ink/changelog/v2.3/v2.3.2.md): Release Date: 2024-12-04 Engine Version: 5.4 and 5.5
+- [v2.2](https://quillscript.ink/changelog/v2.2/index.md): We are excited to announce Quillscript latest update, featuring four major new enhancements designed to improve developers' quality of life. Among other things, we introduce the Variable Modifiers feature, the Checkpoint Directive, and the Sprite and TravelPass built-in commands.
+
+### v2.1
+
+- [v2.1](https://quillscript.ink/changelog/v2.1/index.md): This is the first major update for Quillscript since it became the plugin's main branch. It adds new features like new built-in functions, the Inject directive, and some new delegates, among other things.
+- [v2.1.1](https://quillscript.ink/changelog/v2.1/v2.1.1.md): Release Date: 2023-09-05 Engine Version: 5.2
+- [v2.1.2](https://quillscript.ink/changelog/v2.1/v2.1.2.md): Release Date: 2023-09-06 Engine Version: 5.3
+- [v2.1.3](https://quillscript.ink/changelog/v2.1/v2.1.3.md): Release Date: 2023-10-10 Engine Version: 5.3 and 5.2
+- [v2.1.4](https://quillscript.ink/changelog/v2.1/v2.1.4.md): Release Date: 2023-10-30 Engine Version: 5.3 and 5.2
+- [v2.0](https://quillscript.ink/changelog/v2.0/index.md): It's finally here. Snowfall version 2.0, now known as Quillscript, is its first official release and will become the main branch of the language from now onwards.
