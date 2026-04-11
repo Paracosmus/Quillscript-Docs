@@ -4,15 +4,13 @@ url: quillscript.ink
 favicon: /static/img/favicon.ico
 poweredByRetype: false
 
+generator:
+  paths: root
+
 branding:
   title: Quillscript
   label: doc
   logo: ./static/img/logo.svg
-
-  colors:
-    label:
-      text: "#FFFFFF"
-      background: "#E1BEE7"
 
 breadcrumb:
   home: ":icon-home:"
