@@ -45,6 +45,7 @@ New features and improvements are being added regularly, so stay tuned for the f
 ## Fixes
 
 - Fixed an issue where the **Typewriter** would display a fallback character in the last position when the character is surrogate pair, such as emojis. This was caused by the character being split into two separate characters, resulting in an incorrect display.
+- Fixed an issue where the **Target** object were not exposed to Blueprints because of an incorrect access specifier.
 
 ---
 
