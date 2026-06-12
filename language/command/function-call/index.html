@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829251524559">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.834597517434">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Function Call</title>
@@ -47,12 +47,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="/static/img/favicon.ico" />
-    <link href="/resources/css/retype.css?v=4.5.3.829251524559" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=4.6.0.834597517434" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=4.5.3.829251524559" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="/resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=4.5.3.829251524559" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=4.5.3.829251524559" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=4.6.0.834597517434" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=4.6.0.834597517434" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=4.6.0.834597517434" defer></script>
 
     <!-- Styles -->
     <style>
@@ -756,25 +756,111 @@ UTools::RenameObject(MyObject, &quot;RefName&quot;);</code></pre>
 </div>
 <h3 id="shortcuts">Shortcuts</h3>
 <p>You can use these names to reference common Unreal Engine objects.</p>
-<p class="compact">| --- | ---<br />
-<span class="command">&amp;GameInstance</span>         | Game Instance Object<br />
-<span class="command">&amp;PlayerController</span>     | Player Controller Actor<br />
-<span class="command">&amp;GameMode</span>             | Game Mode Object<br />
-<span class="command">&amp;Pawn</span>                 | Player Pawn Actor<br />
-<span class="command">&amp;Character</span>            | Player Character Actor<br />
-<span class="command">&amp;GameState</span>            | Game State Object<br />
-<span class="command">&amp;PlayerState</span>          | Player State Object<br />
-<span class="command">&amp;PlayerCameraManager</span>  | Player Camera Manager Actor<br />
-<span class="command">&amp;Interpreter</span> or <span class="command">&amp;this</span> | This script interpreter Actor<br />
-<span class="command">&amp;Target</span>               | Script target object (Passed in the Play Script node)<br />
-<span class="command">&amp;Script</span>               | Script object<br />
-<span class="command">&amp;DialogBox</span>            | Dialog Box Widget<br />
-<span class="command">&amp;SelectionBox</span>         | Selection Box Widget<br />
-<span class="command">&amp;BackgroundBox</span>        | Background Box Widget<br />
-<span class="command">&amp;HUD</span>                  | Head-up Display Object<br />
-<span class="command">&amp;Level</span>                | Current Level Script Actor<br />
-<span class="command">&amp;World</span>                | World Object<br />
-<span class="command">&amp;Subsystem</span>            | Quillscript Subsystem Object</p>
+<retype-table copy-text="|
+--- | ---
+&lt;span class=&quot;command&quot;&gt;&amp;GameInstance&lt;/span&gt;         | Game Instance Object
+&lt;span class=&quot;command&quot;&gt;&amp;PlayerController&lt;/span&gt;     | Player Controller Actor
+&lt;span class=&quot;command&quot;&gt;&amp;GameMode&lt;/span&gt;             | Game Mode Object
+&lt;span class=&quot;command&quot;&gt;&amp;Pawn&lt;/span&gt;                 | Player Pawn Actor
+&lt;span class=&quot;command&quot;&gt;&amp;Character&lt;/span&gt;            | Player Character Actor
+&lt;span class=&quot;command&quot;&gt;&amp;GameState&lt;/span&gt;            | Game State Object
+&lt;span class=&quot;command&quot;&gt;&amp;PlayerState&lt;/span&gt;          | Player State Object
+&lt;span class=&quot;command&quot;&gt;&amp;PlayerCameraManager&lt;/span&gt;  | Player Camera Manager Actor
+&lt;span class=&quot;command&quot;&gt;&amp;Interpreter&lt;/span&gt; or &lt;span class=&quot;command&quot;&gt;&amp;this&lt;/span&gt; | This script interpreter Actor
+&lt;span class=&quot;command&quot;&gt;&amp;Target&lt;/span&gt;               | Script target object (Passed in the Play Script node)
+&lt;span class=&quot;command&quot;&gt;&amp;Script&lt;/span&gt;               | Script object
+&lt;span class=&quot;command&quot;&gt;&amp;DialogBox&lt;/span&gt;            | Dialog Box Widget
+&lt;span class=&quot;command&quot;&gt;&amp;SelectionBox&lt;/span&gt;         | Selection Box Widget
+&lt;span class=&quot;command&quot;&gt;&amp;BackgroundBox&lt;/span&gt;        | Background Box Widget
+&lt;span class=&quot;command&quot;&gt;&amp;HUD&lt;/span&gt;                  | Head-up Display Object
+&lt;span class=&quot;command&quot;&gt;&amp;Level&lt;/span&gt;                | Current Level Script Actor
+&lt;span class=&quot;command&quot;&gt;&amp;World&lt;/span&gt;                | World Object
+&lt;span class=&quot;command&quot;&gt;&amp;Subsystem&lt;/span&gt;            | Quillscript Subsystem Object">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th class="compact"> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="compact"><span class="command">&amp;GameInstance</span></td>
+<td>Game Instance Object</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;PlayerController</span></td>
+<td>Player Controller Actor</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;GameMode</span></td>
+<td>Game Mode Object</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;Pawn</span></td>
+<td>Player Pawn Actor</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;Character</span></td>
+<td>Player Character Actor</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;GameState</span></td>
+<td>Game State Object</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;PlayerState</span></td>
+<td>Player State Object</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;PlayerCameraManager</span></td>
+<td>Player Camera Manager Actor</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;Interpreter</span> or <span class="command">&amp;this</span></td>
+<td>This script interpreter Actor</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;Target</span></td>
+<td>Script target object (Passed in the Play Script node)</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;Script</span></td>
+<td>Script object</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;DialogBox</span></td>
+<td>Dialog Box Widget</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;SelectionBox</span></td>
+<td>Selection Box Widget</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;BackgroundBox</span></td>
+<td>Background Box Widget</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;HUD</span></td>
+<td>Head-up Display Object</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;Level</span></td>
+<td>Current Level Script Actor</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;World</span></td>
+<td>World Object</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&amp;Subsystem</span></td>
+<td>Quillscript Subsystem Object</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
 <h3 id="script-references">Script References</h3>
 <p>In addition, you can create a list of object references to use in scripts. To add an object to the list, use the method below:</p>
 <doc-tabs>
@@ -1168,7 +1254,6 @@ $ MyFunction @bBooleanParam:true @StringParam:String @IntParam:10
 // The intended param is passed, and others are omitted (default value).
 $ MyFunction @StringParam:String</code></pre>
 </doc-codeblock></div>
-<hr>
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
@@ -1196,17 +1281,12 @@ $ MyFunction @StringParam:String</code></pre>
 </div>
 </div>
 </div>
+<hr>
 <!-- Insert this at the bottom of each markdown page -->
 <!-- Tooltips -->
 <!-- *[AWS]: Amazon Web Services -->
 
-                <div id="retype-tags" class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 mt-6 mb-6 clear-both">
                 
-                    <time id="retype-last-updated" class="text-sm whitespace-nowrap text-base-text-muted ml-auto" datetime="2025-01-06T17:28:58" title="2025-01-06" data-absolute-label="Last updated on 2025-01-06" data-absolute-label-html="Last updated on 2025-01-06" data-relative-template="Last updated {0}" data-relative-template-html="Last updated RETYPETEMPLATELASTUPDATEDVALUETOKEN">
-                        Last updated on 2025-01-06
-                    </time>
-                </div>
-
                 <!-- Required only on API pages -->
                 <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
             </div>

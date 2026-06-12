@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829251524559">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.834597517434">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Quillscript Variables</title>
@@ -41,12 +41,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="/static/img/favicon.ico" />
-    <link href="/resources/css/retype.css?v=4.5.3.829251524559" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=4.6.0.834597517434" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=4.5.3.829251524559" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="/resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=4.5.3.829251524559" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=4.5.3.829251524559" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=4.6.0.834597517434" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=4.6.0.834597517434" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=4.6.0.834597517434" defer></script>
 
     <!-- Styles -->
     <style>
@@ -723,23 +723,118 @@ $ value ^= 2
 </code></pre>
 </doc-codeblock></div>
 <h4 id="valid-operators">Valid Operators</h4>
-<p class="compact">| --- | --- | ---<br />
-<span class="command">or</span>   | Logical OR | Check if <strong>a</strong> or <strong>b</strong> is <spam class="keyword">on</span><br />
-<span class="command">and</span>  | Logical AND | Check if <strong>a</strong> and <strong>b</strong> are <spam class="keyword">on</span><br />
-<span class="command"><mark></span>   | Equal | Check if <strong>a</strong> equals <strong>b</strong> (case insensitive)<br />
-<span class="command">=</mark></span> | Strict Equal | Check if <strong>a</strong> equals <strong>b</strong> (case sensitive)<br />
-<span class="command">!=</span>   | NOT Equal | Check if <strong>a</strong> not equals <strong>b</strong> (case insensitive)<br />
-<span class="command">!==</span>  | Strict NOT Equal | Check if <strong>a</strong> not equals <strong>b</strong> (case sensitive)<br />
-<span class="command">&lt;</span>    | Less | Check if <strong>a</strong> less than <strong>b</strong><br />
-<span class="command">&lt;=</span>   | Less Equal | Check if <strong>a</strong> less or equal <strong>b</strong><br />
-<span class="command">&gt;</span>   | Greater | Check if <strong>a</strong> greater than <strong>b</strong><br />
-<span class="command">&gt;=</span>  | Greater Equal | Check if <strong>a</strong> greater or equal <strong>b</strong><br />
-<span class="command">+</span>   | Addition | Sum <strong>a</strong> plus <strong>b</strong><br />
-<span class="command">-</span>   | Subtraction | Subtract <strong>b</strong> from a<br />
-<span class="command">*</span>   | Multiplication | Multiply <strong>a</strong> for <strong>b</strong><br />
-<span class="command">/</span>    | Division | Divide <strong>a</strong> by <strong>b</strong><br />
-<span class="command">%</span>    | Remainder | Find the remainder of <strong>a</strong> divided by <strong>b</strong><br />
-<span class="command">^</span>    | Power | Power <strong>a</strong> by <strong>b</strong></p>
+<retype-table copy-text="|
+--- | --- | ---
+&lt;span class=&quot;command&quot;&gt;or&lt;/span&gt;   | Logical OR | Check if **a** or **b** is &lt;spam class=&quot;keyword&quot;&gt;on&lt;/span&gt;
+&lt;span class=&quot;command&quot;&gt;and&lt;/span&gt;  | Logical AND | Check if **a** and **b** are &lt;spam class=&quot;keyword&quot;&gt;on&lt;/span&gt;
+&lt;span class=&quot;command&quot;&gt;==&lt;/span&gt;   | Equal | Check if **a** equals **b** (case insensitive)
+&lt;span class=&quot;command&quot;&gt;\===&lt;/span&gt; | Strict Equal | Check if **a** equals **b** (case sensitive)
+&lt;span class=&quot;command&quot;&gt;!=&lt;/span&gt;   | NOT Equal | Check if **a** not equals **b** (case insensitive)
+&lt;span class=&quot;command&quot;&gt;!==&lt;/span&gt;  | Strict NOT Equal | Check if **a** not equals **b** (case sensitive)
+&lt;span class=&quot;command&quot;&gt;&lt;&lt;/span&gt;    | Less | Check if **a** less than **b**
+&lt;span class=&quot;command&quot;&gt;&lt;=&lt;/span&gt;   | Less Equal | Check if **a** less or equal **b**
+&lt;span class=&quot;command&quot;&gt;\&gt;&lt;/span&gt;   | Greater | Check if **a** greater than **b**
+&lt;span class=&quot;command&quot;&gt;\&gt;=&lt;/span&gt;  | Greater Equal | Check if **a** greater or equal **b**
+&lt;span class=&quot;command&quot;&gt;\+&lt;/span&gt;   | Addition | Sum **a** plus **b**
+&lt;span class=&quot;command&quot;&gt;\-&lt;/span&gt;   | Subtraction | Subtract **b** from a
+&lt;span class=&quot;command&quot;&gt;\*&lt;/span&gt;   | Multiplication | Multiply **a** for **b**
+&lt;span class=&quot;command&quot;&gt;/&lt;/span&gt;    | Division | Divide **a** by **b**
+&lt;span class=&quot;command&quot;&gt;%&lt;/span&gt;    | Remainder | Find the remainder of **a** divided by **b**
+&lt;span class=&quot;command&quot;&gt;^&lt;/span&gt;    | Power | Power **a** by **b**">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th class="compact"> </th>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="compact"><span class="command">or</span></td>
+<td>Logical OR</td>
+<td>Check if <strong>a</strong> or <strong>b</strong> is <spam class="keyword">on</span></td>
+</tr>
+<tr>
+<td class="compact"><span class="command">and</span></td>
+<td>Logical AND</td>
+<td>Check if <strong>a</strong> and <strong>b</strong> are <spam class="keyword">on</span></td>
+</tr>
+<tr>
+<td class="compact"><span class="command"><mark></span></mark></td>
+<td>Equal</td>
+<td>Check if <strong>a</strong> equals <strong>b</strong> (case insensitive)</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">=</span></td>
+<td>Strict Equal</td>
+<td>Check if <strong>a</strong> equals <strong>b</strong> (case sensitive)</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">!=</span></td>
+<td>NOT Equal</td>
+<td>Check if <strong>a</strong> not equals <strong>b</strong> (case insensitive)</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">!==</span></td>
+<td>Strict NOT Equal</td>
+<td>Check if <strong>a</strong> not equals <strong>b</strong> (case sensitive)</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&lt;</span></td>
+<td>Less</td>
+<td>Check if <strong>a</strong> less than <strong>b</strong></td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&lt;=</span></td>
+<td>Less Equal</td>
+<td>Check if <strong>a</strong> less or equal <strong>b</strong></td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&gt;</span></td>
+<td>Greater</td>
+<td>Check if <strong>a</strong> greater than <strong>b</strong></td>
+</tr>
+<tr>
+<td class="compact"><span class="command">&gt;=</span></td>
+<td>Greater Equal</td>
+<td>Check if <strong>a</strong> greater or equal <strong>b</strong></td>
+</tr>
+<tr>
+<td class="compact"><span class="command">+</span></td>
+<td>Addition</td>
+<td>Sum <strong>a</strong> plus <strong>b</strong></td>
+</tr>
+<tr>
+<td class="compact"><span class="command">-</span></td>
+<td>Subtraction</td>
+<td>Subtract <strong>b</strong> from a</td>
+</tr>
+<tr>
+<td class="compact"><span class="command">*</span></td>
+<td>Multiplication</td>
+<td>Multiply <strong>a</strong> for <strong>b</strong></td>
+</tr>
+<tr>
+<td class="compact"><span class="command">/</span></td>
+<td>Division</td>
+<td>Divide <strong>a</strong> by <strong>b</strong></td>
+</tr>
+<tr>
+<td class="compact"><span class="command">%</span></td>
+<td>Remainder</td>
+<td>Find the remainder of <strong>a</strong> divided by <strong>b</strong></td>
+</tr>
+<tr>
+<td class="compact"><span class="command">^</span></td>
+<td>Power</td>
+<td>Power <strong>a</strong> by <strong>b</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -891,7 +986,6 @@ $ PI = 3.14
         </div>
     </div>
 </div>
-<hr>
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
@@ -930,17 +1024,12 @@ $ PI = 3.14
 </div>
 </div>
 </div>
+<hr>
 <!-- Insert this at the bottom of each markdown page -->
 <!-- Tooltips -->
 <!-- *[AWS]: Amazon Web Services -->
 
-                <div id="retype-tags" class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 mt-6 mb-6 clear-both">
                 
-                    <time id="retype-last-updated" class="text-sm whitespace-nowrap text-base-text-muted ml-auto" datetime="2025-05-07T11:20:03" title="2025-05-07" data-absolute-label="Last updated on 2025-05-07" data-absolute-label-html="Last updated on 2025-05-07" data-relative-template="Last updated {0}" data-relative-template-html="Last updated RETYPETEMPLATELASTUPDATEDVALUETOKEN">
-                        Last updated on 2025-05-07
-                    </time>
-                </div>
-
                 <!-- Required only on API pages -->
                 <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
             </div>

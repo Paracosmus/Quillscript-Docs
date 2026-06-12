@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829251524559">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.834597517434">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Rich Text</title>
@@ -47,12 +47,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="/static/img/favicon.ico" />
-    <link href="/resources/css/retype.css?v=4.5.3.829251524559" rel="stylesheet">
+    <link href="/resources/css/retype.css?v=4.6.0.834597517434" rel="stylesheet">
 
-    <script data-cfasync="false" src="/resources/js/config.js?v=4.5.3.829251524559" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="/resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=4.5.3.829251524559" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=4.5.3.829251524559" defer></script>
+    <script data-cfasync="false" src="/resources/js/config.js?v=4.6.0.834597517434" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=4.6.0.834597517434" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="/resources/js/prism.js?v=4.6.0.834597517434" defer></script>
 
     <!-- Styles -->
     <style>
@@ -626,19 +626,94 @@
 <p>Quillscript comes packed with a set of built-in rich text tags that can be used to format text in a Rich Text Block.</p>
 <p>And you can also create your own custom rich text data table with custom tags, and apply it to any Rich Text Block, including to custom Dialog Box and Selection Box widgets.</p>
 <p>The built-in Dialog Box and Selection Box widget supports the following tags:</p>
-<p class="compact">Rich Text Tag | Source Text              | Formatted Text Result ---           | ---                      | ---<br />
-b             | <code translate="no" v-pre>&lt;b&gt;bold&lt;/&gt;</code>             | <strong>bold</strong><br />
-i             | <code translate="no" v-pre>&lt;i&gt;italic&lt;/&gt;</code>           | <em>italic</em><br />
-bi            | <code translate="no" v-pre>&lt;bi&gt;bold and italic&lt;/&gt;</code> | <strong><em>bold and italic</em></strong><br />
-u             | <code translate="no" v-pre>&lt;u&gt;underline&lt;/&gt;</code>        | <u>underline</u><br />
-s             | <code translate="no" v-pre>&lt;s&gt;strike&lt;/&gt;</code>           | <del>strike</del><br />
-a             | <code translate="no" v-pre>&lt;a&gt;anchor&lt;/&gt;</code>           | <span style="color: blue; text-decoration: underline;">anchor</span><br />
-info          | <code translate="no" v-pre>&lt;info&gt;info&lt;/&gt;</code>          | <span style="color: #00E592;">info</span><br />
-warning       | <code translate="no" v-pre>&lt;warning&gt;warning&lt;/&gt;</code>    | <span style="color: #FFC107; font-style: italic;">warning</span><br />
-danger        | <code translate="no" v-pre>&lt;danger&gt;danger&lt;/&gt;</code>      | <span style="color: #F44336; font-weight: bold">danger</span><br />
-disable       | <code translate="no" v-pre>&lt;disable&gt;disable&lt;/&gt;</code>    | <span style="color: #666666; font-weight: 200">disable</span><br />
-big           | <code translate="no" v-pre>&lt;big&gt;big&lt;/&gt;</code>            | <span style="font-size: 24px">big</span><br />
-small         | <code translate="no" v-pre>&lt;small&gt;small&lt;/&gt;</code>        | <span style="font-size: 11px">small</span></p>
+<retype-table copy-text="Rich Text Tag | Source Text              | Formatted Text Result
+---           | ---                      | ---
+b             | `&lt;b&gt;bold&lt;/&gt;`             | **bold**
+i             | `&lt;i&gt;italic&lt;/&gt;`           | _italic_
+bi            | `&lt;bi&gt;bold and italic&lt;/&gt;` | **_bold and italic_**
+u             | `&lt;u&gt;underline&lt;/&gt;`        | &lt;u&gt;underline&lt;/u&gt;
+s             | `&lt;s&gt;strike&lt;/&gt;`           | ~~strike~~
+a             | `&lt;a&gt;anchor&lt;/&gt;`           | &lt;span style=&quot;color: blue; text-decoration: underline;&quot;&gt;anchor&lt;/span&gt;
+info          | `&lt;info&gt;info&lt;/&gt;`          | &lt;span style=&quot;color: #00E592;&quot;&gt;info&lt;/span&gt;
+warning       | `&lt;warning&gt;warning&lt;/&gt;`    | &lt;span style=&quot;color: #FFC107; font-style: italic;&quot;&gt;warning&lt;/span&gt;
+danger        | `&lt;danger&gt;danger&lt;/&gt;`      | &lt;span style=&quot;color: #F44336; font-weight: bold&quot;&gt;danger&lt;/span&gt;
+disable       | `&lt;disable&gt;disable&lt;/&gt;`    | &lt;span style=&quot;color: #666666; font-weight: 200&quot;&gt;disable&lt;/span&gt;
+big           | `&lt;big&gt;big&lt;/&gt;`            | &lt;span style=&quot;font-size: 24px&quot;&gt;big&lt;/span&gt;
+small         | `&lt;small&gt;small&lt;/&gt;`        | &lt;span style=&quot;font-size: 11px&quot;&gt;small&lt;/span&gt;">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Rich Text Tag</th>
+<th>Source Text</th>
+<th class="compact">Formatted Text Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>b</td>
+<td><code translate="no" v-pre>&lt;b&gt;bold&lt;/&gt;</code></td>
+<td class="compact"><strong>bold</strong></td>
+</tr>
+<tr>
+<td>i</td>
+<td><code translate="no" v-pre>&lt;i&gt;italic&lt;/&gt;</code></td>
+<td class="compact"><em>italic</em></td>
+</tr>
+<tr>
+<td>bi</td>
+<td><code translate="no" v-pre>&lt;bi&gt;bold and italic&lt;/&gt;</code></td>
+<td class="compact"><strong><em>bold and italic</em></strong></td>
+</tr>
+<tr>
+<td>u</td>
+<td><code translate="no" v-pre>&lt;u&gt;underline&lt;/&gt;</code></td>
+<td class="compact"><u>underline</u></td>
+</tr>
+<tr>
+<td>s</td>
+<td><code translate="no" v-pre>&lt;s&gt;strike&lt;/&gt;</code></td>
+<td class="compact"><del>strike</del></td>
+</tr>
+<tr>
+<td>a</td>
+<td><code translate="no" v-pre>&lt;a&gt;anchor&lt;/&gt;</code></td>
+<td class="compact"><span style="color: blue; text-decoration: underline;">anchor</span></td>
+</tr>
+<tr>
+<td>info</td>
+<td><code translate="no" v-pre>&lt;info&gt;info&lt;/&gt;</code></td>
+<td class="compact"><span style="color: #00E592;">info</span></td>
+</tr>
+<tr>
+<td>warning</td>
+<td><code translate="no" v-pre>&lt;warning&gt;warning&lt;/&gt;</code></td>
+<td class="compact"><span style="color: #FFC107; font-style: italic;">warning</span></td>
+</tr>
+<tr>
+<td>danger</td>
+<td><code translate="no" v-pre>&lt;danger&gt;danger&lt;/&gt;</code></td>
+<td class="compact"><span style="color: #F44336; font-weight: bold">danger</span></td>
+</tr>
+<tr>
+<td>disable</td>
+<td><code translate="no" v-pre>&lt;disable&gt;disable&lt;/&gt;</code></td>
+<td class="compact"><span style="color: #666666; font-weight: 200">disable</span></td>
+</tr>
+<tr>
+<td>big</td>
+<td><code translate="no" v-pre>&lt;big&gt;big&lt;/&gt;</code></td>
+<td class="compact"><span style="font-size: 24px">big</span></td>
+</tr>
+<tr>
+<td>small</td>
+<td><code translate="no" v-pre>&lt;small&gt;small&lt;/&gt;</code></td>
+<td class="compact"><span style="font-size: 11px">small</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -729,10 +804,56 @@ small         | <code translate="no" v-pre>&lt;small&gt;small&lt;/&gt;</code>   
     <img src="/static/img/examples/decorator-variables.png" alt="" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="382" height="163" />
     <figcaption class="caption"></figcaption>
 </figure>
-<p class="compact">Variable     | Type                                    | Data ---          | ---                                     | ---<br />
-<strong>Name</strong>     | String <code translate="no" v-pre>FString</code>                        | The name of the rich text tag used<br />
-<strong>Content</strong>  | Text <code translate="no" v-pre>FText</code>                            | The content text inside of the rich text tag<br />
-<strong>Metadata</strong> | Map of Strings <code translate="no" v-pre>TMap&lt;FString, FString&gt;</code> | The metadata attributes of the rich text tag</p>
+<retype-table copy-text="Variable     | Type                                    | Data
+---          | ---                                     | ---
+**Name**     | String `FString`                        | The name of the rich text tag used
+**Content**  | Text `FText`                            | The content text inside of the rich text tag
+**Metadata** | Map of Strings `TMap&lt;FString, FString&gt;` | The metadata attributes of the rich text tag">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th class="compact">Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong></td>
+<td>String <code translate="no" v-pre>FString</code></td>
+<td class="compact">The name of the rich text tag used</td>
+</tr>
+<tr>
+<td><strong>Content</strong></td>
+<td>Text <code translate="no" v-pre>FText</code></td>
+<td class="compact">The content text inside of the rich text tag</td>
+</tr>
+<tr>
+<td><strong>Metadata</strong></td>
+<td>Map of Strings <code translate="no" v-pre>TMap&lt;FString, FString&gt;</code></td>
+<td class="compact">The metadata attributes of the rich text tag</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<div id="retype-backlinks">
+    <h2>See also</h2>
+<div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/changelog/v2.4/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-icon inline-flex shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><!--icon--><path d="M16.944 11h4.306a.75.75 0 0 1 0 1.5h-4.306a5.001 5.001 0 0 1-9.888 0H2.75a.75.75 0 0 1 0-1.5h4.306a5.001 5.001 0 0 1 9.888 0Zm-1.444.75a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0Z"/></svg></span>
+                <span class="card-compact-title">v2.4</span>
+            </div>
+            <p class="card-compact-description">This update includes three major new features to add to Quillscript's pool of tools. It introduces the new Dynamic Options, Smart Typewriter, and Tooltip Text.</p>
+        </div>
+    </a>
+</div>
+</div>
+</div>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -751,33 +872,11 @@ These variables must be <strong>UProperty</strong></p>
     </div>
 </div>
 <hr>
-<div id="retype-backlinks">
-    <h2>See also</h2>
-<div class="card-compact-group">
-<div class="card-compact-container">
-    <a href="/changelog/v2.4/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-icon inline-flex shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><!--icon--><path d="M16.944 11h4.306a.75.75 0 0 1 0 1.5h-4.306a5.001 5.001 0 0 1-9.888 0H2.75a.75.75 0 0 1 0-1.5h4.306a5.001 5.001 0 0 1 9.888 0Zm-1.444.75a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0Z"/></svg></span>
-                <span class="card-compact-title">v2.4</span>
-            </div>
-            <p class="card-compact-description">This update includes three major new features to add to Quillscript's pool of tools. It introduces the new Dynamic Options, Smart Typewriter, and Tooltip Text.</p>
-        </div>
-    </a>
-</div>
-</div>
-</div>
 <!-- Insert this at the bottom of each markdown page -->
 <!-- Tooltips -->
 <!-- *[AWS]: Amazon Web Services -->
 
-                <div id="retype-tags" class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 mt-6 mb-6 clear-both">
                 
-                    <time id="retype-last-updated" class="text-sm whitespace-nowrap text-base-text-muted ml-auto" datetime="2025-01-09T11:33:39" title="2025-01-09" data-absolute-label="Last updated on 2025-01-09" data-absolute-label-html="Last updated on 2025-01-09" data-relative-template="Last updated {0}" data-relative-template-html="Last updated RETYPETEMPLATELASTUPDATEDVALUETOKEN">
-                        Last updated on 2025-01-09
-                    </time>
-                </div>
-
                 <!-- Required only on API pages -->
                 <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
             </div>
